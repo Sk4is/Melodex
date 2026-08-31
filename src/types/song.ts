@@ -4,7 +4,10 @@ export interface Song {
   artist: string;
   album?: string;
   year?: number;
+  verifiedOriginalYear?: number;
+  yearConfidence?: 'high' | 'medium' | 'low';
   genre?: string;
+  recognitionScore?: number;
   artworkUrl?: string;
   previewUrl: string;
   previewStart?: number;

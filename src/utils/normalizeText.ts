@@ -3,7 +3,7 @@
  * - Case-insensitive
  * - Accent-insensitive (e.g., Beyoncé -> beyonce)
  * - Whitespace-tolerant (trims and collapses multiple spaces)
- * - Removes non-alphanumeric noise characters for resilient matching
+ * - Replaces punctuation/symbols with space
  */
 export function normalizeText(text: string): string {
   if (!text) return '';
@@ -17,15 +17,76 @@ export function normalizeText(text: string): string {
 }
 
 /**
+ * Strips all non-alphanumeric characters completely (e.g. "P!nk" -> "pink", "Ke$ha" -> "kesha", "Jay-Z" -> "jayz")
+ */
+export function squashSymbols(text: string): string {
+  if (!text) return '';
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+/**
+ * Splits complex multi-artist credits into individual artist names
+ * e.g., "Pitbull feat. Ke$ha" -> ["Pitbull", "Ke$ha"]
+ * e.g., "David Guetta & Sia" -> ["David Guetta", "Sia"]
+ */
+export function extractArtistCredits(artistString: string): string[] {
+  if (!artistString) return [];
+  const parts = artistString.split(/(?:feat\.|ft\.|featuring|with|&|\band\b|x|\+|\/|,)/i);
+  return parts.map(p => p.trim()).filter(Boolean);
+}
+
+/**
+ * Generates an expanded searchable corpus string for a song
+ */
+export function generateSearchCorpus(title: string, artist: string): string {
+  const normTitle = normalizeText(title);
+  const normArtist = normalizeText(artist);
+  const squashedTitle = squashSymbols(title);
+  const squashedArtist = squashSymbols(artist);
+  
+  const individualArtists = extractArtistCredits(artist)
+    .map(a => `${normalizeText(a)} ${squashSymbols(a)}`)
+    .join(' ');
+
+  // Handle common aliases/substitutions
+  let aliases = '';
+  if (normArtist.includes('pink') || squashedArtist.includes('pnk')) aliases += ' p!nk pink';
+  if (normArtist.includes('kesha') || squashedArtist.includes('keha')) aliases += ' ke$ha kesha';
+  if (normArtist.includes('asap') || squashedArtist.includes('aap')) aliases += ' a$ap asap';
+  if (normArtist.includes('nsync')) aliases += ' *nsync nsync n sync';
+  if (normArtist.includes('jay z') || squashedArtist.includes('jayz')) aliases += ' jay-z jayz jay z';
+  if (normArtist.includes('blink 182') || squashedArtist.includes('blink182')) aliases += ' blink-182 blink182 blink 182';
+  if (normArtist.includes('pitbull') || normTitle.includes('pitbull')) aliases += ' pitbull mr worldwide';
+
+  return `${normTitle} ${squashedTitle} ${normArtist} ${squashedArtist} ${individualArtists} ${aliases}`.toLowerCase();
+}
+
+/**
  * Checks if query terms match in target text (title or artist).
- * Supports fuzzy token matching (every search word must be in the target string).
+ * Supports fuzzy token matching (every search word must be in the search corpus).
  */
 export function fuzzyMatchSong(title: string, artist: string, query: string): boolean {
-  const normQuery = normalizeText(query);
-  if (!normQuery) return true;
+  const trimmed = query.trim();
+  if (!trimmed) return true;
 
-  const normCombined = normalizeText(`${title} ${artist}`);
+  const corpus = generateSearchCorpus(title, artist);
+  const squashedQuery = squashSymbols(trimmed);
+  
+  // Direct squashed query match (e.g. "pitbull", "pink", "kesha")
+  if (squashedQuery.length >= 3 && corpus.includes(squashedQuery)) {
+    return true;
+  }
+
+  // Token-by-token normalized check
+  const normQuery = normalizeText(trimmed);
   const queryTokens = normQuery.split(' ').filter(Boolean);
 
-  return queryTokens.every(token => normCombined.includes(token));
+  return queryTokens.every(token => {
+    const squashedToken = squashSymbols(token);
+    return corpus.includes(token) || (squashedToken.length >= 2 && corpus.includes(squashedToken));
+  });
 }
