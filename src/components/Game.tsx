@@ -152,6 +152,23 @@ export const Game: React.FC = () => {
     }));
   };
 
+  // Seamless Gameplay Safety Net:
+  // If an audio stream ever fails at runtime, silently blacklist it and pick another verified track
+  const handleAudioFailure = useCallback(() => {
+    if (!gameState.currentSong) return;
+    const failedSongId = gameState.currentSong.id;
+    musicService.rejectSong(failedSongId);
+
+    const replacement = musicService.getRandomSong(playedSongIds, gameState.decade);
+    if (replacement) {
+      setPlayedSongIds((prev) => [...prev, replacement.id]);
+      setGameState((prev) => ({
+        ...prev,
+        currentSong: replacement,
+      }));
+    }
+  }, [gameState.currentSong, playedSongIds, gameState.decade]);
+
   // Player selects a guess from autocomplete
   const handleSelectGuess = (selectedSong: Song) => {
     if (!gameState.currentSong || gameState.status !== 'ready') return;
@@ -307,6 +324,7 @@ export const Game: React.FC = () => {
                 previewStart={gameState.currentSong.previewStart ?? 0}
                 currentStage={gameState.currentStage}
                 disabled={false}
+                onAudioError={handleAudioFailure}
               />
 
               {/* Song Search / Guess Field */}

@@ -18,6 +18,7 @@ interface AudioPlayerProps {
   previewStart?: number;
   currentStage: number;
   disabled?: boolean;
+  onAudioError?: () => void;
 }
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
@@ -25,6 +26,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   previewStart = 0,
   currentStage,
   disabled = false,
+  onAudioError,
 }) => {
   const [playbackStatus, setPlaybackStatus] = useState<PlaybackStatus>({
     state: 'idle',
@@ -40,11 +42,16 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   useEffect(() => {
     const unsubscribe = audioService.subscribe((status) => {
       setPlaybackStatus(status);
+      if (status.state === 'error' && onAudioError) {
+        onAudioError();
+      }
     });
 
     if (previewUrl) {
-      audioService.preloadAudio(previewUrl).catch((err) => {
-        console.warn('Audio preload notice:', err);
+      audioService.preloadAudio(previewUrl).catch(() => {
+        if (onAudioError) {
+          onAudioError();
+        }
       });
     }
 
@@ -52,7 +59,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       audioService.stop();
       unsubscribe();
     };
-  }, [previewUrl]);
+  }, [previewUrl, onAudioError]);
 
   const handlePlayToggle = () => {
     if (disabled || !previewUrl) return;
