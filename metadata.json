@@ -1,0 +1,7 @@
+{
+  "name": "Melodex",
+  "description": "Melodex - Functional prototype of a music guessing game where players identify songs from increasingly longer audio snippets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
