@@ -1,4 +1,4 @@
-import { Song } from '../types/song';
+import { Song, AudioHealthStatus } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
 import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/normalizeText';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
@@ -282,13 +282,22 @@ export function getNormalizedGenre(genre?: string, artist = '', title = ''): Nor
 
 const STORAGE_RECENT_TRACKS = 'melodex_recent_tracks_v2';
 const STORAGE_RECENT_ARTISTS = 'melodex_recent_artists_v2';
-const STORAGE_QUARANTINED_SONGS = 'melodex_quarantined_songs_v2';
+const STORAGE_QUARANTINED_SONGS = 'melodex_quarantined_songs_v3';
+const STORAGE_AUDIO_HEALTH = 'melodex_audio_health_v3';
 const MAX_RECENT_TRACKS = 400;
 const MAX_RECENT_ARTISTS = 35;
+
+export interface TrackHealthRecord {
+  status: AudioHealthStatus;
+  validatedAt: number;
+  failureCount: number;
+  lastReason?: string;
+}
 
 class MusicService {
   private catalog: Map<string, Song> = new Map();
   private rejectedSongIds: Set<string> = new Set();
+  private audioHealthMap: Map<string, TrackHealthRecord> = new Map();
   private isCatalogLoaded = false;
   private loadPromise: Promise<Song[]> | null = null;
   private countCache: Map<DecadeFilter, Record<GenreFilter, number>> = new Map();
@@ -302,14 +311,18 @@ class MusicService {
   private recentTrackIds: string[] = [];
   private recentArtistKeys: string[] = [];
 
+  // Background Cleanup Runner
+  private backgroundCleanupTimer: number | null = null;
+  private isCleanupRunning = false;
+
   constructor() {
     this.loadPersistedState();
     this.bootstrapCatalog();
+    this.startBackgroundHealthCleanup();
   }
 
   /**
-   * Loads persisted cooldowns and quarantined tracks from localStorage.
-   * Prevents repeating songs/artists even when the user refreshes the page.
+   * Loads persisted cooldowns, audio health status, and quarantined tracks from localStorage.
    */
   private loadPersistedState(): void {
     if (typeof window === 'undefined' || !window.localStorage) return;
@@ -342,13 +355,29 @@ class MusicService {
           }
         }
       }
+
+      const rawHealth = localStorage.getItem(STORAGE_AUDIO_HEALTH);
+      if (rawHealth) {
+        const parsed = JSON.parse(rawHealth);
+        if (parsed && typeof parsed === 'object') {
+          for (const [id, rec] of Object.entries(parsed)) {
+            if (rec && typeof rec === 'object') {
+              this.audioHealthMap.set(id, rec as TrackHealthRecord);
+              if ((rec as TrackHealthRecord).status === 'dead') {
+                this.rejectedSongIds.add(id);
+                this.catalog.delete(id);
+              }
+            }
+          }
+        }
+      }
     } catch (e) {
       console.warn('Could not read persisted game history from localStorage:', e);
     }
   }
 
   /**
-   * Persists cooldowns and quarantined songs to localStorage.
+   * Persists cooldowns, audio health records, and quarantined songs to localStorage.
    */
   private savePersistedState(): void {
     if (typeof window === 'undefined' || !window.localStorage) return;
@@ -365,6 +394,12 @@ class MusicService {
         STORAGE_QUARANTINED_SONGS,
         JSON.stringify(Array.from(this.rejectedSongIds))
       );
+
+      const healthObj: Record<string, TrackHealthRecord> = {};
+      for (const [id, rec] of this.audioHealthMap.entries()) {
+        healthObj[id] = rec;
+      }
+      localStorage.setItem(STORAGE_AUDIO_HEALTH, JSON.stringify(healthObj));
     } catch (e) {
       console.warn('Could not save game history to localStorage:', e);
     }
@@ -396,8 +431,15 @@ class MusicService {
     try {
       if (Array.isArray(MELODEX_BASE_CATALOG)) {
         for (const item of MELODEX_BASE_CATALOG) {
-          if (this.isValidCatalogItem(item)) {
-            this.catalog.set(item.id, item);
+          if (this.isValidCatalogItem(item) && !this.rejectedSongIds.has(item.id)) {
+            const health = this.audioHealthMap.get(item.id);
+            if (!health || health.status !== 'dead') {
+              this.catalog.set(item.id, {
+                ...item,
+                audioStatus: health ? health.status : (item.audioStatus || 'unknown'),
+                audioValidatedAt: health ? health.validatedAt : item.audioValidatedAt,
+              });
+            }
           }
         }
       }
@@ -425,10 +467,17 @@ class MusicService {
       if (!this.isValidCatalogItem(track)) continue;
       if (this.catalog.has(track.id) || this.rejectedSongIds.has(track.id)) continue;
 
+      const health = this.audioHealthMap.get(track.id);
+      if (health && health.status === 'dead') continue;
+
       const sig = `${track.artist.toLowerCase().trim()}:::${track.title.toLowerCase().trim()}`;
       if (existingSignatures.has(sig)) continue;
 
-      this.catalog.set(track.id, track);
+      this.catalog.set(track.id, {
+        ...track,
+        audioStatus: health ? health.status : (track.audioStatus || 'healthy'),
+        audioValidatedAt: health ? health.validatedAt : (track.audioValidatedAt || Date.now()),
+      });
       existingSignatures.add(sig);
       addedCount++;
     }
@@ -437,6 +486,83 @@ class MusicService {
       this.invalidateCountCache();
     }
     return addedCount;
+  }
+
+  /**
+   * Records audio health status for a track with permanent vs temporary criteria
+   */
+  public recordAudioHealth(songId: string, status: AudioHealthStatus, reason?: string): void {
+    if (!songId) return;
+
+    const prev = this.audioHealthMap.get(songId) || {
+      status: 'unknown',
+      validatedAt: 0,
+      failureCount: 0,
+    };
+
+    let newFailureCount = prev.failureCount;
+    let finalStatus = status;
+
+    if (status === 'healthy') {
+      newFailureCount = 0;
+    } else if (status === 'temporarily_failed') {
+      newFailureCount += 1;
+      if (newFailureCount >= 3) {
+        finalStatus = 'dead';
+      }
+    } else if (status === 'dead') {
+      newFailureCount += 1;
+    }
+
+    const record: TrackHealthRecord = {
+      status: finalStatus,
+      validatedAt: Date.now(),
+      failureCount: newFailureCount,
+      lastReason: reason || prev.lastReason,
+    };
+
+    this.audioHealthMap.set(songId, record);
+
+    const song = this.catalog.get(songId);
+    if (song) {
+      song.audioStatus = finalStatus;
+      song.audioValidatedAt = record.validatedAt;
+      song.failureCount = newFailureCount;
+      song.lastFailureReason = record.lastReason;
+    }
+
+    if (finalStatus === 'dead') {
+      this.rejectedSongIds.add(songId);
+      this.catalog.delete(songId);
+      this.sessionDeck = this.sessionDeck.filter((s) => s.id !== songId);
+      this.invalidateCountCache();
+    }
+
+    this.savePersistedState();
+  }
+
+  /**
+   * Blacklist / quarantine a song permanently
+   */
+  public rejectSong(songId: string, reason = 'Audio unplayable'): void {
+    this.recordAudioHealth(songId, 'dead', reason);
+  }
+
+  public quarantineSong(songId: string, reason?: string): void {
+    this.rejectSong(songId, reason);
+  }
+
+  public isSongRejected(songId: string): boolean {
+    return this.rejectedSongIds.has(songId) || this.audioHealthMap.get(songId)?.status === 'dead';
+  }
+
+  public getAudioStatus(songId: string): AudioHealthStatus {
+    if (this.rejectedSongIds.has(songId)) return 'dead';
+    return this.audioHealthMap.get(songId)?.status || this.catalog.get(songId)?.audioStatus || 'unknown';
+  }
+
+  public getFailureCount(songId: string): number {
+    return this.audioHealthMap.get(songId)?.failureCount || 0;
   }
 
   /**
@@ -526,26 +652,6 @@ class MusicService {
   }
 
   /**
-   * Blacklist a song in the current session (e.g. if audio unexpectedly fails at runtime)
-   * Automatically persists quarantined tracks to prevent them from ever loading again.
-   */
-  public rejectSong(songId: string): void {
-    if (!songId) return;
-    this.rejectedSongIds.add(songId);
-    this.catalog.delete(songId);
-    this.sessionDeck = this.sessionDeck.filter((s) => s.id !== songId);
-    this.invalidateCountCache();
-    this.savePersistedState();
-  }
-
-  /**
-   * Check if a song has been blacklisted in this session
-   */
-  public isSongRejected(songId: string): boolean {
-    return this.rejectedSongIds.has(songId);
-  }
-
-  /**
    * Loads initial verified catalog
    */
   public async loadInitialCatalog(): Promise<Song[]> {
@@ -560,12 +666,6 @@ class MusicService {
     }
 
     this.loadPromise = (async () => {
-      if (this.catalog.size > 0) {
-        this.isCatalogLoaded = true;
-        this.invalidateCountCache();
-        return this.getCatalog();
-      }
-
       try {
         const res = await fetch('/melodex-catalog.json');
         if (res.ok) {
@@ -573,7 +673,14 @@ class MusicService {
           if (Array.isArray(list)) {
             for (const item of list) {
               if (this.isValidCatalogItem(item) && !this.rejectedSongIds.has(item.id)) {
-                this.catalog.set(item.id, item);
+                const health = this.audioHealthMap.get(item.id);
+                if (!health || health.status !== 'dead') {
+                  this.catalog.set(item.id, {
+                    ...item,
+                    audioStatus: health ? health.status : (item.audioStatus || 'healthy'),
+                    audioValidatedAt: health ? health.validatedAt : (item.audioValidatedAt || Date.now()),
+                  });
+                }
               }
             }
           }
@@ -591,11 +698,11 @@ class MusicService {
   }
 
   /**
-   * Get full in-memory playable verified catalog
+   * Get full in-memory playable verified catalog (healthy tracks only)
    */
   public getCatalog(): Song[] {
     return Array.from(this.catalog.values()).filter(
-      (s) => !this.rejectedSongIds.has(s.id) && this.isValidCatalogItem(s)
+      (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead' && this.isValidCatalogItem(s)
     );
   }
 
@@ -755,11 +862,12 @@ class MusicService {
 
   /**
    * Constructs a balanced, randomized Session Deck for the given decade & genres.
-   * Solves the catalog distribution problem:
-   * 1. Groups candidate songs by artist so huge artists don't drown out smaller curated artists.
+   * Features:
+   * 1. Groups candidate healthy songs by artist.
    * 2. Applies session exposure penalty + recent artist cooldown penalty.
-   * 3. Samples 1-2 tracks per artist using soft recognition weighting with randomness.
-   * 4. Ensures genre balance if 'all' or multiple genres are active.
+   * 3. Curated Post Malone Boost: Exactly +0.5 percentage points (+0.005) absolute probability bonus
+   *    applied after eligibility & fairness cooldowns, then renormalized.
+   * 4. Samples 1-2 tracks per artist with weighted randomness.
    * 5. Shuffles using Fisher-Yates and stores as this.sessionDeck.
    */
   public buildSessionDeck(
@@ -781,7 +889,7 @@ class MusicService {
       return [];
     }
 
-    // 1. Strict filter by decade and genres
+    // 1. Strict filter by decade and genres (excluding dead/quarantined)
     const candidates = this.filterByDecadeAndGenres(allPlayable, decade, genreList);
     if (candidates.length === 0) {
       this.sessionDeck = [];
@@ -798,24 +906,21 @@ class MusicService {
       artistMap.set(aKey, list);
     }
 
-    // 3. For each artist, calculate dynamic selection weight and pick 1-2 representative tracks
-    const deckSelection: Song[] = [];
+    // 3. For each artist, calculate dynamic selection weight
     const artistKeys = Array.from(artistMap.keys());
-
     const weightedArtists: { key: string; weight: number; songs: Song[] }[] = [];
 
     for (const aKey of artistKeys) {
       const songs = artistMap.get(aKey) || [];
       if (songs.length === 0) continue;
 
-      // Base weight = 1.0 (Requirement 17: GENRE -> ARTIST -> SONG, fair artist baseline)
       const baseWeight = 1.0;
 
-      // Session exposure penalty (Requirement 20: 0 appearances gain preference vs multiple appearances)
+      // Session exposure penalty
       const exposureCount = this.sessionArtistExposure.get(aKey) || 0;
       const sessionExposurePenalty = exposureCount === 0 ? 1.5 : 1 / (1 + exposureCount * 2.0);
 
-      // Cooldown penalty from recent games / reloads (Requirement 19: strongly penalize recent artists)
+      // Cooldown penalty from recent games (anti-repeat logic)
       const recentPos = this.recentArtistKeys.lastIndexOf(aKey);
       let recentArtistPenalty = 1.0;
       if (recentPos !== -1) {
@@ -829,29 +934,56 @@ class MusicService {
         }
       }
 
-      // Availability health: count of tracks not in recentTrackIds (Requirement 20: availabilityHealth)
-      const unplayedCount = songs.filter(s => !this.recentTrackIds.includes(s.id)).length;
+      // Availability health: unplayed tracks in artist catalog
+      const unplayedCount = songs.filter((s) => !this.recentTrackIds.includes(s.id)).length;
       const availabilityHealth = Math.min(1.0, Math.max(0.15, unplayedCount / 2));
 
-      // Final composite artist weight
-      const finalWeight = baseWeight * recentArtistPenalty * sessionExposurePenalty * availabilityHealth;
-      weightedArtists.push({ key: aKey, weight: finalWeight, songs });
+      const compositeWeight = baseWeight * recentArtistPenalty * sessionExposurePenalty * availabilityHealth;
+      weightedArtists.push({ key: aKey, weight: compositeWeight, songs });
     }
 
-    // Sort artists with random entropy based on dynamic weights
+    if (weightedArtists.length === 0) {
+      this.sessionDeck = [];
+      this.currentDeckKey = deckKey;
+      return [];
+    }
+
+    // 4. Curated Post Malone Probability Boost: Exactly +0.5 percentage points (+0.005)
+    const totalBaseWeight = weightedArtists.reduce((sum, item) => sum + item.weight, 0);
+    const postMaloneKey = 'post malone';
+    const postEntry = weightedArtists.find((a) => a.key === postMaloneKey);
+
+    if (postEntry && totalBaseWeight > 0) {
+      const pNormal = postEntry.weight / totalBaseWeight;
+      // Boost by exactly +0.5 percentage points (+0.005)
+      const pBoosted = Math.min(0.95, pNormal + 0.005);
+
+      if (pNormal < 1.0) {
+        const remainingScale = (1 - pBoosted) / (1 - pNormal);
+        for (const item of weightedArtists) {
+          if (item.key === postMaloneKey) {
+            item.weight = pBoosted * totalBaseWeight;
+          } else {
+            item.weight = item.weight * remainingScale;
+          }
+        }
+      }
+    }
+
+    // Sort artists with random entropy based on dynamic normalized weights
     weightedArtists.sort((a, b) => {
       const scoreA = a.weight * (0.6 + getSecureRandomFloat() * 0.8);
       const scoreB = b.weight * (0.6 + getSecureRandomFloat() * 0.8);
       return scoreB - scoreA;
     });
 
-    // Pick 1 best track per artist (Requirement 21: weighted randomness among recognizable tracks, not always #1 hit)
+    // Pick 1-2 best tracks per artist
+    const deckSelection: Song[] = [];
     for (const item of weightedArtists) {
       const { songs } = item;
       const notRecent = songs.filter((s) => !this.recentTrackIds.includes(s.id));
       const pool = notRecent.length > 0 ? notRecent : songs;
 
-      // Weighted selection among artist's pool
       const sortedSongs = [...pool].sort((a, b) => {
         const scoreA = (a.recognitionScore ?? 75) * (0.5 + getSecureRandomFloat() * 1.0);
         const scoreB = (b.recognitionScore ?? 75) * (0.5 + getSecureRandomFloat() * 1.0);
@@ -861,13 +993,12 @@ class MusicService {
       if (sortedSongs[0]) {
         deckSelection.push(sortedSongs[0]);
       }
-      // If total deck is small, allow a 2nd song for artists with ample catalog
       if (deckSelection.length < 80 && sortedSongs.length >= 5 && sortedSongs[1]) {
         deckSelection.push(sortedSongs[1]);
       }
     }
 
-    // 4. Final Fisher-Yates shuffle on the balanced deck
+    // 5. Final Fisher-Yates shuffle on the balanced deck
     const shuffledDeck = fisherYatesShuffle(deckSelection);
 
     // Prevent immediate repeat on the first card drawn from fresh deck
@@ -877,7 +1008,10 @@ class MusicService {
       const topSong = shuffledDeck[shuffledDeck.length - 1];
       if (topSong && (topSong.id === lastPlayedId || normalizeArtistKey(topSong.artist) === lastPlayedArtist)) {
         const swapIdx = Math.floor(getSecureRandomFloat() * (shuffledDeck.length - 1));
-        [shuffledDeck[shuffledDeck.length - 1], shuffledDeck[swapIdx]] = [shuffledDeck[swapIdx], shuffledDeck[shuffledDeck.length - 1]];
+        [shuffledDeck[shuffledDeck.length - 1], shuffledDeck[swapIdx]] = [
+          shuffledDeck[swapIdx],
+          shuffledDeck[shuffledDeck.length - 1],
+        ];
       }
     }
 
@@ -958,26 +1092,52 @@ class MusicService {
   }
 
   /**
-   * Validates that song audio is actively playable and at least 15s.
-   * If preview expired or failed, attempts re-resolution.
-   * If unplayable, automatically blacklists/rejects song ID and returns false.
+   * Pre-validation 8-Step Gate:
+   * 1. verify metadata
+   * 2. verify track identity
+   * 3. verify year & confidence
+   * 4. verify preview URL
+   * 5. preload audio
+   * 6. confirm audio can actually play (duration >= 14.5s)
+   * If any step fails, attempt re-resolution; if still failing, mark dead/temporary and quarantine.
    */
-  public async validateSongPlayability(song: Song): Promise<boolean> {
-    if (!song || !song.previewUrl) return false;
+  public async prevalidateCandidateSong(song: Song): Promise<boolean> {
+    if (!song || !song.id || !song.title || !song.artist) {
+      return false;
+    }
+    if (this.rejectedSongIds.has(song.id)) {
+      return false;
+    }
+    if (song.trackIdentityVerified === false) {
+      this.recordAudioHealth(song.id, 'dead', 'Unverified track identity');
+      return false;
+    }
+    const year = this.getVerifiedYear(song);
+    if (year === null || (song.yearConfidence && song.yearConfidence === 'low')) {
+      this.recordAudioHealth(song.id, 'dead', 'Invalid release year');
+      return false;
+    }
+    if (!song.previewUrl || !song.previewUrl.startsWith('http')) {
+      this.recordAudioHealth(song.id, 'dead', 'Invalid preview URL format');
+      return false;
+    }
 
-    // 1. Direct validation check via Web Audio / HTMLAudio
-    const isOk = await audioService.validateAudioUrl(song.previewUrl, 3500);
-    if (isOk) {
+    // Preload and validate playable audio stream
+    const isPlayable = await audioService.validateAudioUrl(song.previewUrl, 3500);
+    if (isPlayable) {
+      this.recordAudioHealth(song.id, 'healthy');
       return true;
     }
 
-    // 2. Attempt runtime re-resolution
+    // Attempt runtime re-resolution via iTunes
     try {
       const freshUrl = await this.resolveFreshPreviewUrl(song);
       if (freshUrl && freshUrl !== song.previewUrl) {
         const freshOk = await audioService.validateAudioUrl(freshUrl, 3500);
         if (freshOk) {
           song.previewUrl = freshUrl;
+          song.provider = 'itunes';
+          this.recordAudioHealth(song.id, 'healthy');
           return true;
         }
       }
@@ -985,84 +1145,195 @@ class MusicService {
       // Re-resolution failed
     }
 
-    // 3. Mark as rejected so it won't appear in rounds or autocomplete
-    this.rejectSong(song.id);
+    // If stream fails, determine whether to mark permanently dead or temporary
+    const isPermanent = song.previewUrl.includes('dzcdn.net') || this.getFailureCount(song.id) >= 2;
+    this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporarily_failed', 'Audio stream unplayable');
     return false;
   }
 
   /**
-   * Selects and pre-validates a random song for a round from the Session Deck.
-   * GUARANTEES that returned song is 100% playable with valid audio (silent replacement on failure).
-   * Consumes tracks without replacement from the deck.
+   * Compatibility wrapper for single-song validation
+   */
+  public async validateSongPlayability(song: Song): Promise<boolean> {
+    return this.prevalidateCandidateSong(song);
+  }
+
+  /**
+   * Selects and PRE-VALIDATES a song for a round before returning it.
+   * GUARANTEES that returned song is 100% playable with valid audio.
+   * If validation fails: DO NOT show the song; immediately quarantine/retry candidate.
    */
   public async getPlayableSongForRound(
     excludeIds: string[] = [],
     decade: DecadeFilter = 'all',
     genres: GenreFilter[] | GenreFilter = ['all'],
-    maxAttempts = 15
+    maxAttempts = 20
   ): Promise<Song | null> {
     const genreList = Array.isArray(genres) ? genres : [genres];
     const deckKey = `${decade}::${genreList.slice().sort().join(',')}`;
 
-    // If deck is empty or filters changed, build fresh deck
     if (this.currentDeckKey !== deckKey || this.sessionDeck.length === 0) {
       this.buildSessionDeck(decade, genres, true);
     }
 
     const triedIds = new Set<string>(excludeIds);
-    // Hard constraint: Never repeat the immediately preceding played song
     const lastPlayedId = this.recentTrackIds[this.recentTrackIds.length - 1];
     if (lastPlayedId) {
       triedIds.add(lastPlayedId);
     }
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
-      // Rebuild deck if exhausted
       if (this.sessionDeck.length === 0) {
         this.buildSessionDeck(decade, genres, true);
       }
 
       if (this.sessionDeck.length === 0) {
         const fallback = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-          .filter((s) => !this.rejectedSongIds.has(s.id));
+          .filter((s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead');
         if (fallback.length === 0) return null;
         const notTried = fallback.filter((s) => !triedIds.has(s.id));
         const pool = notTried.length > 0 ? notTried : fallback;
-        const chosen = pool[Math.floor(getSecureRandomFloat() * pool.length)];
-        this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
-        return chosen;
+        const candidate = pool[Math.floor(getSecureRandomFloat() * pool.length)];
+
+        triedIds.add(candidate.id);
+        const ok = await this.prevalidateCandidateSong(candidate);
+        if (ok) {
+          this.recordRecentPlay(candidate.id, normalizeArtistKey(candidate.artist));
+          return candidate;
+        }
+        continue;
       }
 
-      // Pop next candidate from the deck (consumed without replacement!)
+      // Pop next candidate from the deck
       const candidate = this.sessionDeck.pop()!;
 
-      // If already played in this game session or quarantined, skip to next
-      if (triedIds.has(candidate.id) || this.rejectedSongIds.has(candidate.id)) {
+      if (triedIds.has(candidate.id) || this.rejectedSongIds.has(candidate.id) || candidate.audioStatus === 'dead') {
         continue;
       }
 
       triedIds.add(candidate.id);
 
-      // Silent pre-validation: verify audio URL before returning to game
-      const isValid = await this.validateSongPlayability(candidate);
+      // Pre-validate candidate before showing
+      const isValid = await this.prevalidateCandidateSong(candidate);
       if (isValid) {
         const artKey = normalizeArtistKey(candidate.artist);
         this.recordRecentPlay(candidate.id, artKey);
         return candidate;
       }
-      // If invalid, validateSongPlayability automatically called rejectSong() which blacklisted it.
-      // Loop seamlessly draws next card from sessionDeck!
+      // If validation failed, prevalidateCandidateSong already quarantined it and recorded health.
+      // Seamlessly test the next candidate card in the loop!
     }
 
-    // Fallback if max attempts exceeded
+    // Ultimate fallback
     const remaining = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-      .filter((s) => !this.rejectedSongIds.has(s.id));
-    if (remaining.length === 0) return null;
-    const notTried = remaining.filter((s) => !triedIds.has(s.id));
-    const pool = notTried.length > 0 ? notTried : remaining;
-    const chosen = pool[Math.floor(getSecureRandomFloat() * pool.length)];
-    this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
-    return chosen;
+      .filter((s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead');
+    for (const song of remaining) {
+      if (!triedIds.has(song.id)) {
+        const ok = await this.prevalidateCandidateSong(song);
+        if (ok) {
+          this.recordRecentPlay(song.id, normalizeArtistKey(song.artist));
+          return song;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  /**
+   * Background Catalog Health Cleanup Runner:
+   * Periodically validates tracks in small controlled batches (20-30 tracks, low concurrency).
+   * Prioritizes: unknown status, previously failed status, oldest validation timestamps.
+   */
+  public startBackgroundHealthCleanup(batchSize = 25, intervalMs = 25000): () => void {
+    if (typeof window === 'undefined') return () => {};
+
+    if (this.backgroundCleanupTimer) {
+      clearInterval(this.backgroundCleanupTimer);
+    }
+
+    const runBatch = async () => {
+      if (this.isCleanupRunning || this.catalog.size === 0) return;
+      this.isCleanupRunning = true;
+
+      try {
+        const allSongs = Array.from(this.catalog.values()).filter(
+          (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead'
+        );
+
+        // Sort by priority: unknown -> temporarily_failed -> oldest validatedAt
+        const prioritized = allSongs.sort((a, b) => {
+          const statusOrder = (s: Song): number => {
+            const st = s.audioStatus || 'unknown';
+            if (st === 'unknown') return 0;
+            if (st === 'temporarily_failed') return 1;
+            return 2;
+          };
+          const orderA = statusOrder(a);
+          const orderB = statusOrder(b);
+          if (orderA !== orderB) return orderA - orderB;
+
+          const timeA = a.audioValidatedAt || 0;
+          const timeB = b.audioValidatedAt || 0;
+          return timeA - timeB;
+        });
+
+        const batch = prioritized.slice(0, batchSize);
+
+        // Process with controlled concurrency of 3
+        const CONCURRENCY = 3;
+        for (let i = 0; i < batch.length; i += CONCURRENCY) {
+          const chunk = batch.slice(i, i + CONCURRENCY);
+          await Promise.all(
+            chunk.map(async (song) => {
+              // Only re-check if not checked within last 4 hours (unless unknown/failed)
+              const age = Date.now() - (song.audioValidatedAt || 0);
+              if (song.audioStatus === 'healthy' && age < 14400000) {
+                return;
+              }
+
+              try {
+                const ok = await audioService.validateAudioUrl(song.previewUrl, 3000);
+                if (ok) {
+                  this.recordAudioHealth(song.id, 'healthy');
+                } else {
+                  // Attempt iTunes re-resolution
+                  const freshUrl = await this.resolveFreshPreviewUrl(song);
+                  if (freshUrl) {
+                    const freshOk = await audioService.validateAudioUrl(freshUrl, 3000);
+                    if (freshOk) {
+                      song.previewUrl = freshUrl;
+                      song.provider = 'itunes';
+                      this.recordAudioHealth(song.id, 'healthy');
+                      return;
+                    }
+                  }
+                  const isPermanent = song.previewUrl.includes('dzcdn.net') || this.getFailureCount(song.id) >= 2;
+                  this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporarily_failed');
+                }
+              } catch {
+                // Ignore transient background error
+              }
+            })
+          );
+        }
+      } catch (err) {
+        console.warn('Background audio health cleanup error:', err);
+      } finally {
+        this.isCleanupRunning = false;
+      }
+    };
+
+    // Run first batch after initial delay, then on recurring interval
+    setTimeout(() => runBatch(), 5000);
+    this.backgroundCleanupTimer = window.setInterval(runBatch, intervalMs);
+
+    return () => {
+      if (this.backgroundCleanupTimer) {
+        clearInterval(this.backgroundCleanupTimer);
+        this.backgroundCleanupTimer = null;
+      }
+    };
   }
 }
 

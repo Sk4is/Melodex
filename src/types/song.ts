@@ -1,3 +1,5 @@
+export type AudioHealthStatus = 'healthy' | 'unknown' | 'temporarily_failed' | 'dead';
+
 export interface Song {
   id: string;
   title: string;
@@ -15,4 +17,11 @@ export interface Song {
   provider?: 'itunes' | 'deezer' | 'spotify' | string;
   trackIdentityVerified?: boolean;
   providerTrackId?: string;
+
+  // Audio Health Tracking
+  audioStatus?: AudioHealthStatus;
+  audioValidatedAt?: number; // timestamp in ms
+  failureCount?: number;
+  lastFailureReason?: string;
 }
+
