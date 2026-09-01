@@ -1,8 +1,22 @@
 import { Song } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
-import { fuzzyMatchSong } from '../utils/normalizeText';
+import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/normalizeText';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 import { audioService } from './audioService';
+
+export function fisherYatesShuffle<T>(items: readonly T[]): T[] {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+export function normalizeArtistKey(artist: string): string {
+  const primary = extractPrimaryArtist(artist);
+  return normalizeText(primary);
+}
 
 export type NormalizedGenre =
   | 'Pop'
@@ -264,8 +278,22 @@ class MusicService {
   private loadPromise: Promise<Song[]> | null = null;
   private countCache: Map<DecadeFilter, Record<GenreFilter, number>> = new Map();
 
+  // Recent History Tracking for Session Variance
+  private recentTrackIds: string[] = [];
+  private recentArtistKeys: string[] = [];
+  private readonly maxRecentTracks = 40;
+  private readonly maxRecentArtists = 10;
+
   constructor() {
     this.bootstrapCatalog();
+  }
+
+  /**
+   * Resets recent session history (e.g. on full game reset or new game session)
+   */
+  public clearRecentHistory(): void {
+    this.recentTrackIds = [];
+    this.recentArtistKeys = [];
   }
 
   /**
@@ -623,43 +651,109 @@ class MusicService {
   }
 
   /**
-   * Select a candidate song inside a genre pool weighted by recognitionScore.
-   * Strongly favors iconic/major hits (score >= 80) while allowing well-known tracks (60+).
+   * Selects an eligible artist with balanced weights (preventing artists with huge catalogs
+   * from dominating over artists with 5-15 tracks), then selects an eligible song from that artist.
    */
-  private pickSongByRecognition(songs: Song[]): Song | null {
-    if (songs.length === 0) return null;
-    if (songs.length === 1) return songs[0];
+  private selectBalancedCandidate(candidates: Song[], excludeIds: string[] = []): Song | null {
+    if (candidates.length === 0) return null;
+    if (candidates.length === 1) return candidates[0];
 
-    // Compute weights based on recognitionScore (default 75 if unspecified)
-    // Using power scaling to prioritize iconic tracks without starving variety
-    const weights = songs.map((s) => {
-      const score = typeof s.recognitionScore === 'number' ? s.recognitionScore : 75;
-      return Math.pow(Math.max(10, score) / 100, 1.8);
-    });
+    const excludeSet = new Set([...excludeIds, ...this.rejectedSongIds]);
 
-    const totalWeight = weights.reduce((sum, w) => sum + w, 0);
-    if (totalWeight <= 0) {
-      return songs[Math.floor(Math.random() * songs.length)];
+    // 1. Group candidate songs by primary artist key
+    const artistMap = new Map<string, Song[]>();
+    for (const song of candidates) {
+      if (excludeSet.has(song.id)) continue;
+      const aKey = normalizeArtistKey(song.artist);
+      const list = artistMap.get(aKey) || [];
+      list.push(song);
+      artistMap.set(aKey, list);
     }
 
-    let randomVal = Math.random() * totalWeight;
-    for (let i = 0; i < songs.length; i++) {
-      randomVal -= weights[i];
-      if (randomVal <= 0) {
-        return songs[i];
+    // If all candidate songs are in excludeIds, relax excludeIds (except rejectedSongIds)
+    if (artistMap.size === 0) {
+      for (const song of candidates) {
+        if (this.rejectedSongIds.has(song.id)) continue;
+        const aKey = normalizeArtistKey(song.artist);
+        const list = artistMap.get(aKey) || [];
+        list.push(song);
+        artistMap.set(aKey, list);
       }
     }
 
-    return songs[songs.length - 1];
+    const allArtistKeys = Array.from(artistMap.keys());
+    if (allArtistKeys.length === 0) return null;
+
+    // 2. Filter out recently played artists (Recent Artist Memory)
+    let availableArtistKeys = allArtistKeys.filter((k) => !this.recentArtistKeys.includes(k));
+    if (availableArtistKeys.length === 0) {
+      // If all eligible artists were recently played, fall back to all eligible artists
+      availableArtistKeys = allArtistKeys;
+    }
+
+    // 3. Shuffle available artists with unbiased Fisher-Yates shuffle
+    const shuffledArtists = fisherYatesShuffle(availableArtistKeys);
+    const chosenArtistKey = shuffledArtists[0];
+    const artistSongs = artistMap.get(chosenArtistKey) || [];
+
+    if (artistSongs.length === 0) return null;
+
+    // 4. Filter out recently played tracks for this artist
+    let availableSongs = artistSongs.filter((s) => !excludeSet.has(s.id) && !this.recentTrackIds.includes(s.id));
+    if (availableSongs.length === 0) {
+      availableSongs = artistSongs.filter((s) => !this.recentTrackIds.includes(s.id));
+    }
+    if (availableSongs.length === 0) {
+      availableSongs = artistSongs;
+    }
+
+    // 5. Song selection within chosen artist using soft recognition weighting
+    let chosenSong: Song;
+    if (availableSongs.length === 1) {
+      chosenSong = availableSongs[0];
+    } else {
+      const shuffledSongs = fisherYatesShuffle(availableSongs);
+      const weights = shuffledSongs.map((s) => {
+        const score = typeof s.recognitionScore === 'number' ? s.recognitionScore : 75;
+        return Math.pow(Math.max(20, score) / 100, 1.2);
+      });
+      const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+      let rand = Math.random() * totalWeight;
+      chosenSong = shuffledSongs[0];
+      for (let i = 0; i < shuffledSongs.length; i++) {
+        rand -= weights[i];
+        if (rand <= 0) {
+          chosenSong = shuffledSongs[i];
+          break;
+        }
+      }
+    }
+
+    // 6. Record in recent memory
+    this.recordRecentPlay(chosenSong.id, chosenArtistKey);
+    return chosenSong;
+  }
+
+  private recordRecentPlay(songId: string, artistKey: string): void {
+    this.recentTrackIds.push(songId);
+    if (this.recentTrackIds.length > this.maxRecentTracks) {
+      this.recentTrackIds.shift();
+    }
+
+    this.recentArtistKeys.push(artistKey);
+    if (this.recentArtistKeys.length > this.maxRecentArtists) {
+      this.recentArtistKeys.shift();
+    }
   }
 
   /**
    * Decade + Multi-Genre Balanced Random Selection:
    *
    * STEP 1: Filter candidate pool by strict decade AND active genres (OR logic), and session exclusions.
-   * STEP 2: If specific genres selected, pick weighted by recognitionScore from that candidate pool.
-   * STEP 3: If 'all' genres selected, group eligible candidates by normalized genre & apply balanced weights.
-   * STEP 4: Validate before returning.
+   * STEP 2: Balanced selection:
+   *         - If specific genres selected: choose fairly among selected genres, then select artist -> track.
+   *         - If 'all' genres selected: select genre by balanced weight, then select artist -> track.
+   * STEP 3: Validate candidate before returning.
    */
   public getRandomSong(
     excludeIds: string[] = [],
@@ -672,50 +766,56 @@ class MusicService {
     const genreList = Array.isArray(genres) ? genres : [genres];
     const isAll = genreList.length === 0 || genreList.includes('all');
 
-    // Filter by strict decade and selected genres (OR match)
-    let filteredPool = this.filterByDecadeAndGenres(all, decade, genreList);
+    // Filter by strict decade release year FIRST
+    const decadeFiltered = all.filter((s) => this.matchesDecade(s, decade) && !this.rejectedSongIds.has(s.id));
+    if (decadeFiltered.length === 0) return null;
 
-    // If specific genre+decade pool is empty (e.g. rare combination), fallback to decade pool with 'all'
-    if (filteredPool.length === 0) {
-      filteredPool = this.filterByDecadeAndGenres(all, decade, ['all']);
-    }
-    if (filteredPool.length === 0) {
-      filteredPool = all;
-    }
-
-    const excludeSet = new Set([...excludeIds, ...this.rejectedSongIds]);
-    let available = filteredPool.filter((s) => !excludeSet.has(s.id));
-
-    // If available is exhausted, fall back to entire filtered pool
-    if (available.length === 0) {
-      available = filteredPool;
-    }
-
-    if (available.length === 0) return null;
-
-    // If specific genres were chosen (not 'all'), pick directly from available matched pool
+    // When specific genres were selected
     if (!isAll) {
-      const chosen = this.pickSongByRecognition(available);
-      if (chosen && this.isValidCatalogItem(chosen)) {
-        return chosen;
+      // If multiple specific genres (e.g. ['hiphop', 'rnb']), group candidates by active genre
+      // and alternate/randomize fairly between those selected genres
+      const activeSpecificGenres = genreList.filter((g) => g !== 'all');
+      const genreMap = new Map<GenreFilter, Song[]>();
+      for (const g of activeSpecificGenres) {
+        const matching = decadeFiltered.filter((s) => matchesGenre(s, g));
+        if (matching.length > 0) {
+          genreMap.set(g, matching);
+        }
+      }
+
+      const availableGenres = Array.from(genreMap.keys());
+      if (availableGenres.length > 0) {
+        const shuffledGenres = fisherYatesShuffle(availableGenres);
+        const chosenGenre = shuffledGenres[0];
+        const genreSongs = genreMap.get(chosenGenre) || [];
+        const chosenSong = this.selectBalancedCandidate(genreSongs, excludeIds);
+        if (chosenSong && this.isValidCatalogItem(chosenSong)) {
+          return chosenSong;
+        }
+      }
+
+      // Fallback if specific genre map was empty
+      const matched = decadeFiltered.filter((s) => matchesAnyGenre(s, genreList));
+      if (matched.length > 0) {
+        const chosen = this.selectBalancedCandidate(matched, excludeIds);
+        if (chosen && this.isValidCatalogItem(chosen)) return chosen;
       }
     }
 
-    // When genre is 'all', group candidates by normalized genre for balanced variety
-    const genreMap: Map<NormalizedGenre, Song[]> = new Map();
-    for (const song of available) {
+    // When genre is 'all': Multi-stage Genre -> Artist -> Song selection
+    const normalizedGenreMap = new Map<NormalizedGenre, Song[]>();
+    for (const song of decadeFiltered) {
       const g = getNormalizedGenre(song.genre, song.artist, song.title);
-      const list = genreMap.get(g) || [];
+      const list = normalizedGenreMap.get(g) || [];
       list.push(song);
-      genreMap.set(g, list);
+      normalizedGenreMap.set(g, list);
     }
 
-    // Determine active weights for genres that currently have available tracks
     const activeGenres: NormalizedGenre[] = [];
     const activeWeights: number[] = [];
     let totalActiveWeight = 0;
 
-    for (const [gName, songs] of genreMap.entries()) {
+    for (const [gName, songs] of normalizedGenreMap.entries()) {
       if (songs.length > 0) {
         const weight = GENRE_WEIGHTS[gName] ?? 0.10;
         activeGenres.push(gName);
@@ -725,13 +825,12 @@ class MusicService {
     }
 
     if (activeGenres.length === 0) {
-      return this.pickSongByRecognition(available);
+      return this.selectBalancedCandidate(decadeFiltered, excludeIds);
     }
 
-    // Step 1: Select Genre
+    // Step 1: Select Genre with balanced weights
     let chosenGenre: NormalizedGenre = activeGenres[0];
     let rand = Math.random() * totalActiveWeight;
-
     for (let i = 0; i < activeGenres.length; i++) {
       rand -= activeWeights[i];
       if (rand <= 0) {
@@ -740,18 +839,15 @@ class MusicService {
       }
     }
 
-    const genreCandidates = genreMap.get(chosenGenre) || available;
+    const genreCandidates = normalizedGenreMap.get(chosenGenre) || decadeFiltered;
 
-    // Step 2: Select Song inside Chosen Genre
-    const selectedSong = this.pickSongByRecognition(genreCandidates);
-
-    // Final Round Validation Pipeline check
+    // Step 2 & 3: Select Artist -> Song
+    const selectedSong = this.selectBalancedCandidate(genreCandidates, excludeIds);
     if (selectedSong && this.isValidCatalogItem(selectedSong) && this.matchesDecade(selectedSong, decade)) {
       return selectedSong;
     }
 
-    // If for any reason validation failed, try direct selection from available pool
-    return this.pickSongByRecognition(available);
+    return this.selectBalancedCandidate(decadeFiltered, excludeIds);
   }
 
   /**

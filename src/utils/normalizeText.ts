@@ -35,8 +35,17 @@ export function squashSymbols(text: string): string {
  */
 export function extractArtistCredits(artistString: string): string[] {
   if (!artistString) return [];
-  const parts = artistString.split(/(?:feat\.|ft\.|featuring|with|&|\band\b|x|\+|\/|,)/i);
+  const parts = artistString.split(/(?:feat\.|ft\.|featuring|with|&|\band\b|\bx\b|\+|\/|,)/i);
   return parts.map(p => p.trim()).filter(Boolean);
+}
+
+/**
+ * Extracts the primary artist from a potentially complex artist credit string
+ */
+export function extractPrimaryArtist(artistString: string): string {
+  if (!artistString) return '';
+  const credits = extractArtistCredits(artistString);
+  return credits[0] || artistString.trim();
 }
 
 /**

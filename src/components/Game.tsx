@@ -355,6 +355,7 @@ export const Game: React.FC = () => {
       <AudioBackground
         artworkUrl={gameState.currentSong?.artworkUrl}
         isResultRevealed={isGameOver}
+        isWon={gameState.status === 'won'}
         decade={gameState.decade}
       />
 

@@ -6,21 +6,32 @@ import { CATEGORY_THEMES } from '../types/theme';
 interface AudioBackgroundProps {
   artworkUrl?: string;
   isResultRevealed?: boolean;
+  isWon?: boolean;
   decade?: DecadeFilter;
 }
 
 export const AudioBackground: React.FC<AudioBackgroundProps> = ({
   artworkUrl,
   isResultRevealed = false,
+  isWon = false,
   decade = 'all',
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number | null>(null);
   const currentDecadeRef = useRef<DecadeFilter>(decade);
+  const winTriggerTimeRef = useRef<number | null>(null);
+  const prevIsWonRef = useRef<boolean>(false);
 
   useEffect(() => {
     currentDecadeRef.current = decade;
   }, [decade]);
+
+  useEffect(() => {
+    if (isWon && !prevIsWonRef.current) {
+      winTriggerTimeRef.current = performance.now();
+    }
+    prevIsWonRef.current = isWon;
+  }, [isWon]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -123,6 +134,54 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, Math.PI * 2);
         ctx.fill();
+      }
+
+      // Subtle center resonance wave upon correct discovery (1.5s duration)
+      if (winTriggerTimeRef.current !== null) {
+        const elapsed = (performance.now() - winTriggerTimeRef.current) / 1000;
+        if (elapsed < 1.5) {
+          const progress = elapsed / 1.5; // 0 to 1
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const resonanceRadius = Math.min(width, height) * (0.25 + easeOut * 0.9);
+          const alpha = (1 - easeOut) * 0.18;
+
+          // Expanding soft resonance ring
+          const ringGrad = ctx.createRadialGradient(
+            width / 2,
+            height / 2,
+            Math.max(0, resonanceRadius - 60),
+            width / 2,
+            height / 2,
+            resonanceRadius
+          );
+          ringGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
+          ringGrad.addColorStop(0.7, `hsla(${currentHue}, ${currentSat}%, 55%, ${alpha})`);
+          ringGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+          ctx.fillStyle = ringGrad;
+          ctx.beginPath();
+          ctx.arc(width / 2, height / 2, resonanceRadius, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Gentle center illumination bloom
+          const centerBloomR = Math.min(width, height) * 0.45;
+          const bloomAlpha = (1 - easeOut) * 0.12;
+          const bloomGrad = ctx.createRadialGradient(
+            width / 2,
+            height / 2,
+            0,
+            width / 2,
+            height / 2,
+            centerBloomR
+          );
+          bloomGrad.addColorStop(0, `hsla(${currentHue}, ${currentSat}%, 60%, ${bloomAlpha})`);
+          bloomGrad.addColorStop(1, 'rgba(6, 7, 9, 0)');
+
+          ctx.fillStyle = bloomGrad;
+          ctx.beginPath();
+          ctx.arc(width / 2, height / 2, centerBloomR, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
 
       // Very subtle organic center glow reacting to music
