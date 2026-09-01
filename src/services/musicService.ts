@@ -178,6 +178,14 @@ export function matchesGenre(song: Song, genre: GenreFilter): boolean {
   }
 }
 
+/**
+ * Checks if a song matches ANY of the selected genres (OR logic)
+ */
+export function matchesAnyGenre(song: Song, genres: GenreFilter[]): boolean {
+  if (!genres || genres.length === 0 || genres.includes('all')) return true;
+  return genres.some((g) => matchesGenre(song, g));
+}
+
 export function getNormalizedGenre(genre?: string, artist = '', title = ''): NormalizedGenre {
   const g = (genre || '').toLowerCase();
   const a = artist.toLowerCase();
@@ -395,20 +403,32 @@ class MusicService {
   }
 
   /**
-   * Filter songs matching both decade and genre criteria
+   * Filter songs matching both decade and genre(s) criteria (OR logic across selected genres)
    */
-  public filterByDecadeAndGenre(songs: Song[], decade: DecadeFilter, genre: GenreFilter): Song[] {
+  public filterByDecadeAndGenres(
+    songs: Song[],
+    decade: DecadeFilter,
+    genres: GenreFilter[] | GenreFilter = ['all']
+  ): Song[] {
+    const genreList = Array.isArray(genres) ? genres : [genres];
     return songs.filter(
-      (song) => this.matchesDecade(song, decade) && matchesGenre(song, genre)
+      (song) => this.matchesDecade(song, decade) && matchesAnyGenre(song, genreList)
     );
   }
 
+  public filterByDecadeAndGenre(songs: Song[], decade: DecadeFilter, genre: GenreFilter): Song[] {
+    return this.filterByDecadeAndGenres(songs, decade, [genre]);
+  }
+
   /**
-   * Returns count of playable verified songs matching decade and genre
+   * Returns count of playable verified songs matching decade and genre(s)
    */
-  public getPlayableCount(decade: DecadeFilter = 'all', genre: GenreFilter = 'all'): number {
+  public getPlayableCount(
+    decade: DecadeFilter = 'all',
+    genres: GenreFilter[] | GenreFilter = 'all'
+  ): number {
     const all = this.getCatalog();
-    return this.filterByDecadeAndGenre(all, decade, genre).length;
+    return this.filterByDecadeAndGenres(all, decade, genres).length;
   }
 
   /**
@@ -486,27 +506,30 @@ class MusicService {
   }
 
   /**
-   * Decade + Genre Balanced Random Selection:
+   * Decade + Multi-Genre Balanced Random Selection:
    *
-   * STEP 1: Filter candidate pool by strict decade AND genre, and session exclusions.
-   * STEP 2: If specific genre selected, pick weighted by recognitionScore from that pool.
+   * STEP 1: Filter candidate pool by strict decade AND active genres (OR logic), and session exclusions.
+   * STEP 2: If specific genres selected, pick weighted by recognitionScore from that candidate pool.
    * STEP 3: If 'all' genres selected, group eligible candidates by normalized genre & apply balanced weights.
    * STEP 4: Validate before returning.
    */
   public getRandomSong(
     excludeIds: string[] = [],
     decade: DecadeFilter = 'all',
-    genre: GenreFilter = 'all'
+    genres: GenreFilter[] | GenreFilter = ['all']
   ): Song | null {
     const all = this.getCatalog();
     if (all.length === 0) return null;
 
-    // Filter by strict decade and genre
-    let filteredPool = this.filterByDecadeAndGenre(all, decade, genre);
+    const genreList = Array.isArray(genres) ? genres : [genres];
+    const isAll = genreList.length === 0 || genreList.includes('all');
 
-    // If specific genre+decade pool is empty (e.g. rare combination), fallback to decade pool
+    // Filter by strict decade and selected genres (OR match)
+    let filteredPool = this.filterByDecadeAndGenres(all, decade, genreList);
+
+    // If specific genre+decade pool is empty (e.g. rare combination), fallback to decade pool with 'all'
     if (filteredPool.length === 0) {
-      filteredPool = this.filterByDecadeAndGenre(all, decade, 'all');
+      filteredPool = this.filterByDecadeAndGenres(all, decade, ['all']);
     }
     if (filteredPool.length === 0) {
       filteredPool = all;
@@ -522,8 +545,8 @@ class MusicService {
 
     if (available.length === 0) return null;
 
-    // If a specific genre was chosen (not 'all'), pick directly from available genre pool
-    if (genre !== 'all') {
+    // If specific genres were chosen (not 'all'), pick directly from available matched pool
+    if (!isAll) {
       const chosen = this.pickSongByRecognition(available);
       if (chosen && this.isValidCatalogItem(chosen)) {
         return chosen;

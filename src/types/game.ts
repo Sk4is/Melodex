@@ -65,7 +65,7 @@ export interface GameState {
   status: GameStatus;
   score: number;
   decade: DecadeFilter;
-  genre: GenreFilter;
+  genres: GenreFilter[];
   errorMessage?: string;
 }
 

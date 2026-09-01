@@ -26,7 +26,7 @@ export const Game: React.FC = () => {
     status: 'loading',
     score: 0,
     decade: 'all',
-    genre: 'all',
+    genres: ['all'],
   });
 
   const [playedSongIds, setPlayedSongIds] = useState<string[]>([]);
@@ -49,7 +49,10 @@ export const Game: React.FC = () => {
 
   // Initialize music catalog and select first song
   const initializeGame = useCallback(
-    async (initialDecade: DecadeFilter = 'all', initialGenre: GenreFilter = 'all') => {
+    async (
+      initialDecade: DecadeFilter = 'all',
+      initialGenres: GenreFilter[] = ['all']
+    ) => {
       setGameState((prev) => ({ ...prev, status: 'loading', errorMessage: undefined }));
       setInitError(null);
 
@@ -60,7 +63,7 @@ export const Game: React.FC = () => {
           throw new Error('Music catalog is empty. Please check your internet connection.');
         }
 
-        const song = musicService.getRandomSong([], initialDecade, initialGenre);
+        const song = musicService.getRandomSong([], initialDecade, initialGenres);
         if (!song) {
           throw new Error('Could not find songs for this selection.');
         }
@@ -73,7 +76,7 @@ export const Game: React.FC = () => {
           status: 'ready',
           score: 0,
           decade: initialDecade,
-          genre: initialGenre,
+          genres: initialGenres,
         });
       } catch (err: unknown) {
         const message = err instanceof Error ? err.message : 'Failed to load music catalog';
@@ -86,18 +89,28 @@ export const Game: React.FC = () => {
   );
 
   useEffect(() => {
-    initializeGame('all', 'all');
+    initializeGame('all', ['all']);
     return () => {
       audioService.stop();
     };
   }, [initializeGame]);
 
-  // Handle Decade selection
+  // Handle Decade selection (preserves valid multi-selected genres)
   const handleSelectDecade = (newDecade: DecadeFilter) => {
     if (newDecade === gameState.decade && gameState.currentSong) return;
 
     audioService.stop();
-    const song = musicService.getRandomSong(playedSongIds, newDecade, gameState.genre);
+
+    // Check if currently selected genres still have playable songs in the new decade
+    let validGenres = gameState.genres;
+    if (!gameState.genres.includes('all')) {
+      const filtered = gameState.genres.filter(
+        (g) => musicService.getPlayableCount(newDecade, [g]) > 0
+      );
+      validGenres = filtered.length > 0 ? filtered : ['all'];
+    }
+
+    const song = musicService.getRandomSong(playedSongIds, newDecade, validGenres);
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
@@ -109,10 +122,11 @@ export const Game: React.FC = () => {
         status: 'ready',
         score: 0,
         decade: newDecade,
+        genres: validGenres,
       }));
     } else {
       // If all songs in session are exhausted, reset played history
-      const freshSong = musicService.getRandomSong([], newDecade, gameState.genre);
+      const freshSong = musicService.getRandomSong([], newDecade, validGenres);
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
@@ -123,17 +137,41 @@ export const Game: React.FC = () => {
           status: 'ready',
           score: 0,
           decade: newDecade,
+          genres: validGenres,
         }));
       }
     }
   };
 
-  // Handle Genre selection
-  const handleSelectGenre = (newGenre: GenreFilter) => {
-    if (newGenre === gameState.genre && gameState.currentSong) return;
+  // Handle Multi-Select Genre toggling
+  const handleToggleGenre = (clickedGenre: GenreFilter) => {
+    let newGenres: GenreFilter[];
+
+    if (clickedGenre === 'all') {
+      newGenres = ['all'];
+    } else {
+      if (gameState.genres.includes('all')) {
+        // If ALL was active, disable ALL and activate clicked genre
+        newGenres = [clickedGenre];
+      } else if (gameState.genres.includes(clickedGenre)) {
+        // If already active, remove it
+        const remaining = gameState.genres.filter((g) => g !== clickedGenre);
+        // If empty after deselecting, automatically return to ALL
+        newGenres = remaining.length > 0 ? remaining : ['all'];
+      } else {
+        // Add to active genres
+        newGenres = [...gameState.genres, clickedGenre];
+      }
+    }
+
+    // Check if selection is effectively unchanged
+    const isSame =
+      newGenres.length === gameState.genres.length &&
+      newGenres.every((g) => gameState.genres.includes(g));
+    if (isSame && gameState.currentSong) return;
 
     audioService.stop();
-    const song = musicService.getRandomSong(playedSongIds, gameState.decade, newGenre);
+    const song = musicService.getRandomSong(playedSongIds, gameState.decade, newGenres);
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
@@ -144,10 +182,10 @@ export const Game: React.FC = () => {
         guesses: [],
         status: 'ready',
         score: 0,
-        genre: newGenre,
+        genres: newGenres,
       }));
     } else {
-      const freshSong = musicService.getRandomSong([], gameState.decade, newGenre);
+      const freshSong = musicService.getRandomSong([], gameState.decade, newGenres);
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
@@ -157,26 +195,26 @@ export const Game: React.FC = () => {
           guesses: [],
           status: 'ready',
           score: 0,
-          genre: newGenre,
+          genres: newGenres,
         }));
       }
     }
   };
 
-  // Next Song transition (resets progression, guesses, audio, and loads new song)
+  // Move to next song in round after win/loss
   const handleNextSong = () => {
     audioService.stop();
 
     const song = musicService.getRandomSong(
       playedSongIds,
       gameState.decade,
-      gameState.genre
+      gameState.genres
     );
     if (!song) {
       const freshSong = musicService.getRandomSong(
         [],
         gameState.decade,
-        gameState.genre
+        gameState.genres
       );
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
@@ -203,8 +241,7 @@ export const Game: React.FC = () => {
     }));
   };
 
-  // Seamless Gameplay Safety Net:
-  // If an audio stream ever fails at runtime, silently blacklist it and pick another verified track
+  // Seamless Gameplay Safety Net
   const handleAudioFailure = useCallback(() => {
     if (!gameState.currentSong) return;
     const failedSongId = gameState.currentSong.id;
@@ -213,7 +250,7 @@ export const Game: React.FC = () => {
     const replacement = musicService.getRandomSong(
       playedSongIds,
       gameState.decade,
-      gameState.genre
+      gameState.genres
     );
     if (replacement) {
       setPlayedSongIds((prev) => [...prev, replacement.id]);
@@ -222,7 +259,7 @@ export const Game: React.FC = () => {
         currentSong: replacement,
       }));
     }
-  }, [gameState.currentSong, playedSongIds, gameState.decade, gameState.genre]);
+  }, [gameState.currentSong, playedSongIds, gameState.decade, gameState.genres]);
 
   // Player selects a guess from autocomplete
   const handleSelectGuess = (selectedSong: Song) => {
@@ -300,163 +337,158 @@ export const Game: React.FC = () => {
         decade={gameState.decade}
       />
 
-      {/* Main Responsive Grid Container */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex-1 flex flex-col justify-between">
-        {/* Minimalist Top Header */}
-        <header className="mb-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+      {/* 2. Floating Desktop Genre Rail (Fixed Left - Zero Impact on Center Layout) */}
+      {!isGameOver && (
+        <aside
+          id="desktop-genre-rail"
+          className="hidden xl:flex fixed left-6 2xl:left-12 top-1/2 -translate-y-1/2 z-30 flex-col pointer-events-auto"
+          aria-label="Genre Filters"
+        >
+          <GenreSelector
+            selectedGenres={gameState.genres}
+            selectedDecade={gameState.decade}
+            onToggleGenre={handleToggleGenre}
+            disabled={gameState.status === 'loading'}
+            layoutMode="vertical"
+          />
+        </aside>
+      )}
+
+      {/* 3. Main Screen-Centered Game Container (Centering is Viewport-Aligned) */}
+      <div className="relative z-10 w-full max-w-xl mx-auto flex-1 flex flex-col justify-between items-center">
+        {/* Minimalist Top Header (Centered on Viewport Axis) */}
+        <header className="w-full mb-5 sm:mb-6 flex items-center justify-center text-center">
+          <div className="inline-flex items-center justify-center gap-2.5">
             <span
-              className="w-2.5 h-2.5 rounded-full animate-pulse theme-transition"
+              className="w-2.5 h-2.5 rounded-full animate-pulse theme-transition flex-shrink-0"
               style={{
                 backgroundColor: 'var(--accent)',
                 boxShadow: '0 0 12px var(--accent)',
               }}
             />
-            <h1 className="text-xl font-black tracking-widest text-white uppercase">
+            <h1 className="text-xl font-black tracking-widest text-white uppercase select-none">
               MELODEX
             </h1>
           </div>
         </header>
 
-        {/* Content Layout: Desktop Left Rail + Central Game Board */}
-        <div className="w-full flex-1 flex flex-col lg:flex-row items-stretch lg:items-start gap-6 lg:gap-10">
-          {/* Desktop Left Rail: Genre Filter Navigation */}
-          {!isGameOver && (
-            <aside className="hidden lg:flex flex-col w-48 shrink-0 pt-1">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-neutral-400 mb-3 px-3">
-                Genres
-              </div>
-              <GenreSelector
-                selectedGenre={gameState.genre}
-                selectedDecade={gameState.decade}
-                onSelectGenre={handleSelectGenre}
-                disabled={gameState.status === 'loading'}
-                layoutMode="vertical"
+        {/* Decade Selector */}
+        {!isGameOver && (
+          <div className="w-full mb-3">
+            <DecadeSelector
+              selectedDecade={gameState.decade}
+              onSelectDecade={handleSelectDecade}
+              disabled={gameState.status === 'loading'}
+            />
+          </div>
+        )}
+
+        {/* Mobile / Tablet Horizontal Genre Strip (Multi-Select, Hidden on XL where Rail is Fixed) */}
+        {!isGameOver && (
+          <div className="xl:hidden w-full mb-4">
+            <GenreSelector
+              selectedGenres={gameState.genres}
+              selectedDecade={gameState.decade}
+              onToggleGenre={handleToggleGenre}
+              disabled={gameState.status === 'loading'}
+              layoutMode="horizontal"
+            />
+          </div>
+        )}
+
+        {/* Loading State */}
+        {gameState.status === 'loading' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="my-auto py-16 text-center"
+          >
+            <RefreshCw
+              className="w-8 h-8 animate-spin mx-auto mb-3 theme-transition"
+              style={{ color: 'var(--accent)' }}
+            />
+            <h2 className="text-base font-semibold text-white">Loading Melodex...</h2>
+          </motion.div>
+        )}
+
+        {/* Error State */}
+        {gameState.status === 'error' && (
+          <div className="my-auto py-12 text-center">
+            <AlertTriangle className="w-9 h-9 mx-auto text-rose-400 mb-2" />
+            <h2 className="text-base font-bold text-white">Unable to Load Music</h2>
+            <p className="text-xs sm:text-sm text-neutral-400 mt-1 mb-4">
+              {initError || 'An error occurred while loading tracks.'}
+            </p>
+            <button
+              id="retry-init-btn"
+              onClick={() => initializeGame(gameState.decade, gameState.genres)}
+              className="px-6 py-2.5 text-xs sm:text-sm font-bold rounded-full transition-colors theme-transition"
+              style={{
+                backgroundColor: 'var(--accent)',
+                color: 'var(--accent-text-color)',
+              }}
+            >
+              Retry Connection
+            </button>
+          </div>
+        )}
+
+        {/* Dynamic Game View: Gameplay vs Centered Result */}
+        <AnimatePresence mode="wait">
+          {!isGameOver && gameState.status === 'ready' && gameState.currentSong && (
+            <motion.main
+              key="gameplay-view"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex-1 flex flex-col justify-center my-auto"
+            >
+              {/* Audio Player Controls */}
+              <AudioPlayer
+                previewUrl={gameState.currentSong.previewUrl}
+                previewStart={gameState.currentSong.previewStart ?? 0}
+                currentStage={gameState.currentStage}
+                disabled={false}
+                onAudioError={handleAudioFailure}
               />
-            </aside>
+
+              {/* Song Search / Guess Field */}
+              <SongSearch
+                onSelectGuess={handleSelectGuess}
+                onSkip={handleSkip}
+                currentStage={gameState.currentStage}
+                disabled={false}
+                alreadyGuessedIds={alreadyGuessedIds}
+              />
+
+              {/* Previous Wrong Guesses */}
+              <GuessHistory
+                guesses={gameState.guesses}
+                currentStage={gameState.currentStage}
+              />
+            </motion.main>
           )}
 
-          {/* Central Gameplay Area (max-w-2xl) */}
-          <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col justify-between">
-            {/* Decade Selector */}
-            {!isGameOver && (
-              <div className="w-full mb-3">
-                <DecadeSelector
-                  selectedDecade={gameState.decade}
-                  onSelectDecade={handleSelectDecade}
-                  disabled={gameState.status === 'loading'}
-                />
-              </div>
-            )}
-
-            {/* Mobile / Tablet Horizontal Genre Strip */}
-            {!isGameOver && (
-              <div className="lg:hidden w-full mb-4">
-                <GenreSelector
-                  selectedGenre={gameState.genre}
-                  selectedDecade={gameState.decade}
-                  onSelectGenre={handleSelectGenre}
-                  disabled={gameState.status === 'loading'}
-                  layoutMode="horizontal"
-                />
-              </div>
-            )}
-
-            {/* Loading State */}
-            {gameState.status === 'loading' && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="my-auto py-16 text-center"
-              >
-                <RefreshCw
-                  className="w-8 h-8 animate-spin mx-auto mb-3 theme-transition"
-                  style={{ color: 'var(--accent)' }}
-                />
-                <h2 className="text-base font-semibold text-white">Loading Melodex...</h2>
-              </motion.div>
-            )}
-
-            {/* Error State */}
-            {gameState.status === 'error' && (
-              <div className="my-auto py-12 text-center">
-                <AlertTriangle className="w-9 h-9 mx-auto text-rose-400 mb-2" />
-                <h2 className="text-base font-bold text-white">Unable to Load Music</h2>
-                <p className="text-xs sm:text-sm text-neutral-400 mt-1 mb-4">
-                  {initError || 'An error occurred while loading tracks.'}
-                </p>
-                <button
-                  id="retry-init-btn"
-                  onClick={() => initializeGame(gameState.decade, gameState.genre)}
-                  className="px-6 py-2.5 text-xs sm:text-sm font-bold rounded-full transition-colors theme-transition"
-                  style={{
-                    backgroundColor: 'var(--accent)',
-                    color: 'var(--accent-text-color)',
-                  }}
-                >
-                  Retry Connection
-                </button>
-              </div>
-            )}
-
-            {/* Dynamic Game View: Gameplay vs Centered Result */}
-            <AnimatePresence mode="wait">
-              {!isGameOver && gameState.status === 'ready' && gameState.currentSong && (
-                <motion.main
-                  key="gameplay-view"
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full flex-1 flex flex-col justify-center my-auto"
-                >
-                  {/* Audio Player Controls */}
-                  <AudioPlayer
-                    previewUrl={gameState.currentSong.previewUrl}
-                    previewStart={gameState.currentSong.previewStart ?? 0}
-                    currentStage={gameState.currentStage}
-                    disabled={false}
-                    onAudioError={handleAudioFailure}
-                  />
-
-                  {/* Song Search / Guess Field */}
-                  <SongSearch
-                    onSelectGuess={handleSelectGuess}
-                    onSkip={handleSkip}
-                    currentStage={gameState.currentStage}
-                    disabled={false}
-                    alreadyGuessedIds={alreadyGuessedIds}
-                  />
-
-                  {/* Previous Wrong Guesses */}
-                  <GuessHistory
-                    guesses={gameState.guesses}
-                    currentStage={gameState.currentStage}
-                  />
-                </motion.main>
-              )}
-
-              {isGameOver && gameState.currentSong && (
-                <motion.main
-                  key="result-view"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="w-full flex-1 flex flex-col justify-center items-center my-auto"
-                >
-                  <ResultCard
-                    status={gameState.status as 'won' | 'lost'}
-                    currentSong={gameState.currentSong}
-                    currentStage={gameState.currentStage}
-                    score={gameState.score}
-                    onNextSong={handleNextSong}
-                  />
-                </motion.main>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
+          {isGameOver && gameState.currentSong && (
+            <motion.main
+              key="result-view"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="w-full flex-1 flex flex-col justify-center items-center my-auto"
+            >
+              <ResultCard
+                status={gameState.status as 'won' | 'lost'}
+                currentSong={gameState.currentSong}
+                currentStage={gameState.currentStage}
+                score={gameState.score}
+                onNextSong={handleNextSong}
+              />
+            </motion.main>
+          )}
+        </AnimatePresence>
 
         {/* Minimal Footer */}
         <footer className="mt-8 text-center text-xs text-neutral-600">
@@ -466,4 +498,3 @@ export const Game: React.FC = () => {
     </div>
   );
 };
-
