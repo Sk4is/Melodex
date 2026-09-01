@@ -13,4 +13,6 @@ export interface Song {
   previewUrl: string;
   previewStart?: number;
   provider?: 'itunes' | 'deezer' | 'spotify' | string;
+  trackIdentityVerified?: boolean;
+  providerTrackId?: string;
 }

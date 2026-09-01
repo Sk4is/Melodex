@@ -4,10 +4,19 @@ import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/no
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 import { audioService } from './audioService';
 
+export function getSecureRandomFloat(): number {
+  if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+    const arr = new Uint32Array(1);
+    crypto.getRandomValues(arr);
+    return arr[0] / (0xffffffff + 1);
+  }
+  return Math.random();
+}
+
 export function fisherYatesShuffle<T>(items: readonly T[]): T[] {
   const result = [...items];
   for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(getSecureRandomFloat() * (i + 1));
     [result[i], result[j]] = [result[j], result[i]];
   }
   return result;
@@ -274,7 +283,7 @@ export function getNormalizedGenre(genre?: string, artist = '', title = ''): Nor
 const STORAGE_RECENT_TRACKS = 'melodex_recent_tracks_v2';
 const STORAGE_RECENT_ARTISTS = 'melodex_recent_artists_v2';
 const STORAGE_QUARANTINED_SONGS = 'melodex_quarantined_songs_v2';
-const MAX_RECENT_TRACKS = 200;
+const MAX_RECENT_TRACKS = 250;
 const MAX_RECENT_ARTISTS = 25;
 
 class MusicService {
@@ -449,11 +458,15 @@ class MusicService {
         const data = await itunesRes.json();
         if (Array.isArray(data.results) && data.results.length > 0) {
           const normTitle = song.title.toLowerCase().replace(/[^a-z0-9]/g, '');
-          const match = data.results.find((r: { trackName?: string; previewUrl?: string }) => {
+          const normArtist = song.artist.toLowerCase().replace(/[^a-z0-9]/g, '');
+          const match = data.results.find((r: { trackName?: string; artistName?: string; previewUrl?: string }) => {
             if (!r.previewUrl) return false;
             const rTitle = (r.trackName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            return rTitle.includes(normTitle) || normTitle.includes(rTitle);
-          }) || data.results[0];
+            const rArtist = (r.artistName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            const artistMatches = rArtist.includes(normArtist) || normArtist.includes(rArtist);
+            const titleMatches = rTitle.includes(normTitle) || normTitle.includes(rTitle);
+            return artistMatches && titleMatches;
+          });
 
           if (match && match.previewUrl) {
             // Update in-memory song with fresh preview URL
@@ -475,9 +488,17 @@ class MusicService {
   /**
    * Strict validation rule for catalog item acceptance:
    * Must have id, title, artist, valid audio preview, and verified year with high confidence
+   * ONLY trackIdentityVerified === true may enter gameplay.
    */
   public isValidCatalogItem(item: Song | null | undefined): item is Song {
     if (!item || !item.id || !item.title || !item.artist || !item.previewUrl) {
+      return false;
+    }
+    // Strict requirement: trackIdentityVerified must be true
+    if (item.trackIdentityVerified !== true) {
+      return false;
+    }
+    if (!item.previewUrl.startsWith('http')) {
       return false;
     }
     const year = this.getVerifiedYear(item);
@@ -787,57 +808,78 @@ class MusicService {
       const songs = artistMap.get(aKey) || [];
       if (songs.length === 0) continue;
 
-      // Average recognition of this artist's available songs
-      const avgScore = songs.reduce((sum, s) => sum + (s.recognitionScore ?? 75), 0) / songs.length;
-      const recWeight = Math.pow(Math.max(25, avgScore) / 80, 1.2);
+      // Base weight = 1.0 (Requirement 17: GENRE -> ARTIST -> SONG, fair artist baseline)
+      const baseWeight = 1.0;
 
-      // Session exposure penalty (reduces probability of hearing the same artist repeatedly in 1 session)
+      // Session exposure penalty (Requirement 20: 0 appearances gain preference vs multiple appearances)
       const exposureCount = this.sessionArtistExposure.get(aKey) || 0;
-      const exposurePenalty = 1 / (1 + exposureCount * 0.85);
+      const sessionExposurePenalty = exposureCount === 0 ? 1.5 : 1 / (1 + exposureCount * 2.0);
 
-      // Cooldown penalty from recent games / reloads
-      const isRecentArtist = this.recentArtistKeys.includes(aKey);
-      const recentIndex = this.recentArtistKeys.indexOf(aKey);
-      const recentPenalty = isRecentArtist
-        ? Math.max(0.12, ((this.recentArtistKeys.length - recentIndex) / this.recentArtistKeys.length) * 0.4)
-        : 1.0;
+      // Cooldown penalty from recent games / reloads (Requirement 19: strongly penalize recent artists)
+      const recentPos = this.recentArtistKeys.lastIndexOf(aKey);
+      let recentArtistPenalty = 1.0;
+      if (recentPos !== -1) {
+        const roundsAgo = this.recentArtistKeys.length - 1 - recentPos;
+        if (roundsAgo <= 5) {
+          recentArtistPenalty = 0.05;
+        } else if (roundsAgo <= 15) {
+          recentArtistPenalty = 0.20;
+        } else if (roundsAgo <= 25) {
+          recentArtistPenalty = 0.50;
+        }
+      }
 
-      const finalWeight = recWeight * exposurePenalty * recentPenalty;
+      // Availability health: count of tracks not in recentTrackIds (Requirement 20: availabilityHealth)
+      const unplayedCount = songs.filter(s => !this.recentTrackIds.includes(s.id)).length;
+      const availabilityHealth = Math.min(1.0, Math.max(0.15, unplayedCount / 2));
+
+      // Final composite artist weight
+      const finalWeight = baseWeight * recentArtistPenalty * sessionExposurePenalty * availabilityHealth;
       weightedArtists.push({ key: aKey, weight: finalWeight, songs });
     }
 
     // Sort artists with random entropy based on dynamic weights
     weightedArtists.sort((a, b) => {
-      const scoreA = a.weight * (0.6 + Math.random() * 0.8);
-      const scoreB = b.weight * (0.6 + Math.random() * 0.8);
+      const scoreA = a.weight * (0.6 + getSecureRandomFloat() * 0.8);
+      const scoreB = b.weight * (0.6 + getSecureRandomFloat() * 0.8);
       return scoreB - scoreA;
     });
 
-    // Pick 1 or 2 best tracks per artist
+    // Pick 1 best track per artist (Requirement 21: weighted randomness among recognizable tracks, not always #1 hit)
     for (const item of weightedArtists) {
       const { songs } = item;
-      // Prefer songs not in recent track history
       const notRecent = songs.filter((s) => !this.recentTrackIds.includes(s.id));
-      const songPool = notRecent.length > 0 ? notRecent : songs;
+      const pool = notRecent.length > 0 ? notRecent : songs;
 
-      // Sort songs within artist by recognition with slight randomness
-      const sortedSongs = [...songPool].sort((a, b) => {
-        const rA = (a.recognitionScore ?? 75) * (0.8 + Math.random() * 0.4);
-        const rB = (b.recognitionScore ?? 75) * (0.8 + Math.random() * 0.4);
-        return rB - rA;
+      // Weighted selection among artist's pool
+      const sortedSongs = [...pool].sort((a, b) => {
+        const scoreA = (a.recognitionScore ?? 75) * (0.5 + getSecureRandomFloat() * 1.0);
+        const scoreB = (b.recognitionScore ?? 75) * (0.5 + getSecureRandomFloat() * 1.0);
+        return scoreB - scoreA;
       });
 
       if (sortedSongs[0]) {
         deckSelection.push(sortedSongs[0]);
       }
-      // If artist has many tracks and total selection is modest, take a second track
-      if (sortedSongs.length >= 4 && deckSelection.length < 120 && sortedSongs[1]) {
+      // If total deck is small, allow a 2nd song for artists with ample catalog
+      if (deckSelection.length < 80 && sortedSongs.length >= 5 && sortedSongs[1]) {
         deckSelection.push(sortedSongs[1]);
       }
     }
 
     // 4. Final Fisher-Yates shuffle on the balanced deck
     const shuffledDeck = fisherYatesShuffle(deckSelection);
+
+    // Prevent immediate repeat on the first card drawn from fresh deck
+    const lastPlayedId = this.recentTrackIds[this.recentTrackIds.length - 1];
+    const lastPlayedArtist = this.recentArtistKeys[this.recentArtistKeys.length - 1];
+    if (shuffledDeck.length > 1) {
+      const topSong = shuffledDeck[shuffledDeck.length - 1];
+      if (topSong && (topSong.id === lastPlayedId || normalizeArtistKey(topSong.artist) === lastPlayedArtist)) {
+        const swapIdx = Math.floor(getSecureRandomFloat() * (shuffledDeck.length - 1));
+        [shuffledDeck[shuffledDeck.length - 1], shuffledDeck[swapIdx]] = [shuffledDeck[swapIdx], shuffledDeck[shuffledDeck.length - 1]];
+      }
+    }
 
     this.sessionDeck = shuffledDeck;
     this.currentDeckKey = deckKey;
@@ -865,6 +907,7 @@ class MusicService {
 
   /**
    * Synchronous fallback selection adhering to the Session Deck.
+   * Strictly enforces anti-repeat cooldowns: NEVER repeats the immediate previous song.
    */
   public getRandomSong(
     excludeIds: string[] = [],
@@ -879,6 +922,12 @@ class MusicService {
     }
 
     const excludeSet = new Set(excludeIds);
+    // Hard constraint: Never repeat the immediately preceding played song
+    const lastPlayedId = this.recentTrackIds[this.recentTrackIds.length - 1];
+    if (lastPlayedId) {
+      excludeSet.add(lastPlayedId);
+    }
+
     const eligible = this.sessionDeck.filter((s) => !excludeSet.has(s.id) && !this.rejectedSongIds.has(s.id));
 
     if (eligible.length > 0) {
@@ -888,16 +937,24 @@ class MusicService {
       return chosen;
     }
 
+    // Fallback if sessionDeck exhausted
     const allEligible = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-      .filter((s) => !excludeSet.has(s.id) && !this.rejectedSongIds.has(s.id));
+      .filter((s) => !this.rejectedSongIds.has(s.id));
 
-    if (allEligible.length > 0) {
-      const chosen = allEligible[Math.floor(Math.random() * allEligible.length)];
-      this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
-      return chosen;
-    }
+    if (allEligible.length === 0) return null;
 
-    return null;
+    // Prioritize non-recent songs
+    const notRecent = allEligible.filter((s) => !excludeSet.has(s.id) && !this.recentTrackIds.includes(s.id));
+    const notExcluded = allEligible.filter((s) => !excludeSet.has(s.id));
+    const pool = notRecent.length > 0 ? notRecent : notExcluded.length > 0 ? notExcluded : allEligible;
+
+    // If pool has more than 1 item and lastPlayedId is in pool, strictly remove lastPlayedId
+    const nonImmediate = pool.filter((s) => s.id !== lastPlayedId);
+    const finalPool = nonImmediate.length > 0 ? nonImmediate : pool;
+
+    const chosen = finalPool[Math.floor(getSecureRandomFloat() * finalPool.length)];
+    this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
+    return chosen;
   }
 
   /**
@@ -953,6 +1010,11 @@ class MusicService {
     }
 
     const triedIds = new Set<string>(excludeIds);
+    // Hard constraint: Never repeat the immediately preceding played song
+    const lastPlayedId = this.recentTrackIds[this.recentTrackIds.length - 1];
+    if (lastPlayedId) {
+      triedIds.add(lastPlayedId);
+    }
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
       // Rebuild deck if exhausted
@@ -961,9 +1023,14 @@ class MusicService {
       }
 
       if (this.sessionDeck.length === 0) {
-        const fallback = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres);
+        const fallback = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
+          .filter((s) => !this.rejectedSongIds.has(s.id));
         if (fallback.length === 0) return null;
-        return fallback[Math.floor(Math.random() * fallback.length)];
+        const notTried = fallback.filter((s) => !triedIds.has(s.id));
+        const pool = notTried.length > 0 ? notTried : fallback;
+        const chosen = pool[Math.floor(getSecureRandomFloat() * pool.length)];
+        this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
+        return chosen;
       }
 
       // Pop next candidate from the deck (consumed without replacement!)
@@ -988,8 +1055,14 @@ class MusicService {
     }
 
     // Fallback if max attempts exceeded
-    const remaining = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres);
-    return remaining.length > 0 ? remaining[Math.floor(Math.random() * remaining.length)] : null;
+    const remaining = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
+      .filter((s) => !this.rejectedSongIds.has(s.id));
+    if (remaining.length === 0) return null;
+    const notTried = remaining.filter((s) => !triedIds.has(s.id));
+    const pool = notTried.length > 0 ? notTried : remaining;
+    const chosen = pool[Math.floor(getSecureRandomFloat() * pool.length)];
+    this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
+    return chosen;
   }
 }
 
