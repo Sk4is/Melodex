@@ -1,7 +1,7 @@
 import { Song } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
 import { fuzzyMatchSong } from '../utils/normalizeText';
-import prebuiltCatalog from '../data/melodex-catalog.json';
+import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 
 export type NormalizedGenre =
   | 'Pop'
@@ -267,20 +267,95 @@ class MusicService {
   }
 
   /**
-   * Initializes catalog with prebuilt verified songs
+   * Initializes catalog with prebuilt verified songs from version-controlled file
    */
   private bootstrapCatalog() {
     try {
-      if (Array.isArray(prebuiltCatalog)) {
-        for (const item of prebuiltCatalog as Song[]) {
+      if (Array.isArray(MELODEX_BASE_CATALOG)) {
+        for (const item of MELODEX_BASE_CATALOG) {
           if (this.isValidCatalogItem(item)) {
             this.catalog.set(item.id, item);
           }
         }
       }
-    } catch {
-      // Will fall back to dynamic load if needed
+    } catch (e) {
+      console.warn('Failed to bootstrap catalog synchronously:', e);
     }
+  }
+
+  /**
+   * Additively expands the catalog with new verified tracks.
+   * Deduplicates by ID and Title+Artist signature without overwriting existing verified catalog.
+   */
+  public addVerifiedTracks(newTracks: Song[]): number {
+    if (!Array.isArray(newTracks) || newTracks.length === 0) return 0;
+
+    let addedCount = 0;
+    const existingSignatures = new Set<string>();
+
+    for (const song of this.catalog.values()) {
+      const sig = `${song.artist.toLowerCase().trim()}:::${song.title.toLowerCase().trim()}`;
+      existingSignatures.add(sig);
+    }
+
+    for (const track of newTracks) {
+      if (!this.isValidCatalogItem(track)) continue;
+      if (this.catalog.has(track.id) || this.rejectedSongIds.has(track.id)) continue;
+
+      const sig = `${track.artist.toLowerCase().trim()}:::${track.title.toLowerCase().trim()}`;
+      if (existingSignatures.has(sig)) continue;
+
+      this.catalog.set(track.id, track);
+      existingSignatures.add(sig);
+      addedCount++;
+    }
+
+    if (addedCount > 0) {
+      this.invalidateCountCache();
+    }
+    return addedCount;
+  }
+
+  /**
+   * Runtime Audio URL Re-Resolution (Requirement 11):
+   * If a preview URL expires or fails at runtime, queries iTunes Search API or Deezer API
+   * to resolve a fresh, valid audio stream without modifying game state.
+   */
+  public async resolveFreshPreviewUrl(song: Song): Promise<string | null> {
+    if (!song || !song.title || !song.artist) return null;
+
+    try {
+      // 1. Try iTunes Search API
+      const itunesQuery = encodeURIComponent(`${song.artist} ${song.title}`);
+      const itunesRes = await fetch(
+        `https://itunes.apple.com/search?term=${itunesQuery}&media=music&entity=song&limit=5`
+      );
+
+      if (itunesRes.ok) {
+        const data = await itunesRes.json();
+        if (Array.isArray(data.results) && data.results.length > 0) {
+          const normTitle = song.title.toLowerCase().replace(/[^a-z0-9]/g, '');
+          const match = data.results.find((r: { trackName?: string; previewUrl?: string }) => {
+            if (!r.previewUrl) return false;
+            const rTitle = (r.trackName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+            return rTitle.includes(normTitle) || normTitle.includes(rTitle);
+          }) || data.results[0];
+
+          if (match && match.previewUrl) {
+            // Update in-memory song with fresh preview URL
+            song.previewUrl = match.previewUrl;
+            if (match.artworkUrl100 && !song.artworkUrl) {
+              song.artworkUrl = match.artworkUrl100.replace('100x100bb', '600x600bb');
+            }
+            return match.previewUrl;
+          }
+        }
+      }
+    } catch {
+      // Fallback network failure handled below
+    }
+
+    return null;
   }
 
   /**

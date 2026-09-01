@@ -2,6 +2,7 @@ export interface Song {
   id: string;
   title: string;
   artist: string;
+  normalizedArtist?: string;
   album?: string;
   year?: number;
   verifiedOriginalYear?: number;
@@ -11,4 +12,5 @@ export interface Song {
   artworkUrl?: string;
   previewUrl: string;
   previewStart?: number;
+  provider?: 'itunes' | 'deezer' | 'spotify' | string;
 }

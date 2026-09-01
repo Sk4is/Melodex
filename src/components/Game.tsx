@@ -241,11 +241,27 @@ export const Game: React.FC = () => {
     }));
   };
 
-  // Seamless Gameplay Safety Net
-  const handleAudioFailure = useCallback(() => {
+  // Seamless Gameplay Safety Net with Auto Re-Resolution
+  const handleAudioFailure = useCallback(async () => {
     if (!gameState.currentSong) return;
-    const failedSongId = gameState.currentSong.id;
-    musicService.rejectSong(failedSongId);
+    const failedSong = gameState.currentSong;
+
+    // 1. Attempt to resolve a fresh preview URL if the preview expired
+    try {
+      const freshUrl = await musicService.resolveFreshPreviewUrl(failedSong);
+      if (freshUrl && freshUrl !== failedSong.previewUrl) {
+        setGameState((prev) => ({
+          ...prev,
+          currentSong: { ...failedSong, previewUrl: freshUrl },
+        }));
+        return;
+      }
+    } catch {
+      // Continue to replacement fallback
+    }
+
+    // 2. If re-resolution fails or preview is permanently gone, reject and replace
+    musicService.rejectSong(failedSong.id);
 
     const replacement = musicService.getRandomSong(
       playedSongIds,
