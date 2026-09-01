@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { motion } from 'motion/react';
 import { GenreFilter, GENRE_OPTIONS, DecadeFilter } from '../types/game';
 import { musicService } from '../services/musicService';
@@ -19,6 +19,72 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
   layoutMode = 'horizontal',
 }) => {
   const isAll = selectedGenres.includes('all') || selectedGenres.length === 0;
+
+  // Horizontal scroll container refs & state for visual discovery fades and smooth drag
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Mouse drag support for desktop emulation & testing
+  const isPointerDown = useRef(false);
+  const startX = useRef(0);
+  const startScrollLeft = useRef(0);
+  const hasDragged = useRef(false);
+
+  const checkScrollability = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    setCanScrollLeft(scrollLeft > 4);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 4);
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    checkScrollability();
+    el.addEventListener('scroll', checkScrollability, { passive: true });
+    window.addEventListener('resize', checkScrollability, { passive: true });
+    return () => {
+      el.removeEventListener('scroll', checkScrollability);
+      window.removeEventListener('resize', checkScrollability);
+    };
+  }, [checkScrollability]);
+
+  // Handle pointer down (mouse/touch drag for seamless swiping)
+  const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (layoutMode === 'vertical') return;
+    isPointerDown.current = true;
+    hasDragged.current = false;
+    startX.current = e.pageX;
+    startScrollLeft.current = scrollRef.current?.scrollLeft || 0;
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!isPointerDown.current || !scrollRef.current) return;
+    const dx = e.pageX - startX.current;
+    if (Math.abs(dx) > 6) {
+      hasDragged.current = true;
+    }
+    scrollRef.current.scrollLeft = startScrollLeft.current - dx;
+  };
+
+  const handlePointerUp = () => {
+    isPointerDown.current = false;
+  };
+
+  const handlePointerCancel = () => {
+    isPointerDown.current = false;
+  };
+
+  // Click handler that suppresses accidental clicks after dragging/swiping
+  const handleGenreClick = (genre: GenreFilter) => {
+    if (hasDragged.current) {
+      hasDragged.current = false;
+      return;
+    }
+    onToggleGenre(genre);
+  };
 
   if (layoutMode === 'vertical') {
     return (
@@ -42,7 +108,7 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
               id={`genre-filter-btn-${option.id}`}
               type="button"
               disabled={disabled || (isUnavailable && !isActive)}
-              onClick={() => onToggleGenre(option.id)}
+              onClick={() => handleGenreClick(option.id)}
               className={`group text-left text-xs sm:text-[13px] tracking-wider uppercase transition-all duration-150 focus:outline-none flex items-center gap-2 py-0.5 px-1 select-none ${
                 isActive
                   ? 'font-bold'
@@ -75,57 +141,77 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
     );
   }
 
-  // Horizontal mobile/tablet strip
+  // Horizontal Mobile / Tablet Swipeable Carousel
   return (
-    <nav
-      id="genre-selector-horizontal"
-      aria-label="Genre Filters"
-      className="w-full flex items-center gap-2 overflow-x-auto scrollbar-none py-1.5 px-0.5 select-none no-scrollbar"
-      style={{
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none',
-      }}
+    <div
+      id="genre-carousel-wrapper"
+      className="relative w-full overflow-hidden select-none"
+      style={{ touchAction: 'pan-y' }}
     >
-      {GENRE_OPTIONS.map((option) => {
-        const isAllOption = option.id === 'all';
-        const isActive = isAllOption ? isAll : !isAll && selectedGenres.includes(option.id);
-        const availableCount = musicService.getPlayableCount(selectedDecade, option.id);
-        const isUnavailable = availableCount === 0;
+      {/* Left Edge Subtle Fade (indicates previous genres available) */}
+      <div
+        className={`absolute left-0 top-0 bottom-0 w-6 z-20 pointer-events-none bg-gradient-to-r from-[#060709] to-transparent transition-opacity duration-200 ${
+          canScrollLeft ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
 
-        return (
-          <button
-            key={option.id}
-            id={`genre-filter-btn-mobile-${option.id}`}
-            type="button"
-            disabled={disabled || (isUnavailable && !isActive)}
-            onClick={() => onToggleGenre(option.id)}
-            className={`relative group flex items-center px-3 py-1.5 text-xs sm:text-sm rounded-lg transition-all duration-200 focus:outline-none whitespace-nowrap select-none ${
-              isActive
-                ? 'font-bold'
-                : isUnavailable
-                ? 'text-neutral-700 cursor-not-allowed opacity-40'
-                : 'text-neutral-500 hover:text-neutral-200'
-            }`}
-            style={{
-              color: isActive ? 'var(--accent)' : undefined,
-              textShadow: isActive ? '0 0 16px var(--accent-glow)' : undefined,
-            }}
-          >
-            {isActive && (
-              <motion.span
-                layoutId={`active-genre-indicator-mobile-${option.id}`}
-                className="absolute inset-0 rounded-lg bg-neutral-900/80 border theme-transition -z-10"
-                style={{
-                  boxShadow: '0 0 12px var(--accent-glow)',
-                  borderColor: 'var(--accent)',
-                }}
-                transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10 tracking-wide">{option.label}</span>
-          </button>
-        );
-      })}
-    </nav>
+      {/* Right Edge Subtle Fade (indicates more genres available) */}
+      <div
+        className={`absolute right-0 top-0 bottom-0 w-8 z-20 pointer-events-none bg-gradient-to-l from-[#060709] to-transparent transition-opacity duration-200 ${
+          canScrollRight ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+
+      {/* Swipeable Scroll Container */}
+      <div
+        ref={scrollRef}
+        id="genre-selector-horizontal"
+        role="navigation"
+        aria-label="Genre Filters Carousel"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
+        className="w-full flex items-center gap-2 overflow-x-auto py-1.5 px-2 select-none no-scrollbar touch-pan-x cursor-grab active:cursor-grabbing"
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          WebkitOverflowScrolling: 'touch',
+          overscrollBehaviorX: 'contain',
+        }}
+      >
+        {GENRE_OPTIONS.map((option) => {
+          const isAllOption = option.id === 'all';
+          const isActive = isAllOption ? isAll : !isAll && selectedGenres.includes(option.id);
+          const availableCount = musicService.getPlayableCount(selectedDecade, option.id);
+          const isUnavailable = availableCount === 0;
+
+          return (
+            <button
+              key={option.id}
+              id={`genre-filter-btn-mobile-${option.id}`}
+              type="button"
+              disabled={disabled || (isUnavailable && !isActive)}
+              onClick={() => handleGenreClick(option.id)}
+              className={`relative group flex-shrink-0 flex items-center justify-center px-3.5 py-1.5 min-h-[36px] text-xs sm:text-sm font-semibold uppercase tracking-wider rounded-xl transition-all duration-150 focus:outline-none whitespace-nowrap select-none ${
+                isActive
+                  ? 'bg-neutral-900/90 border font-bold'
+                  : isUnavailable
+                  ? 'text-neutral-700 bg-neutral-950/40 border border-neutral-900 cursor-not-allowed opacity-40'
+                  : 'text-neutral-400 hover:text-neutral-200 bg-neutral-900/40 border border-neutral-800/40 hover:border-neutral-700/60'
+              }`}
+              style={{
+                borderColor: isActive ? 'var(--accent)' : undefined,
+                color: isActive ? 'var(--accent)' : undefined,
+                textShadow: isActive ? '0 0 14px var(--accent-glow)' : undefined,
+                boxShadow: isActive ? '0 0 10px var(--accent-glow)' : undefined,
+              }}
+            >
+              <span className="relative z-10">{option.label}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 };
