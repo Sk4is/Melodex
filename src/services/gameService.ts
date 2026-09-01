@@ -1,5 +1,6 @@
 import { Song } from '../types/song';
 import { Guess, STAGES } from '../types/game';
+import { isMatchingArtist } from '../utils/normalizeText';
 
 export const SCORE_MAP: Record<number, number> = {
   0: 1000, // 0.5 sec
@@ -32,20 +33,30 @@ class GameService {
     return selectedSongId === currentSongId;
   }
 
+  /**
+   * Checks if guess has matching artist/collaborator even if the song is wrong
+   */
+  public isArtistMatch(guessArtist: string, targetArtist: string): boolean {
+    return isMatchingArtist(guessArtist, targetArtist);
+  }
+
   public hasAlreadyGuessed(guesses: Guess[], songId: string): boolean {
     return guesses.some((g) => g.songId === songId);
   }
 
   public createGuess(selectedSong: Song, currentSong: Song, stageNumber: number): Guess {
     const isCorrect = this.validateGuess(selectedSong.id, currentSong.id);
+    const correctArtist = !isCorrect && this.isArtistMatch(selectedSong.artist, currentSong.artist);
     return {
       songId: selectedSong.id,
       title: selectedSong.title,
       artist: selectedSong.artist,
       correct: isCorrect,
+      correctArtist,
       stageNumber,
     };
   }
 }
 
 export const gameService = new GameService();
+

@@ -96,3 +96,57 @@ export function fuzzyMatchSong(title: string, artist: string, query: string): bo
     return corpus.includes(token) || (squashedToken.length >= 2 && corpus.includes(squashedToken));
   });
 }
+
+/**
+ * Normalizes artist name for strict identity comparison:
+ * - Trims whitespace and converts to lower case
+ * - Removes accents / diacritics
+ * - Removes common English prefix "the " if present
+ * - Strips punctuation/symbols
+ */
+export function normalizeArtistIdentity(artist: string): string {
+  if (!artist) return '';
+  const norm = normalizeText(artist);
+  const withoutThe = norm.startsWith('the ') && norm.length > 4 ? norm.slice(4).trim() : norm;
+  return squashSymbols(withoutThe);
+}
+
+/**
+ * Checks if two artist strings match or share a primary/featured artist.
+ * Handles:
+ * - "Post Malone" vs "Post Malone"
+ * - "Post Malone feat. 21 Savage" vs "Post Malone"
+ * - "P!nk" vs "Pink", "Ke$ha" vs "Kesha", "JAY-Z" vs "Jay Z"
+ * - "David Guetta & Sia" vs "Sia"
+ * - "The Weeknd" vs "Weeknd"
+ * - "Beyoncé" vs "Beyonce"
+ */
+export function isMatchingArtist(artistA: string, artistB: string): boolean {
+  if (!artistA || !artistB) return false;
+
+  const idA = normalizeArtistIdentity(artistA);
+  const idB = normalizeArtistIdentity(artistB);
+
+  // Exact whole-string identity match
+  if (idA && idB && idA === idB) {
+    return true;
+  }
+
+  // Extract separate credited artists from both strings
+  const creditsA = extractArtistCredits(artistA).map(normalizeArtistIdentity).filter(c => c.length >= 2);
+  const creditsB = extractArtistCredits(artistB).map(normalizeArtistIdentity).filter(c => c.length >= 2);
+
+  // Check direct credit matching
+  for (const a of creditsA) {
+    for (const b of creditsB) {
+      if (a === b) return true;
+    }
+  }
+
+  // Also check if one full artist identity is contained as one of the credits
+  if (idA.length >= 3 && creditsB.some(b => b === idA)) return true;
+  if (idB.length >= 3 && creditsA.some(a => a === idB)) return true;
+
+  return false;
+}
+

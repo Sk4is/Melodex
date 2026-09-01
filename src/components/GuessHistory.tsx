@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Check } from 'lucide-react';
+import { X, Check, UserCheck } from 'lucide-react';
 import { Guess, STAGES } from '../types/game';
 
 interface GuessHistoryProps {
@@ -34,10 +34,19 @@ export const GuessHistory: React.FC<GuessHistoryProps> = ({
                 className={`py-2 px-3.5 rounded-xl text-xs flex items-center justify-between transition-colors ${
                   guess.correct
                     ? 'bg-neutral-900/80 text-white'
+                    : guess.correctArtist
+                    ? 'bg-neutral-900/80 text-neutral-200 border border-neutral-800'
                     : 'bg-neutral-900/60 text-neutral-300'
                 }`}
                 style={{
-                  borderLeft: guess.correct ? '3px solid var(--accent)' : undefined,
+                  borderLeft: guess.correct
+                    ? '3px solid var(--accent)'
+                    : guess.correctArtist
+                    ? '3px solid var(--accent)'
+                    : undefined,
+                  boxShadow: guess.correctArtist
+                    ? '0 0 12px -4px var(--accent-glow)'
+                    : undefined,
                 }}
               >
                 <div className="flex items-center gap-2 overflow-hidden">
@@ -46,12 +55,28 @@ export const GuessHistory: React.FC<GuessHistoryProps> = ({
                       className="w-3.5 h-3.5 flex-shrink-0 theme-transition"
                       style={{ color: 'var(--accent)' }}
                     />
+                  ) : guess.correctArtist ? (
+                    <UserCheck
+                      className="w-3.5 h-3.5 flex-shrink-0 theme-transition"
+                      style={{ color: 'var(--accent)' }}
+                    />
                   ) : (
                     <X className="w-3.5 h-3.5 text-neutral-500 flex-shrink-0" />
                   )}
-                  <div className="truncate">
-                    <span className="font-medium text-white">{guess.title}</span>
-                    <span className="text-neutral-400 ml-1.5">— {guess.artist}</span>
+                  <div className="truncate flex items-center gap-1.5">
+                    <span className="font-medium text-white truncate">{guess.title}</span>
+                    <span className="text-neutral-400 truncate">— {guess.artist}</span>
+                    {guess.correctArtist && !guess.correct && (
+                      <span
+                        className="text-[10px] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 theme-transition"
+                        style={{
+                          backgroundColor: 'var(--accent-soft)',
+                          color: 'var(--accent)',
+                        }}
+                      >
+                        Correct artist
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -66,3 +91,4 @@ export const GuessHistory: React.FC<GuessHistoryProps> = ({
     </div>
   );
 };
+

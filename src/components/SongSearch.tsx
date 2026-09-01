@@ -11,6 +11,7 @@ interface SongSearchProps {
   currentStage: number;
   disabled?: boolean;
   alreadyGuessedIds: string[];
+  hasCorrectArtistGuess?: boolean;
 }
 
 export const SongSearch: React.FC<SongSearchProps> = ({
@@ -19,6 +20,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
   currentStage,
   disabled = false,
   alreadyGuessedIds,
+  hasCorrectArtistGuess = false,
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Song[]>([]);
@@ -297,6 +299,32 @@ export const SongSearch: React.FC<SongSearchProps> = ({
             </span>
           </div>
         )}
+
+        {/* Subtle Correct Artist Feedback Banner */}
+        <AnimatePresence>
+          {hasCorrectArtistGuess && !selectedSong && !duplicateWarning && (
+            <motion.div
+              id="correct-artist-banner"
+              initial={{ opacity: 0, y: -4, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -4, scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl border text-xs font-semibold theme-transition"
+              style={{
+                backgroundColor: 'var(--accent-soft)',
+                borderColor: 'var(--accent)',
+                color: 'var(--accent)',
+                boxShadow: '0 0 16px -2px var(--accent-glow)',
+              }}
+            >
+              <span
+                className="w-2 h-2 rounded-full animate-ping flex-shrink-0"
+                style={{ backgroundColor: 'var(--accent)' }}
+              />
+              <span>Correct artist</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {duplicateWarning && (
           <div className="text-xs sm:text-sm text-amber-400 bg-amber-950/20 px-3.5 py-2 rounded-xl border border-amber-800/30">

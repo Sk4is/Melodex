@@ -208,6 +208,95 @@ class AudioService {
   }
 
   /**
+   * Pre-validates that an audio URL is fully playable (>= 14.5s duration) before a round starts.
+   * Returns true if verified playable, false otherwise.
+   */
+  public async validateAudioUrl(url: string, timeoutMs = 4000): Promise<boolean> {
+    if (!url) return false;
+
+    // 1. If already decoded in cache
+    const cached = this.bufferCache.get(url);
+    if (cached) {
+      return cached.duration >= 14.5;
+    }
+
+    // 2. Race Web Audio decode against timeout
+    try {
+      const timeoutPromise = new Promise<null>((_, reject) =>
+        setTimeout(() => reject(new Error('Validation timeout')), timeoutMs)
+      );
+
+      const buffer = await Promise.race([
+        this.preloadAudio(url),
+        timeoutPromise,
+      ]);
+
+      if (buffer && buffer.duration >= 14.5) {
+        return true;
+      }
+    } catch {
+      // If Web Audio decode failed (e.g. CORS or format issue), test with HTMLAudioElement
+      try {
+        const htmlAudioResult = await new Promise<boolean>((resolve) => {
+          const audio = new Audio();
+          let resolved = false;
+
+          const cleanup = () => {
+            if (timer) clearTimeout(timer);
+            audio.oncanplaythrough = null;
+            audio.onerror = null;
+            audio.onloadedmetadata = null;
+            audio.src = '';
+          };
+
+          const timer = setTimeout(() => {
+            if (!resolved) {
+              resolved = true;
+              cleanup();
+              resolve(false);
+            }
+          }, timeoutMs);
+
+          audio.oncanplaythrough = () => {
+            if (!resolved) {
+              resolved = true;
+              const isOk = audio.duration >= 14.5 || isNaN(audio.duration);
+              cleanup();
+              resolve(isOk);
+            }
+          };
+
+          audio.onloadedmetadata = () => {
+            if (!resolved && audio.duration >= 14.5) {
+              resolved = true;
+              cleanup();
+              resolve(true);
+            }
+          };
+
+          audio.onerror = () => {
+            if (!resolved) {
+              resolved = true;
+              cleanup();
+              resolve(false);
+            }
+          };
+
+          audio.src = url;
+          audio.load();
+        });
+
+        if (htmlAudioResult) return true;
+      } catch {
+        return false;
+      }
+    }
+
+    return false;
+  }
+
+
+  /**
    * Plays an exact snippet from startTime with duration using Web Audio API
    */
   public async playSnippet(url: string, startTime = 0, duration = 1): Promise<void> {

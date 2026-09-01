@@ -63,9 +63,9 @@ export const Game: React.FC = () => {
           throw new Error('Music catalog is empty. Please check your internet connection.');
         }
 
-        const song = musicService.getRandomSong([], initialDecade, initialGenres);
+        const song = await musicService.getPlayableSongForRound([], initialDecade, initialGenres);
         if (!song) {
-          throw new Error('Could not find songs for this selection.');
+          throw new Error('Could not find playable songs for this selection.');
         }
 
         setPlayedSongIds([song.id]);
@@ -96,7 +96,7 @@ export const Game: React.FC = () => {
   }, [initializeGame]);
 
   // Handle Decade selection (preserves valid multi-selected genres)
-  const handleSelectDecade = (newDecade: DecadeFilter) => {
+  const handleSelectDecade = async (newDecade: DecadeFilter) => {
     if (newDecade === gameState.decade && gameState.currentSong) return;
 
     audioService.stop();
@@ -110,7 +110,7 @@ export const Game: React.FC = () => {
       validGenres = filtered.length > 0 ? filtered : ['all'];
     }
 
-    const song = musicService.getRandomSong(playedSongIds, newDecade, validGenres);
+    const song = await musicService.getPlayableSongForRound(playedSongIds, newDecade, validGenres);
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
@@ -126,7 +126,7 @@ export const Game: React.FC = () => {
       }));
     } else {
       // If all songs in session are exhausted, reset played history
-      const freshSong = musicService.getRandomSong([], newDecade, validGenres);
+      const freshSong = await musicService.getPlayableSongForRound([], newDecade, validGenres);
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
@@ -144,7 +144,7 @@ export const Game: React.FC = () => {
   };
 
   // Handle Multi-Select Genre toggling
-  const handleToggleGenre = (clickedGenre: GenreFilter) => {
+  const handleToggleGenre = async (clickedGenre: GenreFilter) => {
     let newGenres: GenreFilter[];
 
     if (clickedGenre === 'all') {
@@ -171,7 +171,7 @@ export const Game: React.FC = () => {
     if (isSame && gameState.currentSong) return;
 
     audioService.stop();
-    const song = musicService.getRandomSong(playedSongIds, gameState.decade, newGenres);
+    const song = await musicService.getPlayableSongForRound(playedSongIds, gameState.decade, newGenres);
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
@@ -185,7 +185,7 @@ export const Game: React.FC = () => {
         genres: newGenres,
       }));
     } else {
-      const freshSong = musicService.getRandomSong([], gameState.decade, newGenres);
+      const freshSong = await musicService.getPlayableSongForRound([], gameState.decade, newGenres);
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
@@ -202,16 +202,16 @@ export const Game: React.FC = () => {
   };
 
   // Move to next song in round after win/loss
-  const handleNextSong = () => {
+  const handleNextSong = async () => {
     audioService.stop();
 
-    const song = musicService.getRandomSong(
+    const song = await musicService.getPlayableSongForRound(
       playedSongIds,
       gameState.decade,
       gameState.genres
     );
     if (!song) {
-      const freshSong = musicService.getRandomSong(
+      const freshSong = await musicService.getPlayableSongForRound(
         [],
         gameState.decade,
         gameState.genres
@@ -263,7 +263,7 @@ export const Game: React.FC = () => {
     // 2. If re-resolution fails or preview is permanently gone, reject and replace
     musicService.rejectSong(failedSong.id);
 
-    const replacement = musicService.getRandomSong(
+    const replacement = await musicService.getPlayableSongForRound(
       playedSongIds,
       gameState.decade,
       gameState.genres
@@ -284,11 +284,16 @@ export const Game: React.FC = () => {
     audioService.stop();
 
     const isCorrect = gameService.validateGuess(selectedSong.id, gameState.currentSong.id);
+    const correctArtist =
+      !isCorrect &&
+      gameService.isArtistMatch(selectedSong.artist, gameState.currentSong.artist);
+
     const newGuess: Guess = {
       songId: selectedSong.id,
       title: selectedSong.title,
       artist: selectedSong.artist,
       correct: isCorrect,
+      correctArtist,
       stageNumber: gameState.currentStage,
     };
 
@@ -476,6 +481,7 @@ export const Game: React.FC = () => {
                 currentStage={gameState.currentStage}
                 disabled={false}
                 alreadyGuessedIds={alreadyGuessedIds}
+                hasCorrectArtistGuess={gameState.guesses.some((g) => g.correctArtist && !g.correct)}
               />
 
               {/* Previous Wrong Guesses */}

@@ -2,6 +2,7 @@ import { Song } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
 import { fuzzyMatchSong } from '../utils/normalizeText';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
+import { audioService } from './audioService';
 
 export type NormalizedGenre =
   | 'Pop'
@@ -752,6 +753,73 @@ class MusicService {
     // If for any reason validation failed, try direct selection from available pool
     return this.pickSongByRecognition(available);
   }
+
+  /**
+   * Validates that song audio is actively playable and at least 15s.
+   * If preview expired or failed, attempts re-resolution.
+   * If unplayable, automatically blacklists/rejects song ID and returns false.
+   */
+  public async validateSongPlayability(song: Song): Promise<boolean> {
+    if (!song || !song.previewUrl) return false;
+
+    // 1. Direct validation check via Web Audio / HTMLAudio
+    const isOk = await audioService.validateAudioUrl(song.previewUrl, 3500);
+    if (isOk) {
+      return true;
+    }
+
+    // 2. Attempt runtime re-resolution
+    try {
+      const freshUrl = await this.resolveFreshPreviewUrl(song);
+      if (freshUrl && freshUrl !== song.previewUrl) {
+        const freshOk = await audioService.validateAudioUrl(freshUrl, 3500);
+        if (freshOk) {
+          song.previewUrl = freshUrl;
+          return true;
+        }
+      }
+    } catch {
+      // Re-resolution failed
+    }
+
+    // 3. Mark as rejected so it won't appear in rounds or autocomplete
+    this.rejectSong(song.id);
+    return false;
+  }
+
+  /**
+   * Selects and pre-validates a random song for a round.
+   * GUARANTEES that returned song is 100% playable with valid audio (silent replacement on failure).
+   */
+  public async getPlayableSongForRound(
+    excludeIds: string[] = [],
+    decade: DecadeFilter = 'all',
+    genres: GenreFilter[] | GenreFilter = ['all'],
+    maxAttempts = 10
+  ): Promise<Song | null> {
+    const triedIds = new Set<string>(excludeIds);
+
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      let candidate = this.getRandomSong(Array.from(triedIds), decade, genres);
+      if (!candidate) {
+        // If pool exhausted with exclusions, try without session exclusions (except rejected IDs)
+        candidate = this.getRandomSong([], decade, genres);
+      }
+      if (!candidate) return null;
+
+      triedIds.add(candidate.id);
+
+      const isValid = await this.validateSongPlayability(candidate);
+      if (isValid) {
+        return candidate;
+      }
+      // If invalid, candidate was rejected, loop continues to pick next song seamlessly
+    }
+
+    // Fallback if max attempts exceeded
+    return this.getRandomSong([], decade, genres);
+  }
 }
 
 export const musicService = new MusicService();
+

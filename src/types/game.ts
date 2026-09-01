@@ -55,6 +55,7 @@ export interface Guess {
   title: string;
   artist: string;
   correct: boolean;
+  correctArtist?: boolean;
   stageNumber: number;
 }
 
