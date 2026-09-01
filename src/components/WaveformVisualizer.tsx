@@ -17,15 +17,15 @@ export const WaveformVisualizer: React.FC<WaveformVisualizerProps> = ({ isPlayin
     if (!ctx) return;
 
     const dpr = window.devicePixelRatio || 1;
-    const width = 160;
-    const height = 28;
+    const width = 220;
+    const height = 32;
 
     canvas.width = width * dpr;
     canvas.height = height * dpr;
     ctx.scale(dpr, dpr);
 
-    const BAR_COUNT = 18;
-    const barWidth = 3;
+    const BAR_COUNT = 24;
+    const barWidth = 3.5;
     const barGap = (width - BAR_COUNT * barWidth) / (BAR_COUNT - 1);
     const heights = new Array(BAR_COUNT).fill(2);
     const targetHeights = new Array(BAR_COUNT).fill(2);

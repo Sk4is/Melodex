@@ -100,14 +100,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       />
 
       {/* 2. Large Central Play Button */}
-      <div className="relative mt-8 mb-3 flex flex-col items-center">
+      <div className="relative mt-8 mb-4 flex flex-col items-center">
         {/* Very subtle pulse when playing */}
         {isPlaying && (
           <motion.div
             initial={{ scale: 0.95, opacity: 0.4 }}
-            animate={{ scale: 1.18, opacity: 0 }}
+            animate={{ scale: 1.2, opacity: 0 }}
             transition={{ repeat: Infinity, duration: 1.4, ease: 'easeOut' }}
-            className="absolute -inset-2 rounded-full pointer-events-none theme-transition"
+            className="absolute -inset-3 rounded-full pointer-events-none theme-transition"
             style={{ backgroundColor: 'var(--accent-glow)' }}
           />
         )}
@@ -119,7 +119,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
           disabled={disabled || !previewUrl}
           whileHover={{ scale: disabled ? 1 : 1.04 }}
           whileTap={{ scale: disabled ? 1 : 0.96 }}
-          className={`relative z-10 w-20 h-20 sm:w-22 sm:h-22 rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed theme-transition ${
+          className={`relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full flex items-center justify-center transition-all duration-300 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed theme-transition ${
             isPlaying
               ? 'bg-neutral-900 border shadow-lg'
               : 'shadow-lg'
@@ -128,14 +128,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
             borderColor: isPlaying ? 'var(--accent)' : undefined,
             color: isPlaying ? 'var(--accent)' : 'var(--accent-text-color)',
             backgroundColor: isPlaying ? undefined : 'var(--accent)',
-            boxShadow: isPlaying ? '0 0 20px var(--accent-glow)' : '0 8px 24px var(--accent-glow)',
+            boxShadow: isPlaying ? '0 0 24px var(--accent-glow)' : '0 10px 28px var(--accent-glow)',
           }}
           aria-label={isPlaying ? 'Stop' : `Play snippet`}
         >
           {isPlaying ? (
-            <Square className="w-7 h-7 fill-current" />
+            <Square className="w-8 h-8 sm:w-9 sm:h-9 fill-current" />
           ) : (
-            <Play className="w-8 h-8 fill-current ml-1" />
+            <Play className="w-9 h-9 sm:w-10 sm:h-10 fill-current ml-1.5" />
           )}
         </motion.button>
       </div>
