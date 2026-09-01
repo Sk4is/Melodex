@@ -1,3 +1,5 @@
+import { GenreFilter } from './game';
+
 export type AudioHealthStatus = 'healthy' | 'unknown' | 'temporarily_failed' | 'dead';
 
 export interface Song {
@@ -10,6 +12,7 @@ export interface Song {
   verifiedOriginalYear?: number;
   yearConfidence?: 'high' | 'medium' | 'low';
   genre?: string;
+  normalizedGenres?: GenreFilter[]; // Precomputed canonical Melodex genres, e.g. ['pop', 'rnb']
   recognitionScore?: number;
   artworkUrl?: string;
   previewUrl: string;
@@ -22,6 +25,7 @@ export interface Song {
   audioStatus?: AudioHealthStatus;
   audioValidatedAt?: number; // timestamp in ms
   failureCount?: number;
+  lastReason?: string;
   lastFailureReason?: string;
 }
 

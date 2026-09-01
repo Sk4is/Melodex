@@ -27,6 +27,8 @@ export function normalizeArtistKey(artist: string): string {
   return normalizeText(primary);
 }
 
+import { computeNormalizedGenres, matchSongToSingleGenre, matchSongToSelectedGenres } from '../utils/genreUtils';
+
 export type NormalizedGenre =
   | 'Pop'
   | 'Hip-Hop/Rap'
@@ -46,237 +48,43 @@ export const GENRE_WEIGHTS: Record<NormalizedGenre, number> = {
   'Other': 0.07,
 };
 
+/**
+ * Strict Song-Level Genre Matching:
+ * Evaluates the song's precomputed normalizedGenres.
+ * If normalizedGenres is not set, computes it on-the-fly via computeNormalizedGenres.
+ * FAIL-CLOSED: Unclassified or mismatched songs NEVER match specific genre filters.
+ * NEVER uses broad artist genre associations.
+ */
 export function matchesGenre(song: Song, genre: GenreFilter): boolean {
   if (genre === 'all') return true;
+  const genres = song.normalizedGenres && song.normalizedGenres.length > 0
+    ? song.normalizedGenres
+    : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
 
-  const g = (song.genre || '').toLowerCase();
-  const a = (song.artist || '').toLowerCase();
-
-  switch (genre) {
-    case 'pop':
-      return (
-        g.includes('pop') ||
-        g.includes('dance') ||
-        g.includes('disco') ||
-        (!g.includes('rock') &&
-          !g.includes('metal') &&
-          !g.includes('rap') &&
-          [
-            'taylor swift', 'katy perry', 'bruno mars', 'lady gaga', 'ariana grande',
-            'justin bieber', 'dua lipa', 'billie eilish', 'ed sheeran', 'maroon 5',
-            'shawn mendes', 'camila cabello', 'selena gomez', 'miley cyrus',
-            'charlie puth', 'sam smith', 'halsey', 'olivia rodrigo', 'sabrina carpenter',
-            'sia', 'pink', 'p!nk', 'kesha', 'britney spears', 'madonna', 'rihanna',
-            'pitbull', 'shakira', 'avril lavigne', 'kelly clarkson', 'one direction',
-            'george michael', 'wham', 'a-ha', 'duran duran', 'tears for fears',
-            'eurythmics', 'roxette', 'ace of base', 'aqua', 'rick astley', 'cher',
-            'celine dion', 'céline dion', 'abba', 'spice girls', 'backstreet boys',
-            'nsync', '*nsync', 'cyndi lauper', 'belinda carlisle', 'culture club',
-            'laura branigan', 'boney m', 'village people', 'dexys midnight runners',
-            'men at work', 'rick springfield', 'human league', 'soft cell'
-          ].some((k) => a.includes(k)))
-      );
-
-    case 'hiphop':
-      return (
-        g.includes('hip-hop') ||
-        g.includes('rap') ||
-        g.includes('trap') ||
-        g.includes('drill') ||
-        [
-          'eminem', 'drake', 'kanye west', 'kendrick lamar', 'travis scott', 'j. cole',
-          'future', '21 savage', 'lil wayne', 'juice wrld', 'xxxtentacion', 'lil uzi vert',
-          'playboi carti', 'post malone', '50 cent', 'jay-z', 'snoop dogg', 'notorious b.i.g.',
-          'tupac', 'dr. dre', 'cardi b', 'nicki minaj', 'megan thee stallion', 'asap rocky',
-          'tyler, the creator', 'wiz khalifa', 'gunna', 'young thug', 'lil baby', 'central cee',
-          'jack harlow', 'lil peep', 'lil skies', 'outkast', 'migos', 'trippie redd',
-          'lil mosey', 'lil tecca', 'yung pinch', 'famous dex', 'fetty wap', 'youngboy', 'nba youngboy'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'rock':
-      return (
-        ((g.includes('rock') || g.includes('alternative') || g.includes('grunge') || g.includes('punk')) &&
-          !g.includes('metal')) ||
-        [
-          'queen', 'the beatles', 'the rolling stones', 'led zeppelin', 'pink floyd', 'nirvana',
-          'linkin park', 'green day', 'red hot chili peppers', 'foo fighters', 'radiohead', 'oasis',
-          'u2', 'coldplay', 'the killers', 'arctic monkeys', 'muse', 'fall out boy', 'paramore',
-          'my chemical romance', 'blink-182', 'bon jovi', 'aerosmith', 'guns n', 'ac/dc',
-          'the eagles', 'fleetwood mac', 'bruce springsteen', 'imagine dragons', 'the police',
-          'dire straits', 'creedence', 'toto', 'journey'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'rnb':
-      return (
-        g.includes('r&b') ||
-        g.includes('soul') ||
-        g.includes('funk') ||
-        g.includes('motown') ||
-        g.includes('neo-soul') ||
-        [
-          'the weeknd', 'sza', 'frank ocean', 'beyonce', 'rihanna', 'alicia keys', 'usher',
-          'chris brown', 'ne-yo', 'john legend', 'mariah carey', 'whitney houston',
-          'michael jackson', 'stevie wonder', 'aretha franklin', 'marvin gaye',
-          'earth, wind & fire', 'luther vandross', 'boyz ii men', 'bryson tiller', 'khalid',
-          'daniel caesar', 'h.e.r.', 'jhene aiko', 'partynextdoor', 'giveon', 'brent faiyaz',
-          'summer walker', 'kehlani', 'ella mai', '6lack', 'trey songz', 'monica', 'brandy',
-          'barry white', 'the isley brothers'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'electronic':
-      return (
-        g.includes('electronic') ||
-        g.includes('electro') ||
-        g.includes('synth') ||
-        g.includes('ambient') ||
-        g.includes('techno') ||
-        g.includes('trance') ||
-        g.includes('dubstep') ||
-        g.includes('drum and bass') ||
-        [
-          'daft punk', 'kraftwerk', 'deadmau5', 'skrillex', 'the prodigy', 'fatboy slim', 'moby',
-          'chemical brothers', 'pendulum', 'flume', 'odesza', 'porter robinson', 'madeon',
-          'aphex twin', 'justice', 'disclosure', 'rufus du sol', 'kaytranada', 'avicii', 'calvin harris'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'latin':
-      return (
-        g.includes('latin') ||
-        g.includes('urbano') ||
-        g.includes('reggaeton') ||
-        g.includes('bachata') ||
-        g.includes('salsa') ||
-        g.includes('cumbia') ||
-        g.includes('mexican') ||
-        g.includes('ranchera') ||
-        g.includes('corridos') ||
-        [
-          'bad bunny', 'j balvin', 'daddy yankee', 'ozuna', 'maluma', 'shakira', 'rosalia',
-          'karol g', 'rauw alejandro', 'peso pluma', 'anuel aa', 'feid', 'nicky jam',
-          'luis fonsi', 'enrique iglesias', 'ricky martin', 'pitbull', 'becky g', 'camilo',
-          'sebastian yatra', 'kali uchis', 'manuel turizo', 'bizarrap', 'romeo santos', 'jhayco'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'indie':
-      return (
-        g.includes('indie') ||
-        g.includes('alternative') ||
-        [
-          'tame impala', 'the 1975', 'the neighbourhood', 'foster the people', 'cage the elephant',
-          'two door cinema club', 'phoenix', 'vampire weekend', 'mgmt', 'florence + the machine',
-          'bastille', 'the strokes', 'franz ferdinand', 'glass animals', 'wallows', 'clairo',
-          'beabadoobee', 'rex orange county', 'boy pablo', 'mac demarco', 'phoebe bridgers',
-          'mitski', 'lord huron', 'hozier', 'the lumineers', 'vance joy', 'mumford & sons'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'metal':
-      return (
-        g.includes('metal') ||
-        g.includes('hard rock') ||
-        g.includes('heavy metal') ||
-        g.includes('nu metal') ||
-        g.includes('metalcore') ||
-        [
-          'metallica', 'iron maiden', 'black sabbath', 'judas priest', 'megadeth', 'slayer',
-          'slipknot', 'system of a down', 'korn', 'avenged sevenfold', 'rammstein', 'pantera',
-          'motorhead', 'disturbed', 'deftones', 'limp bizkit', 'bring me the horizon', 'ghost',
-          'bullet for my valentine', 'ozzy osbourne', 'scorpions', 'deep purple'
-        ].some((k) => a.includes(k))
-      );
-
-    case 'dance':
-      return (
-        g.includes('dance') ||
-        g.includes('house') ||
-        g.includes('edm') ||
-        g.includes('club') ||
-        g.includes('disco') ||
-        [
-          'calvin harris', 'david guetta', 'avicii', 'tiesto', 'marshmello', 'the chainsmokers',
-          'martin garrix', 'zedd', 'kygo', 'alan walker', 'alesso', 'swedish house mafia',
-          'armin van buuren', 'robin schulz', 'lost frequencies', 'galantis', 'major lazer',
-          'dj snake', 'afrojack', 'steve aoki', 'fisher', 'fred again', 'peggy gou', 'meduza',
-          'black eyed peas', 'pitbull', 'cascada', 'basshunter'
-        ].some((k) => a.includes(k))
-      );
-
-    default:
-      return true;
-  }
+  return matchSongToSingleGenre(genres, genre);
 }
 
 /**
- * Checks if a song matches ANY of the selected genres (OR logic)
+ * Strict Multi-Genre Matching (OR logic):
+ * A song matches if ANY selected genre is in its normalizedGenres.
  */
 export function matchesAnyGenre(song: Song, genres: GenreFilter[]): boolean {
   if (!genres || genres.length === 0 || genres.includes('all')) return true;
-  return genres.some((g) => matchesGenre(song, g));
+  const songGenres = song.normalizedGenres && song.normalizedGenres.length > 0
+    ? song.normalizedGenres
+    : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
+
+  return matchSongToSelectedGenres(songGenres, genres);
 }
 
-export function getNormalizedGenre(genre?: string, artist = '', title = ''): NormalizedGenre {
-  const g = (genre || '').toLowerCase();
-  const a = artist.toLowerCase();
-
-  if (g.includes('hip-hop') || g.includes('rap') || g.includes('trap')) {
-    return 'Hip-Hop/Rap';
-  }
-  if (
-    g.includes('dance') ||
-    g.includes('electronic') ||
-    g.includes('house') ||
-    g.includes('edm') ||
-    g.includes('electro')
-  ) {
-    return 'Electronic/Dance';
-  }
-  if (
-    g.includes('rock') ||
-    g.includes('alternative') ||
-    g.includes('indie') ||
-    g.includes('metal') ||
-    g.includes('punk')
-  ) {
-    return 'Rock/Alternative/Indie';
-  }
-  if (g.includes('r&b') || g.includes('soul') || g.includes('funk')) {
-    return 'R&B';
-  }
-  if (
-    g.includes('latin') ||
-    g.includes('urbano') ||
-    g.includes('reggaeton') ||
-    g.includes('tropical') ||
-    g.includes('bachata')
-  ) {
-    return 'Latin';
-  }
-  if (g.includes('pop') || g.includes('k-pop')) {
-    return 'Pop';
-  }
-
-  // Fallbacks by known artist signatures
-  if (['avicii', 'calvin harris', 'david guetta', 'zedd', 'marshmello', 'martin garrix', 'alan walker', 'kygo', 'tiesto', 'alesso', 'galantis', 'robin schulz', 'the chainsmokers', 'disclosure'].some(k => a.includes(k))) {
-    return 'Electronic/Dance';
-  }
-  if (['arctic monkeys', 'coldplay', 'imagine dragons', 'tame impala', 'twenty one pilots', 'the 1975', 'the neighbourhood', 'foster the people', 'cage the elephant', 'paramore', 'fall out boy', 'muse', 'bastille', 'lumineers', 'vance joy', 'hozier'].some(k => a.includes(k))) {
-    return 'Rock/Alternative/Indie';
-  }
-  if (['frank ocean', 'sza', 'the weeknd', 'bryson tiller', 'khalid', 'daniel caesar', 'h.e.r.', 'jhene aiko', 'partynextdoor', 'ella mai', 'miguel'].some(k => a.includes(k))) {
-    return 'R&B';
-  }
-  if (['bad bunny', 'j balvin', 'ozuna', 'daddy yankee', 'maluma', 'nicky jam', 'luis fonsi', 'anuel aa', 'karol g', 'becky g', 'rosalia', 'cnco', 'farruko'].some(k => a.includes(k))) {
-    return 'Latin';
-  }
-  if (['drake', 'travis scott', 'juice wrld', 'xxxtentacion', 'lil uzi vert', 'playboi carti', 'post malone', 'lil peep', 'lil skies', 'future', '21 savage', 'migos', 'trippie redd', 'kanye west', 'kendrick lamar', 'young thug', 'gunna', 'lil mosey', 'lil tecca', 'yung pinch', 'famous dex', 'fetty wap', 'youngboy', 'nba youngboy'].some(k => a.includes(k))) {
-    return 'Hip-Hop/Rap';
-  }
-
+export function getNormalizedGenre(genre?: string, artist = '', title = '', album = ''): NormalizedGenre {
+  const norm = computeNormalizedGenres(genre, artist, title, album);
+  if (norm.includes('hiphop')) return 'Hip-Hop/Rap';
+  if (norm.includes('electronic') || norm.includes('dance')) return 'Electronic/Dance';
+  if (norm.includes('rock') || norm.includes('indie') || norm.includes('metal')) return 'Rock/Alternative/Indie';
+  if (norm.includes('rnb')) return 'R&B';
+  if (norm.includes('latin')) return 'Latin';
+  if (norm.includes('pop')) return 'Pop';
   return 'Other';
 }
 
