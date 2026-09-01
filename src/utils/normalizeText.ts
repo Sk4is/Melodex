@@ -61,6 +61,12 @@ export function generateSearchCorpus(title: string, artist: string): string {
   if (normArtist.includes('jay z') || squashedArtist.includes('jayz')) aliases += ' jay-z jayz jay z';
   if (normArtist.includes('blink 182') || squashedArtist.includes('blink182')) aliases += ' blink-182 blink182 blink 182';
   if (normArtist.includes('pitbull') || normTitle.includes('pitbull')) aliases += ' pitbull mr worldwide';
+  if (normArtist.includes('youngboy') || normArtist.includes('nba')) aliases += ' nba youngboy youngboy never broke again nba youngboy';
+  if (normTitle.includes('500lbs') || normTitle.includes('500 lbs')) aliases += ' 500lbs 500 lbs 500';
+  if (normTitle.includes('did it again') || normTitle.includes('do it again')) aliases += ' did it again do it again';
+  if (normTitle.includes('when i was yung') || normTitle.includes('when i was young')) aliases += ' when i was yung when i was young';
+  if (normTitle.includes('i know you') || normTitle.includes('i know u')) aliases += ' i know you i know u';
+  if (normArtist.includes('famous dex') || normArtist.includes('dexter')) aliases += ' famous dex dexter';
 
   return `${normTitle} ${squashedTitle} ${normArtist} ${squashedArtist} ${individualArtists} ${aliases}`.toLowerCase();
 }

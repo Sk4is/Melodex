@@ -57,7 +57,8 @@ export function matchesGenre(song: Song, genre: GenreFilter): boolean {
           'playboi carti', 'post malone', '50 cent', 'jay-z', 'snoop dogg', 'notorious b.i.g.',
           'tupac', 'dr. dre', 'cardi b', 'nicki minaj', 'megan thee stallion', 'asap rocky',
           'tyler, the creator', 'wiz khalifa', 'gunna', 'young thug', 'lil baby', 'central cee',
-          'jack harlow', 'lil peep', 'lil skies', 'outkast', 'migos', 'trippie redd'
+          'jack harlow', 'lil peep', 'lil skies', 'outkast', 'migos', 'trippie redd',
+          'lil mosey', 'lil tecca', 'yung pinch', 'famous dex', 'fetty wap', 'youngboy', 'nba youngboy'
         ].some((k) => a.includes(k))
       );
 
@@ -240,7 +241,7 @@ export function getNormalizedGenre(genre?: string, artist = '', title = ''): Nor
   if (['bad bunny', 'j balvin', 'ozuna', 'daddy yankee', 'maluma', 'nicky jam', 'luis fonsi', 'anuel aa', 'karol g', 'becky g', 'rosalia', 'cnco', 'farruko'].some(k => a.includes(k))) {
     return 'Latin';
   }
-  if (['drake', 'travis scott', 'juice wrld', 'xxxtentacion', 'lil uzi vert', 'playboi carti', 'post malone', 'lil peep', 'lil skies', 'future', '21 savage', 'migos', 'trippie redd', 'kanye west', 'kendrick lamar', 'young thug', 'gunna'].some(k => a.includes(k))) {
+  if (['drake', 'travis scott', 'juice wrld', 'xxxtentacion', 'lil uzi vert', 'playboi carti', 'post malone', 'lil peep', 'lil skies', 'future', '21 savage', 'migos', 'trippie redd', 'kanye west', 'kendrick lamar', 'young thug', 'gunna', 'lil mosey', 'lil tecca', 'yung pinch', 'famous dex', 'fetty wap', 'youngboy', 'nba youngboy'].some(k => a.includes(k))) {
     return 'Hip-Hop/Rap';
   }
 
