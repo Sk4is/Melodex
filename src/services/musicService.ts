@@ -283,8 +283,8 @@ export function getNormalizedGenre(genre?: string, artist = '', title = ''): Nor
 const STORAGE_RECENT_TRACKS = 'melodex_recent_tracks_v2';
 const STORAGE_RECENT_ARTISTS = 'melodex_recent_artists_v2';
 const STORAGE_QUARANTINED_SONGS = 'melodex_quarantined_songs_v2';
-const MAX_RECENT_TRACKS = 250;
-const MAX_RECENT_ARTISTS = 25;
+const MAX_RECENT_TRACKS = 400;
+const MAX_RECENT_ARTISTS = 35;
 
 class MusicService {
   private catalog: Map<string, Song> = new Map();
