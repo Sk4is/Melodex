@@ -32,6 +32,8 @@ export function matchesGenre(song: Song, genre: GenreFilter): boolean {
     case 'pop':
       return (
         g.includes('pop') ||
+        g.includes('dance') ||
+        g.includes('disco') ||
         (!g.includes('rock') &&
           !g.includes('metal') &&
           !g.includes('rap') &&
@@ -41,7 +43,13 @@ export function matchesGenre(song: Song, genre: GenreFilter): boolean {
             'shawn mendes', 'camila cabello', 'selena gomez', 'miley cyrus',
             'charlie puth', 'sam smith', 'halsey', 'olivia rodrigo', 'sabrina carpenter',
             'sia', 'pink', 'p!nk', 'kesha', 'britney spears', 'madonna', 'rihanna',
-            'pitbull', 'shakira', 'avril lavigne', 'kelly clarkson', 'one direction'
+            'pitbull', 'shakira', 'avril lavigne', 'kelly clarkson', 'one direction',
+            'george michael', 'wham', 'a-ha', 'duran duran', 'tears for fears',
+            'eurythmics', 'roxette', 'ace of base', 'aqua', 'rick astley', 'cher',
+            'celine dion', 'céline dion', 'abba', 'spice girls', 'backstreet boys',
+            'nsync', '*nsync', 'cyndi lauper', 'belinda carlisle', 'culture club',
+            'laura branigan', 'boney m', 'village people', 'dexys midnight runners',
+            'men at work', 'rick springfield', 'human league', 'soft cell'
           ].some((k) => a.includes(k)))
       );
 
