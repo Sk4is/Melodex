@@ -252,9 +252,17 @@ class MusicService {
   private rejectedSongIds: Set<string> = new Set();
   private isCatalogLoaded = false;
   private loadPromise: Promise<Song[]> | null = null;
+  private countCache: Map<DecadeFilter, Record<GenreFilter, number>> = new Map();
 
   constructor() {
     this.bootstrapCatalog();
+  }
+
+  /**
+   * Invalidate precomputed count cache whenever the verified playable catalog changes
+   */
+  private invalidateCountCache(): void {
+    this.countCache.clear();
   }
 
   /**
@@ -313,6 +321,7 @@ class MusicService {
     if (!songId) return;
     this.rejectedSongIds.add(songId);
     this.catalog.delete(songId);
+    this.invalidateCountCache();
   }
 
   /**
@@ -337,6 +346,7 @@ class MusicService {
     this.loadPromise = (async () => {
       if (this.catalog.size > 0) {
         this.isCatalogLoaded = true;
+        this.invalidateCountCache();
         return this.getCatalog();
       }
 
@@ -357,6 +367,7 @@ class MusicService {
       }
 
       this.isCatalogLoaded = true;
+      this.invalidateCountCache();
       return this.getCatalog();
     })();
 
@@ -427,8 +438,60 @@ class MusicService {
     decade: DecadeFilter = 'all',
     genres: GenreFilter[] | GenreFilter = 'all'
   ): number {
+    if (typeof genres === 'string' && genres !== 'all') {
+      const counts = this.getGenreCountsForDecade(decade);
+      return counts[genres] ?? 0;
+    }
+    if (genres === 'all' || (Array.isArray(genres) && (genres.length === 0 || genres.includes('all')))) {
+      const counts = this.getGenreCountsForDecade(decade);
+      return counts.all ?? 0;
+    }
     const all = this.getCatalog();
     return this.filterByDecadeAndGenres(all, decade, genres).length;
+  }
+
+  /**
+   * Efficiently computes and memoizes song counts for all individual genres + all for a given decade.
+   * Single-pass scan over playable catalog for ultra-fast UI rendering.
+   */
+  public getGenreCountsForDecade(decade: DecadeFilter): Record<GenreFilter, number> {
+    const cached = this.countCache.get(decade);
+    if (cached) {
+      return cached;
+    }
+
+    const counts: Record<GenreFilter, number> = {
+      all: 0,
+      pop: 0,
+      hiphop: 0,
+      rock: 0,
+      rnb: 0,
+      electronic: 0,
+      latin: 0,
+      indie: 0,
+      metal: 0,
+      dance: 0,
+    };
+
+    const allPlayable = this.getCatalog();
+
+    for (const song of allPlayable) {
+      if (this.matchesDecade(song, decade)) {
+        counts.all += 1;
+        if (matchesGenre(song, 'pop')) counts.pop += 1;
+        if (matchesGenre(song, 'hiphop')) counts.hiphop += 1;
+        if (matchesGenre(song, 'rock')) counts.rock += 1;
+        if (matchesGenre(song, 'rnb')) counts.rnb += 1;
+        if (matchesGenre(song, 'electronic')) counts.electronic += 1;
+        if (matchesGenre(song, 'latin')) counts.latin += 1;
+        if (matchesGenre(song, 'indie')) counts.indie += 1;
+        if (matchesGenre(song, 'metal')) counts.metal += 1;
+        if (matchesGenre(song, 'dance')) counts.dance += 1;
+      }
+    }
+
+    this.countCache.set(decade, counts);
+    return counts;
   }
 
   /**

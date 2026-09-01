@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { motion } from 'motion/react';
 import { GenreFilter, GENRE_OPTIONS, DecadeFilter } from '../types/game';
 import { musicService } from '../services/musicService';
@@ -19,6 +19,11 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
   layoutMode = 'horizontal',
 }) => {
   const isAll = selectedGenres.includes('all') || selectedGenres.length === 0;
+
+  // Compute genre counts efficiently for the selected decade
+  const genreCounts = useMemo(() => {
+    return musicService.getGenreCountsForDecade(selectedDecade);
+  }, [selectedDecade]);
 
   // Horizontal scroll container refs & state for visual discovery fades and smooth drag
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -91,7 +96,7 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
       <nav
         id="genre-selector-vertical"
         aria-label="Genre Filters"
-        className="flex flex-col gap-2.5 select-none w-36"
+        className="flex flex-col gap-2.5 select-none w-44"
       >
         <span className="text-[10px] font-bold tracking-widest text-neutral-500 uppercase px-1 mb-0.5">
           Genres
@@ -99,17 +104,17 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
         {GENRE_OPTIONS.map((option) => {
           const isAllOption = option.id === 'all';
           const isActive = isAllOption ? isAll : !isAll && selectedGenres.includes(option.id);
-          const availableCount = musicService.getPlayableCount(selectedDecade, option.id);
-          const isUnavailable = availableCount === 0;
+          const count = genreCounts[option.id] ?? 0;
+          const isUnavailable = count === 0;
 
           return (
             <button
               key={option.id}
               id={`genre-filter-btn-${option.id}`}
               type="button"
-              disabled={disabled || (isUnavailable && !isActive)}
+              disabled={disabled || isUnavailable}
               onClick={() => handleGenreClick(option.id)}
-              className={`group text-left text-xs sm:text-[13px] tracking-wider uppercase transition-all duration-150 focus:outline-none flex items-center gap-2 py-0.5 px-1 select-none ${
+              className={`group text-left text-xs sm:text-[13px] tracking-wider uppercase transition-all duration-150 focus:outline-none flex items-center justify-between py-0.5 px-1 select-none ${
                 isActive
                   ? 'font-bold'
                   : isUnavailable
@@ -121,19 +126,35 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
                 textShadow: isActive ? '0 0 16px var(--accent-glow)' : undefined,
               }}
             >
-              {isActive && (
-                <motion.span
-                  layoutId={`active-dot-${option.id}`}
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  className="w-1.5 h-1.5 rounded-full flex-shrink-0 theme-transition"
-                  style={{
-                    backgroundColor: 'var(--accent)',
-                    boxShadow: '0 0 8px var(--accent)',
-                  }}
-                />
-              )}
-              <span>{option.label}</span>
+              <div className="flex items-center gap-2 min-w-0">
+                {isActive && (
+                  <motion.span
+                    layoutId={`active-dot-${option.id}`}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    className="w-1.5 h-1.5 rounded-full flex-shrink-0 theme-transition"
+                    style={{
+                      backgroundColor: 'var(--accent)',
+                      boxShadow: '0 0 8px var(--accent)',
+                    }}
+                  />
+                )}
+                <span className="truncate">{option.label}</span>
+              </div>
+              <span
+                className={`text-[11px] font-medium tracking-normal ml-2 select-none flex-shrink-0 transition-colors duration-150 ${
+                  isActive
+                    ? 'opacity-80'
+                    : isUnavailable
+                    ? 'text-neutral-800'
+                    : 'text-neutral-600 group-hover:text-neutral-400'
+                }`}
+                style={{
+                  color: isActive ? 'var(--accent)' : undefined,
+                }}
+              >
+                {count}
+              </span>
             </button>
           );
         })}
@@ -183,17 +204,17 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
         {GENRE_OPTIONS.map((option) => {
           const isAllOption = option.id === 'all';
           const isActive = isAllOption ? isAll : !isAll && selectedGenres.includes(option.id);
-          const availableCount = musicService.getPlayableCount(selectedDecade, option.id);
-          const isUnavailable = availableCount === 0;
+          const count = genreCounts[option.id] ?? 0;
+          const isUnavailable = count === 0;
 
           return (
             <button
               key={option.id}
               id={`genre-filter-btn-mobile-${option.id}`}
               type="button"
-              disabled={disabled || (isUnavailable && !isActive)}
+              disabled={disabled || isUnavailable}
               onClick={() => handleGenreClick(option.id)}
-              className={`relative group flex-shrink-0 flex items-center justify-center px-3.5 py-1.5 min-h-[36px] text-xs sm:text-sm font-semibold uppercase tracking-wider rounded-xl transition-all duration-150 focus:outline-none whitespace-nowrap select-none ${
+              className={`relative group flex-shrink-0 flex items-center justify-center gap-1.5 px-3 py-1.5 min-h-[36px] text-xs sm:text-sm font-semibold uppercase tracking-wider rounded-xl transition-all duration-150 focus:outline-none whitespace-nowrap select-none ${
                 isActive
                   ? 'bg-neutral-900/90 border font-bold'
                   : isUnavailable
@@ -208,6 +229,20 @@ export const GenreSelector: React.FC<GenreSelectorProps> = ({
               }}
             >
               <span className="relative z-10">{option.label}</span>
+              <span
+                className={`relative z-10 text-[11px] font-normal tracking-normal transition-colors duration-150 ${
+                  isActive
+                    ? 'opacity-80'
+                    : isUnavailable
+                    ? 'text-neutral-700'
+                    : 'text-neutral-500 group-hover:text-neutral-400'
+                }`}
+                style={{
+                  color: isActive ? 'var(--accent)' : undefined,
+                }}
+              >
+                {count}
+              </span>
             </button>
           );
         })}
