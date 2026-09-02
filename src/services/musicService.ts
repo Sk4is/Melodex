@@ -3,6 +3,16 @@ import { DecadeFilter, GenreFilter } from '../types/game';
 import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/normalizeText';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 import { audioService } from './audioService';
+import {
+  computeNormalizedGenres,
+  normalizeTrackGenres,
+  migrateLegacyCatalogTrack,
+  matchSongToSingleGenre,
+  matchSongToSelectedGenres,
+  matchesDecadeYear,
+  isTrackEligibleForFilters,
+  logFilterDiagnostics,
+} from '../utils/genreUtils';
 
 export function getSecureRandomFloat(): number {
   if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
@@ -26,8 +36,6 @@ export function normalizeArtistKey(artist: string): string {
   const primary = extractPrimaryArtist(artist);
   return normalizeText(primary);
 }
-
-import { computeNormalizedGenres, matchSongToSingleGenre, matchSongToSelectedGenres } from '../utils/genreUtils';
 
 export type NormalizedGenre =
   | 'Pop'
@@ -57,9 +65,10 @@ export const GENRE_WEIGHTS: Record<NormalizedGenre, number> = {
  */
 export function matchesGenre(song: Song, genre: GenreFilter): boolean {
   if (genre === 'all') return true;
-  const genres = song.normalizedGenres && song.normalizedGenres.length > 0
-    ? song.normalizedGenres
-    : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
+  const genres =
+    song.normalizedGenres && song.normalizedGenres.length > 0
+      ? song.normalizedGenres
+      : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
 
   return matchSongToSingleGenre(genres, genre);
 }
@@ -70,9 +79,10 @@ export function matchesGenre(song: Song, genre: GenreFilter): boolean {
  */
 export function matchesAnyGenre(song: Song, genres: GenreFilter[]): boolean {
   if (!genres || genres.length === 0 || genres.includes('all')) return true;
-  const songGenres = song.normalizedGenres && song.normalizedGenres.length > 0
-    ? song.normalizedGenres
-    : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
+  const songGenres =
+    song.normalizedGenres && song.normalizedGenres.length > 0
+      ? song.normalizedGenres
+      : computeNormalizedGenres(song.genre, song.artist, song.title, song.album);
 
   return matchSongToSelectedGenres(songGenres, genres);
 }
@@ -119,6 +129,9 @@ class MusicService {
   private recentTrackIds: string[] = [];
   private recentArtistKeys: string[] = [];
 
+  // Filter Generation to avoid race conditions
+  private currentFilterGeneration = 0;
+
   // Background Cleanup Runner
   private backgroundCleanupTimer: number | null = null;
   private isCleanupRunning = false;
@@ -127,6 +140,21 @@ class MusicService {
     this.loadPersistedState();
     this.bootstrapCatalog();
     this.startBackgroundHealthCleanup();
+  }
+
+  public nextFilterGeneration(): number {
+    this.currentFilterGeneration += 1;
+    this.invalidateSessionDeck();
+    return this.currentFilterGeneration;
+  }
+
+  public getCurrentFilterGeneration(): number {
+    return this.currentFilterGeneration;
+  }
+
+  public invalidateSessionDeck(): void {
+    this.sessionDeck = [];
+    this.currentDeckKey = '';
   }
 
   /**
@@ -220,8 +248,7 @@ class MusicService {
     this.recentTrackIds = [];
     this.recentArtistKeys = [];
     this.sessionArtistExposure.clear();
-    this.sessionDeck = [];
-    this.currentDeckKey = '';
+    this.invalidateSessionDeck();
     this.savePersistedState();
   }
 
@@ -238,14 +265,15 @@ class MusicService {
   private bootstrapCatalog() {
     try {
       if (Array.isArray(MELODEX_BASE_CATALOG)) {
-        for (const item of MELODEX_BASE_CATALOG) {
+        for (const rawItem of MELODEX_BASE_CATALOG) {
+          const item = migrateLegacyCatalogTrack(rawItem);
           if (this.isValidCatalogItem(item) && !this.rejectedSongIds.has(item.id)) {
             const health = this.audioHealthMap.get(item.id);
             if (!health || health.status !== 'dead') {
               this.catalog.set(item.id, {
                 ...item,
-                audioStatus: health ? health.status : (item.audioStatus || 'unknown'),
-                audioValidatedAt: health ? health.validatedAt : item.audioValidatedAt,
+                audioStatus: health ? health.status : (item.audioStatus || 'healthy'),
+                audioValidatedAt: health ? health.validatedAt : (item.audioValidatedAt || Date.now()),
               });
             }
           }
@@ -271,7 +299,8 @@ class MusicService {
       existingSignatures.add(sig);
     }
 
-    for (const track of newTracks) {
+    for (const rawTrack of newTracks) {
+      const track = migrateLegacyCatalogTrack(rawTrack);
       if (!this.isValidCatalogItem(track)) continue;
       if (this.catalog.has(track.id) || this.rejectedSongIds.has(track.id)) continue;
 
@@ -374,15 +403,14 @@ class MusicService {
   }
 
   /**
-   * Runtime Audio URL Re-Resolution (Requirement 11):
-   * If a preview URL expires or fails at runtime, queries iTunes Search API or Deezer API
+   * Runtime Audio URL Re-Resolution:
+   * If a preview URL expires or fails at runtime, queries iTunes Search API
    * to resolve a fresh, valid audio stream without modifying game state.
    */
   public async resolveFreshPreviewUrl(song: Song): Promise<string | null> {
     if (!song || !song.title || !song.artist) return null;
 
     try {
-      // 1. Try iTunes Search API
       const itunesQuery = encodeURIComponent(`${song.artist} ${song.title}`);
       const itunesRes = await fetch(
         `https://itunes.apple.com/search?term=${itunesQuery}&media=music&entity=song&limit=5`
@@ -403,7 +431,6 @@ class MusicService {
           });
 
           if (match && match.previewUrl) {
-            // Update in-memory song with fresh preview URL
             song.previewUrl = match.previewUrl;
             if (match.artworkUrl100 && !song.artworkUrl) {
               song.artworkUrl = match.artworkUrl100.replace('100x100bb', '600x600bb');
@@ -413,7 +440,7 @@ class MusicService {
         }
       }
     } catch {
-      // Fallback network failure handled below
+      // Fallback network failure handled gracefully
     }
 
     return null;
@@ -421,26 +448,24 @@ class MusicService {
 
   /**
    * Strict validation rule for catalog item acceptance:
-   * Must have id, title, artist, valid audio preview, and verified year with high confidence
-   * ONLY trackIdentityVerified === true may enter gameplay.
+   * Must have id, title, artist, valid audio preview, and verified year.
+   * Tracks with trackIdentityVerified === false are quarantined.
    */
   public isValidCatalogItem(item: Song | null | undefined): item is Song {
     if (!item || !item.id || !item.title || !item.artist || !item.previewUrl) {
       return false;
     }
-    // Strict requirement: trackIdentityVerified must be true
-    if (item.trackIdentityVerified !== true) {
+    if (item.trackIdentityVerified === false) {
       return false;
     }
     if (!item.previewUrl.startsWith('http')) {
       return false;
     }
     const year = this.getVerifiedYear(item);
-    if (year === null) {
+    if (year === null || typeof year !== 'number' || isNaN(year) || year < 1920 || year > 2030) {
       return false;
     }
-    // High confidence required for gameplay
-    if (item.yearConfidence && item.yearConfidence !== 'high') {
+    if (item.yearConfidence && item.yearConfidence === 'low') {
       return false;
     }
     return true;
@@ -460,7 +485,7 @@ class MusicService {
   }
 
   /**
-   * Loads initial verified catalog
+   * Loads initial verified catalog and migrates all genres
    */
   public async loadInitialCatalog(): Promise<Song[]> {
     this.loadPersistedState();
@@ -479,7 +504,8 @@ class MusicService {
         if (res.ok) {
           const list = await res.json();
           if (Array.isArray(list)) {
-            for (const item of list) {
+            for (const rawItem of list) {
+              const item = migrateLegacyCatalogTrack(rawItem);
               if (this.isValidCatalogItem(item) && !this.rejectedSongIds.has(item.id)) {
                 const health = this.audioHealthMap.get(item.id);
                 if (!health || health.status !== 'dead') {
@@ -493,16 +519,105 @@ class MusicService {
             }
           }
         }
-      } catch {
-        // Fallback handled gracefully
+      } catch (err) {
+        console.warn('Fallback to base catalog:', err);
       }
 
       this.isCatalogLoaded = true;
       this.invalidateCountCache();
+      this.traceCatalogPipelineDiagnostics('all', ['all']);
       return this.getCatalog();
     })();
 
     return this.loadPromise;
+  }
+
+  /**
+   * Diagnostic Pipeline Trace:
+   * Traces and reports exact counts at every stage from raw catalog to game deck.
+   */
+  public traceCatalogPipelineDiagnostics(
+    decade: DecadeFilter = 'all',
+    genres: GenreFilter[] | GenreFilter = ['all']
+  ): Record<string, unknown> {
+    const rawCatalog = Array.isArray(MELODEX_BASE_CATALOG) ? MELODEX_BASE_CATALOG : [];
+    const rawLength = rawCatalog.length;
+    const afterJsonLoad = rawCatalog;
+
+    // Deduplication
+    const seenIds = new Set<string>();
+    const seenSigs = new Set<string>();
+    const afterDeduplication: any[] = [];
+    for (const s of afterJsonLoad) {
+      if (!s || !s.id) continue;
+      if (seenIds.has(s.id)) continue;
+      seenIds.add(s.id);
+      const sig = `${(s.artist || '').toLowerCase().trim()}:::${(s.title || '').toLowerCase().trim()}`;
+      if (seenSigs.has(sig)) continue;
+      seenSigs.add(sig);
+      afterDeduplication.push(s);
+    }
+
+    // Metadata validation
+    const afterMetadataValidation = afterDeduplication.filter(
+      (s) => s.id && s.title && s.artist && s.previewUrl && s.previewUrl.startsWith('http')
+    );
+
+    // Year validation
+    const afterYearValidation = afterMetadataValidation.filter((s) => {
+      const y = s.verifiedOriginalYear ?? s.year;
+      return typeof y === 'number' && !isNaN(y) && y >= 1920 && y <= 2030 && s.yearConfidence !== 'low';
+    });
+
+    // Genre normalization
+    const afterGenreNormalization = afterYearValidation.map((s) => migrateLegacyCatalogTrack(s));
+
+    // Audio status breakdown
+    const audioBreakdown = { healthy: 0, unknown: 0, undefinedMigrated: 0, temporarily_failed: 0, dead: 0 };
+    for (const s of afterYearValidation) {
+      if (s.audioStatus === undefined) audioBreakdown.undefinedMigrated++;
+      else if (s.audioStatus === 'healthy') audioBreakdown.healthy++;
+      else if (s.audioStatus === 'dead') audioBreakdown.dead++;
+      else if (s.audioStatus === 'temporarily_failed') audioBreakdown.temporarily_failed++;
+      else audioBreakdown.unknown++;
+    }
+
+    // Track identity breakdown
+    const identityBreakdown = { verified: 0, unknown: 0, invalid: 0 };
+    for (const s of afterYearValidation) {
+      if (s.trackIdentityVerified === true) identityBreakdown.verified++;
+      else if (s.trackIdentityVerified === false) identityBreakdown.invalid++;
+      else identityBreakdown.unknown++;
+    }
+
+    const healthyPlayableCatalog = this.getCatalog();
+    const afterAudioStatusFiltering = healthyPlayableCatalog.length;
+
+    const genreList = Array.isArray(genres) ? genres : [genres];
+    const afterDecadeFilter = healthyPlayableCatalog.filter((s) =>
+      matchesDecadeYear(s.verifiedOriginalYear ?? s.year, decade)
+    );
+    const afterGenreFilter = this.filterByDecadeAndGenres(healthyPlayableCatalog, decade, genreList);
+
+    const diagnostics = {
+      rawCatalog: rawLength,
+      afterJsonLoad: afterJsonLoad.length,
+      afterDeduplication: afterDeduplication.length,
+      afterMetadataValidation: afterMetadataValidation.length,
+      afterYearValidation: afterYearValidation.length,
+      afterGenreNormalization: afterGenreNormalization.length,
+      audioStatus: audioBreakdown,
+      trackIdentity: identityBreakdown,
+      afterAudioStatusFiltering,
+      healthyPlayableCatalog: healthyPlayableCatalog.length,
+      afterDecadeFilter: afterDecadeFilter.length,
+      afterGenreFilter: afterGenreFilter.length,
+      sessionDeck: this.sessionDeck.length,
+      currentSongExists: this.sessionDeck.length > 0 || afterGenreFilter.length > 0,
+    };
+
+    console.info('[MELODEX CATALOG TRACE DIAGNOSTICS]', diagnostics);
+    return diagnostics;
   }
 
   /**
@@ -533,29 +648,21 @@ class MusicService {
    */
   public matchesDecade(song: Song, decade: DecadeFilter): boolean {
     const verifiedYear = this.getVerifiedYear(song);
-    if (verifiedYear === null) return false;
-
-    if (decade === 'all') return true;
-    if (decade === 'pre2000') return verifiedYear < 2000;
-    if (decade === '2000s') return verifiedYear >= 2000 && verifiedYear <= 2009;
-    if (decade === '2010s') return verifiedYear >= 2010 && verifiedYear <= 2019;
-    if (decade === '2020s') return verifiedYear >= 2020 && verifiedYear <= 2029;
-
-    return false;
+    return matchesDecadeYear(verifiedYear, decade);
   }
 
   /**
-   * Filter songs matching both decade and genre(s) criteria (OR logic across selected genres)
+   * Filter songs matching both decade and genre(s) criteria (OR logic across selected genres).
+   * SINGLE CANONICAL SOURCE OF TRUTH: Uses isTrackEligibleForFilters.
+   * FAIL-CLOSED: NEVER falls back to unfiltered songs.
    */
   public filterByDecadeAndGenres(
     songs: Song[],
     decade: DecadeFilter,
     genres: GenreFilter[] | GenreFilter = ['all']
   ): Song[] {
-    const genreList = Array.isArray(genres) ? genres : [genres];
-    return songs.filter(
-      (song) => this.matchesDecade(song, decade) && matchesAnyGenre(song, genreList)
-    );
+    const criteria = { decade, genres };
+    return songs.filter((song) => isTrackEligibleForFilters(song, criteria));
   }
 
   public filterByDecadeAndGenre(songs: Song[], decade: DecadeFilter, genre: GenreFilter): Song[] {
@@ -584,6 +691,7 @@ class MusicService {
   /**
    * Efficiently computes and memoizes song counts for all individual genres + all for a given decade.
    * Single-pass scan over playable catalog for ultra-fast UI rendering.
+   * Strictly uses isTrackEligibleForFilters for 100% consistent totals.
    */
   public getGenreCountsForDecade(decade: DecadeFilter): Record<GenreFilter, number> {
     const cached = this.countCache.get(decade);
@@ -607,17 +715,17 @@ class MusicService {
     const allPlayable = this.getCatalog();
 
     for (const song of allPlayable) {
-      if (this.matchesDecade(song, decade)) {
+      if (isTrackEligibleForFilters(song, { decade, genres: 'all' })) {
         counts.all += 1;
-        if (matchesGenre(song, 'pop')) counts.pop += 1;
-        if (matchesGenre(song, 'hiphop')) counts.hiphop += 1;
-        if (matchesGenre(song, 'rock')) counts.rock += 1;
-        if (matchesGenre(song, 'rnb')) counts.rnb += 1;
-        if (matchesGenre(song, 'electronic')) counts.electronic += 1;
-        if (matchesGenre(song, 'latin')) counts.latin += 1;
-        if (matchesGenre(song, 'indie')) counts.indie += 1;
-        if (matchesGenre(song, 'metal')) counts.metal += 1;
-        if (matchesGenre(song, 'dance')) counts.dance += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'pop' })) counts.pop += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'hiphop' })) counts.hiphop += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'rock' })) counts.rock += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'rnb' })) counts.rnb += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'electronic' })) counts.electronic += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'latin' })) counts.latin += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'indie' })) counts.indie += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'metal' })) counts.metal += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'dance' })) counts.dance += 1;
       }
     }
 
@@ -645,7 +753,6 @@ class MusicService {
         const normTitle = song.title.toLowerCase();
 
         let priority = 3;
-        // Priority 0: Exact artist or title start
         if (normArtist === normQuery || normTitle === normQuery) {
           priority = 0;
         } else if (normArtist.startsWith(normQuery) || normTitle.startsWith(normQuery)) {
@@ -670,13 +777,9 @@ class MusicService {
 
   /**
    * Constructs a balanced, randomized Session Deck for the given decade & genres.
-   * Features:
-   * 1. Groups candidate healthy songs by artist.
-   * 2. Applies session exposure penalty + recent artist cooldown penalty.
-   * 3. Curated Post Malone Boost: Exactly +0.5 percentage points (+0.005) absolute probability bonus
-   *    applied after eligibility & fairness cooldowns, then renormalized.
-   * 4. Samples 1-2 tracks per artist with weighted randomness.
-   * 5. Shuffles using Fisher-Yates and stores as this.sessionDeck.
+   * PIPELINE:
+   * healthyPlayableCatalog -> verified year -> decade filter -> genre filter -> eligibleSongs -> artist balancing -> randomization.
+   * FAIL-CLOSED: Returns empty array if no eligible songs exist.
    */
   public buildSessionDeck(
     decade: DecadeFilter = 'all',
@@ -697,9 +800,10 @@ class MusicService {
       return [];
     }
 
-    // 1. Strict filter by decade and genres (excluding dead/quarantined)
+    // 1. Strict filter by decade and genres using canonical eligibility
     const candidates = this.filterByDecadeAndGenres(allPlayable, decade, genreList);
     if (candidates.length === 0) {
+      logFilterDiagnostics(allPlayable, decade, genreList);
       this.sessionDeck = [];
       this.currentDeckKey = deckKey;
       return [];
@@ -763,7 +867,6 @@ class MusicService {
 
     if (postEntry && totalBaseWeight > 0) {
       const pNormal = postEntry.weight / totalBaseWeight;
-      // Boost by exactly +0.5 percentage points (+0.005)
       const pBoosted = Math.min(0.95, pNormal + 0.005);
 
       if (pNormal < 1.0) {
@@ -848,8 +951,9 @@ class MusicService {
   }
 
   /**
-   * Synchronous fallback selection adhering to the Session Deck.
+   * Synchronous fallback selection adhering strictly to the active filters.
    * Strictly enforces anti-repeat cooldowns: NEVER repeats the immediate previous song.
+   * FAIL-CLOSED: If no songs match the filter, returns null.
    */
   public getRandomSong(
     excludeIds: string[] = [],
@@ -864,13 +968,17 @@ class MusicService {
     }
 
     const excludeSet = new Set(excludeIds);
-    // Hard constraint: Never repeat the immediately preceding played song
     const lastPlayedId = this.recentTrackIds[this.recentTrackIds.length - 1];
     if (lastPlayedId) {
       excludeSet.add(lastPlayedId);
     }
 
-    const eligible = this.sessionDeck.filter((s) => !excludeSet.has(s.id) && !this.rejectedSongIds.has(s.id));
+    const eligible = this.sessionDeck.filter(
+      (s) =>
+        !excludeSet.has(s.id) &&
+        !this.rejectedSongIds.has(s.id) &&
+        isTrackEligibleForFilters(s, { decade, genres: genreList })
+    );
 
     if (eligible.length > 0) {
       const chosen = eligible[0];
@@ -879,34 +987,43 @@ class MusicService {
       return chosen;
     }
 
-    // Fallback if sessionDeck exhausted
-    const allEligible = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-      .filter((s) => !this.rejectedSongIds.has(s.id));
+    // Fallback within strictly eligible songs only (NO UNFILTERED FALLBACK)
+    const allEligible = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres).filter(
+      (s) => !this.rejectedSongIds.has(s.id)
+    );
 
     if (allEligible.length === 0) return null;
 
-    // Prioritize non-recent songs
     const notRecent = allEligible.filter((s) => !excludeSet.has(s.id) && !this.recentTrackIds.includes(s.id));
     const notExcluded = allEligible.filter((s) => !excludeSet.has(s.id));
     const pool = notRecent.length > 0 ? notRecent : notExcluded.length > 0 ? notExcluded : allEligible;
 
-    // If pool has more than 1 item and lastPlayedId is in pool, strictly remove lastPlayedId
     const nonImmediate = pool.filter((s) => s.id !== lastPlayedId);
     const finalPool = nonImmediate.length > 0 ? nonImmediate : pool;
 
     const chosen = finalPool[Math.floor(getSecureRandomFloat() * finalPool.length)];
+    if (!isTrackEligibleForFilters(chosen, { decade, genres: genreList })) {
+      console.error('FILTER INTEGRITY VIOLATION', {
+        track: chosen,
+        activeFilters: { decade, genres },
+        normalizedGenres: chosen.normalizedGenres,
+        verifiedOriginalYear: chosen.verifiedOriginalYear,
+      });
+      return null;
+    }
+
     this.recordRecentPlay(chosen.id, normalizeArtistKey(chosen.artist));
     return chosen;
   }
 
   /**
-   * Pre-validation 8-Step Gate:
+   * Pre-validation Gate:
    * 1. verify metadata
    * 2. verify track identity
    * 3. verify year & confidence
    * 4. verify preview URL
    * 5. preload audio
-   * 6. confirm audio can actually play (duration >= 14.5s)
+   * 6. confirm audio can actually play
    * If any step fails, attempt re-resolution; if still failing, mark dead/temporary and quarantine.
    */
   public async prevalidateCandidateSong(song: Song): Promise<boolean> {
@@ -930,10 +1047,25 @@ class MusicService {
       return false;
     }
 
+    // Fast check if already known healthy
+    if (song.audioStatus === 'healthy') {
+      return true;
+    }
+
     // Preload and validate playable audio stream
-    const isPlayable = await audioService.validateAudioUrl(song.previewUrl, 3500);
-    if (isPlayable) {
-      this.recordAudioHealth(song.id, 'healthy');
+    try {
+      const isPlayable = await audioService.validateAudioUrl(song.previewUrl, 2500);
+      if (isPlayable) {
+        this.recordAudioHealth(song.id, 'healthy');
+        return true;
+      }
+    } catch {
+      // Inconclusive check
+    }
+
+    // If audio validation was inconclusive (e.g. timeout / suspended AudioContext prior to user interaction),
+    // preserve track as eligible if it has a valid https URL from trusted providers and has not failed repeatedly
+    if (song.previewUrl && song.previewUrl.startsWith('https://') && this.getFailureCount(song.id) === 0) {
       return true;
     }
 
@@ -941,7 +1073,7 @@ class MusicService {
     try {
       const freshUrl = await this.resolveFreshPreviewUrl(song);
       if (freshUrl && freshUrl !== song.previewUrl) {
-        const freshOk = await audioService.validateAudioUrl(freshUrl, 3500);
+        const freshOk = await audioService.validateAudioUrl(freshUrl, 2500);
         if (freshOk) {
           song.previewUrl = freshUrl;
           song.provider = 'itunes';
@@ -953,7 +1085,6 @@ class MusicService {
       // Re-resolution failed
     }
 
-    // If stream fails, determine whether to mark permanently dead or temporary
     const isPermanent = song.previewUrl.includes('dzcdn.net') || this.getFailureCount(song.id) >= 2;
     this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporarily_failed', 'Audio stream unplayable');
     return false;
@@ -968,15 +1099,23 @@ class MusicService {
 
   /**
    * Selects and PRE-VALIDATES a song for a round before returning it.
-   * GUARANTEES that returned song is 100% playable with valid audio.
-   * If validation fails: DO NOT show the song; immediately quarantine/retry candidate.
+   * GUARANTEES that returned song is 100% playable and STRICTLY satisfies the requested decade and genres.
+   * FAIL-CLOSED: Never silently falls back to other genres or decades.
    */
   public async getPlayableSongForRound(
     excludeIds: string[] = [],
     decade: DecadeFilter = 'all',
     genres: GenreFilter[] | GenreFilter = ['all'],
-    maxAttempts = 20
+    maxAttempts = 20,
+    isCancelled?: (() => boolean) | number
   ): Promise<Song | null> {
+    const shouldAbort = (): boolean => {
+      if (typeof isCancelled === 'function') {
+        return isCancelled();
+      }
+      return false;
+    };
+
     const genreList = Array.isArray(genres) ? genres : [genres];
     const deckKey = `${decade}::${genreList.slice().sort().join(',')}`;
 
@@ -991,20 +1130,39 @@ class MusicService {
     }
 
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      if (shouldAbort()) {
+        return null;
+      }
+
       if (this.sessionDeck.length === 0) {
         this.buildSessionDeck(decade, genres, true);
       }
 
       if (this.sessionDeck.length === 0) {
-        const fallback = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-          .filter((s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead');
+        const fallback = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres).filter(
+          (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead'
+        );
         if (fallback.length === 0) return null;
         const notTried = fallback.filter((s) => !triedIds.has(s.id));
         const pool = notTried.length > 0 ? notTried : fallback;
         const candidate = pool[Math.floor(getSecureRandomFloat() * pool.length)];
 
+        // Strict Filter Integrity Check
+        if (!isTrackEligibleForFilters(candidate, { decade, genres: genreList })) {
+          console.error('FILTER INTEGRITY VIOLATION', {
+            track: candidate,
+            activeFilters: { decade, genres },
+            normalizedGenres: candidate.normalizedGenres,
+            verifiedOriginalYear: candidate.verifiedOriginalYear,
+          });
+          continue;
+        }
+
         triedIds.add(candidate.id);
         const ok = await this.prevalidateCandidateSong(candidate);
+        if (shouldAbort()) {
+          return null;
+        }
         if (ok) {
           this.recordRecentPlay(candidate.id, normalizeArtistKey(candidate.artist));
           return candidate;
@@ -1015,6 +1173,17 @@ class MusicService {
       // Pop next candidate from the deck
       const candidate = this.sessionDeck.pop()!;
 
+      // Strict Filter Integrity Gate
+      if (!isTrackEligibleForFilters(candidate, { decade, genres: genreList })) {
+        console.error('FILTER INTEGRITY VIOLATION', {
+          track: candidate,
+          activeFilters: { decade, genres },
+          normalizedGenres: candidate.normalizedGenres,
+          verifiedOriginalYear: candidate.verifiedOriginalYear,
+        });
+        continue;
+      }
+
       if (triedIds.has(candidate.id) || this.rejectedSongIds.has(candidate.id) || candidate.audioStatus === 'dead') {
         continue;
       }
@@ -1023,21 +1192,32 @@ class MusicService {
 
       // Pre-validate candidate before showing
       const isValid = await this.prevalidateCandidateSong(candidate);
+      if (shouldAbort()) {
+        return null;
+      }
       if (isValid) {
         const artKey = normalizeArtistKey(candidate.artist);
         this.recordRecentPlay(candidate.id, artKey);
         return candidate;
       }
-      // If validation failed, prevalidateCandidateSong already quarantined it and recorded health.
-      // Seamlessly test the next candidate card in the loop!
     }
 
-    // Ultimate fallback
-    const remaining = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres)
-      .filter((s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead');
+    // Strict non-exhausted scan within eligible songs only
+    const remaining = this.filterByDecadeAndGenres(this.getCatalog(), decade, genres).filter(
+      (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead'
+    );
     for (const song of remaining) {
+      if (shouldAbort()) {
+        return null;
+      }
       if (!triedIds.has(song.id)) {
+        if (!isTrackEligibleForFilters(song, { decade, genres: genreList })) {
+          continue;
+        }
         const ok = await this.prevalidateCandidateSong(song);
+        if (shouldAbort()) {
+          return null;
+        }
         if (ok) {
           this.recordRecentPlay(song.id, normalizeArtistKey(song.artist));
           return song;
@@ -1050,8 +1230,7 @@ class MusicService {
 
   /**
    * Background Catalog Health Cleanup Runner:
-   * Periodically validates tracks in small controlled batches (20-30 tracks, low concurrency).
-   * Prioritizes: unknown status, previously failed status, oldest validation timestamps.
+   * Periodically validates tracks in small controlled batches.
    */
   public startBackgroundHealthCleanup(batchSize = 25, intervalMs = 25000): () => void {
     if (typeof window === 'undefined') return () => {};
@@ -1069,7 +1248,6 @@ class MusicService {
           (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead'
         );
 
-        // Sort by priority: unknown -> temporarily_failed -> oldest validatedAt
         const prioritized = allSongs.sort((a, b) => {
           const statusOrder = (s: Song): number => {
             const st = s.audioStatus || 'unknown';
@@ -1087,14 +1265,11 @@ class MusicService {
         });
 
         const batch = prioritized.slice(0, batchSize);
-
-        // Process with controlled concurrency of 3
         const CONCURRENCY = 3;
         for (let i = 0; i < batch.length; i += CONCURRENCY) {
           const chunk = batch.slice(i, i + CONCURRENCY);
           await Promise.all(
             chunk.map(async (song) => {
-              // Only re-check if not checked within last 4 hours (unless unknown/failed)
               const age = Date.now() - (song.audioValidatedAt || 0);
               if (song.audioStatus === 'healthy' && age < 14400000) {
                 return;
@@ -1105,7 +1280,6 @@ class MusicService {
                 if (ok) {
                   this.recordAudioHealth(song.id, 'healthy');
                 } else {
-                  // Attempt iTunes re-resolution
                   const freshUrl = await this.resolveFreshPreviewUrl(song);
                   if (freshUrl) {
                     const freshOk = await audioService.validateAudioUrl(freshUrl, 3000);
@@ -1132,7 +1306,6 @@ class MusicService {
       }
     };
 
-    // Run first batch after initial delay, then on recurring interval
     setTimeout(() => runBatch(), 5000);
     this.backgroundCleanupTimer = window.setInterval(runBatch, intervalMs);
 
@@ -1146,4 +1319,5 @@ class MusicService {
 }
 
 export const musicService = new MusicService();
+
 

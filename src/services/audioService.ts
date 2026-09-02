@@ -1,3 +1,20 @@
+export function isBenignAudioInterruption(err: unknown): boolean {
+  if (!err) return false;
+  const msg = err instanceof Error ? err.message : String(err);
+  const name = err instanceof Error ? err.name : '';
+  if (name === 'AbortError' || name === 'NotAllowedError') return true;
+  if (
+    msg.includes('interrupted by a call to pause') ||
+    msg.includes('interrupted by a new load request') ||
+    msg.includes('interrupted by pause') ||
+    msg.includes('user gesture') ||
+    msg.includes('user cancelled')
+  ) {
+    return true;
+  }
+  return false;
+}
+
 export type PlaybackState = 'idle' | 'loading' | 'playing' | 'paused' | 'error';
 
 export interface PlaybackStatus {
@@ -366,9 +383,12 @@ class AudioService {
         }
       };
     } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'Playback failed';
-      console.error('Audio playback error:', err);
       this.cleanupPlayback();
+      if (isBenignAudioInterruption(err)) {
+        return;
+      }
+      const message = err instanceof Error ? err.message : 'Playback failed';
+      console.warn('Audio playback error:', err);
       this.emitStatus(message);
     }
   }
@@ -397,8 +417,11 @@ class AudioService {
         }, duration * 1000);
       })
       .catch((err) => {
-        console.error('Fallback audio play failed:', err);
         this.cleanupPlayback();
+        if (isBenignAudioInterruption(err)) {
+          return;
+        }
+        console.warn('Fallback audio play failed:', err);
         this.emitStatus('Click Play to allow audio playback.');
       });
   }

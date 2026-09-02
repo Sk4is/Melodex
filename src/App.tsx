@@ -4,8 +4,12 @@
  */
 
 import { Game } from './components/Game';
+import { VisualProvider } from './context/VisualContext';
 
 export default function App() {
-  return <Game />;
+  return (
+    <VisualProvider>
+      <Game />
+    </VisualProvider>
+  );
 }
-

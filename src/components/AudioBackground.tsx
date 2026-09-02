@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { audioService } from '../services/audioService';
 import { DecadeFilter } from '../types/game';
 import { CATEGORY_THEMES } from '../types/theme';
+import { useVisuals } from '../context/VisualContext';
 
 interface AudioBackgroundProps {
   artworkUrl?: string;
@@ -10,12 +11,23 @@ interface AudioBackgroundProps {
   decade?: DecadeFilter;
 }
 
+interface DustParticle {
+  x: number;
+  y: number;
+  radius: number;
+  alpha: number;
+  vy: number;
+  vx: number;
+  hueOffset: number;
+}
+
 export const AudioBackground: React.FC<AudioBackgroundProps> = ({
   artworkUrl,
   isResultRevealed = false,
   isWon = false,
   decade = 'all',
 }) => {
+  const { settings, effectiveAnswerEffect } = useVisuals();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const rafRef = useRef<number | null>(null);
   const currentDecadeRef = useRef<DecadeFilter>(decade);
@@ -29,6 +41,8 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
   useEffect(() => {
     if (isWon && !prevIsWonRef.current) {
       winTriggerTimeRef.current = performance.now();
+    } else if (!isWon) {
+      winTriggerTimeRef.current = null;
     }
     prevIsWonRef.current = isWon;
   }, [isWon]);
@@ -51,18 +65,29 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
 
     window.addEventListener('resize', handleResize);
 
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
-
     const initialTheme = CATEGORY_THEMES[currentDecadeRef.current] || CATEGORY_THEMES.all;
 
-    // Ambient floating orbs parameters
+    // Ambient floating orbs
     const orbs = [
       { x: 0.3, y: 0.35, radius: 0.45, vx: 0.00015, vy: 0.0001, hueOffset: 0, satOffset: 0, baseAlpha: 0.06 },
       { x: 0.7, y: 0.65, radius: 0.5, vx: -0.00012, vy: 0.00015, hueOffset: 12, satOffset: -5, baseAlpha: 0.05 },
       { x: 0.5, y: 0.5, radius: 0.35, vx: 0.0001, vy: -0.0001, hueOffset: -8, satOffset: 10, baseAlpha: 0.04 },
     ];
+
+    // Ambient dust particles
+    const dustCount = settings.ambientDust === 'OFF' ? 0 : settings.ambientDust === 'LOW' ? 20 : 42;
+    const dustParticles: DustParticle[] = [];
+    for (let i = 0; i < dustCount; i++) {
+      dustParticles.push({
+        x: Math.random(),
+        y: Math.random(),
+        radius: Math.random() * 1.3 + 0.5,
+        alpha: Math.random() * 0.08 + 0.03,
+        vy: -(Math.random() * 0.00025 + 0.00008),
+        vx: (Math.random() - 0.5) * 0.0001,
+        hueOffset: (Math.random() - 0.5) * 20,
+      });
+    }
 
     let currentHue = initialTheme.hue;
     let currentSat = initialTheme.sat;
@@ -70,16 +95,32 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
     let smoothedBass = 0;
     let time = 0;
 
-    const render = () => {
-      time += 0.008;
+    // Motion multiplier
+    let motionMultiplier = 1;
+    if (settings.reducedMotion || settings.backgroundMotion === 'OFF') {
+      motionMultiplier = 0;
+    } else if (settings.backgroundMotion === 'LOW') {
+      motionMultiplier = 0.4;
+    } else if (settings.backgroundMotion === 'HIGH') {
+      motionMultiplier = 1.75;
+    }
 
-      // Base background fill (solid near-black)
+    // Glow multiplier
+    let glowMultiplier = 1;
+    if (settings.glowIntensity === 'OFF') glowMultiplier = 0.2;
+    else if (settings.glowIntensity === 'LOW') glowMultiplier = 0.6;
+    else if (settings.glowIntensity === 'HIGH') glowMultiplier = 1.6;
+
+    const render = () => {
+      time += 0.008 * (motionMultiplier > 0 ? motionMultiplier : 0.05);
+
+      // Base background fill (solid dark neutral)
       ctx.fillStyle = '#060709';
       ctx.fillRect(0, 0, width, height);
 
       // Target theme from active decade
       const targetTheme = CATEGORY_THEMES[currentDecadeRef.current] || CATEGORY_THEMES.all;
-      
+
       // Smooth color transition
       let dHue = targetTheme.hue - currentHue;
       if (dHue > 180) dHue -= 360;
@@ -87,28 +128,27 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
       currentHue = (currentHue + dHue * 0.06 + 360) % 360;
       currentSat += (targetTheme.sat - currentSat) * 0.06;
 
-      // Get real-time audio energy
+      // Real-time audio energy
       let energy = 0;
       let bass = 0;
 
-      if (!prefersReducedMotion && audioService.getIsPlaying()) {
+      if (!settings.reducedMotion && settings.audioReactive && audioService.getIsPlaying()) {
         const audioStats = audioService.getAudioEnergy();
         energy = audioStats.overall;
         bass = audioStats.bass;
       }
 
-      // Smooth interpolation to avoid jitter
       smoothedEnergy += (energy - smoothedEnergy) * 0.12;
       smoothedBass += (bass - smoothedBass) * 0.15;
 
-      const dynamicScale = 1 + smoothedBass * 0.35;
-      const dynamicIntensity = 1 + smoothedEnergy * 1.6;
+      const dynamicScale = 1 + smoothedBass * 0.35 * (settings.audioReactive ? 1 : 0);
+      const dynamicIntensity = (1 + smoothedEnergy * 1.6 * (settings.audioReactive ? 1 : 0)) * glowMultiplier;
 
       // Render atmospheric ambient orbs
       for (const orb of orbs) {
-        if (!prefersReducedMotion) {
-          orb.x += orb.vx;
-          orb.y += orb.vy;
+        if (motionMultiplier > 0) {
+          orb.x += orb.vx * motionMultiplier;
+          orb.y += orb.vy * motionMultiplier;
           if (orb.x < 0.15 || orb.x > 0.85) orb.vx *= -1;
           if (orb.y < 0.15 || orb.y > 0.85) orb.vy *= -1;
         }
@@ -116,12 +156,12 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
         const orbHue = (currentHue + orb.hueOffset + 360) % 360;
         const orbSat = Math.max(20, Math.min(100, currentSat + orb.satOffset));
 
-        const cx = orb.x * width + Math.sin(time + orb.hueOffset) * 20;
-        const cy = orb.y * height + Math.cos(time + orb.hueOffset) * 20;
+        const cx = orb.x * width + Math.sin(time + orb.hueOffset) * 20 * (motionMultiplier > 0 ? 1 : 0);
+        const cy = orb.y * height + Math.cos(time + orb.hueOffset) * 20 * (motionMultiplier > 0 ? 1 : 0);
         const r = Math.min(width, height) * orb.radius * dynamicScale;
 
         const effectiveAlpha = Math.min(
-          0.18,
+          0.22,
           orb.baseAlpha * dynamicIntensity * (isResultRevealed ? 0.6 : 1)
         );
 
@@ -136,36 +176,98 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
         ctx.fill();
       }
 
-      // Subtle center resonance wave upon correct discovery (1.5s duration)
-      if (winTriggerTimeRef.current !== null) {
-        const elapsed = (performance.now() - winTriggerTimeRef.current) / 1000;
-        if (elapsed < 1.5) {
-          const progress = elapsed / 1.5; // 0 to 1
-          const easeOut = 1 - Math.pow(1 - progress, 3);
-          const resonanceRadius = Math.min(width, height) * (0.25 + easeOut * 0.9);
-          const alpha = (1 - easeOut) * 0.18;
+      // Render Ambient Dust Particles
+      if (dustParticles.length > 0 && !settings.reducedMotion) {
+        for (const p of dustParticles) {
+          if (motionMultiplier > 0) {
+            p.y += p.vy * (motionMultiplier > 0 ? motionMultiplier : 0.5);
+            p.x += p.vx * (motionMultiplier > 0 ? motionMultiplier : 0.5);
+            if (p.y < -0.05) p.y = 1.05;
+            if (p.x < -0.05) p.x = 1.05;
+            if (p.x > 1.05) p.x = -0.05;
+          }
 
-          // Expanding soft resonance ring
-          const ringGrad = ctx.createRadialGradient(
-            width / 2,
-            height / 2,
-            Math.max(0, resonanceRadius - 60),
-            width / 2,
-            height / 2,
-            resonanceRadius
-          );
-          ringGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
-          ringGrad.addColorStop(0.7, `hsla(${currentHue}, ${currentSat}%, 55%, ${alpha})`);
-          ringGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+          const px = p.x * width;
+          const py = p.y * height;
+          const particleHue = (currentHue + p.hueOffset + 360) % 360;
 
-          ctx.fillStyle = ringGrad;
+          ctx.fillStyle = `hsla(${particleHue}, ${currentSat}%, 75%, ${p.alpha * glowMultiplier})`;
           ctx.beginPath();
-          ctx.arc(width / 2, height / 2, resonanceRadius, 0, Math.PI * 2);
+          ctx.arc(px, py, p.radius, 0, Math.PI * 2);
           ctx.fill();
+        }
+      }
+
+      // Integrated Background Effect on Correct Answer
+      if (winTriggerTimeRef.current !== null && !settings.reducedMotion) {
+        const elapsed = (performance.now() - winTriggerTimeRef.current) / 1000;
+        if (elapsed < 1.8) {
+          const progress = elapsed / 1.8;
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+
+          if (effectiveAnswerEffect === 'RESONANCE') {
+            const resonanceRadius = Math.min(width, height) * (0.2 + easeOut * 0.9);
+            const alpha = (1 - easeOut) * 0.22 * glowMultiplier;
+
+            const ringGrad = ctx.createRadialGradient(
+              width / 2,
+              height / 2,
+              Math.max(0, resonanceRadius - 60),
+              width / 2,
+              height / 2,
+              resonanceRadius
+            );
+            ringGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
+            ringGrad.addColorStop(0.7, `hsla(${currentHue}, ${currentSat}%, 55%, ${alpha})`);
+            ringGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+            ctx.fillStyle = ringGrad;
+            ctx.beginPath();
+            ctx.arc(width / 2, height / 2, resonanceRadius, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (effectiveAnswerEffect === 'SHOCKWAVE') {
+            const shockRadius = Math.min(width, height) * (0.1 + easeOut * 1.2);
+            const alpha = (1 - easeOut) * 0.3 * glowMultiplier;
+            const shockGrad = ctx.createRadialGradient(
+              width / 2,
+              height / 2,
+              Math.max(0, shockRadius - 40),
+              width / 2,
+              height / 2,
+              shockRadius
+            );
+            shockGrad.addColorStop(0, 'rgba(0,0,0,0)');
+            shockGrad.addColorStop(0.8, `hsla(${currentHue}, ${currentSat}%, 65%, ${alpha})`);
+            shockGrad.addColorStop(1, 'rgba(0,0,0,0)');
+
+            ctx.fillStyle = shockGrad;
+            ctx.beginPath();
+            ctx.arc(width / 2, height / 2, shockRadius, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (effectiveAnswerEffect === 'AURORA') {
+            const auroraBloomR = Math.min(width, height) * (0.3 + easeOut * 0.7);
+            const alpha = (1 - easeOut) * 0.28 * glowMultiplier;
+            const auroraGrad = ctx.createRadialGradient(
+              width / 2,
+              height / 2,
+              0,
+              width / 2,
+              height / 2,
+              auroraBloomR
+            );
+            auroraGrad.addColorStop(0, `hsla(${currentHue}, ${currentSat}%, 55%, ${alpha})`);
+            auroraGrad.addColorStop(0.6, `hsla(${(currentHue + 30) % 360}, ${currentSat}%, 40%, ${alpha * 0.5})`);
+            auroraGrad.addColorStop(1, 'rgba(6, 7, 9, 0)');
+
+            ctx.fillStyle = auroraGrad;
+            ctx.beginPath();
+            ctx.arc(width / 2, height / 2, auroraBloomR, 0, Math.PI * 2);
+            ctx.fill();
+          }
 
           // Gentle center illumination bloom
           const centerBloomR = Math.min(width, height) * 0.45;
-          const bloomAlpha = (1 - easeOut) * 0.12;
+          const bloomAlpha = (1 - easeOut) * 0.12 * glowMultiplier;
           const bloomGrad = ctx.createRadialGradient(
             width / 2,
             height / 2,
@@ -184,26 +286,6 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
         }
       }
 
-      // Very subtle organic center glow reacting to music
-      if (smoothedEnergy > 0.01) {
-        const centerR = Math.min(width, height) * 0.4 * (1 + smoothedBass * 0.25);
-        const centerGrad = ctx.createRadialGradient(
-          width / 2,
-          height / 2,
-          0,
-          width / 2,
-          height / 2,
-          centerR
-        );
-        centerGrad.addColorStop(0, `hsla(${currentHue}, ${currentSat}%, 50%, ${smoothedEnergy * 0.08})`);
-        centerGrad.addColorStop(1, 'rgba(6, 7, 9, 0)');
-
-        ctx.fillStyle = centerGrad;
-        ctx.beginPath();
-        ctx.arc(width / 2, height / 2, centerR, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
       rafRef.current = requestAnimationFrame(render);
     };
 
@@ -215,26 +297,36 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
       }
       window.removeEventListener('resize', handleResize);
     };
-  }, [isResultRevealed]);
+  }, [
+    isResultRevealed,
+    settings.backgroundMotion,
+    settings.audioReactive,
+    settings.ambientDust,
+    settings.glowIntensity,
+    settings.reducedMotion,
+    effectiveAnswerEffect,
+  ]);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none">
-      {/* Canvas ambient reactive layer */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full object-cover" />
 
-      {/* Blurred album art overlay for revealed rounds (subtle, dark, low opacity) */}
-      {artworkUrl && isResultRevealed && (
+      {artworkUrl && isResultRevealed && settings.artworkAmbience && (
         <div
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-20 filter blur-[90px] scale-110"
+          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-25 filter blur-[90px] scale-110"
           style={{ backgroundImage: `url(${artworkUrl})` }}
         />
       )}
 
-      {/* Vignette overlay */}
-      <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#060709]/60 to-[#060709] pointer-events-none" />
+      {settings.screenVignette !== 'OFF' && (
+        <div
+          className={`absolute inset-0 pointer-events-none transition-all duration-500 ${
+            settings.screenVignette === 'DEEP'
+              ? 'bg-radial-gradient from-transparent via-[#060709]/80 to-[#060709]'
+              : 'bg-radial-gradient from-transparent via-[#060709]/55 to-[#060709]'
+          }`}
+        />
+      )}
     </div>
   );
 };

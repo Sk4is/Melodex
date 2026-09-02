@@ -4,6 +4,8 @@ export const STAGES = [0.5, 1, 3, 5, 15] as const;
 
 export type GameStatus = 'loading' | 'ready' | 'won' | 'lost' | 'error';
 
+export type RoundState = 'loading' | 'playing' | 'revealed' | 'transitioning';
+
 export type DecadeFilter = 'all' | 'pre2000' | '2000s' | '2010s' | '2020s';
 
 export type GenreFilter =
@@ -60,7 +62,12 @@ export interface Guess {
 }
 
 export interface GameState {
+  roundId: string;
+  roundState: RoundState;
   currentSong: Song | null;
+  revealedSong: Song | null;
+  nextSongCandidate: Song | null;
+  roundAnswerSongId: string | null;
   currentStage: number; // 0 to 4 (stages.length - 1)
   guesses: Guess[];
   status: GameStatus;

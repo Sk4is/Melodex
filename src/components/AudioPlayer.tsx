@@ -12,6 +12,7 @@ import { audioService, PlaybackStatus } from '../services/audioService';
 import { STAGES } from '../types/game';
 import { TimeProgressBar } from './TimeProgressBar';
 import { WaveformVisualizer } from './WaveformVisualizer';
+import { useVisuals } from '../context/VisualContext';
 
 interface AudioPlayerProps {
   previewUrl: string;
@@ -28,6 +29,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   disabled = false,
   onAudioError,
 }) => {
+  const { settings, setIsPlayingAudio } = useVisuals();
   const [playbackStatus, setPlaybackStatus] = useState<PlaybackStatus>({
     state: 'idle',
     currentTime: 0,
@@ -42,6 +44,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   useEffect(() => {
     const unsubscribe = audioService.subscribe((status) => {
       setPlaybackStatus(status);
+      setIsPlayingAudio(status.state === 'playing');
       if (status.state === 'error' && onAudioError) {
         onAudioError();
       }
@@ -57,9 +60,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
     return () => {
       audioService.stop();
+      setIsPlayingAudio(false);
       unsubscribe();
     };
-  }, [previewUrl, onAudioError]);
+  }, [previewUrl, onAudioError, setIsPlayingAudio]);
 
   const handlePlayToggle = () => {
     if (disabled || !previewUrl) return;
@@ -90,6 +94,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
   const currentVolume = playbackStatus.isMuted ? 0 : playbackStatus.volume;
 
+  // Glow calculation
+  const hasGlow = settings.glowIntensity !== 'OFF';
+  const glowMultiplier = settings.glowIntensity === 'OFF' ? 0 : settings.glowIntensity === 'LOW' ? 0.5 : settings.glowIntensity === 'HIGH' ? 1.6 : 1;
+
   return (
     <div id="audio-player-section" className="w-full flex flex-col items-center select-none py-2">
       {/* 1. Clean Time Progression */}
@@ -101,15 +109,27 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
       {/* 2. Large Central Play Button */}
       <div className="relative mt-8 mb-4 flex flex-col items-center">
-        {/* Very subtle pulse when playing */}
-        {isPlaying && (
-          <motion.div
-            initial={{ scale: 0.95, opacity: 0.4 }}
-            animate={{ scale: 1.2, opacity: 0 }}
-            transition={{ repeat: Infinity, duration: 1.4, ease: 'easeOut' }}
-            className="absolute -inset-3 rounded-full pointer-events-none theme-transition"
-            style={{ backgroundColor: 'var(--accent-glow)' }}
-          />
+        {/* Audio-Reactive Energy Ring when playing and enabled */}
+        {isPlaying && settings.playEnergy && !settings.reducedMotion && (
+          <>
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0.45 }}
+              animate={{ scale: 1.22, opacity: 0 }}
+              transition={{ repeat: Infinity, duration: 1.4, ease: 'easeOut' }}
+              className="absolute -inset-3.5 rounded-full pointer-events-none theme-transition"
+              style={{ backgroundColor: 'var(--accent-glow)' }}
+            />
+            <motion.div
+              initial={{ scale: 0.98, opacity: 0.3 }}
+              animate={{ scale: 1.35, opacity: 0 }}
+              transition={{ repeat: Infinity, duration: 1.6, delay: 0.2, ease: 'easeOut' }}
+              className="absolute -inset-5 rounded-full pointer-events-none theme-transition"
+              style={{
+                border: '1px solid var(--accent)',
+                boxShadow: '0 0 16px var(--accent-glow)',
+              }}
+            />
+          </>
         )}
 
         <motion.button
@@ -128,7 +148,11 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
             borderColor: isPlaying ? 'var(--accent)' : undefined,
             color: isPlaying ? 'var(--accent)' : 'var(--accent-text-color)',
             backgroundColor: isPlaying ? undefined : 'var(--accent)',
-            boxShadow: isPlaying ? '0 0 24px var(--accent-glow)' : '0 10px 28px var(--accent-glow)',
+            boxShadow: hasGlow
+              ? isPlaying
+                ? `0 0 ${Math.round(24 * glowMultiplier)}px var(--accent-glow)`
+                : `0 10px ${Math.round(28 * glowMultiplier)}px var(--accent-glow)`
+              : '0 4px 12px rgba(0,0,0,0.5)',
           }}
           aria-label={isPlaying ? 'Stop' : `Play snippet`}
         >
@@ -140,7 +164,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
         </motion.button>
       </div>
 
-      {/* 3. Smooth Minimal Waveform Visualizer */}
+      {/* 3. Smooth Visualizer */}
       <WaveformVisualizer isPlaying={isPlaying} />
 
       {/* 4. Minimalist Volume Slider */}
@@ -177,7 +201,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
         </div>
       </div>
 
-      {/* Audio Error Banner if any */}
+      {/* Audio Error Banner */}
       <AnimatePresence>
         {playbackStatus.error && (
           <motion.div

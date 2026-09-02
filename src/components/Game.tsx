@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   RefreshCw, 
   AlertTriangle,
+  Music,
 } from 'lucide-react';
 import { Song } from '../types/song';
 import { GameState, STAGES, Guess, DecadeFilter, GenreFilter } from '../types/game';
@@ -10,6 +11,7 @@ import { CATEGORY_THEMES } from '../types/theme';
 import { musicService } from '../services/musicService';
 import { audioService } from '../services/audioService';
 import { gameService } from '../services/gameService';
+import { isTrackEligibleForFilters } from '../utils/genreUtils';
 import { DecadeSelector } from './DecadeSelector';
 import { GenreSelector } from './GenreSelector';
 import { AudioPlayer } from './AudioPlayer';
@@ -17,20 +19,49 @@ import { SongSearch } from './SongSearch';
 import { GuessHistory } from './GuessHistory';
 import { ResultCard } from './ResultCard';
 import { AudioBackground } from './AudioBackground';
+import { VisualCustomizationPanel } from './VisualCustomizationPanel';
+import { useVisuals } from '../context/VisualContext';
+
+function generateRoundId(): string {
+  if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+    return crypto.randomUUID();
+  }
+  return `round-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+}
 
 export const Game: React.FC = () => {
-  const [gameState, setGameState] = useState<GameState>({
-    currentSong: null,
-    currentStage: 0,
-    guesses: [],
-    status: 'loading',
-    score: 0,
-    decade: 'all',
-    genres: ['all'],
+  const { settings, isPlayingAudio, triggerRoundShuffle } = useVisuals();
+  
+  const [gameState, setGameState] = useState<GameState>(() => {
+    const initialRoundId = generateRoundId();
+    return {
+      roundId: initialRoundId,
+      roundState: 'loading',
+      currentSong: null,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: null,
+      currentStage: 0,
+      guesses: [],
+      status: 'loading',
+      score: 0,
+      decade: 'all',
+      genres: ['all'],
+    };
   });
 
   const [playedSongIds, setPlayedSongIds] = useState<string[]>([]);
   const [initError, setInitError] = useState<string | null>(null);
+
+  const filterGenerationRef = useRef(0);
+  const activeRoundIdRef = useRef(gameState.roundId);
+  const nextSongCandidateRef = useRef<Song | null>(null);
+  const isPreparingNextRef = useRef<boolean>(false);
+
+  // Sync active round ID ref
+  useEffect(() => {
+    activeRoundIdRef.current = gameState.roundId;
+  }, [gameState.roundId]);
 
   // Sync CSS variables with current category theme
   useEffect(() => {
@@ -47,14 +78,83 @@ export const Game: React.FC = () => {
     );
   }, [gameState.decade]);
 
+  // Out-of-band next song preparation during reveal screen
+  const prepareNextSongCandidate = useCallback(
+    async (
+      prepRoundId: string,
+      prepFilterGen: number,
+      excludeIds: string[],
+      decade: DecadeFilter,
+      genres: GenreFilter[]
+    ) => {
+      if (isPreparingNextRef.current) return;
+      isPreparingNextRef.current = true;
+      nextSongCandidateRef.current = null;
+
+      try {
+        const candidate = await musicService.getPlayableSongForRound(
+          excludeIds,
+          decade,
+          genres,
+          20,
+          () =>
+            filterGenerationRef.current !== prepFilterGen ||
+            activeRoundIdRef.current !== prepRoundId
+        );
+
+        if (
+          filterGenerationRef.current !== prepFilterGen ||
+          activeRoundIdRef.current !== prepRoundId
+        ) {
+          return;
+        }
+
+        if (candidate) {
+          nextSongCandidateRef.current = candidate;
+          setGameState((prev) => {
+            if (prev.roundId !== prepRoundId) return prev;
+            return { ...prev, nextSongCandidate: candidate };
+          });
+          // Background audio preload (isolated, non-blocking)
+          if (candidate.previewUrl) {
+            audioService.preloadAudio(candidate.previewUrl).catch(() => {});
+          }
+        }
+      } catch (err) {
+        console.warn('Background candidate preparation failed:', err);
+      } finally {
+        isPreparingNextRef.current = false;
+      }
+    },
+    []
+  );
+
   // Initialize music catalog and select first song
   const initializeGame = useCallback(
     async (
       initialDecade: DecadeFilter = 'all',
       initialGenres: GenreFilter[] = ['all']
     ) => {
-      setGameState((prev) => ({ ...prev, status: 'loading', errorMessage: undefined }));
+      const gen = ++filterGenerationRef.current;
+      const newRoundId = generateRoundId();
+      activeRoundIdRef.current = newRoundId;
+      nextSongCandidateRef.current = null;
+
+      setGameState((prev) => ({
+        ...prev,
+        roundId: newRoundId,
+        roundState: 'loading',
+        status: 'loading',
+        errorMessage: undefined,
+        currentSong: null,
+        revealedSong: null,
+        nextSongCandidate: null,
+        roundAnswerSongId: null,
+        guesses: [],
+        currentStage: 0,
+      }));
       setInitError(null);
+      triggerRoundShuffle();
 
       try {
         const catalog = await musicService.loadInitialCatalog();
@@ -63,14 +163,41 @@ export const Game: React.FC = () => {
           throw new Error('Music catalog is empty. Please check your internet connection.');
         }
 
-        const song = await musicService.getPlayableSongForRound([], initialDecade, initialGenres);
+        const song = await musicService.getPlayableSongForRound(
+          [],
+          initialDecade,
+          initialGenres,
+          20,
+          () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+        );
+        if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
         if (!song) {
-          throw new Error('Could not find playable songs for this selection.');
+          setGameState({
+            roundId: newRoundId,
+            roundState: 'playing',
+            currentSong: null,
+            revealedSong: null,
+            nextSongCandidate: null,
+            roundAnswerSongId: null,
+            currentStage: 0,
+            guesses: [],
+            status: 'ready',
+            score: 0,
+            decade: initialDecade,
+            genres: initialGenres,
+          });
+          return;
         }
 
         setPlayedSongIds([song.id]);
         setGameState({
+          roundId: newRoundId,
+          roundState: 'playing',
           currentSong: song,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: song.id,
           currentStage: 0,
           guesses: [],
           status: 'ready',
@@ -85,7 +212,7 @@ export const Game: React.FC = () => {
         setGameState((prev) => ({ ...prev, status: 'error', errorMessage: message }));
       }
     },
-    []
+    [triggerRoundShuffle]
   );
 
   useEffect(() => {
@@ -95,49 +222,203 @@ export const Game: React.FC = () => {
     };
   }, [initializeGame]);
 
-  // Handle Decade selection (preserves valid multi-selected genres)
-  const handleSelectDecade = async (newDecade: DecadeFilter) => {
-    if (newDecade === gameState.decade && gameState.currentSong) return;
-
+  // Handle Reset Filters to Any Year + All Genres
+  const handleResetFilters = async () => {
     audioService.stop();
+    triggerRoundShuffle();
 
-    // Check if currently selected genres still have playable songs in the new decade
-    let validGenres = gameState.genres;
-    if (!gameState.genres.includes('all')) {
-      const filtered = gameState.genres.filter(
-        (g) => musicService.getPlayableCount(newDecade, [g]) > 0
-      );
-      validGenres = filtered.length > 0 ? filtered : ['all'];
-    }
+    const gen = ++filterGenerationRef.current;
+    const newRoundId = generateRoundId();
+    activeRoundIdRef.current = newRoundId;
+    nextSongCandidateRef.current = null;
+    musicService.invalidateSessionDeck();
 
-    const song = await musicService.getPlayableSongForRound(playedSongIds, newDecade, validGenres);
+    setGameState((prev) => ({
+      ...prev,
+      roundId: newRoundId,
+      roundState: 'loading',
+      status: 'loading',
+      currentSong: null,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: null,
+      currentStage: 0,
+      guesses: [],
+      decade: 'all',
+      genres: ['all'],
+    }));
+
+    const song = await musicService.getPlayableSongForRound(
+      playedSongIds,
+      'all',
+      ['all'],
+      20,
+      () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+    );
+    if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
       setGameState((prev) => ({
         ...prev,
+        roundId: newRoundId,
+        roundState: 'playing',
         currentSong: song,
+        revealedSong: null,
+        nextSongCandidate: null,
+        roundAnswerSongId: song.id,
+        currentStage: 0,
+        guesses: [],
+        status: 'ready',
+        score: 0,
+        decade: 'all',
+        genres: ['all'],
+      }));
+    } else {
+      const freshSong = await musicService.getPlayableSongForRound(
+        [],
+        'all',
+        ['all'],
+        20,
+        () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+      );
+      if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
+      if (freshSong) {
+        setPlayedSongIds([freshSong.id]);
+        setGameState((prev) => ({
+          ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
+          currentSong: freshSong,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: freshSong.id,
+          currentStage: 0,
+          guesses: [],
+          status: 'ready',
+          score: 0,
+          decade: 'all',
+          genres: ['all'],
+        }));
+      } else {
+        setGameState((prev) => ({
+          ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
+          currentSong: null,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: null,
+          currentStage: 0,
+          guesses: [],
+          status: 'ready',
+          score: 0,
+          decade: 'all',
+          genres: ['all'],
+        }));
+      }
+    }
+  };
+
+  // Handle Decade selection (preserves valid multi-selected genres)
+  const handleSelectDecade = async (newDecade: DecadeFilter) => {
+    if (newDecade === gameState.decade && gameState.currentSong) return;
+
+    audioService.stop();
+    triggerRoundShuffle();
+
+    const gen = ++filterGenerationRef.current;
+    const newRoundId = generateRoundId();
+    activeRoundIdRef.current = newRoundId;
+    nextSongCandidateRef.current = null;
+    musicService.invalidateSessionDeck();
+
+    const activeGenres = gameState.genres;
+
+    setGameState((prev) => ({
+      ...prev,
+      roundId: newRoundId,
+      roundState: 'loading',
+      status: 'loading',
+      currentSong: null,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: null,
+      currentStage: 0,
+      guesses: [],
+      decade: newDecade,
+      genres: activeGenres,
+    }));
+
+    const song = await musicService.getPlayableSongForRound(
+      playedSongIds,
+      newDecade,
+      activeGenres,
+      20,
+      () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+    );
+    if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
+    if (song) {
+      setPlayedSongIds((prev) => [...prev, song.id]);
+      setGameState((prev) => ({
+        ...prev,
+        roundId: newRoundId,
+        roundState: 'playing',
+        currentSong: song,
+        revealedSong: null,
+        nextSongCandidate: null,
+        roundAnswerSongId: song.id,
         currentStage: 0,
         guesses: [],
         status: 'ready',
         score: 0,
         decade: newDecade,
-        genres: validGenres,
+        genres: activeGenres,
       }));
     } else {
-      // If all songs in session are exhausted, reset played history
-      const freshSong = await musicService.getPlayableSongForRound([], newDecade, validGenres);
+      const freshSong = await musicService.getPlayableSongForRound(
+        [],
+        newDecade,
+        activeGenres,
+        20,
+        () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+      );
+      if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
           ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
           currentSong: freshSong,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: freshSong.id,
           currentStage: 0,
           guesses: [],
           status: 'ready',
           score: 0,
           decade: newDecade,
-          genres: validGenres,
+          genres: activeGenres,
+        }));
+      } else {
+        setGameState((prev) => ({
+          ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
+          currentSong: null,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: null,
+          currentStage: 0,
+          guesses: [],
+          status: 'ready',
+          score: 0,
+          decade: newDecade,
+          genres: activeGenres,
         }));
       }
     }
@@ -151,33 +432,62 @@ export const Game: React.FC = () => {
       newGenres = ['all'];
     } else {
       if (gameState.genres.includes('all')) {
-        // If ALL was active, disable ALL and activate clicked genre
         newGenres = [clickedGenre];
       } else if (gameState.genres.includes(clickedGenre)) {
-        // If already active, remove it
         const remaining = gameState.genres.filter((g) => g !== clickedGenre);
-        // If empty after deselecting, automatically return to ALL
         newGenres = remaining.length > 0 ? remaining : ['all'];
       } else {
-        // Add to active genres
         newGenres = [...gameState.genres, clickedGenre];
       }
     }
 
-    // Check if selection is effectively unchanged
     const isSame =
       newGenres.length === gameState.genres.length &&
       newGenres.every((g) => gameState.genres.includes(g));
     if (isSame && gameState.currentSong) return;
 
     audioService.stop();
-    const song = await musicService.getPlayableSongForRound(playedSongIds, gameState.decade, newGenres);
+    triggerRoundShuffle();
+
+    const gen = ++filterGenerationRef.current;
+    const newRoundId = generateRoundId();
+    activeRoundIdRef.current = newRoundId;
+    nextSongCandidateRef.current = null;
+    musicService.invalidateSessionDeck();
+
+    setGameState((prev) => ({
+      ...prev,
+      roundId: newRoundId,
+      roundState: 'loading',
+      status: 'loading',
+      currentSong: null,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: null,
+      currentStage: 0,
+      guesses: [],
+      genres: newGenres,
+    }));
+
+    const song = await musicService.getPlayableSongForRound(
+      playedSongIds,
+      gameState.decade,
+      newGenres,
+      20,
+      () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+    );
+    if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
 
     if (song) {
       setPlayedSongIds((prev) => [...prev, song.id]);
       setGameState((prev) => ({
         ...prev,
+        roundId: newRoundId,
+        roundState: 'playing',
         currentSong: song,
+        revealedSong: null,
+        nextSongCandidate: null,
+        roundAnswerSongId: song.id,
         currentStage: 0,
         guesses: [],
         status: 'ready',
@@ -185,12 +495,40 @@ export const Game: React.FC = () => {
         genres: newGenres,
       }));
     } else {
-      const freshSong = await musicService.getPlayableSongForRound([], gameState.decade, newGenres);
+      const freshSong = await musicService.getPlayableSongForRound(
+        [],
+        gameState.decade,
+        newGenres,
+        20,
+        () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
+      );
+      if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
           ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
           currentSong: freshSong,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: freshSong.id,
+          currentStage: 0,
+          guesses: [],
+          status: 'ready',
+          score: 0,
+          genres: newGenres,
+        }));
+      } else {
+        setGameState((prev) => ({
+          ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
+          currentSong: null,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: null,
           currentStage: 0,
           guesses: [],
           status: 'ready',
@@ -201,26 +539,100 @@ export const Game: React.FC = () => {
     }
   };
 
-  // Move to next song in round after win/loss
+  // Move to next song in round after win/loss when user clicks NEXT
   const handleNextSong = async () => {
     audioService.stop();
+    triggerRoundShuffle();
+
+    const newRoundId = generateRoundId();
+    activeRoundIdRef.current = newRoundId;
+
+    // 1. If pre-validated candidate is ready and eligible, promote immediately
+    const candidate = nextSongCandidateRef.current;
+    nextSongCandidateRef.current = null;
+
+    if (
+      candidate &&
+      isTrackEligibleForFilters(candidate, {
+        decade: gameState.decade,
+        genres: gameState.genres,
+      })
+    ) {
+      setPlayedSongIds((prev) => [...prev, candidate.id]);
+      setGameState((prev) => ({
+        ...prev,
+        roundId: newRoundId,
+        roundState: 'playing',
+        currentSong: candidate,
+        revealedSong: null,
+        nextSongCandidate: null,
+        roundAnswerSongId: candidate.id,
+        currentStage: 0,
+        guesses: [],
+        status: 'ready',
+        score: 0,
+      }));
+      return;
+    }
+
+    // 2. Fetch fresh next song
+    const gen = ++filterGenerationRef.current;
+    setGameState((prev) => ({
+      ...prev,
+      roundId: newRoundId,
+      roundState: 'loading',
+      status: 'loading',
+      currentSong: null,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: null,
+      currentStage: 0,
+      guesses: [],
+    }));
 
     const song = await musicService.getPlayableSongForRound(
       playedSongIds,
       gameState.decade,
-      gameState.genres
+      gameState.genres,
+      20,
+      () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
     );
+    if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
     if (!song) {
       const freshSong = await musicService.getPlayableSongForRound(
         [],
         gameState.decade,
-        gameState.genres
+        gameState.genres,
+        20,
+        () => filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId
       );
+      if (filterGenerationRef.current !== gen || activeRoundIdRef.current !== newRoundId) return;
+
       if (freshSong) {
         setPlayedSongIds([freshSong.id]);
         setGameState((prev) => ({
           ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
           currentSong: freshSong,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: freshSong.id,
+          currentStage: 0,
+          guesses: [],
+          status: 'ready',
+          score: 0,
+        }));
+      } else {
+        setGameState((prev) => ({
+          ...prev,
+          roundId: newRoundId,
+          roundState: 'playing',
+          currentSong: null,
+          revealedSong: null,
+          nextSongCandidate: null,
+          roundAnswerSongId: null,
           currentStage: 0,
           guesses: [],
           status: 'ready',
@@ -233,7 +645,12 @@ export const Game: React.FC = () => {
     setPlayedSongIds((prev) => [...prev, song.id]);
     setGameState((prev) => ({
       ...prev,
+      roundId: newRoundId,
+      roundState: 'playing',
       currentSong: song,
+      revealedSong: null,
+      nextSongCandidate: null,
+      roundAnswerSongId: song.id,
       currentStage: 0,
       guesses: [],
       status: 'ready',
@@ -241,52 +658,78 @@ export const Game: React.FC = () => {
     }));
   };
 
-  // Seamless Gameplay Safety Net with Auto Re-Resolution
+  // Seamless Gameplay Safety Net for active gameplay ONLY
   const handleAudioFailure = useCallback(async () => {
-    if (!gameState.currentSong) return;
-    const failedSong = gameState.currentSong;
+    // CRITICAL: NEVER replace song if in reveal or if round is not actively playing
+    if (gameState.roundState === 'revealed' || gameState.revealedSong || !gameState.currentSong) {
+      return;
+    }
 
-    // 1. Attempt to resolve a fresh preview URL if the preview expired
+    const failedSong = gameState.currentSong;
+    const currentRoundId = gameState.roundId;
+
+    // 1. Attempt to resolve fresh preview URL without modifying game state
     try {
       const freshUrl = await musicService.resolveFreshPreviewUrl(failedSong);
-      if (freshUrl && freshUrl !== failedSong.previewUrl) {
-        setGameState((prev) => ({
-          ...prev,
-          currentSong: { ...failedSong, previewUrl: freshUrl },
-        }));
+      if (freshUrl && freshUrl !== failedSong.previewUrl && activeRoundIdRef.current === currentRoundId) {
+        setGameState((prev) => {
+          if (prev.roundId !== currentRoundId || !prev.currentSong) return prev;
+          return {
+            ...prev,
+            currentSong: { ...failedSong, previewUrl: freshUrl },
+          };
+        });
         return;
       }
     } catch {
       // Continue to replacement fallback
     }
 
-    // 2. If re-resolution fails or preview is permanently gone, reject and replace
+    // 2. If re-resolution fails, quarantine track and get replacement for active round
     musicService.rejectSong(failedSong.id);
 
     const replacement = await musicService.getPlayableSongForRound(
       playedSongIds,
       gameState.decade,
-      gameState.genres
+      gameState.genres,
+      20,
+      () => activeRoundIdRef.current !== currentRoundId
     );
-    if (replacement) {
+
+    if (replacement && activeRoundIdRef.current === currentRoundId) {
       setPlayedSongIds((prev) => [...prev, replacement.id]);
-      setGameState((prev) => ({
-        ...prev,
-        currentSong: replacement,
-      }));
+      setGameState((prev) => {
+        if (prev.roundId !== currentRoundId) return prev;
+        return {
+          ...prev,
+          currentSong: replacement,
+          roundAnswerSongId: replacement.id,
+        };
+      });
     }
-  }, [gameState.currentSong, playedSongIds, gameState.decade, gameState.genres]);
+  }, [
+    gameState.roundState,
+    gameState.revealedSong,
+    gameState.currentSong,
+    gameState.roundId,
+    gameState.decade,
+    gameState.genres,
+    playedSongIds,
+  ]);
 
   // Player selects a guess from autocomplete
   const handleSelectGuess = (selectedSong: Song) => {
-    if (!gameState.currentSong || gameState.status !== 'ready') return;
+    if (!gameState.currentSong || gameState.status !== 'ready' || gameState.roundState !== 'playing') {
+      return;
+    }
 
     audioService.stop();
 
-    const isCorrect = gameService.validateGuess(selectedSong.id, gameState.currentSong.id);
+    const activeSong = gameState.currentSong;
+    const isCorrect = gameService.validateGuess(selectedSong.id, activeSong.id);
     const correctArtist =
       !isCorrect &&
-      gameService.isArtistMatch(selectedSong.artist, gameState.currentSong.artist);
+      gameService.isArtistMatch(selectedSong.artist, activeSong.artist);
 
     const newGuess: Guess = {
       songId: selectedSong.id,
@@ -301,12 +744,27 @@ export const Game: React.FC = () => {
 
     if (isCorrect) {
       const earnedScore = gameService.calculateScore(gameState.currentStage, true);
+      const activeRoundId = gameState.roundId;
+      const activeFilterGen = filterGenerationRef.current;
+
       setGameState((prev) => ({
         ...prev,
-        guesses: updatedGuesses,
+        revealedSong: activeSong,
+        roundAnswerSongId: activeSong.id,
+        roundState: 'revealed',
         status: 'won',
         score: earnedScore,
+        guesses: updatedGuesses,
       }));
+
+      // Background preparation for next round
+      prepareNextSongCandidate(
+        activeRoundId,
+        activeFilterGen,
+        [...playedSongIds, activeSong.id],
+        gameState.decade,
+        gameState.genres
+      );
     } else {
       if (gameState.currentStage < STAGES.length - 1) {
         setGameState((prev) => ({
@@ -315,19 +773,36 @@ export const Game: React.FC = () => {
           currentStage: prev.currentStage + 1,
         }));
       } else {
+        const activeRoundId = gameState.roundId;
+        const activeFilterGen = filterGenerationRef.current;
+
         setGameState((prev) => ({
           ...prev,
-          guesses: updatedGuesses,
+          revealedSong: activeSong,
+          roundAnswerSongId: activeSong.id,
+          roundState: 'revealed',
           status: 'lost',
           score: 0,
+          guesses: updatedGuesses,
         }));
+
+        // Background preparation for next round
+        prepareNextSongCandidate(
+          activeRoundId,
+          activeFilterGen,
+          [...playedSongIds, activeSong.id],
+          gameState.decade,
+          gameState.genres
+        );
       }
     }
   };
 
   // Skip to next stage duration or end round
   const handleSkip = () => {
-    if (!gameState.currentSong || gameState.status !== 'ready') return;
+    if (!gameState.currentSong || gameState.status !== 'ready' || gameState.roundState !== 'playing') {
+      return;
+    }
 
     audioService.stop();
 
@@ -337,23 +812,45 @@ export const Game: React.FC = () => {
         currentStage: prev.currentStage + 1,
       }));
     } else {
-      // Skipped at 15s -> End round and reveal
+      // Skipped at 15s -> End round and freeze revealed song
+      const activeSong = gameState.currentSong;
+      const activeRoundId = gameState.roundId;
+      const activeFilterGen = filterGenerationRef.current;
+
       setGameState((prev) => ({
         ...prev,
+        revealedSong: activeSong,
+        roundAnswerSongId: activeSong.id,
+        roundState: 'revealed',
         status: 'lost',
         score: 0,
       }));
+
+      // Background preparation for next round
+      prepareNextSongCandidate(
+        activeRoundId,
+        activeFilterGen,
+        [...playedSongIds, activeSong.id],
+        gameState.decade,
+        gameState.genres
+      );
     }
   };
 
-  const isGameOver = gameState.status === 'won' || gameState.status === 'lost';
+  const isGameOver = gameState.roundState === 'revealed' || gameState.status === 'won' || gameState.status === 'lost';
+  const displayRevealSong = gameState.revealedSong || gameState.currentSong;
   const alreadyGuessedIds = gameState.guesses.map((g) => g.songId);
+  const isImmersiveDimmed = settings.immersive && isPlayingAudio && !isGameOver;
 
   return (
     <div className="relative min-h-screen bg-[#060709] text-neutral-100 py-6 sm:py-10 px-4 sm:px-6 font-sans flex flex-col justify-between items-center overflow-x-hidden theme-transition">
       {/* 1. Atmospheric Audio-Reactive Background Canvas */}
       <AudioBackground
-        artworkUrl={gameState.currentSong?.artworkUrl}
+        artworkUrl={
+          isGameOver
+            ? displayRevealSong?.artworkUrl
+            : gameState.currentSong?.artworkUrl
+        }
         isResultRevealed={isGameOver}
         isWon={gameState.status === 'won'}
         decade={gameState.decade}
@@ -363,7 +860,9 @@ export const Game: React.FC = () => {
       {!isGameOver && (
         <aside
           id="desktop-genre-rail"
-          className="hidden xl:flex fixed left-6 2xl:left-12 top-1/2 -translate-y-1/2 z-30 flex-col pointer-events-auto"
+          className={`hidden xl:flex fixed left-6 2xl:left-12 top-1/2 -translate-y-1/2 z-30 flex-col pointer-events-auto transition-opacity duration-400 ${
+            isImmersiveDimmed ? 'opacity-25 hover:opacity-90' : 'opacity-100'
+          }`}
           aria-label="Genre Filters"
         >
           <GenreSelector
@@ -396,7 +895,11 @@ export const Game: React.FC = () => {
 
         {/* Decade Selector */}
         {!isGameOver && (
-          <div className="w-full mb-3">
+          <div
+            className={`w-full mb-3 transition-opacity duration-400 ${
+              isImmersiveDimmed ? 'opacity-30 hover:opacity-90' : 'opacity-100'
+            }`}
+          >
             <DecadeSelector
               selectedDecade={gameState.decade}
               onSelectDecade={handleSelectDecade}
@@ -407,7 +910,11 @@ export const Game: React.FC = () => {
 
         {/* Mobile / Tablet Horizontal Genre Strip (Multi-Select, Hidden on XL where Rail is Fixed) */}
         {!isGameOver && (
-          <div className="xl:hidden w-full mb-4">
+          <div
+            className={`xl:hidden w-full mb-4 transition-opacity duration-400 ${
+              isImmersiveDimmed ? 'opacity-25' : 'opacity-100'
+            }`}
+          >
             <GenreSelector
               selectedGenres={gameState.genres}
               selectedDecade={gameState.decade}
@@ -457,6 +964,36 @@ export const Game: React.FC = () => {
 
         {/* Dynamic Game View: Gameplay vs Centered Result */}
         <AnimatePresence mode="wait">
+          {!isGameOver && gameState.status === 'ready' && !gameState.currentSong && (
+            <motion.main
+              key="no-songs-view"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.3 }}
+              className="w-full flex-1 flex flex-col justify-center items-center my-auto py-12 text-center"
+            >
+              <div className="w-12 h-12 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center mb-3">
+                <Music className="w-6 h-6 text-neutral-400" />
+              </div>
+              <h2 className="text-base font-bold text-white mb-1">No playable songs available</h2>
+              <p className="text-xs text-neutral-400 max-w-sm mb-5">
+                No songs match the selected decade and genre filters. Try selecting a different filter combination or reset to all.
+              </p>
+              <button
+                id="reset-filters-btn"
+                onClick={handleResetFilters}
+                className="px-5 py-2 text-xs font-bold rounded-full transition-colors theme-transition cursor-pointer"
+                style={{
+                  backgroundColor: 'var(--accent)',
+                  color: 'var(--accent-text-color)',
+                }}
+              >
+                Reset Filters
+              </button>
+            </motion.main>
+          )}
+
           {!isGameOver && gameState.status === 'ready' && gameState.currentSong && (
             <motion.main
               key="gameplay-view"
@@ -493,9 +1030,9 @@ export const Game: React.FC = () => {
             </motion.main>
           )}
 
-          {isGameOver && gameState.currentSong && (
+          {isGameOver && displayRevealSong && (
             <motion.main
-              key="result-view"
+              key={`result-view-${gameState.roundId}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -504,7 +1041,7 @@ export const Game: React.FC = () => {
             >
               <ResultCard
                 status={gameState.status as 'won' | 'lost'}
-                currentSong={gameState.currentSong}
+                currentSong={displayRevealSong}
                 currentStage={gameState.currentStage}
                 score={gameState.score}
                 onNextSong={handleNextSong}
@@ -518,6 +1055,9 @@ export const Game: React.FC = () => {
           <p>Melodex</p>
         </footer>
       </div>
+
+      {/* 4. Hidden Right Edge Visual Customization Panel (Fixed Overlay) */}
+      <VisualCustomizationPanel />
     </div>
   );
 };

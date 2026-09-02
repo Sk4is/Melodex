@@ -20995,7 +20995,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1670245874",
@@ -21064,7 +21067,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "309101732",
@@ -21086,7 +21092,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1444890943",
@@ -21108,7 +21117,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance",
+      "hiphop"
+    ]
   },
   {
     "id": "1457188745",
@@ -21246,7 +21259,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1819754182",
@@ -22337,7 +22353,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance",
+      "hiphop"
+    ]
   },
   {
     "id": "1559318719",
@@ -22503,7 +22523,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance",
+      "hiphop"
+    ]
   },
   {
     "id": "1472443666",
@@ -22573,7 +22597,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance",
+      "hiphop"
+    ]
   },
   {
     "id": "216999880",
@@ -24604,6 +24632,7 @@
     "audioValidatedAt": 1788304101427,
     "failureCount": 0,
     "normalizedGenres": [
+      "pop",
       "rnb"
     ]
   },
@@ -27183,7 +27212,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101428,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1440819062",
@@ -30491,7 +30522,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101428,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ]
   },
   {
     "id": "1421658647",
@@ -30523,7 +30557,7 @@
     "artist": "Faithless",
     "normalizedArtist": "faithless",
     "album": "Reverence (Bonus Track Version)",
-    "year": 1996,
+    "year": 1995,
     "verifiedOriginalYear": 1995,
     "yearConfidence": "high",
     "genre": "Dance",
@@ -30837,7 +30871,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101428,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ]
   },
   {
     "id": "281242336",
@@ -31898,6 +31935,7 @@
     "audioValidatedAt": 1788304101428,
     "failureCount": 0,
     "normalizedGenres": [
+      "pop",
       "rnb"
     ]
   },
@@ -37002,7 +37040,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "576655100",
@@ -37741,7 +37781,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1544292230",
@@ -37908,7 +37950,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1161504034",
@@ -38338,7 +38382,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1440826555",
@@ -39131,7 +39178,7 @@
     "artist": "The Goo Goo Dolls & Steve Aoki",
     "normalizedArtist": "the goo goo dolls steve aoki",
     "album": "Iris - Single",
-    "year": 2026,
+    "year": 1998,
     "verifiedOriginalYear": 1998,
     "yearConfidence": "high",
     "genre": "Rock",
@@ -39441,7 +39488,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1443507537",
@@ -42418,7 +42468,8 @@
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
     "normalizedGenres": [
-      "pop"
+      "pop",
+      "dance"
     ]
   },
   {
@@ -43274,7 +43325,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ]
   },
   {
     "id": "957609753",
@@ -45618,7 +45672,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "349971712",
@@ -45784,7 +45840,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101429,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1442991146",
@@ -48077,6 +48135,7 @@
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
     "normalizedGenres": [
+      "pop",
       "rnb"
     ]
   },
@@ -48148,7 +48207,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1062401023",
@@ -48194,7 +48255,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "250870557",
@@ -49130,7 +49193,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1729487135",
@@ -49632,7 +49697,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1688054943",
@@ -52776,7 +52843,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101430,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1697401283",
@@ -60115,7 +60184,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101431,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1440808354",
@@ -60764,7 +60835,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101431,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "712778938",
@@ -61050,7 +61124,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101431,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "789132917",
@@ -61217,7 +61294,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101431,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1024988241",
@@ -67246,7 +67326,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67270,7 +67351,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67294,7 +67376,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67318,7 +67401,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67342,7 +67426,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67366,7 +67451,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67390,7 +67476,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67414,7 +67501,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67438,7 +67526,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -67462,7 +67551,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70071,7 +70161,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70095,7 +70186,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70119,7 +70211,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70143,7 +70236,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70167,7 +70261,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70191,7 +70286,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70215,7 +70311,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70239,7 +70336,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70263,7 +70361,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70287,7 +70386,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70684,7 +70784,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70708,7 +70809,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70732,7 +70834,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70756,7 +70859,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70780,7 +70884,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70804,7 +70909,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70828,7 +70934,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70852,7 +70959,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -70876,7 +70984,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75725,7 +75834,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75749,7 +75859,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75773,7 +75884,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75797,7 +75909,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75821,7 +75934,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75845,7 +75959,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75869,7 +75984,8 @@
     "audioValidatedAt": 1788304101432,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75893,7 +76009,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -75917,7 +76034,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76111,7 +76229,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76799,7 +76918,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76873,7 +76993,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76897,7 +77018,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76921,7 +77043,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -76970,7 +77093,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -77043,7 +77167,8 @@
     "audioValidatedAt": 1788304101433,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -83932,7 +84057,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "itunes-1717680441",
@@ -85345,7 +85473,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1441586589",
@@ -85367,7 +85497,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1441053440",
@@ -85389,7 +85521,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1828767309",
@@ -85483,7 +85617,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1254572586",
@@ -85553,7 +85689,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1789446426",
@@ -85599,7 +85737,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-433409655",
@@ -85645,7 +85785,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1789446417",
@@ -87026,7 +87168,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101434,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1440852694",
@@ -94715,7 +94859,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101435,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "itunes-1469584356",
@@ -103887,7 +104033,8 @@
     "audioValidatedAt": 1788304101438,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -108098,7 +108245,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1522812316",
@@ -109202,7 +109351,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "193016032",
@@ -110212,7 +110363,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1193701449",
@@ -110464,7 +110617,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1637864517",
@@ -110924,7 +111079,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1537015680",
@@ -110945,7 +111102,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "464532942",
@@ -111012,7 +111171,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101439,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1440659905",
@@ -113218,7 +113379,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101440,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "283567168",
@@ -118330,7 +118493,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101440,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1440818657",
@@ -122634,7 +122799,8 @@
     "audioValidatedAt": 1788304101441,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -124037,7 +124203,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101441,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1646100636",
@@ -125185,7 +125353,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101441,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1442991144",
@@ -125229,7 +125399,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101441,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1443179343",
@@ -127662,7 +127834,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ]
   },
   {
     "id": "1433928680",
@@ -127731,7 +127907,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ]
   },
   {
     "id": "1712046569",
@@ -129328,7 +129507,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "latin"
+    ]
   },
   {
     "id": "1531721270",
@@ -130572,7 +130753,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130710,7 +130892,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130733,7 +130916,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130848,7 +131032,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130894,7 +131079,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130917,7 +131103,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -130986,7 +131173,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -131032,7 +131220,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -131055,7 +131244,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -131791,7 +131981,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -132987,7 +133178,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133010,7 +133202,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133033,7 +133226,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133056,7 +133250,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133102,7 +133297,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133194,7 +133390,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133217,7 +133414,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133263,7 +133461,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133286,7 +133485,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133309,7 +133509,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133332,7 +133533,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133355,7 +133557,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133378,7 +133581,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133401,7 +133605,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133424,7 +133629,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133447,7 +133653,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133470,7 +133677,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133516,7 +133724,8 @@
     "audioValidatedAt": 1788304101442,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133562,7 +133771,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133585,7 +133795,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -133838,7 +134049,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134045,7 +134257,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134068,7 +134281,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134482,7 +134696,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134505,7 +134720,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134528,7 +134744,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134551,7 +134768,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134574,7 +134792,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134597,7 +134816,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134643,7 +134863,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134666,7 +134887,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134689,7 +134911,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134712,7 +134935,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134735,7 +134959,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134758,7 +134983,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134781,7 +135007,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134827,7 +135054,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134850,7 +135078,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134873,7 +135102,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134896,7 +135126,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134942,7 +135173,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -134988,7 +135220,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135011,7 +135244,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135034,7 +135268,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135080,7 +135315,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135103,7 +135339,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135126,7 +135363,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135172,7 +135410,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135218,7 +135457,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135241,7 +135481,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135264,7 +135505,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135287,7 +135529,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135333,7 +135576,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135356,7 +135600,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135425,7 +135670,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135448,7 +135694,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135517,7 +135764,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135678,7 +135926,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135701,7 +135950,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135724,7 +135974,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135747,7 +135998,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135770,7 +136022,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135793,7 +136046,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135816,7 +136070,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135839,7 +136094,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -135862,7 +136118,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136253,7 +136510,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136276,7 +136534,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136299,7 +136558,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136345,7 +136605,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136368,7 +136629,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136437,7 +136699,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136506,7 +136769,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136529,7 +136793,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136575,7 +136840,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136736,7 +137002,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136782,7 +137049,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136874,7 +137142,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -136943,7 +137212,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -137012,7 +137282,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -137035,7 +137306,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -137058,7 +137330,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -137081,7 +137354,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -137495,7 +137769,8 @@
     "audioValidatedAt": 1788304101443,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -142187,7 +142462,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "976388076",
@@ -142970,7 +143247,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -142993,7 +143271,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143016,7 +143295,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143039,7 +143319,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143062,7 +143343,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143085,7 +143367,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143108,7 +143391,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143131,7 +143415,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143154,7 +143439,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143177,7 +143463,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143223,7 +143510,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143246,7 +143534,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143269,7 +143558,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143292,7 +143582,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143315,7 +143606,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143338,7 +143630,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143361,7 +143654,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143384,7 +143678,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143407,7 +143702,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143430,7 +143726,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143453,7 +143750,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143476,7 +143774,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143499,7 +143798,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143522,7 +143822,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143545,7 +143846,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143568,7 +143870,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143591,7 +143894,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143614,7 +143918,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143637,7 +143942,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143660,7 +143966,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143683,7 +143990,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143729,7 +144037,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143752,7 +144061,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143775,7 +144085,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143821,7 +144132,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143844,7 +144156,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143867,7 +144180,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143890,7 +144204,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143913,7 +144228,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143936,7 +144252,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143959,7 +144276,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -143982,7 +144300,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144005,7 +144324,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144028,7 +144348,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144051,7 +144372,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144074,7 +144396,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144120,7 +144443,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144143,7 +144467,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144212,7 +144537,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144235,7 +144561,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144258,7 +144585,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144281,7 +144609,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144304,7 +144633,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144350,7 +144680,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144373,7 +144704,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144396,7 +144728,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144419,7 +144752,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144442,7 +144776,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144465,7 +144800,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144511,7 +144847,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144534,7 +144871,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144557,7 +144895,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144580,7 +144919,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144603,7 +144943,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144626,7 +144967,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144649,7 +144991,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144695,7 +145038,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144718,7 +145062,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144764,7 +145109,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144810,7 +145156,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144879,7 +145226,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -144902,7 +145250,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145063,7 +145412,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145086,7 +145436,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145109,7 +145460,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145132,7 +145484,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145155,7 +145508,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145178,7 +145532,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145201,7 +145556,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145224,7 +145580,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145247,7 +145604,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145270,7 +145628,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145293,7 +145652,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145316,7 +145676,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145339,7 +145700,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145362,7 +145724,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145385,7 +145748,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145408,7 +145772,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145431,7 +145796,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145454,7 +145820,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145477,7 +145844,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145500,7 +145868,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145523,7 +145892,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145684,7 +146054,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145707,7 +146078,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145730,7 +146102,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145753,7 +146126,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145776,7 +146150,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145799,7 +146174,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145822,7 +146198,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145845,7 +146222,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145868,7 +146246,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145891,7 +146270,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145914,7 +146294,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145937,7 +146318,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145960,7 +146342,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -145983,7 +146366,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146006,7 +146390,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146029,7 +146414,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146052,7 +146438,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146098,7 +146485,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146121,7 +146509,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146190,7 +146579,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -146213,7 +146603,8 @@
     "audioValidatedAt": 1788304101444,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -150642,7 +151033,11 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101445,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "hiphop"
+    ]
   },
   {
     "id": "1525791185",
@@ -150778,7 +151173,10 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101445,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop",
+      "dance"
+    ]
   },
   {
     "id": "1856040638",
@@ -160145,7 +160543,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "178051228",
@@ -160603,7 +161003,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "344594223",
@@ -160624,7 +161026,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "1318809257",
@@ -160668,7 +161072,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "344800421",
@@ -160712,7 +161118,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "344594226",
@@ -160733,7 +161141,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "401864449",
@@ -160892,7 +161302,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "1318809251",
@@ -160982,7 +161394,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "rnb"
+    ]
   },
   {
     "id": "354988145",
@@ -161211,7 +161625,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -161257,7 +161672,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -161533,7 +161949,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -161625,7 +162042,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -161970,7 +162388,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162016,7 +162435,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162269,7 +162689,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162407,7 +162828,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162683,7 +163105,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162706,7 +163129,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -162798,7 +163222,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -163327,7 +163752,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -163511,7 +163937,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -163580,7 +164007,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -163695,7 +164123,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -163879,7 +164308,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -164109,7 +164539,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -164132,7 +164563,8 @@
     "audioValidatedAt": 1788304101447,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168847,7 +169279,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168870,7 +169303,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168893,7 +169327,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168916,7 +169351,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168939,7 +169375,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -168962,7 +169399,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169031,7 +169469,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169054,7 +169493,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169077,7 +169517,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169100,7 +169541,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169169,7 +169611,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169192,7 +169635,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169215,7 +169659,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169238,7 +169683,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169284,7 +169730,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169330,7 +169777,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169353,7 +169801,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169399,7 +169848,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169422,7 +169872,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169468,7 +169919,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169491,7 +169943,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169514,7 +169967,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169560,7 +170014,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169606,7 +170061,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169629,7 +170085,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169675,7 +170132,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169698,7 +170156,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169744,7 +170203,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169790,7 +170250,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169813,7 +170274,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169836,7 +170298,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169859,7 +170322,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169882,7 +170346,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169928,7 +170393,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -169951,7 +170417,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170043,7 +170510,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170066,7 +170534,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170158,7 +170627,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170181,7 +170651,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170204,7 +170675,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170227,7 +170699,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170411,7 +170884,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170434,7 +170908,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170480,7 +170955,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170503,7 +170979,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170526,7 +171003,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170549,7 +171027,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170687,7 +171166,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170710,7 +171190,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170733,7 +171214,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170756,7 +171238,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170825,7 +171308,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170871,7 +171355,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170894,7 +171379,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170917,7 +171403,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170940,7 +171427,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -170985,7 +171473,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1788380681",
@@ -171053,7 +171543,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -171076,7 +171567,8 @@
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -171811,7 +172303,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1744255391",
@@ -172522,7 +173016,9 @@
     "audioStatus": "healthy",
     "audioValidatedAt": 1788304101448,
     "failureCount": 0,
-    "normalizedGenres": []
+    "normalizedGenres": [
+      "pop"
+    ]
   },
   {
     "id": "1440745639",
@@ -176408,7 +176904,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176431,7 +176928,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176454,7 +176952,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176477,7 +176976,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176500,7 +177000,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176546,7 +177047,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176569,7 +177071,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176592,7 +177095,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176615,7 +177119,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176638,7 +177143,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176661,7 +177167,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176684,7 +177191,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176707,7 +177215,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176730,7 +177239,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176753,7 +177263,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176776,7 +177287,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176799,7 +177311,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176822,7 +177335,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176845,7 +177359,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176868,7 +177383,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176891,7 +177407,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176914,7 +177431,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176937,7 +177455,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176960,7 +177479,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -176983,7 +177503,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177006,7 +177527,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177029,7 +177551,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177052,7 +177575,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177075,7 +177599,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177098,7 +177623,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177121,7 +177647,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177144,7 +177671,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177167,7 +177695,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177214,7 +177743,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177237,7 +177767,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177260,7 +177791,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177283,7 +177815,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177306,7 +177839,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177329,7 +177863,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177352,7 +177887,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177375,7 +177911,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177398,7 +177935,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177421,7 +177959,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177444,7 +177983,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177467,7 +178007,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -177490,7 +178031,8 @@
     "audioValidatedAt": 1788304101449,
     "failureCount": 0,
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225530,7 +226072,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/bb/70/30/bb70307e-2915-f7fe-9547-5295bec07497/016861798598.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225552,7 +226095,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f8/cd/38/f8cd3816-a840-209a-e9f6-cf3f3e47da21/0881034134455.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225574,7 +226118,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e6/aa/e7/e6aae7ce-9890-18f2-f3a9-42f964091abf/cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225596,7 +226141,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/89/e3/ce/89e3cef5-2cdb-fb65-bedd-b77460a98acd/0881034134493.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225618,7 +226164,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cb/ac/1dcbac1b-737d-b7c8-8bed-b5a98ae9df77/0881034134448.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225640,7 +226187,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/8a/c3/2f8ac34f-9e53-e4d3-c0be-195dee1a44ff/0881034134462.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225662,7 +226210,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/4c/1c/18/4c1c1857-4113-904d-6161-fcd03e43335a/cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225684,7 +226233,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b4/0c/7a/b40c7ad0-bec4-e00a-6794-1a94728e9907/4050538293180.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225706,7 +226256,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/89/e3/ce/89e3cef5-2cdb-fb65-bedd-b77460a98acd/0881034134493.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225728,7 +226279,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f8/cd/38/f8cd3816-a840-209a-e9f6-cf3f3e47da21/0881034134455.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225750,7 +226302,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/2f/8a/c3/2f8ac34f-9e53-e4d3-c0be-195dee1a44ff/0881034134462.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225772,7 +226325,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/31/61/46/31614655-a6a9-d05f-afe4-06664e9326df/0881034134424.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225794,7 +226348,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/5d/74/af/5d74afa8-ea61-87df-1ed4-3c9cbfc00bc7/747014632925.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225816,7 +226371,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/6e/26/fb/6e26fbe8-eab4-b0e6-034e-c4608a0ca515/94175.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225838,7 +226394,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/eb/4c/47/eb4c474a-581c-8525-a07b-51e84e159170/4050538710779.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225860,7 +226417,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cb/ac/1dcbac1b-737d-b7c8-8bed-b5a98ae9df77/0881034134448.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225882,7 +226440,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7a/d1/0c/7ad10c97-6c8b-f63b-b324-1950718bc9a8/0881034134431.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225904,7 +226463,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7a/d1/0c/7ad10c97-6c8b-f63b-b324-1950718bc9a8/0881034134431.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225926,7 +226486,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c6/24/de/c624de71-e086-6f24-a279-b32a1e1c1009/0881034134486.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225948,7 +226509,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1d/cb/ac/1dcbac1b-737d-b7c8-8bed-b5a98ae9df77/0881034134448.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225970,7 +226532,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c6/24/de/c624de71-e086-6f24-a279-b32a1e1c1009/0881034134486.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -225992,7 +226555,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/b3/9f/66/mzi.iydcmswf.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226014,7 +226578,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f8/cd/38/f8cd3816-a840-209a-e9f6-cf3f3e47da21/0881034134455.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226036,7 +226601,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/f8/cd/38/f8cd3816-a840-209a-e9f6-cf3f3e47da21/0881034134455.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226058,7 +226624,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/05/12/64/05126407-a371-8fa9-9429-0e0b60deebcb/mzi.jqdlqldj.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226080,7 +226647,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/8a/3d/628a3dc3-c862-8641-6306-64d7e7e8960a/075992718523.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226102,7 +226670,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226124,7 +226693,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226146,7 +226716,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/94/a3/5f/94a35fa1-dba2-243e-dbff-a5b33e05ce48/603497906024.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226168,7 +226739,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226190,7 +226762,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226212,7 +226785,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/9f/a1/c29fa109-8c22-bb7f-82f2-a6891d961c28/075992725323.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226234,7 +226808,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/7d/9a/2b7d9a86-ff59-f9fe-37ec-363b44f54d18/075992727228.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226256,7 +226831,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/68/ac/6568ace4-0c7a-6387-47ed-2f4c3411ff4d/075992725927.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226278,7 +226854,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/be/27/91/be279120-2285-16c6-c7ba-9d6643d4a948/075992732727.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226300,7 +226877,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/7d/9a/2b7d9a86-ff59-f9fe-37ec-363b44f54d18/075992727228.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226322,7 +226900,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/8a/3d/628a3dc3-c862-8641-6306-64d7e7e8960a/075992718523.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226344,7 +226923,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d4/a1/2c/d4a12c6e-9410-8f8b-7845-1367f7caf868/20UMGIM30976.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226366,7 +226946,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/27/d2/22/27d222de-b53e-eafe-c1ed-1d36c5c9ac3f/603497870318.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226388,7 +226969,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/4f/f1/06/4ff106d3-595c-dede-84d9-48e2186e5d8a/62735.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226410,7 +226992,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/84/d9/7a/84d97a9d-fa02-ddaa-a0ba-789e6c1dfb9d/Halloween_Party_Time_wChanges_2.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226432,7 +227015,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/68/ac/6568ace4-0c7a-6387-47ed-2f4c3411ff4d/075992725927.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226454,7 +227038,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/63/58/3d/63583dc0-ea28-28eb-37b0-55f05229826f/00602537387267.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226476,7 +227061,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/26/d6/fb/26d6fb50-5e33-baf7-98ec-13b167b06387/mzi.bxsjhsxe.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226498,7 +227084,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/9f/a1/c29fa109-8c22-bb7f-82f2-a6891d961c28/075992725323.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226520,7 +227107,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/9f/a1/c29fa109-8c22-bb7f-82f2-a6891d961c28/075992725323.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226542,7 +227130,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c2/9f/a1/c29fa109-8c22-bb7f-82f2-a6891d961c28/075992725323.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226564,7 +227153,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/26/d6/fb/26d6fb50-5e33-baf7-98ec-13b167b06387/mzi.bxsjhsxe.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226586,7 +227176,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/31/a6/e1/31a6e173-8af1-c582-c991-a46516237971/886445936452.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226608,7 +227199,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/c1/69/7e/c1697e12-3f02-c672-8645-f27a24a13a3a/197189933066.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226630,7 +227222,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/c3/67/7b/c3677b3a-5588-97a6-cbce-001588713824/dj.xwtprxem.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226652,7 +227245,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/74/85/6c/74856c38-ad00-adfe-4041-e433b1b097b2/dj.msxviebt.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226674,7 +227268,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7e/82/c1/7e82c11a-d532-225d-9c60-3d92c5b60319/196871506335.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226696,7 +227291,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/40/99/10/409910d4-ba6a-ab60-44ce-a9056981eb5a/886446812250.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226718,7 +227314,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/8a/ac/c8/8aacc8bc-9482-8a90-6376-74c700a7433f/dj.zyfwcflg.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226740,7 +227337,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/f4/d9/d0f4d907-d333-1c26-703d-7245a348a519/dj.xjjnnhmb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226762,7 +227360,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/74/85/6c/74856c38-ad00-adfe-4041-e433b1b097b2/dj.msxviebt.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226784,7 +227383,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/f4/d9/d0f4d907-d333-1c26-703d-7245a348a519/dj.xjjnnhmb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226806,7 +227406,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7e/82/c1/7e82c11a-d532-225d-9c60-3d92c5b60319/196871506335.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226828,7 +227429,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/40/99/10/409910d4-ba6a-ab60-44ce-a9056981eb5a/886446812250.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226850,7 +227452,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/74/85/6c/74856c38-ad00-adfe-4041-e433b1b097b2/dj.msxviebt.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226872,7 +227475,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/f4/d9/d0f4d907-d333-1c26-703d-7245a348a519/dj.xjjnnhmb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226894,7 +227498,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d0/f4/d9/d0f4d907-d333-1c26-703d-7245a348a519/dj.xjjnnhmb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226916,7 +227521,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7e/82/c1/7e82c11a-d532-225d-9c60-3d92c5b60319/196871506335.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226938,7 +227544,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b1/ce/6b/b1ce6b49-ff54-6ef0-d192-e6b10d0d4670/dj.nnwdghro.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226960,7 +227567,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/40/99/10/409910d4-ba6a-ab60-44ce-a9056981eb5a/886446812250.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -226982,7 +227590,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/30/eb/13/30eb139b-f8d7-83d0-4198-483ba65dd8c8/5195.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227004,7 +227613,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/3e/ce/c7/3ecec7e6-66a3-7ca8-d70f-5a4512aa21ba/dj.stjulnox.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227026,7 +227636,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ff/35/3f/ff353ff5-6204-fc69-bb49-1d49665e9310/mzi.zbpalsrv.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227048,7 +227659,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2c/d2/a3/2cd2a3cb-60d8-34b5-a7b2-5d8c1d25ffba/603497825660.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227070,7 +227682,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bf/91/02/bf9102b3-0454-40bb-46df-6f9465642756/075679762160.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227092,7 +227705,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bf/91/02/bf9102b3-0454-40bb-46df-6f9465642756/075679762160.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227114,7 +227728,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/59/de/25/59de252f-224b-7210-36d0-5938d6b45bbf/016861752408.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227136,7 +227751,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f6/eb/9c/f6eb9cc6-91a4-a723-de7a-08bd45d483b0/016861741006.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227158,7 +227774,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/43/3b/a9/433ba92d-79ed-6ddc-3436-0ba06a8c9fab/016861752309.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227180,7 +227797,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b8/fd/75/b8fd75a9-cc1c-b17d-7c8f-65682f83d138/075679698759.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227202,7 +227820,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/43/3b/a9/433ba92d-79ed-6ddc-3436-0ba06a8c9fab/016861752309.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227224,7 +227843,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f6/eb/9c/f6eb9cc6-91a4-a723-de7a-08bd45d483b0/016861741006.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227246,7 +227866,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/c8/66/08c866ba-8a5c-3a95-1004-94491a8969ac/756014759907.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227268,7 +227889,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/43/3b/a9/433ba92d-79ed-6ddc-3436-0ba06a8c9fab/016861752309.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227290,7 +227912,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1c/bf/46/1cbf46b8-c549-f3f2-010c-06d6e7627115/016861752200.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227312,7 +227935,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f6/eb/9c/f6eb9cc6-91a4-a723-de7a-08bd45d483b0/016861741006.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227334,7 +227958,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f6/eb/9c/f6eb9cc6-91a4-a723-de7a-08bd45d483b0/016861741006.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227356,7 +227981,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5e/8d/fe/5e8dfe92-cea3-e8eb-c667-df0fb9408c74/artwork.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227378,7 +228004,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/03/a2/c703a2c4-97d1-106d-4e25-10322d7063ea/196873486703.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227400,7 +228027,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/75/b7/07/75b7076e-326c-76b9-cee2-e24eb231828a/dj.vcfewdhc.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227422,7 +228050,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/75/b7/07/75b7076e-326c-76b9-cee2-e24eb231828a/dj.vcfewdhc.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227444,7 +228073,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/86/8f/d1868fff-4ca4-16f5-caf8-d037813563db/dj.rzxzdzxs.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227466,7 +228096,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/03/a2/c703a2c4-97d1-106d-4e25-10322d7063ea/196873486703.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227488,7 +228119,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/03/a2/c703a2c4-97d1-106d-4e25-10322d7063ea/196873486703.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227510,7 +228142,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b0/84/ea/b084ea69-c2c5-4af3-c84a-b0e601627694/5054526000032_1.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227532,7 +228165,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/de/02/78de020a-43f5-614b-128c-b2e13658ac85/016861740900.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227554,7 +228188,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/03/a2/c703a2c4-97d1-106d-4e25-10322d7063ea/196873486703.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227576,7 +228211,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c7/03/a2/c703a2c4-97d1-106d-4e25-10322d7063ea/196873486703.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227598,7 +228234,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/de/02/78de020a-43f5-614b-128c-b2e13658ac85/016861740900.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227620,7 +228257,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3a/c2/03/3ac203cc-916d-97c5-946a-957532ef4c72/886443469013.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227642,7 +228280,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/de/02/78de020a-43f5-614b-128c-b2e13658ac85/016861740900.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227664,7 +228303,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9d/a4/3c/9da43c98-fbb9-7ab5-5898-ec7e6844ab5b/016861747138.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227686,7 +228326,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/86/8f/d1868fff-4ca4-16f5-caf8-d037813563db/dj.rzxzdzxs.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227708,7 +228349,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d1/86/8f/d1868fff-4ca4-16f5-caf8-d037813563db/dj.rzxzdzxs.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227730,7 +228372,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/05/87/ad/0587ad45-51e5-f00c-48a4-941452a65d85/5054526859951.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227752,7 +228395,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/47/04/43/4704432e-3af9-5364-57d6-77ac57e887b2/Passion-iTunes.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227774,7 +228418,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/58/40/33/58403322-bc6b-6f5d-2386-713c2aab983f/887158414329_cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227796,7 +228441,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/92/83/31/928331b7-ce0a-18b8-6bff-3dfbc943bcc3/1606.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227818,7 +228464,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/bf/c7/fb/bfc7fb43-7cc3-a97d-ece2-b03248b305fa/093624867968.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227840,7 +228487,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/d2/a4/bc/d2a4bcac-25c6-9187-d66a-20dc97ba9c56/093624923336.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227862,7 +228510,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4a/71/92/4a7192ec-cb5e-6dc4-919c-4fea69641e9c/093624924661.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227884,7 +228533,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/32/2b/12/322b1228-a133-3317-8d05-742669b700ec/093624926245.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227906,7 +228556,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d7/69/5b/d7695bbb-4dd4-f6a8-e4d9-55643611dc1c/12587.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227928,7 +228579,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/32/2b/12/322b1228-a133-3317-8d05-742669b700ec/093624926245.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227950,7 +228602,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/32/2b/12/322b1228-a133-3317-8d05-742669b700ec/093624926245.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227972,7 +228625,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/19/7b/4b/197b4be0-97ef-1039-f337-f664a0874a72/093624904809.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -227994,7 +228648,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f1/ee/03/f1ee03ea-0583-2f6c-85ab-c6c208c6822e/cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228016,7 +228671,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4a/71/92/4a7192ec-cb5e-6dc4-919c-4fea69641e9c/093624924661.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228038,7 +228694,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/32/2b/12/322b1228-a133-3317-8d05-742669b700ec/093624926245.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228060,7 +228717,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a6/1d/65/a61d654a-f53b-f753-57e0-47d7a4edd6e5/810183320082.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228082,7 +228740,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/78/af/45/78af45f6-e4e6-5681-c1f6-a20e3949ab8c/18UMGIM31237.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228104,7 +228763,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228126,7 +228786,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228148,7 +228809,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228170,7 +228832,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/78/af/45/78af45f6-e4e6-5681-c1f6-a20e3949ab8c/18UMGIM31237.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228192,7 +228855,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/aa/8a/e8aa8add-b683-45de-bd5b-9c04aa749763/09UMGIM45296.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228214,7 +228878,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228236,7 +228901,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228258,7 +228924,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228280,7 +228947,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/aa/8a/e8aa8add-b683-45de-bd5b-9c04aa749763/09UMGIM45296.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228302,7 +228970,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/aa/8a/e8aa8add-b683-45de-bd5b-9c04aa749763/09UMGIM45296.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228324,7 +228993,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228346,7 +229016,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228368,7 +229039,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/aa/8a/e8aa8add-b683-45de-bd5b-9c04aa749763/09UMGIM45296.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228390,7 +229062,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4f/7e/43/4f7e43fd-3598-d2b2-e7b4-b9a69e998e25/21UM1IM29936.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228412,7 +229085,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b5/c5/4b/b5c54bdb-066c-1971-0852-cf23859e8324/15UMGIM36273.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228434,7 +229108,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228456,7 +229131,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4f/7e/43/4f7e43fd-3598-d2b2-e7b4-b9a69e998e25/21UM1IM29936.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228478,7 +229154,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/94/5b/2f/945b2fb1-ab12-b052-5a76-f301ec8828c5/09UMGIM36966.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228500,7 +229177,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228522,7 +229200,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228544,7 +229223,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/e6/3d/35/mzi.xlbgghku.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228566,7 +229246,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b5/c5/4b/b5c54bdb-066c-1971-0852-cf23859e8324/15UMGIM36273.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228588,7 +229269,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/78/af/45/78af45f6-e4e6-5681-c1f6-a20e3949ab8c/18UMGIM31237.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228610,7 +229292,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b5/c5/4b/b5c54bdb-066c-1971-0852-cf23859e8324/15UMGIM36273.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228632,7 +229315,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/ad/32/8f/ad328fce-8d4f-2708-9393-15eeb93528a8/06UMGIM68596.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228654,7 +229338,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/78/af/45/78af45f6-e4e6-5681-c1f6-a20e3949ab8c/18UMGIM31237.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228676,7 +229361,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b5/c5/4b/b5c54bdb-066c-1971-0852-cf23859e8324/15UMGIM36273.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228698,7 +229384,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4f/7e/43/4f7e43fd-3598-d2b2-e7b4-b9a69e998e25/21UM1IM29936.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228720,7 +229407,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/57/0d/2a/570d2ad2-737e-de2e-fcec-f404be5a1bd3/194660613660.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228742,7 +229430,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/5c/74/ea/5c74eaf2-9777-09a4-2f8d-20aa0f8a128a/057829170285.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228764,7 +229453,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a9/12/c1/a912c1d8-a132-389c-e3b8-1f933624f7ca/614.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228786,7 +229476,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/bb/dc/1d/bbdc1dda-00d3-f989-0599-543da601acaf/886445386097.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228808,7 +229499,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/bb/dc/1d/bbdc1dda-00d3-f989-0599-543da601acaf/886445386097.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228830,7 +229522,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/c2/1d/35c21dea-2661-4d17-a1ed-c42e62125b86/886447279588.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228852,7 +229545,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/64/38/c264386e-c6e6-c7e0-fefc-39beffa0e5ec/196872087246.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228874,7 +229568,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/c2/1d/35c21dea-2661-4d17-a1ed-c42e62125b86/886447279588.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228896,7 +229591,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/c2/1d/35c21dea-2661-4d17-a1ed-c42e62125b86/886447279588.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228918,7 +229614,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1e/d5/e0/1ed5e015-03cd-9ef2-3797-5c112288c099/886443690707.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228940,7 +229637,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/f6/cf/43/f6cf4309-16ea-6428-cbf6-c478342d1d8d/886448061694.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228962,7 +229660,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/c2/1d/35c21dea-2661-4d17-a1ed-c42e62125b86/886447279588.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -228984,7 +229683,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/c2/1d/35c21dea-2661-4d17-a1ed-c42e62125b86/886447279588.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229006,7 +229706,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2a/00/ed/2a00ed34-47da-12fc-1444-15b895b3dd9e/886448602200.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229028,7 +229729,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/ce/c5/93/cec593ee-808f-cf44-cb34-a2f0f2eb56d3/886448213192.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229050,7 +229752,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/3d/bf/cf/3dbfcf22-f5c8-7689-d86f-1bd1b035bc5c/0045778756063.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229072,7 +229775,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1e/d5/e0/1ed5e015-03cd-9ef2-3797-5c112288c099/886443690707.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229094,7 +229798,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c2/64/38/c264386e-c6e6-c7e0-fefc-39beffa0e5ec/196872087246.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229116,7 +229821,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b8/6c/c0/b86cc061-db88-316c-093e-711da71e13c4/23UM1IM18077.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229138,7 +229844,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/3f/73/e23f7366-967a-b2b3-5455-1e74c7e3a355/0045778706563.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229160,7 +229867,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d7/db/80/d7db80e0-c9fa-1e32-cf86-bb786f3b376d/21UMGIM65173.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229182,7 +229890,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/3f/73/e23f7366-967a-b2b3-5455-1e74c7e3a355/0045778706563.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229204,7 +229913,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/73/1d/1c/731d1c2e-05b6-d81a-4325-621ce8c691c5/075679756909.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229226,7 +229936,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e2/3f/73/e23f7366-967a-b2b3-5455-1e74c7e3a355/0045778706563.png/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229248,7 +229959,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1e/d5/e0/1ed5e015-03cd-9ef2-3797-5c112288c099/886443690707.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229270,7 +229982,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5e/03/e7/5e03e721-b270-070d-63bb-03ea768a1e69/735910998481_cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229292,7 +230005,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229314,7 +230028,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/cd/bd/cb/cdbdcbfd-0b6e-93ff-61f7-04c9d5da7368/093624919759.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229336,7 +230051,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/0f/b0/5a/0fb05adc-3847-4e07-3fe7-3cf9eb898e4d/093624946793.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229358,7 +230074,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/cb/b4/27cbb40e-f8c6-dede-9c69-62089a873fa9/093624919803.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229380,7 +230097,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229402,7 +230120,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e3/04/cf/e304cf55-06c7-8b6c-34d3-95b2706c79a8/093624832232.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229424,7 +230143,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229446,7 +230166,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e0/e9/89/e0e9890e-19a5-b959-e0b2-2010d4425ad2/093624926467.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229468,7 +230189,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b4/b6/1a/b4b61aee-c236-4061-55de-15c8a57ca32a/093624892120.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229490,7 +230212,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/e3/04/cf/e304cf55-06c7-8b6c-34d3-95b2706c79a8/093624832232.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229512,7 +230235,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e0/e9/89/e0e9890e-19a5-b959-e0b2-2010d4425ad2/093624926467.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229534,7 +230258,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/2e/12/19/2e121951-b104-af73-1952-93b3aaccabcf/093624919773.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229556,7 +230281,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/cb/b4/27cbb40e-f8c6-dede-9c69-62089a873fa9/093624919803.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229578,7 +230304,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/2e/12/19/2e121951-b104-af73-1952-93b3aaccabcf/093624919773.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
@@ -229600,7 +230327,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/96/51/57/96515710-cf91-0663-6f5a-942acf6ea31b/093624919797.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "metal"
+      "metal",
+      "rock"
     ]
   },
   {
