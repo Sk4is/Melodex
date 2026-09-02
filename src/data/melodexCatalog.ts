@@ -1,4 +1,4 @@
-// Auto-generated Melodex verified base catalog (5527 tracks)
+// Auto-generated Melodex verified base catalog (10117 tracks)
 import { Song } from '../types/song';
 import rawCatalog from './melodexCatalog.json';
 

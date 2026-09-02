@@ -6946,7 +6946,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1488408568",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788363274027,
     "failureCount": 0,
     "normalizedGenres": [
       "rnb"
@@ -9206,7 +9206,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1437958680",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788363316409,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -22401,7 +22401,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1577414972",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788363293584,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25062,7 +25062,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1445949409",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274941,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -25086,7 +25086,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1781959234",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363354593,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25180,7 +25180,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1526575743",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274468,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25192,8 +25192,8 @@
     "artist": "Juice WRLD",
     "normalizedArtist": "juice wrld",
     "album": "Goodbye & Good Riddance (Anniversary Edition)",
-    "year": 2017,
-    "verifiedOriginalYear": 2017,
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 75,
@@ -25204,7 +25204,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1571796957",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274442,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25240,8 +25240,8 @@
     "artist": "Juice WRLD",
     "normalizedArtist": "juice wrld",
     "album": "Lucid Dreams - Single",
-    "year": 2017,
-    "verifiedOriginalYear": 2017,
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 97,
@@ -25252,7 +25252,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1447177630",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274457,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25369,7 +25369,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1509339768",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274953,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25545,8 +25545,8 @@
     "artist": "Juice WRLD",
     "normalizedArtist": "juice wrld",
     "album": "Fighting Demons (Digital Deluxe)",
-    "year": 2021,
-    "verifiedOriginalYear": 2021,
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 75,
@@ -25557,7 +25557,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1614302940",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274932,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -30017,7 +30017,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1699799586",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363341975,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -30041,7 +30041,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1623193280",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363315550,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -30208,7 +30208,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1151481750",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788363274019,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -43848,8 +43848,8 @@
     "artist": "Lil Uzi Vert",
     "normalizedArtist": "lil uzi vert",
     "album": "What You Saying - Single",
-    "year": 2025,
-    "verifiedOriginalYear": 2025,
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 75,
@@ -43860,7 +43860,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1863528318",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788363371056,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -44124,7 +44124,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1274598329",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788363369636,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -44148,7 +44148,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1274598326",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788363311185,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -44268,7 +44268,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1313343143",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788363334180,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -50321,7 +50321,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1598406499",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101430,
+    "audioValidatedAt": 1788363287424,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -61941,7 +61941,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1221488260",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101431,
+    "audioValidatedAt": 1788363345585,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -61989,7 +61989,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1315198142",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101431,
+    "audioValidatedAt": 1788363342535,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -79464,7 +79464,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1711436900",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363347969,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -79608,8 +79608,8 @@
     "artist": "Lil Mosey",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ec/51/6f/ec516f72-7a05-69bb-fb28-9217c9f9acc2/mzaf_1275590893821047071.plus.aac.p.m4a",
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/54/7f/80/547f809a-e483-2973-1205-ffa0e2ade18c/18UMGIM66998.rgb.jpg/600x600bb.jpg",
-    "year": 2018,
-    "verifiedOriginalYear": 2018,
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 80,
@@ -79618,7 +79618,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1438808449",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363295101,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -79662,7 +79662,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1479484411",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363269785,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -79684,7 +79684,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1485449974",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363293545,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -79706,7 +79706,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1466965672",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363315481,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80060,7 +80060,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1453887210",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363306366,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80084,7 +80084,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1453887049",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363324572,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80120,8 +80120,8 @@
     "artist": "Lil Skies",
     "normalizedArtist": "lil skies",
     "album": "Magic - Single",
-    "year": 2019,
-    "verifiedOriginalYear": 2019,
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 89,
@@ -80132,7 +80132,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1474857384",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363274995,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80156,7 +80156,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1453887053",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363324598,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80276,7 +80276,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1567633170",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363274978,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80324,7 +80324,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1507282283",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363326681,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80372,7 +80372,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1615746726",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363303152,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -80648,8 +80648,8 @@
     "artist": "Lil Peep & Lil Tracy",
     "normalizedArtist": "lil peep",
     "album": "EVERYBODY'S EVERYTHING",
-    "year": 2019,
-    "verifiedOriginalYear": 2019,
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 95,
@@ -80660,7 +80660,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1485823641",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363371080,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -81025,7 +81025,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1312807655",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363324136,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -82570,8 +82570,8 @@
     "artist": "YNW Melly",
     "normalizedArtist": "ynw melly",
     "album": "772 Love - Single",
-    "year": 2017,
-    "verifiedOriginalYear": 2017,
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 95,
@@ -82582,7 +82582,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1296569471",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363344958,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -82654,7 +82654,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1503724293",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363295943,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -82726,7 +82726,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1355210825",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363338165,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -82798,7 +82798,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1580599394",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788363338127,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -83911,7 +83911,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1711412436",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101434,
+    "audioValidatedAt": 1788363305331,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -84284,8 +84284,8 @@
     "artist": "Internet Money, Gunna & Don Toliver",
     "normalizedArtist": "gunna",
     "album": "Lemonade (feat. NAV) - Single",
-    "year": 2022,
-    "verifiedOriginalYear": 2022,
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "recognitionScore": 69,
@@ -84296,7 +84296,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1711562293",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101434,
+    "audioValidatedAt": 1788363305351,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -91815,7 +91815,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1269287617",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101435,
+    "audioValidatedAt": 1788363342897,
     "failureCount": 0,
     "normalizedGenres": [
       "latin",
@@ -104238,7 +104238,7 @@
     "providerTrackId": "deezer-2235565007",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788363341340,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -104261,7 +104261,7 @@
     "providerTrackId": "deezer-1775918667",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788363315574,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -104977,7 +104977,7 @@
     "providerTrackId": "1274598339",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788363303034,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -105989,7 +105989,7 @@
     "providerTrackId": "1711561444",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363305308,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106058,7 +106058,7 @@
     "providerTrackId": "1453887050",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363333112,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106081,7 +106081,7 @@
     "providerTrackId": "1453887055",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363324630,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106219,7 +106219,7 @@
     "providerTrackId": "1567634112",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363276131,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106265,7 +106265,7 @@
     "providerTrackId": "1567633172",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363293573,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106518,7 +106518,7 @@
     "providerTrackId": "1477887167",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363276153,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106794,7 +106794,7 @@
     "providerTrackId": "1628224559",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363313049,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -107093,7 +107093,7 @@
     "providerTrackId": "1628224865",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363315674,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -107116,7 +107116,7 @@
     "providerTrackId": "1623258537",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363315537,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -107162,7 +107162,7 @@
     "providerTrackId": "1623258526",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363315604,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -107806,7 +107806,7 @@
     "providerTrackId": "1567633175",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788363332284,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -121323,7 +121323,7 @@
     "providerTrackId": "1502319171",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101441,
+    "audioValidatedAt": 1788363306342,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -122773,7 +122773,7 @@
     "providerTrackId": "1355216115",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101441,
+    "audioValidatedAt": 1788363313596,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -156907,7 +156907,7 @@
     "providerTrackId": "1461515034",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101446,
+    "audioValidatedAt": 1788363292726,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -156953,7 +156953,7 @@
     "providerTrackId": "1475300179",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101446,
+    "audioValidatedAt": 1788363273996,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -178092,7 +178092,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101449,
+    "audioValidatedAt": 1788363343764,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -231437,8 +231437,8 @@
     "title": "Falling",
     "artist": "Lil Mosey",
     "album": "Falling - Single",
-    "year": 2022,
-    "verifiedOriginalYear": 2022,
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
@@ -231450,7 +231450,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304939141,
+    "audioValidatedAt": 1788363303090,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/6e/34/2a/6e342a5f-292a-0afb-274e-80d80bc58583/22UMGIM20121.rgb.jpg/600x600bb.jpg"
   },
@@ -231560,7 +231560,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304942155,
+    "audioValidatedAt": 1788363336891,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/5a/af/0b/5aaf0b57-3a57-85cb-f349-d8d3ac063e71/20UMGIM17189.rgb.jpg/600x600bb.jpg"
   },
@@ -231802,7 +231802,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304946248,
+    "audioValidatedAt": 1788363287486,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ff/12/46/ff1246cf-c2cc-f296-9ec6-a883aa50eb1a/20UMGIM63082.rgb.jpg/600x600bb.jpg"
   },
@@ -233241,5 +233241,2641 @@
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
     "audioValidatedAt": 1788359910970
+  },
+  {
+    "id": "1579787434",
+    "title": "GO",
+    "artist": "The Kid LAROI & Juice WRLD",
+    "album": "F*CK LOVE 3+: OVER YOU",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/26/86/982686e6-d525-c732-246c-7ecefd1b0f25/mzaf_14909810769086903470.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1579787434",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363270355
+  },
+  {
+    "id": "1446115362",
+    "title": "Gnarly (feat. Lil Pump)",
+    "artist": "Kodak Black",
+    "album": "Dying to Live",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/8f/23/46/8f2346c7-0db4-523d-e2c7-37949293527a/075679856210.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/27/6b/c8/276bc885-104e-1179-7743-85b47b9d0d55/mzaf_7045698977548670964.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1446115362",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363270806
+  },
+  {
+    "id": "862831572",
+    "title": "Diva (feat. Lil Tecca)",
+    "artist": "The Kid LAROI",
+    "album": "Diva (feat. Lil Tecca)",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5f99d6a6fc2505e9e5a74a1a33e84a39/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/a/8/0/ea8b62352eb8c912422773cc809c78d9.mp3?hdnea=exp=1788364171~acl=/api/1/1/e/a/8/0/ea8b62352eb8c912422773cc809c78d9.mp3*~data=user_id=0,application_id=42~hmac=33f1b6f3d65c8bd6d1bc4fc4e8edbf59a37a5bca0be048146369ea60355470e0",
+    "provider": "itunes",
+    "providerTrackId": "862831572",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363271792
+  },
+  {
+    "id": "1579787435",
+    "title": "TELL ME WHY",
+    "artist": "The Kid LAROI",
+    "album": "F*CK LOVE 3+: OVER YOU",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/10/a0/4110a051-2d2d-d560-3a1e-7d026561aee5/mzaf_314519057866481741.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1579787435",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363272119
+  },
+  {
+    "id": "572115812",
+    "title": "Arms Around You (feat. Maluma & Swae Lee)",
+    "artist": "XXXTENTACION",
+    "album": "Arms Around You (feat. Maluma & Swae Lee)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "latin"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/234871dc6c2f30bfc5255c6ead8c93e4/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/e/b/0/aeb478140928bb8e45fdbbee39d4d523.mp3?hdnea=exp=1788364173~acl=/api/1/1/a/e/b/0/aeb478140928bb8e45fdbbee39d4d523.mp3*~data=user_id=0,application_id=42~hmac=b45044aac157ebf7f4b6301b8e562e0e856c4fd48911ae11bba38251d9d0ef02",
+    "provider": "itunes",
+    "providerTrackId": "572115812",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363273131
+  },
+  {
+    "id": "2269096357",
+    "title": "Ayer Me Llamó Mi Ex",
+    "artist": "KHEA",
+    "album": "Ayer Me Llamó Mi Ex",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "latin"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/6fa9e7d533a8cccbf6b22d4739075938/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/2/8/0/f283d340ec0a82b894d76a9a6b021cf4.mp3?hdnea=exp=1788364173~acl=/api/1/1/f/2/8/0/f283d340ec0a82b894d76a9a6b021cf4.mp3*~data=user_id=0,application_id=42~hmac=5083c859983d235c6dce965ea7e6ddc9133d5a6fb52330fb38c7ab863dc0d49e",
+    "provider": "itunes",
+    "providerTrackId": "2269096357",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363273966
+  },
+  {
+    "id": "1307050979",
+    "title": "Hit My Phone",
+    "artist": "Yvng Swag",
+    "album": "32 Teeth",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c6/99/dc/c699dc66-b7c6-a2b0-b309-5c5a10f0a7aa/075679881694.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/21/49/c1/2149c196-7326-e03e-6621-fb0cdd515284/mzaf_3630883176117807905.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1307050979",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363274430
+  },
+  {
+    "id": "1523387057",
+    "title": "Stay High",
+    "artist": "Juice WRLD",
+    "album": "Legends Never Die",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/63/6b/21/636b213c-2deb-43e5-4cec-7f8533ad0ef1/20UMGIM58296.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/77/fb/89/77fb89f5-214f-82a5-9d2b-5228ab48da7a/mzaf_3875835888394961278.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1523387057",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363274921
+  },
+  {
+    "id": "2493735241",
+    "title": "1400 / 999 Freestyle (feat. Juice WRLD)",
+    "artist": "Trippie Redd",
+    "album": "A Love Letter To You 3",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/22cd3810bf6746f1441ab4724d9c4bba/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/5/f/0/35f90cdda913287b568fff5279889405.mp3?hdnea=exp=1788364175~acl=/api/1/1/3/5/f/0/35f90cdda913287b568fff5279889405.mp3*~data=user_id=0,application_id=42~hmac=f08785d90b5889ae9dca20d8dc23f7b6341e6d31c1f513ef143a8921bb30ca44",
+    "provider": "itunes",
+    "providerTrackId": "2493735241",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363276099
+  },
+  {
+    "id": "470202122",
+    "title": "Wish",
+    "artist": "Diplo",
+    "album": "California",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/75cb1690a4bf2d7148a31ff7b0f1e798/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/6/0/0/9604dd31877abbd9f9cea060f1b12f5b.mp3?hdnea=exp=1788364176~acl=/api/1/1/9/6/0/0/9604dd31877abbd9f9cea060f1b12f5b.mp3*~data=user_id=0,application_id=42~hmac=0b83d4c634a646d1bd4f5657508f3c4ec01704451235adc22b9bc3a9fbe214ae",
+    "provider": "itunes",
+    "providerTrackId": "470202122",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363281293
+  },
+  {
+    "id": "2478514141",
+    "title": "Save That Shit",
+    "artist": "Lil Peep",
+    "album": "Come Over When You're Sober, Pt. 1",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/e29b6fc03173d7e1f19daf91637a1a4b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/8/2/0/58205d79613b642b5ad66fee3569bfbc.mp3?hdnea=exp=1788364181~acl=/api/1/1/5/8/2/0/58205d79613b642b5ad66fee3569bfbc.mp3*~data=user_id=0,application_id=42~hmac=1f8a35c319e8a2e185907a889d654e4131efb44f0917c2d6f70a8aff242e8e29",
+    "provider": "itunes",
+    "providerTrackId": "2478514141",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363281805
+  },
+  {
+    "id": "1567987681",
+    "title": "GANG GANG",
+    "artist": "Polo G & Lil Wayne",
+    "album": "GANG GANG - Single",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ef/f5/1d/eff51d6e-c3c5-3a07-a7e8-8595ca1720fa/886449306138.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/49/6f/27/496f274c-719b-15f8-da1f-c1d16972fc23/mzaf_15355455403203496817.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1567987681",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363284338
+  },
+  {
+    "id": "1680853601",
+    "title": "734 (Mixed)",
+    "artist": "Juice WRLD",
+    "album": "STILL TRAPPIN’ 1 (DJ Mix)",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/07/96/a5/0796a578-d958-f9c8-bfb1-42abaf253047/3bf057c7-2686-41dc-ad4a-cdc82bdf1831.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/bc/78/a8/bc78a88f-e253-e6ac-68a3-133bfd657c5d/mzaf_620093921357471282.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1680853601",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363286800
+  },
+  {
+    "id": "127880605",
+    "title": "One Night",
+    "artist": "Lil Yachty",
+    "album": "Lil Boat",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/b5ab53020c987eae2a3bcf4e7cc244b3/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/6/1/0/c61ac6e1653b38a6138e867145b7e64f.mp3?hdnea=exp=1788364187~acl=/api/1/1/c/6/1/0/c61ac6e1653b38a6138e867145b7e64f.mp3*~data=user_id=0,application_id=42~hmac=6c51784d16a55c8c3649660fdc7b99095e035d34493440b6c9662eb27805cd7f",
+    "provider": "itunes",
+    "providerTrackId": "127880605",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363287410
+  },
+  {
+    "id": "1328391212",
+    "title": "Malbec",
+    "artist": "Duki",
+    "album": "Desde el Fin del Mundo",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "latin"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f3c6632f753d16c43773a7629ee5ffb3/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/4/9/0/6498b3427a652c042dc9ae7b80a9be55.mp3?hdnea=exp=1788364188~acl=/api/1/1/6/4/9/0/6498b3427a652c042dc9ae7b80a9be55.mp3*~data=user_id=0,application_id=42~hmac=8624d81371e932079f503724cb9f4bd0c198a5f1d264997da50eb0c5d1ed4a8d",
+    "provider": "itunes",
+    "providerTrackId": "1328391212",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363288394
+  },
+  {
+    "id": "700713642",
+    "title": "Kamikaze",
+    "artist": "Lil Mosey",
+    "album": "Northsbest (Extended)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/6b74bff4e1bef7a5a8c86e459bfd8602/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/a/2/0/7a273deae8451929822f5658d37d7457.mp3?hdnea=exp=1788364188~acl=/api/1/1/7/a/2/0/7a273deae8451929822f5658d37d7457.mp3*~data=user_id=0,application_id=42~hmac=4783c011a01b54e38db21e4a3b77aec09f7b026c1cd6ac5338472ff1189080e0",
+    "provider": "itunes",
+    "providerTrackId": "700713642",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363290269
+  },
+  {
+    "id": "1417650162",
+    "title": "No Kizzy",
+    "artist": "DDG",
+    "album": "No Kizzy",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/abe61dde822eeaa3554f26ac12ebc2eb/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/c/8/0/dc8ada88d9e8a8b9905c0d3d7bab869e.mp3?hdnea=exp=1788364190~acl=/api/1/1/d/c/8/0/dc8ada88d9e8a8b9905c0d3d7bab869e.mp3*~data=user_id=0,application_id=42~hmac=8b9bb416333399045631d0567a826739a3661407e0ea1d97fdae51ad24f3725c",
+    "provider": "itunes",
+    "providerTrackId": "1417650162",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363291858
+  },
+  {
+    "id": "1575618128",
+    "title": "Motley Crew",
+    "artist": "Post Malone",
+    "album": "Motley Crew - Single",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4b/fb/f7/4bfbf70d-5bd0-8c62-b4e0-a1af2efe0d90/21UMGIM61404.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1f/89/1c/1f891cea-7d73-17ec-c35e-5cd9c9bbe0b3/mzaf_1082966049810098079.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1575618128",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363292235
+  },
+  {
+    "id": "1579787410",
+    "title": "STAY",
+    "artist": "The Kid LAROI & Justin Bieber",
+    "album": "F*CK LOVE 3+: OVER YOU",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/25/9a/1c/259a1c5d-c59b-ce1f-8279-c0e644dc2b9e/mzaf_3677842867275398060.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1579787410",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363292668
+  },
+  {
+    "id": "1453651416",
+    "title": "Creeping",
+    "artist": "Lil Skies Beats",
+    "album": "World Biggest Beats, Vol. 4",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/51/a0/a2/51a0a24f-2782-6a40-6aea-bc26944e8f18/402339.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/da/ee/0a/daee0aa7-f85e-6401-bbbf-7bc2b943da86/mzaf_9552357368255995123.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1453651416",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363293133
+  },
+  {
+    "id": "1618089382",
+    "title": "Lean Wit Me",
+    "artist": "Juice WRLD",
+    "album": "Goodbye & Good Riddance (Anniversary)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/f8/6c/2a/f86c2ae0-b4eb-578c-1f02-3acb8409b815/21UMGIM53733.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/89/ba/23/89ba237d-6cfc-c9b0-3b91-fbb9ed9096ce/mzaf_7666711784786820724.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1618089382",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363293515
+  },
+  {
+    "id": "414870102",
+    "title": "Red Roses (feat. Landon Cube)",
+    "artist": "Lil Skies",
+    "album": "Red Roses (feat. Landon Cube)",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/31db42dce64e702a821eafccb9d9d78b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/8/0/0/b8070b7020e5f4bdef3279e0849e1cef.mp3?hdnea=exp=1788364194~acl=/api/1/1/b/8/0/0/b8070b7020e5f4bdef3279e0849e1cef.mp3*~data=user_id=0,application_id=42~hmac=dba92b6bd3fe144703246747ee339d011253666f456ecbaca287ee1c16903a4c",
+    "provider": "itunes",
+    "providerTrackId": "414870102",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363295074
+  },
+  {
+    "id": "1609312736",
+    "title": "Already Dead",
+    "artist": "Juice WRLD",
+    "album": "Fighting Demons (Extended Edition)",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/aa/c5/8e/aac58efc-d999-a5b3-c5b8-9719fd7a7bba/21UM1IM54284.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/75/f1/79/75f17958-4e52-22bc-c411-e69e871b0f5e/mzaf_16537242741084100680.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1609312736",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363295478
+  },
+  {
+    "id": "1598253712",
+    "title": "Wandered To LA",
+    "artist": "Juice WRLD & Justin Bieber",
+    "album": "Wandered To LA - Single",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b9/15/63/b91563fe-d1c9-be47-5214-f22ad07a96e7/21UM1IM51560.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/73/83/dc/7383dcee-5846-d7d1-67a1-a47c17ca07db/mzaf_11062045909136364197.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1598253712",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363295915
+  },
+  {
+    "id": "617739852",
+    "title": "Mixed Personalities (feat. Kanye West)",
+    "artist": "YNW Melly",
+    "album": "We All Shine",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2cfba5bfbf8e51b12550feb585e1a0bf/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/7/2/0/a72ab2c8998e86c27db8227efd8971ba.mp3?hdnea=exp=1788364196~acl=/api/1/1/a/7/2/0/a72ab2c8998e86c27db8227efd8971ba.mp3*~data=user_id=0,application_id=42~hmac=3c14ececb17ff9ad98d27e5d799d2e93e6c4a88c08c3300b40caef6274f39f4c",
+    "provider": "itunes",
+    "providerTrackId": "617739852",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363297136
+  },
+  {
+    "id": "818565332",
+    "title": "Legendary",
+    "artist": "YNW Melly",
+    "album": "Collect Call EP",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f94b5ecd25fff746a1c92b80de9bb97c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/9/4/0/a94af858d682dfaf14811e897e727220.mp3?hdnea=exp=1788364197~acl=/api/1/1/a/9/4/0/a94af858d682dfaf14811e897e727220.mp3*~data=user_id=0,application_id=42~hmac=136f95ce3b100f1c6b4cf7ac3a371d38c35ff0cc2c0e018223b4e368e80fbe71",
+    "provider": "itunes",
+    "providerTrackId": "818565332",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363297916
+  },
+  {
+    "id": "485790332",
+    "title": "Virtual (Blue Balenciagas)",
+    "artist": "YNW Melly",
+    "album": "Virtual (Blue Balenciagas)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/da03c4df87fa3512c9ee6fca27a78573/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/e/0/84e9f0993cf4dc9a172376605cf30444.mp3?hdnea=exp=1788364198~acl=/api/1/1/8/4/e/0/84e9f0993cf4dc9a172376605cf30444.mp3*~data=user_id=0,application_id=42~hmac=506a3f26f640545a519959cd7d3d7893dd661a7baeaa7bd2aeebc2fa2fa42897",
+    "provider": "itunes",
+    "providerTrackId": "485790332",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363298911
+  },
+  {
+    "id": "1614302720",
+    "title": "Cigarettes",
+    "artist": "Juice WRLD",
+    "album": "Fighting Demons (Digital Deluxe)",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/5a/18/b6/5a18b6f3-61cc-2ccc-3d59-874d3a7a2603/21UM1IM54284.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ea/aa/e2/eaaae236-c0b0-cb2f-9000-b6c471ad95ab/mzaf_11478130522400729499.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1614302720",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363300804
+  },
+  {
+    "id": "482789402",
+    "title": "Pop Star",
+    "artist": "Lil Skies",
+    "album": "Pop Star",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/35b9e2df6d8dd3f751fefe945f66b4dd/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/e/3/0/7e382d84d680751e5edec562f826b69b.mp3?hdnea=exp=1788364201~acl=/api/1/1/7/e/3/0/7e382d84d680751e5edec562f826b69b.mp3*~data=user_id=0,application_id=42~hmac=b1a97b0ecd0827c3689af6e1d16e5077183988441c525e3ab92c9010e8fe8190",
+    "provider": "itunes",
+    "providerTrackId": "482789402",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363301705
+  },
+  {
+    "id": "1526575295",
+    "title": "Conversations",
+    "artist": "Juice WRLD",
+    "album": "Legends Never Die",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/39/b1/1e/39b11eef-4709-bf53-2b5b-7954d2782496/20UMGIM58296.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1f/da/52/1fda52a1-8997-d005-4b6b-b0ab139c30f0/mzaf_12599395036163729610.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1526575295",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363302087
+  },
+  {
+    "id": "129916034",
+    "title": "Erase Your Social",
+    "artist": "Lil Uzi Vert",
+    "album": "The Perfect LUV Tape",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/757b65eef408035453c1904136991e40/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/c/d/0/acd3cc51cb912defc5fe3e16c295e678.mp3?hdnea=exp=1788364202~acl=/api/1/1/a/c/d/0/acd3cc51cb912defc5fe3e16c295e678.mp3*~data=user_id=0,application_id=42~hmac=a2a4cf705f9dc3c51a0d6b67d02e6b501f9716a6b3cff7d198ca74856cff62e3",
+    "provider": "itunes",
+    "providerTrackId": "129916034",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363303001
+  },
+  {
+    "id": "1874259925",
+    "title": "Hello (feat. A Boogie wit da Hoodie)",
+    "artist": "Pop Smoke",
+    "album": "Shoot For The Stars Aim For The Moon (Deluxe)",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/23/f5/74/23f57450-8bbe-1c8c-6731-d539c658d4b6/00602435015781_Cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7b/3c/e9/7b3ce9de-a4e4-9d47-2670-a1567d8d9a9b/mzaf_2395862795526451233.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1874259925",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363303481
+  },
+  {
+    "id": "1613601723",
+    "title": "Fall (Radio Edit)",
+    "artist": "Isaac App",
+    "album": "FALL (Radio Edit) [Radio Edit] - Single",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "rnb"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a4/84/49/a4844933-2461-51ec-69a9-48543ac30477/artwork.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/11/f9/3a/11f93ad6-c7f9-4c5f-810c-35dad28e2d89/mzaf_9706138110986010146.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1613601723",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363303803
+  },
+  {
+    "id": "1711793221",
+    "title": "His & Hers (feat. Don Toliver & Lil Uzi Vert)",
+    "artist": "Internet Money & Gunna",
+    "album": "His & Hers (feat. Don Toliver & Lil Uzi Vert) - Single",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/56/e6/e3/56e6e353-b102-763f-35fe-027e6e5dd97b/842812144424.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ed/9a/e1/ed9ae15b-6159-9156-7619-d91a98c72ad7/mzaf_5299144145366940443.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1711793221",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363305889
+  },
+  {
+    "id": "1711562339",
+    "title": "Blastoff (feat. Juice WRLD)",
+    "artist": "Internet Money, Trippie Redd & Diplo",
+    "album": "B4 The Storm",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/af/b2/af/afb2af7b-b687-e326-3437-88909f442d65/842812134265.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/0c/2d/09/0c2d097a-dd36-9707-a9e1-51981513cc55/mzaf_16347509256370989775.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1711562339",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363306315
+  },
+  {
+    "id": "2328458185",
+    "title": "Lonely",
+    "artist": "Yung Bans",
+    "album": "Lonely",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/e87f28c08bfd696d21c492e7049ca12f/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/3/f/0/a3fc0cb6ab1295c81e1317a7131e9c15.mp3?hdnea=exp=1788364207~acl=/api/1/1/a/3/f/0/a3fc0cb6ab1295c81e1317a7131e9c15.mp3*~data=user_id=0,application_id=42~hmac=0ad86eebed47cce7594de9a612c56ab3a568ee36b1b9e711c1da52bbd759002d",
+    "provider": "itunes",
+    "providerTrackId": "2328458185",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363309780
+  },
+  {
+    "id": "2330375355",
+    "title": "Ridin (feat. Landon Cube & YBN Nahmir)",
+    "artist": "Yung Bans",
+    "album": "Yung Bans Vol. 5",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/bf1fee3500f6e4ca8af49a20442b3ab9/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/a/0/76ab8e6d0e53a54bc9076c72632e906f.mp3?hdnea=exp=1788364210~acl=/api/1/1/7/6/a/0/76ab8e6d0e53a54bc9076c72632e906f.mp3*~data=user_id=0,application_id=42~hmac=1442f6ef6fe70f78f46537644bc627933aeb3ed355e66b6a223ede2c4f710cb9",
+    "provider": "itunes",
+    "providerTrackId": "2330375355",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363311161
+  },
+  {
+    "id": "570030882",
+    "title": "Nightmares (feat. Lil Skies)",
+    "artist": "Yung Pinch",
+    "album": "Nightmares (feat. Lil Skies)",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/e96b62f76b64c3453a124b65a5c1fdc8/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/f/1/0/2f17f31bc3461388014f20da737d3936.mp3?hdnea=exp=1788364211~acl=/api/1/1/2/f/1/0/2f17f31bc3461388014f20da737d3936.mp3*~data=user_id=0,application_id=42~hmac=73bd93ceefff85f194a66683fef03b234a75920fbab7ba24c9665639c183d652",
+    "provider": "itunes",
+    "providerTrackId": "570030882",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363312194
+  },
+  {
+    "id": "507345382",
+    "title": "I Know You (feat. Yung Pinch)",
+    "artist": "Lil Skies",
+    "album": "I Know You (feat. Yung Pinch)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/fb10c6a594df81893d0c523e4143a4ad/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/4/e/0/34e81e8244288f0f6b6e263d30d3b833.mp3?hdnea=exp=1788364212~acl=/api/1/1/3/4/e/0/34e81e8244288f0f6b6e263d30d3b833.mp3*~data=user_id=0,application_id=42~hmac=14e7499f7add3bf694f87a2c0bc220c386c5f5cf16c7c4dc35bd7cd12d6647e1",
+    "provider": "itunes",
+    "providerTrackId": "507345382",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363338107
+  },
+  {
+    "id": "534741652",
+    "title": "No Rest",
+    "artist": "Lil Skies",
+    "album": "No Rest",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5f9545c2d04ef683885c14d1d4014cb5/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/5/a/0/05adc5b1900285d74af37f0c4322fe37.mp3?hdnea=exp=1788364213~acl=/api/1/1/0/5/a/0/05adc5b1900285d74af37f0c4322fe37.mp3*~data=user_id=0,application_id=42~hmac=401588dfff06d83252464b309c8cb764b2fcef60bd4473d328f9bd937f6618b5",
+    "provider": "itunes",
+    "providerTrackId": "534741652",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363313562
+  },
+  {
+    "id": "632560872",
+    "title": "Wouldn't Be Nothing",
+    "artist": "Yung Pinch",
+    "album": "Wouldn't Be Nothing",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/c687801f72027fb7017f9a4724d8b3ce/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/7/0/a8714d4abd8b9ccbd3dde001889c647e.mp3?hdnea=exp=1788364214~acl=/api/1/1/a/8/7/0/a8714d4abd8b9ccbd3dde001889c647e.mp3*~data=user_id=0,application_id=42~hmac=a8cf17923e0ab4187e95b8c88f9e9cb37b4b0aa3aef50e5b5b7273fbe9de8bab",
+    "provider": "itunes",
+    "providerTrackId": "632560872",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363315449
+  },
+  {
+    "id": "2332671165",
+    "title": "Juicy Fruit",
+    "artist": "Yung Pinch",
+    "album": "4EVERFRIDAY SZN TWO",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2e81baa19bb2f187ce8429219c2c30ce/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/e/0/0/5e0d7a7a207ff2f67f173808b4aa950c.mp3?hdnea=exp=1788364216~acl=/api/1/1/5/e/0/0/5e0d7a7a207ff2f67f173808b4aa950c.mp3*~data=user_id=0,application_id=42~hmac=94f0c028e9f7809ba781d7bf948cc74227b0555c251287855aa127a499cab6dc",
+    "provider": "itunes",
+    "providerTrackId": "2332671165",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363316155
+  },
+  {
+    "id": "121275010",
+    "title": "Digits",
+    "artist": "Young Thug",
+    "album": "Slime Season 3",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/a16acab78b1af7204a1b3393c23f6252/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/6/0/f468fb842fd6d88bf05b168db5e234f4.mp3?hdnea=exp=1788364216~acl=/api/1/1/f/4/6/0/f468fb842fd6d88bf05b168db5e234f4.mp3*~data=user_id=0,application_id=42~hmac=2e25d10088ebb0be9ae67c4a2fa4301bbe8bfbc5927de5a27563aedb7ac772a7",
+    "provider": "itunes",
+    "providerTrackId": "121275010",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363316399
+  },
+  {
+    "id": "1810696707",
+    "title": "Deep End (feat. Lil Skies)",
+    "artist": "Bankrol Hayden",
+    "album": "Deep End (feat. Lil Skies)",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/58b7bef1a04584759a559cb1617c5540/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/4/c/0/94c3b6d293680d398590562ea2405a31.mp3?hdnea=exp=1788364216~acl=/api/1/1/9/4/c/0/94c3b6d293680d398590562ea2405a31.mp3*~data=user_id=0,application_id=42~hmac=77bf7d860464f2261743783617389884771564e0a0e041f5e5feb6999306e096",
+    "provider": "itunes",
+    "providerTrackId": "1810696707",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363317055
+  },
+  {
+    "id": "531856421",
+    "title": "Plug Walk",
+    "artist": "Rich The Kid",
+    "album": "The World Is Yours",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/fb6a2c8481da58f90224a2f88f222e89/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/e/0/76ed0c053a58a5209309231ccc764efd.mp3?hdnea=exp=1788364217~acl=/api/1/1/7/6/e/0/76ed0c053a58a5209309231ccc764efd.mp3*~data=user_id=0,application_id=42~hmac=0dc88987b18bfd629cb44ca1471a86177f63a481120e359d6ac65a70c13c1fa9",
+    "provider": "itunes",
+    "providerTrackId": "531856421",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363317502
+  },
+  {
+    "id": "1628205780",
+    "title": "Splurgin (Clean)",
+    "artist": "Lil Pump",
+    "album": "Splurgin (Clean) - Single",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/e2/5d/6d/e25d6d31-0234-b388-e59d-81bfc82a95f0/732138033291_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/99/cf/32/99cf326b-9998-b04e-534a-e48afb947f79/mzaf_7567993924310621539.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1628205780",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363317820
+  },
+  {
+    "id": "413807792",
+    "title": "D Rose",
+    "artist": "Lil Pump",
+    "album": "Lil Pump",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/50713068daa248f0ba802e71bd6bba76/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/b/e/0/9be14d96a8aacf8f472a6a90239a573d.mp3?hdnea=exp=1788364218~acl=/api/1/1/9/b/e/0/9be14d96a8aacf8f472a6a90239a573d.mp3*~data=user_id=0,application_id=42~hmac=95f1ad584becbb24e98dac936e6b72c8467e4acd28fc4f83b506f4d3c94576fd",
+    "provider": "itunes",
+    "providerTrackId": "413807792",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363318502
+  },
+  {
+    "id": "413807872",
+    "title": "Flex Like Ouu",
+    "artist": "Lil Pump",
+    "album": "Lil Pump",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/50713068daa248f0ba802e71bd6bba76/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/3/d/0/f3d23fb63749c086abc8c5fd71778297.mp3?hdnea=exp=1788364218~acl=/api/1/1/f/3/d/0/f3d23fb63749c086abc8c5fd71778297.mp3*~data=user_id=0,application_id=42~hmac=1e16d0ff2be484132108c900508788ae0c316d383d7eaa732dbff3da45d24a34",
+    "provider": "itunes",
+    "providerTrackId": "413807872",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363323217
+  },
+  {
+    "id": "413807862",
+    "title": "Boss",
+    "artist": "Lil Pump",
+    "album": "Lil Pump",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/50713068daa248f0ba802e71bd6bba76/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/d/6/0/ad633fb3f1d90e50c37d091f20d26294.mp3?hdnea=exp=1788364223~acl=/api/1/1/a/d/6/0/ad633fb3f1d90e50c37d091f20d26294.mp3*~data=user_id=0,application_id=42~hmac=6258ea8b4c4f422c4e1579e3d527d3fa6ab9f1293f7c4978cbaec457262f043b",
+    "provider": "itunes",
+    "providerTrackId": "413807862",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363323678
+  },
+  {
+    "id": "413807842",
+    "title": "Molly",
+    "artist": "Lil Pump",
+    "album": "Lil Pump",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/50713068daa248f0ba802e71bd6bba76/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/d/0/0/ed0e3770b0e2b0ba23472ade996abfc9.mp3?hdnea=exp=1788364223~acl=/api/1/1/e/d/0/0/ed0e3770b0e2b0ba23472ade996abfc9.mp3*~data=user_id=0,application_id=42~hmac=ceb914de83bcf36cf9e64c395ac6325b8e4fdef0568f682b06309444df1b9d23",
+    "provider": "itunes",
+    "providerTrackId": "413807842",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363324108
+  },
+  {
+    "id": "398055742",
+    "title": "Fuck Love",
+    "artist": "XXXTENTACION",
+    "album": "17",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/b7d770d1049a3d4742d5ac0759b501e9/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/a/4/0/4a47dbcf019b8b10a6bdeaba92ff3b1a.mp3?hdnea=exp=1788364224~acl=/api/1/1/4/a/4/0/4a47dbcf019b8b10a6bdeaba92ff3b1a.mp3*~data=user_id=0,application_id=42~hmac=174684779af8257f32a4dd638404dc43bd49b6420a52e49f48afd275d61edbc0",
+    "provider": "itunes",
+    "providerTrackId": "398055742",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363324550
+  },
+  {
+    "id": "376263271",
+    "title": "Next (feat. Rich the Kid)",
+    "artist": "Lil Pump",
+    "album": "Next (feat. Rich the Kid)",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/6bf81030d0eb33fce4624dbfb719eca9/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/5/f/0/55f4444ca5d8adfc6528aa1d65fa00b2.mp3?hdnea=exp=1788364225~acl=/api/1/1/5/5/f/0/55f4444ca5d8adfc6528aa1d65fa00b2.mp3*~data=user_id=0,application_id=42~hmac=3f75d2f6321f4f2f6b04bc5c35a5c4adb8b6963e0802e4060c6ffe7c7f43e844",
+    "provider": "itunes",
+    "providerTrackId": "376263271",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363325234
+  },
+  {
+    "id": "618620132",
+    "title": "Real Ties",
+    "artist": "Lil Skies",
+    "album": "Real Ties",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/67dd8cf25fb03c6af4926109f47f4853/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/a/e/0/5aef778783db23f9f40625646ebda87a.mp3?hdnea=exp=1788364225~acl=/api/1/1/5/a/e/0/5aef778783db23f9f40625646ebda87a.mp3*~data=user_id=0,application_id=42~hmac=b99e41b2de7bbb761999fa00751aaedc20d70f886df2e575911dcc40da498dda",
+    "provider": "itunes",
+    "providerTrackId": "618620132",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363325647
+  },
+  {
+    "id": "1666137992",
+    "title": "I Wish",
+    "artist": "Kodak Black",
+    "album": "Back For Everything",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/94f5d23ae742e56a88ccfcdf92e2d9bf/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/1/4/0/d148232fffcc1bdc03931dc05bb4f9e9.mp3?hdnea=exp=1788364225~acl=/api/1/1/d/1/4/0/d148232fffcc1bdc03931dc05bb4f9e9.mp3*~data=user_id=0,application_id=42~hmac=03dbd8c2eaa1a72bf378b9ac0c8e69cc041335b37306ffe899f385273d7d1c9e",
+    "provider": "itunes",
+    "providerTrackId": "1666137992",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363326141
+  },
+  {
+    "id": "714406982",
+    "title": "Going Off",
+    "artist": "Lil Skies",
+    "album": "Going Off",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/8ead8bbf1329ba1615588ddfa7aac0eb/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/d/f/0/6df25c5021559b08c88509484649abaf.mp3?hdnea=exp=1788364226~acl=/api/1/1/6/d/f/0/6df25c5021559b08c88509484649abaf.mp3*~data=user_id=0,application_id=42~hmac=1ef0d2d205d1033201c8adbf5d98d42572144f6b58816d6071f5a37a8ee64b8a",
+    "provider": "itunes",
+    "providerTrackId": "714406982",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363326658
+  },
+  {
+    "id": "512696602",
+    "title": "Cashing Out Ft. Suigeneris",
+    "artist": "Kamrin Houser",
+    "album": "Cashing Out",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/b9e32111f18ec688e84e6edf8b2ae499/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/b/d/0/1bd520194d8bcd5c8570d4b8893ef812.mp3?hdnea=exp=1788364227~acl=/api/1/1/1/b/d/0/1bd520194d8bcd5c8570d4b8893ef812.mp3*~data=user_id=0,application_id=42~hmac=70972f2cc456f5b04439c0a3d82ecc4d425f682b0cb41066c5e164d1e144bfa6",
+    "provider": "itunes",
+    "providerTrackId": "512696602",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363327293
+  },
+  {
+    "id": "1724126097",
+    "title": "THOUSAND MILES",
+    "artist": "The Kid LAROI",
+    "album": "THOUSAND MILES",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/c198296b472b23cf47ae3ad4ca48d61f/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/d/6/0/4d61c593bc3bbb465d5716d0c9fc4927.mp3?hdnea=exp=1788364227~acl=/api/1/1/4/d/6/0/4d61c593bc3bbb465d5716d0c9fc4927.mp3*~data=user_id=0,application_id=42~hmac=3d02f859d2975478f87f6e3aa5d0b33db1a963e5fc62bd8b6815589da1813320",
+    "provider": "itunes",
+    "providerTrackId": "1724126097",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363327804
+  },
+  {
+    "id": "1879502257",
+    "title": "Juice WRLD DID (feat. Juice WRLD)",
+    "artist": "DJ Khaled",
+    "album": "GOD DID",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/12988cb0d9168125a5587d098f3cf69a/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/6/3/0/963560c73329c6fd5896a32c96c1b4fb.mp3?hdnea=exp=1788364228~acl=/api/1/1/9/6/3/0/963560c73329c6fd5896a32c96c1b4fb.mp3*~data=user_id=0,application_id=42~hmac=12437ae1d9f985980039dff49933a8650c4f10f5c375030e89291bf672a57295",
+    "provider": "itunes",
+    "providerTrackId": "1879502257",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363328384
+  },
+  {
+    "id": "672987652",
+    "title": "MIDDLE CHILD",
+    "artist": "PnB Rock",
+    "album": "TrapStar Turnt PopStar",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/fc2cd8a02f94e184d4312db6869384e4/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/2/a/0/c2a30513bc0fa1a4a1f49e225b28b28f.mp3?hdnea=exp=1788364228~acl=/api/1/1/c/2/a/0/c2a30513bc0fa1a4a1f49e225b28b28f.mp3*~data=user_id=0,application_id=42~hmac=376c9660335a945c75a93c85fc384f936c78d23992c875deb4de8e1430a15c3f",
+    "provider": "itunes",
+    "providerTrackId": "672987652",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363328932
+  },
+  {
+    "id": "525249392",
+    "title": "CLOUT COBAIN | CLOUT CO13A1N",
+    "artist": "Denzel Curry",
+    "album": "CLOUT COBAIN | CLOUT CO13A1N",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2fd9da19e4bcb7fb8ce9e34f4f6c1aa6/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/0/7/0/7073ac4cbdad68079e49a1b8bf853f3c.mp3?hdnea=exp=1788364229~acl=/api/1/1/7/0/7/0/7073ac4cbdad68079e49a1b8bf853f3c.mp3*~data=user_id=0,application_id=42~hmac=f1f0c002c6cd9d6c1cbcb4568ed2f0f820d3aae3ed731a1352e5c73c533b977f",
+    "provider": "itunes",
+    "providerTrackId": "525249392",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363329389
+  },
+  {
+    "id": "2332716075",
+    "title": "Beach Ballin' (feat. blackbear)",
+    "artist": "Yung Pinch",
+    "album": "Beach Ballin' (feat. blackbear)",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/d48e5c5da63d45fc13d8ea614802b0d2/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/4/2/0/84256b396efffba65f590067934e858b.mp3?hdnea=exp=1788364229~acl=/api/1/1/8/4/2/0/84256b396efffba65f590067934e858b.mp3*~data=user_id=0,application_id=42~hmac=0c3b8b29c69adf2526bba560e81369fc5c581029fecaa983b198f24c2a0c8bda",
+    "provider": "itunes",
+    "providerTrackId": "2332716075",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363330089
+  },
+  {
+    "id": "516337552",
+    "title": "World Rage",
+    "artist": "Lil Skies",
+    "album": "World Rage",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5874fb74a997a72f07ac24b16ca7911e/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/d/2/0/dd2b7c0b7e35c0e346d88d754441ef85.mp3?hdnea=exp=1788364230~acl=/api/1/1/d/d/2/0/dd2b7c0b7e35c0e346d88d754441ef85.mp3*~data=user_id=0,application_id=42~hmac=218bba6f20691e4e81daa3263a49d88c7b3d5499fa2cc3d1ed1a3c99eac7fcc6",
+    "provider": "itunes",
+    "providerTrackId": "516337552",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363334843
+  },
+  {
+    "id": "595700112",
+    "title": "Opps Want Me Dead",
+    "artist": "Lil Skies",
+    "album": "Opps Want Me Dead",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/24d6d09490f19b1b4db17978d8b39656/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/c/6/0/fc6a37ca7f893360f993331ecf00f6b6.mp3?hdnea=exp=1788364230~acl=/api/1/1/f/c/6/0/fc6a37ca7f893360f993331ecf00f6b6.mp3*~data=user_id=0,application_id=42~hmac=4aad3d905c41c82da75e87ddec6a57491dd74d9ec3ad4bf50029c48900ea2998",
+    "provider": "itunes",
+    "providerTrackId": "595700112",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363331154
+  },
+  {
+    "id": "601837432",
+    "title": "Wasted",
+    "artist": "Juice WRLD",
+    "album": "Goodbye & Good Riddance",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f8c4db1b0f346d6e4b1558f734ad4523/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/6/e/0/56e3639d7973b455ea79a9cf9ae15603.mp3?hdnea=exp=1788364231~acl=/api/1/1/5/6/e/0/56e3639d7973b455ea79a9cf9ae15603.mp3*~data=user_id=0,application_id=42~hmac=129ab30f6fbf0a6773bb3f7f0f66426ea613e560cb5ebf379d89584ce6bf3500",
+    "provider": "itunes",
+    "providerTrackId": "601837432",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363331620
+  },
+  {
+    "id": "601837452",
+    "title": "Black & White",
+    "artist": "Juice WRLD",
+    "album": "Goodbye & Good Riddance",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f8c4db1b0f346d6e4b1558f734ad4523/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/6/b/0/a6b92f90bc27284d0b9257354a35484b.mp3?hdnea=exp=1788364232~acl=/api/1/1/a/6/b/0/a6b92f90bc27284d0b9257354a35484b.mp3*~data=user_id=0,application_id=42~hmac=5eabaa1e8e4a1e58b25505a4ed051276a52aa25b15ddf6c515fb3fa5e82bb9fe",
+    "provider": "itunes",
+    "providerTrackId": "601837452",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363332241
+  },
+  {
+    "id": "1960360337",
+    "title": "Sick Today",
+    "artist": "Lil Mosey",
+    "album": "UNI",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5e2cba9c04ccf0a6fa7302a328ac6a3d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/2/0/d22228d1bf99e124ab1a75734af00f50.mp3?hdnea=exp=1788364232~acl=/api/1/1/d/2/2/0/d22228d1bf99e124ab1a75734af00f50.mp3*~data=user_id=0,application_id=42~hmac=650f9611667ebe93830a7dde9797610757ba78b7a2b29fe12cbd09acfead71f4",
+    "provider": "itunes",
+    "providerTrackId": "1960360337",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363332705
+  },
+  {
+    "id": "1960360327",
+    "title": "Drop Top",
+    "artist": "Lil Mosey",
+    "album": "UNI",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5e2cba9c04ccf0a6fa7302a328ac6a3d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/7/2/0/a72b61218c844568ddf4628abacb5af9.mp3?hdnea=exp=1788364232~acl=/api/1/1/a/7/2/0/a72b61218c844568ddf4628abacb5af9.mp3*~data=user_id=0,application_id=42~hmac=9cad13bd13e71a7f8b1cefb774abd2a9761f01ca506bfbe70a87b2f7123a91ce",
+    "provider": "itunes",
+    "providerTrackId": "1960360327",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363333091
+  },
+  {
+    "id": "902532622",
+    "title": "After Party",
+    "artist": "Don Toliver",
+    "album": "Heaven Or Hell",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "rnb"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/35b209d0371238a161b56b47cb699c83/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/9/b/0/39bcfcee062abfcb1668de408f49e6f9.mp3?hdnea=exp=1788364233~acl=/api/1/1/3/9/b/0/39bcfcee062abfcb1668de408f49e6f9.mp3*~data=user_id=0,application_id=42~hmac=f0830f79cb4aa70a310af8fb43eb1d1517ea1b46f9a9632ceec98a5f38e2f5aa",
+    "provider": "itunes",
+    "providerTrackId": "902532622",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363333391
+  },
+  {
+    "id": "1296915632",
+    "title": "Run It Up (feat. Offset & Moneybagg Yo)",
+    "artist": "Lil Tjay",
+    "album": "Destined 2 Win",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/3353ed8d18d467557f6718e9f711f698/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/8/9/0/a89de283f96c3493ebcfc838d4ee1074.mp3?hdnea=exp=1788364234~acl=/api/1/1/a/8/9/0/a89de283f96c3493ebcfc838d4ee1074.mp3*~data=user_id=0,application_id=42~hmac=cfca5a1dc9755dee0b92c9c218feb2e2bc29dec95e33a505e3acb0fb612592f9",
+    "provider": "itunes",
+    "providerTrackId": "1296915632",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363334771
+  },
+  {
+    "id": "2028453197",
+    "title": "Rocket",
+    "artist": "Lil Mosey",
+    "album": "VER",
+    "year": 2023,
+    "verifiedOriginalYear": 2023,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/020e03f890a917dd381d2e0f48c6558b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/d/d/0/7dd038a4973e105e31f8c46b2e33b63d.mp3?hdnea=exp=1788364235~acl=/api/1/1/7/d/d/0/7dd038a4973e105e31f8c46b2e33b63d.mp3*~data=user_id=0,application_id=42~hmac=25f89e332915893c5829281a6579c14e0568d930139952bb1bc4aae777ac4a0b",
+    "provider": "itunes",
+    "providerTrackId": "2028453197",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363335355
+  },
+  {
+    "id": "2028453187",
+    "title": "Matte Red/Sum He Said",
+    "artist": "Lil Mosey",
+    "album": "VER",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/020e03f890a917dd381d2e0f48c6558b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/1/0/491cd4944c025f888d173694cb37bc25.mp3?hdnea=exp=1788364235~acl=/api/1/1/4/9/1/0/491cd4944c025f888d173694cb37bc25.mp3*~data=user_id=0,application_id=42~hmac=94c503839e37e14a8067f0381eb9ddfce064861c49ca085a40c37b577f1a7f40",
+    "provider": "itunes",
+    "providerTrackId": "2028453187",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363336014
+  },
+  {
+    "id": "898025672",
+    "title": "Baby Pluto",
+    "artist": "Lil Uzi Vert",
+    "album": "Eternal Atake",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/1dfc30f6832a56913bedb5430007b64a/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/f/8/0/9f88b0aa62e81cd1752e65804a02ee46.mp3?hdnea=exp=1788364236~acl=/api/1/1/9/f/8/0/9f88b0aa62e81cd1752e65804a02ee46.mp3*~data=user_id=0,application_id=42~hmac=08b3db3d9a07efc233ea99fa3e50e6b95172922e999ecf0d0f0a17a3bcfef8ef",
+    "provider": "itunes",
+    "providerTrackId": "898025672",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363336313
+  },
+  {
+    "id": "835711292",
+    "title": "Star Player",
+    "artist": "Suigeneris",
+    "album": "Star Player",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/8b74fa47558532dee0e503d706e7926f/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/d/4/0/ed4a75234ba369b88a696259f2c5c22b.mp3?hdnea=exp=1788364236~acl=/api/1/1/e/d/4/0/ed4a75234ba369b88a696259f2c5c22b.mp3*~data=user_id=0,application_id=42~hmac=50ee90fab56bdef6cf183f6d86b51622d8e7686aadab298238bbf3197bb79e0f",
+    "provider": "itunes",
+    "providerTrackId": "835711292",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363336839
+  },
+  {
+    "id": "700705482",
+    "title": "17",
+    "artist": "Landon Cube",
+    "album": "Orange",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/d697035ce156d91d89768f909699432a/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/e/8/0/0e8a68d296aa86305b48fbf9001b0b72.mp3?hdnea=exp=1788364237~acl=/api/1/1/0/e/8/0/0e8a68d296aa86305b48fbf9001b0b72.mp3*~data=user_id=0,application_id=42~hmac=7e9a66b47162061a7e350252125a81f55cbe1349c4d8fdf7d4343351ab3afa53",
+    "provider": "itunes",
+    "providerTrackId": "700705482",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363337736
+  },
+  {
+    "id": "1835600497",
+    "title": "FOR FUN",
+    "artist": "Lil Uzi Vert",
+    "album": "RED & WHITE",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/acb117b0e7dfd35161b07714f513fc39/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/d/c/0/fdc21b4bc451b6d59144577ffebc40f1.mp3?hdnea=exp=1788364237~acl=/api/1/1/f/d/c/0/fdc21b4bc451b6d59144577ffebc40f1.mp3*~data=user_id=0,application_id=42~hmac=dd5828a9daf3b2490eef127cd2647351a7768cfaae82d53fba155f194c655f45",
+    "provider": "itunes",
+    "providerTrackId": "1835600497",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363338047
+  },
+  {
+    "id": "505197202",
+    "title": "Murder on My Mind",
+    "artist": "YNW Melly",
+    "album": "Murder On My Mind",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2460ed92c5246ca5ec2d05745745c3be/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/8/8/0/b887b96afe8cebb55454b5232d3b4d7c.mp3?hdnea=exp=1788364238~acl=/api/1/1/b/8/8/0/b887b96afe8cebb55454b5232d3b4d7c.mp3*~data=user_id=0,application_id=42~hmac=2c88038f0f859034624a6878e0ca8a99a7d063bbc78b377cd588ba34f5d195fb",
+    "provider": "itunes",
+    "providerTrackId": "505197202",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363338472
+  },
+  {
+    "id": "635714292",
+    "title": "High Right Now",
+    "artist": "Tyla Yaweh",
+    "album": "Heart Full of Rage",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/51c86ea9d108b5223b23e9df1694fde0/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/f/b/0/4fb88fa5b48cb98d66ff5bbc283d40cc.mp3?hdnea=exp=1788364238~acl=/api/1/1/4/f/b/0/4fb88fa5b48cb98d66ff5bbc283d40cc.mp3*~data=user_id=0,application_id=42~hmac=a0e5ce04d246168fe6353afd44ae904e9b8a761e63fd984526e95b8a2775d560",
+    "provider": "itunes",
+    "providerTrackId": "635714292",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363338928
+  },
+  {
+    "id": "635714302",
+    "title": "Salute (feat. French Montana)",
+    "artist": "Tyla Yaweh",
+    "album": "Heart Full of Rage",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/51c86ea9d108b5223b23e9df1694fde0/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/6/d/0/b6d47ca5af695530da039cc0a65a74f4.mp3?hdnea=exp=1788364239~acl=/api/1/1/b/6/d/0/b6d47ca5af695530da039cc0a65a74f4.mp3*~data=user_id=0,application_id=42~hmac=7902afb132423a9206689bfefe49bd67cbbb7dc6c4a285cc40cb39e6265b9266",
+    "provider": "itunes",
+    "providerTrackId": "635714302",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363339465
+  },
+  {
+    "id": "144293068",
+    "title": "Rolex",
+    "artist": "Ayo & Teo",
+    "album": "Rolex",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/97d1455f019921bfc6ae28d93f0c3a6c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/d/8/0/fd8214a582286580d0ccac395b8d4f38.mp3?hdnea=exp=1788364239~acl=/api/1/1/f/d/8/0/fd8214a582286580d0ccac395b8d4f38.mp3*~data=user_id=0,application_id=42~hmac=0a22bed2353b01a1a96a88a07b3bc6c8b61cb7fa394ce56376e0909a4febe811",
+    "provider": "itunes",
+    "providerTrackId": "144293068",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363339908
+  },
+  {
+    "id": "3703690832",
+    "title": "Fly N Ghetto",
+    "artist": "Ayo & Teo",
+    "album": "Fly N Ghetto",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/7fe81e38110cc52f15b94ad25c7888cb/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/3/4/0/234983e6163399029317b44eaa577159.mp3?hdnea=exp=1788364240~acl=/api/1/1/2/3/4/0/234983e6163399029317b44eaa577159.mp3*~data=user_id=0,application_id=42~hmac=0e925e929a01a23d872d7b2e354d88403774927878cf40fa041ae023071958e9",
+    "provider": "itunes",
+    "providerTrackId": "3703690832",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363340329
+  },
+  {
+    "id": "3717569582",
+    "title": "Bring a Friend",
+    "artist": "Ayo & Teo",
+    "album": "Bring a Friend",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/68d7de938cb3669b7ae2678182fa6746/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/2/6/0/e2625d0174907af25839c7560e934b26.mp3?hdnea=exp=1788364240~acl=/api/1/1/e/2/6/0/e2625d0174907af25839c7560e934b26.mp3*~data=user_id=0,application_id=42~hmac=e51748d3ab0e7a94244e9799d8fa719414c54aaa178860abb61ccce56feb65e0",
+    "provider": "itunes",
+    "providerTrackId": "3717569582",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363340923
+  },
+  {
+    "id": "828349752",
+    "title": "Go In",
+    "artist": "Lil Tjay",
+    "album": "Go In",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f1f66c80af81b395b7ccd5a59f335dae/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/1/7/0/e1788eb27e2f7bea62b4c0c57382c1e5.mp3?hdnea=exp=1788364241~acl=/api/1/1/e/1/7/0/e1788eb27e2f7bea62b4c0c57382c1e5.mp3*~data=user_id=0,application_id=42~hmac=bbbe1a94829ebe65775b88f03e3b3dc028d620b0cd3e6a64cc07a3f77abcb891",
+    "provider": "itunes",
+    "providerTrackId": "828349752",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363341319
+  },
+  {
+    "id": "1443744432",
+    "title": "No Cap (Feat. PnB Rock)",
+    "artist": "Bry Greatah",
+    "album": "The Wait Is Over",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/54963505206aeb8ec69bfc34f18c0d89/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/4/c/0/b4cf94a3c633fce99b880339a4cfa4e4.mp3?hdnea=exp=1788364241~acl=/api/1/1/b/4/c/0/b4cf94a3c633fce99b880339a4cfa4e4.mp3*~data=user_id=0,application_id=42~hmac=4babe970e4e871713df6f19bbe3bd12994e3d72af797567d47a30d8b87b4aec7",
+    "provider": "itunes",
+    "providerTrackId": "1443744432",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363341959
+  },
+  {
+    "id": "504682532",
+    "title": "Whodie",
+    "artist": "YNW Melly",
+    "album": "Whodie",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f2866fb7b87ae9ff8249b136583954bd/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/5/b/0/55b368fb996b10beaab23229cedb9ede.mp3?hdnea=exp=1788364242~acl=/api/1/1/5/5/b/0/55b368fb996b10beaab23229cedb9ede.mp3*~data=user_id=0,application_id=42~hmac=b67252db2573e8b200fd9c29a842a7b5ae8e22845de90a56a2701cafcfae1d44",
+    "provider": "itunes",
+    "providerTrackId": "504682532",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363342875
+  },
+  {
+    "id": "2330190795",
+    "title": "How Things Go",
+    "artist": "Lil Skies",
+    "album": "How Things Go",
+    "year": 2023,
+    "verifiedOriginalYear": 2023,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/05e069abe5452416f9d3bafd85c22974/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/d/8/0/bd81b468d55438f6ef770be31fe78680.mp3?hdnea=exp=1788364243~acl=/api/1/1/b/d/8/0/bd81b468d55438f6ef770be31fe78680.mp3*~data=user_id=0,application_id=42~hmac=b170dc1a88ac737a1cef220da946e0ed87e819ed5e5e6f65ab0246949cab16d2",
+    "provider": "itunes",
+    "providerTrackId": "2330190795",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363343312
+  },
+  {
+    "id": "2373097945",
+    "title": "Wake Up",
+    "artist": "Lil Skies",
+    "album": "Wake Up",
+    "year": 2023,
+    "verifiedOriginalYear": 2023,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/30904b9d758b52ef60bdabbb2a11b4d0/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/e/5/0/6e5e82cb85e471b0cbedad4766a9a053.mp3?hdnea=exp=1788364243~acl=/api/1/1/6/e/5/0/6e5e82cb85e471b0cbedad4766a9a053.mp3*~data=user_id=0,application_id=42~hmac=86b03f2865141c51787714cb6269cec5e7e6dc86477068521d9ab544db6c766e",
+    "provider": "itunes",
+    "providerTrackId": "2373097945",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363343696
+  },
+  {
+    "id": "419596412",
+    "title": "Betrayed",
+    "artist": "Lil Xan",
+    "album": "Betrayed",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/fca0f60b0c5a77dd8989ee1d75d6e9b5/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/6/9/0/a697e83e20860be92ea3a7e4b1abb997.mp3?hdnea=exp=1788364245~acl=/api/1/1/a/6/9/0/a697e83e20860be92ea3a7e4b1abb997.mp3*~data=user_id=0,application_id=42~hmac=d4e9f183ab63a8e84094a0503a5c821d41f860ed88afa53d70609499b949857c",
+    "provider": "itunes",
+    "providerTrackId": "419596412",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363345182
+  },
+  {
+    "id": "635714312",
+    "title": "Who Shot Johnny?",
+    "artist": "Tyla Yaweh",
+    "album": "Heart Full of Rage",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/51c86ea9d108b5223b23e9df1694fde0/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/4/0/0/d40d381e4c208697e6cfc83175b1a439.mp3?hdnea=exp=1788364245~acl=/api/1/1/d/4/0/0/d40d381e4c208697e6cfc83175b1a439.mp3*~data=user_id=0,application_id=42~hmac=3b3b8b313dba6c767ea6837a6344487c771148df02d7cf3c6d40ba1d44750c65",
+    "provider": "itunes",
+    "providerTrackId": "635714312",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363345571
+  },
+  {
+    "id": "2626620552",
+    "title": "This My Life",
+    "artist": "Lyrical Lemonade",
+    "album": "All Is Yellow",
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/fece4f339005371dc0fb87eec1acecea/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/e/6/0/3e63ac011ed7d7eab109f84436b5bb5b.mp3?hdnea=exp=1788364245~acl=/api/1/1/3/e/6/0/3e63ac011ed7d7eab109f84436b5bb5b.mp3*~data=user_id=0,application_id=42~hmac=c0c4ea894b47823467188049d876ef04cff0a1b9e2253ab23ff5b198af67c60f",
+    "provider": "itunes",
+    "providerTrackId": "2626620552",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363346145
+  },
+  {
+    "id": "2618877202",
+    "title": "THOUSANDS",
+    "artist": "Lil Skies",
+    "album": "THOUSANDS",
+    "year": 2023,
+    "verifiedOriginalYear": 2023,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/d8c985bb3edf2d21dbe1db50157bda98/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/2/8/6/0/286126e1c9da3f82b66a54812373b36e.mp3?hdnea=exp=1788364246~acl=/api/1/1/2/8/6/0/286126e1c9da3f82b66a54812373b36e.mp3*~data=user_id=0,application_id=42~hmac=a3a5e7f868130d92e6734d32540f36d32a7c6930afb3c621e15ca45345753606",
+    "provider": "itunes",
+    "providerTrackId": "2618877202",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363346834
+  },
+  {
+    "id": "2255407127",
+    "title": "nuts",
+    "artist": "Lil Peep",
+    "album": "LIVE FOREVER",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/1cec367f43d884cb853c55e9d6fcaff9/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/7/3/0/c735d017cf7a4f00023bdd8385dbff45.mp3?hdnea=exp=1788364247~acl=/api/1/1/c/7/3/0/c735d017cf7a4f00023bdd8385dbff45.mp3*~data=user_id=0,application_id=42~hmac=a669de8976b618c86503554f0911492de0b6b9e206e9988f1ad0d7b136876d2b",
+    "provider": "itunes",
+    "providerTrackId": "2255407127",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363347314
+  },
+  {
+    "id": "890324522",
+    "title": "Opps",
+    "artist": "JayDaYoungan",
+    "album": "Can't Speak on It",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/aa7a61b541026cf3ede9d524bd757e96/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/7/d/0/97d3ede9f800af30308f195e9a2ea072.mp3?hdnea=exp=1788364248~acl=/api/1/1/9/7/d/0/97d3ede9f800af30308f195e9a2ea072.mp3*~data=user_id=0,application_id=42~hmac=b180774a2c7caea8461d3dab8b8fc8ac8fc119c360c28e52bdeb693a69891ee7",
+    "provider": "itunes",
+    "providerTrackId": "890324522",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363348508
+  },
+  {
+    "id": "472992722",
+    "title": "Hope",
+    "artist": "XXXTENTACION",
+    "album": "?",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/9b6da786cd3ca8b286a04186b3c9079c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/e/1/0/4e162f3456e8e89d6af037dc4b43a40c.mp3?hdnea=exp=1788364249~acl=/api/1/1/4/e/1/0/4e162f3456e8e89d6af037dc4b43a40c.mp3*~data=user_id=0,application_id=42~hmac=d220d0a9c3dd066504efbbf3db4c6fc50dc2eaa38b02543fcd77c187454187f4",
+    "provider": "itunes",
+    "providerTrackId": "472992722",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363349084
+  },
+  {
+    "id": "472992592",
+    "title": "Moonlight",
+    "artist": "XXXTENTACION",
+    "album": "?",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/9b6da786cd3ca8b286a04186b3c9079c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/8/0/0/180230cfaa93fe9ed71623dd5ef080be.mp3?hdnea=exp=1788364249~acl=/api/1/1/1/8/0/0/180230cfaa93fe9ed71623dd5ef080be.mp3*~data=user_id=0,application_id=42~hmac=a8e59648c056a019acf0c3d6fa1a210f0f61ead91dae390131071ab438dda535",
+    "provider": "itunes",
+    "providerTrackId": "472992592",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363349604
+  },
+  {
+    "id": "2332676845",
+    "title": "714Ever",
+    "artist": "Yung Pinch",
+    "album": "714Ever",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/4efe73d0c17a7b8cdaf9ae62a4d9db26/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/6/e/0/06eb79a1bb97b90c240a9a6c3e563115.mp3?hdnea=exp=1788364249~acl=/api/1/1/0/6/e/0/06eb79a1bb97b90c240a9a6c3e563115.mp3*~data=user_id=0,application_id=42~hmac=55950a133e4febd6428f22d880bdb3acb729dd09d70c582aa2a6cad2f118a78b",
+    "provider": "itunes",
+    "providerTrackId": "2332676845",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363350003
+  },
+  {
+    "id": "2332676755",
+    "title": "Here We Go Again",
+    "artist": "Yung Pinch",
+    "album": "714Ever",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/4efe73d0c17a7b8cdaf9ae62a4d9db26/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/f/a/0/4fa1667a1a5679528702b7633dbf56db.mp3?hdnea=exp=1788364250~acl=/api/1/1/4/f/a/0/4fa1667a1a5679528702b7633dbf56db.mp3*~data=user_id=0,application_id=42~hmac=e2fe5d6af30728e132c2cdf780a2ee2ec495c052e27ac6e6164deaa7dfbd8419",
+    "provider": "itunes",
+    "providerTrackId": "2332676755",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363350447
+  },
+  {
+    "id": "2332695815",
+    "title": "My Friends, Not Yours",
+    "artist": "Yung Pinch",
+    "album": "Back 2 The Beach",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/9418e9d2eaca759ee7e63ccf768d0300/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/c/6/0/6c6efa0e7076b56d8e0498740336d77e.mp3?hdnea=exp=1788364250~acl=/api/1/1/6/c/6/0/6c6efa0e7076b56d8e0498740336d77e.mp3*~data=user_id=0,application_id=42~hmac=0958384b27d21ac3591f11cc7436bd478e3447f453b7e351113da9472c3faa04",
+    "provider": "itunes",
+    "providerTrackId": "2332695815",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363351095
+  },
+  {
+    "id": "2332671385",
+    "title": "Sober",
+    "artist": "Yung Pinch",
+    "album": "Sober",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/181da33c913961741263b6cbf30b633e/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/8/b/0/98b81de114b436d5274f8bc4c2b35670.mp3?hdnea=exp=1788364251~acl=/api/1/1/9/8/b/0/98b81de114b436d5274f8bc4c2b35670.mp3*~data=user_id=0,application_id=42~hmac=52996df0bbd58f93ae66102fcc4fabf22248c7be673fcd0a81cf4a1dbba1b093",
+    "provider": "itunes",
+    "providerTrackId": "2332671385",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363351781
+  },
+  {
+    "id": "540988202",
+    "title": "Why Would I Wait (feat. G-Eazy)",
+    "artist": "Yung Pinch",
+    "album": "Why Would I Wait (feat. G-Eazy)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/ba87cbc8bea2c336fc0b651ca088212d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/0/4/0/b04cd94ae04343caf63f2a67e7683c93.mp3?hdnea=exp=1788364252~acl=/api/1/1/b/0/4/0/b04cd94ae04343caf63f2a67e7683c93.mp3*~data=user_id=0,application_id=42~hmac=86e57f65dbca080dd2d2759d8828099df6a70572a5a1f33e96c450ee2c5bd062",
+    "provider": "itunes",
+    "providerTrackId": "540988202",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363352338
+  },
+  {
+    "id": "527595251",
+    "title": "Fr Fr (feat. Lil Skies)",
+    "artist": "Wiz Khalifa",
+    "album": "Rolling Papers 2",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/61c9deffb860ba533a0322de92b9b0ca/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/f/6/0/3f6dc639e393a0cd4d46420b820e79f6.mp3?hdnea=exp=1788364252~acl=/api/1/1/3/f/6/0/3f6dc639e393a0cd4d46420b820e79f6.mp3*~data=user_id=0,application_id=42~hmac=47fb955f9b48997844a89b622c811972c5a5f964142e3753032b9ebb3c327232",
+    "provider": "itunes",
+    "providerTrackId": "527595251",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363352954
+  },
+  {
+    "id": "513581822",
+    "title": "Hopeless Romantic (feat. Swae Lee)",
+    "artist": "Wiz Khalifa",
+    "album": "Hopeless Romantic (feat. Swae Lee)",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/89f2681163cdf41f966675dbf1e94122/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/7/0/0/a706317f7bb5f33ed418eaf9f9d9755b.mp3?hdnea=exp=1788364253~acl=/api/1/1/a/7/0/0/a706317f7bb5f33ed418eaf9f9d9755b.mp3*~data=user_id=0,application_id=42~hmac=d1daf33a4d7399c3087209f546311e82b273d2b60c7ffe6da0cad85c75628f72",
+    "provider": "itunes",
+    "providerTrackId": "513581822",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363353562
+  },
+  {
+    "id": "13547629",
+    "title": "Black and Yellow (feat. Juicy J, Snoop Dogg & T-Pain) (G-Mix)",
+    "artist": "Wiz Khalifa",
+    "album": "Black and Yellow (feat. Juicy J, Snoop Dogg & T-Pain) (G-Mix)",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/af7203fbcbf4b3ef09e54d30a97323e1/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/e/a/0/ceafdd3a5817972b19db948e1587ac17.mp3?hdnea=exp=1788364254~acl=/api/1/1/c/e/a/0/ceafdd3a5817972b19db948e1587ac17.mp3*~data=user_id=0,application_id=42~hmac=7bb3a88aa85c1f5d12a47d7e64787a397f65a035899e2b87daf41daaf3cf4759",
+    "provider": "itunes",
+    "providerTrackId": "13547629",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363354070
+  },
+  {
+    "id": "1689091747",
+    "title": "Burn",
+    "artist": "Juice WRLD",
+    "album": "Fighting Demons (Digital Deluxe)",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/e45718bdca0434c44e61065b6a6b4378/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/7/7/0/e77c1c3aa6dac80a5fed667e5c754d2c.mp3?hdnea=exp=1788364254~acl=/api/1/1/e/7/7/0/e77c1c3aa6dac80a5fed667e5c754d2c.mp3*~data=user_id=0,application_id=42~hmac=440c10d41211fef14cd5496f50d4d06936eb450f72d8988cd1ee5839e29c7152",
+    "provider": "itunes",
+    "providerTrackId": "1689091747",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363354571
+  },
+  {
+    "id": "3115125171",
+    "title": "Spend It",
+    "artist": "Juice WRLD",
+    "album": "The Party Never Ends 2.0",
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/b6f749a8957e3c59b66fc6a457aab28b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/9/5/0/795a5057cd56385c18bcc9d5ab7a3e2b.mp3?hdnea=exp=1788364254~acl=/api/1/1/7/9/5/0/795a5057cd56385c18bcc9d5ab7a3e2b.mp3*~data=user_id=0,application_id=42~hmac=140268057a1b88bf0bcb9b4f2f22103f16600a0a71d3be6a0a9bc8c53dd94712",
+    "provider": "itunes",
+    "providerTrackId": "3115125171",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363355067
+  },
+  {
+    "id": "3129494581",
+    "title": "High Maintenance",
+    "artist": "Lil Skies",
+    "album": "High Maintenance",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/cc3d4a1219f253615a8e9c20c4ce5ba6/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/0/b/0/c0ba2e3f3837fa3ad1ecaf71db074745.mp3?hdnea=exp=1788364255~acl=/api/1/1/c/0/b/0/c0ba2e3f3837fa3ad1ecaf71db074745.mp3*~data=user_id=0,application_id=42~hmac=10afddb8155834217454b42256f4333ccafbd21d113c6d08fabacebcbc7667d0",
+    "provider": "itunes",
+    "providerTrackId": "3129494581",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363355512
+  },
+  {
+    "id": "825317992",
+    "title": "6locc 6a6y",
+    "artist": "Lil Loaded",
+    "album": "6locc 6a6y",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/ddc12d1c282179e05db531a8d1fcd635/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/9/2/0/892c400255d1f4d8588d6fcc81bb69a8.mp3?hdnea=exp=1788364256~acl=/api/1/1/8/9/2/0/892c400255d1f4d8588d6fcc81bb69a8.mp3*~data=user_id=0,application_id=42~hmac=5cfd13f87edf8afd8415c78ba4b64bdb7dbdcdfb00e0ed93a054c9cda4f5bb0c",
+    "provider": "itunes",
+    "providerTrackId": "825317992",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363356240
+  },
+  {
+    "id": "3205905651",
+    "title": "Halo (feat. Lil Skies)",
+    "artist": "iann dior",
+    "album": "Nothings Ever Good Enough II",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f132d83ff0c0a1f6e2baf916747204d6/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/9/f/0/79f9d95761eb5fb1178124467726ee69.mp3?hdnea=exp=1788364256~acl=/api/1/1/7/9/f/0/79f9d95761eb5fb1178124467726ee69.mp3*~data=user_id=0,application_id=42~hmac=9bd15789001d3af5e39fd210d176b2108ca479e82b7ef2cf2724f7e5c47e8063",
+    "provider": "itunes",
+    "providerTrackId": "3205905651",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363356753
+  },
+  {
+    "id": "727925572",
+    "title": "Gang",
+    "artist": "YNW Melly",
+    "album": "Gang",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/33ba97ae91a1f8d9c4758e5ca2aa1468/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/3/b/0/c3b103b313ad6cd4e6eb299aaf9f615d.mp3?hdnea=exp=1788364257~acl=/api/1/1/c/3/b/0/c3b103b313ad6cd4e6eb299aaf9f615d.mp3*~data=user_id=0,application_id=42~hmac=95b2826be58aeb102dd50d86ac105ce9009f9287e7484cbf712d5b24b880fd23",
+    "provider": "itunes",
+    "providerTrackId": "727925572",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363357077
+  },
+  {
+    "id": "543881422",
+    "title": "Butter Pecan (Bonus Track)",
+    "artist": "YNW Melly",
+    "album": "Butter Pecan",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/b7a28e7ed8b45574303f1b0a5b97149d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/3/1/0/131e14ef14892466a2aee48df149bcf5.mp3?hdnea=exp=1788364257~acl=/api/1/1/1/3/1/0/131e14ef14892466a2aee48df149bcf5.mp3*~data=user_id=0,application_id=42~hmac=cea78a36bd84fd31dc2b53845e63c63f2ed643856ba7d9fd2a6e60441c4df90a",
+    "provider": "itunes",
+    "providerTrackId": "543881422",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363357385
+  },
+  {
+    "id": "529248071",
+    "title": "Tissue",
+    "artist": "YNW Juvy",
+    "album": "Tissue",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/aebb4ed5a76cb4ca585a933d8036654b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/a/c/0/4aceaeb96ee00a20fe25a5a08ef38762.mp3?hdnea=exp=1788364258~acl=/api/1/1/4/a/c/0/4aceaeb96ee00a20fe25a5a08ef38762.mp3*~data=user_id=0,application_id=42~hmac=dcbe431925d79fd2ae744cc75e1f7ddf7cd75941b6d4d80a8afed35937c7d66b",
+    "provider": "itunes",
+    "providerTrackId": "529248071",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363358321
+  },
+  {
+    "id": "534991912",
+    "title": "Slang That Iron",
+    "artist": "YNW Melly",
+    "album": "I AM YOU",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/5ffd6260c6ad765e1b11291a3a405b5e/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/b/f/0/0/bf03f3f44e435aac28b21c201f617c9e.mp3?hdnea=exp=1788364258~acl=/api/1/1/b/f/0/0/bf03f3f44e435aac28b21c201f617c9e.mp3*~data=user_id=0,application_id=42~hmac=7ed4620f4621fa448fa0ff12adf46a7d8e8e49b843ccfa2107f36c875ad5a31a",
+    "provider": "itunes",
+    "providerTrackId": "534991912",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363358712
+  },
+  {
+    "id": "617739822",
+    "title": "Hold Up (Wait 1 Min)",
+    "artist": "YNW Melly",
+    "album": "We All Shine",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2cfba5bfbf8e51b12550feb585e1a0bf/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/d/b/0/3db8c6fd123c924a060186d06d3c899c.mp3?hdnea=exp=1788364259~acl=/api/1/1/3/d/b/0/3db8c6fd123c924a060186d06d3c899c.mp3*~data=user_id=0,application_id=42~hmac=5625a53272f1affc10318d8c547ddb046c127a693958605ca04ab4dde198311c",
+    "provider": "itunes",
+    "providerTrackId": "617739822",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363359305
+  },
+  {
+    "id": "3165786301",
+    "title": "Trap Getting Money",
+    "artist": "YNW Juvy",
+    "album": "7Days 7Ways",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/943279b76a8ecc9071de8d99ec402a73/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/e/8/0/7e880ccf7e08e5092b2728c6c9a8c693.mp3?hdnea=exp=1788364259~acl=/api/1/1/7/e/8/0/7e880ccf7e08e5092b2728c6c9a8c693.mp3*~data=user_id=0,application_id=42~hmac=671d601961b4d53705db43cf368c956dcae29a70f6b9187469e0f6592841e803",
+    "provider": "itunes",
+    "providerTrackId": "3165786301",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363360152
+  },
+  {
+    "id": "135599780",
+    "title": "New Wave",
+    "artist": "Rich The Kid",
+    "album": "Keep Flexin",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/514f12558b58ab80021ca3d7d5d1853b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/3/9/0/7394f216db3e01b06c5fb1beec733629.mp3?hdnea=exp=1788364260~acl=/api/1/1/7/3/9/0/7394f216db3e01b06c5fb1beec733629.mp3*~data=user_id=0,application_id=42~hmac=baba76b9c133ecf373e3b8ec569998dda97b51fd3d8c2b9a5d317a3e620fe230",
+    "provider": "itunes",
+    "providerTrackId": "135599780",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363360921
+  },
+  {
+    "id": "890704622",
+    "title": "Jungle",
+    "artist": "Yungeen Ace",
+    "album": "Life of Betrayal",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/511b24c950c60b786299ab384a22bd4c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/0/2/0/802c85062d3ef43a39aca732f9d939cb.mp3?hdnea=exp=1788364261~acl=/api/1/1/8/0/2/0/802c85062d3ef43a39aca732f9d939cb.mp3*~data=user_id=0,application_id=42~hmac=cec5f3bbccb660d72722254a697ee098d48c665aa2719bc3b5b5abe899e079f7",
+    "provider": "itunes",
+    "providerTrackId": "890704622",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363361589
+  },
+  {
+    "id": "662282822",
+    "title": "Voo Doo",
+    "artist": "Foolio",
+    "album": "Never Wanted Fame",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f6be36dd3f55579b714414f5a814103b/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/9/8/0/d98f87ff7231cf8257982c6382b72232.mp3?hdnea=exp=1788364262~acl=/api/1/1/d/9/8/0/d98f87ff7231cf8257982c6382b72232.mp3*~data=user_id=0,application_id=42~hmac=6e91cb3bd847093f29b9a5842fa0f52e47b105a3acee5aa849c3c2743ab4a154",
+    "provider": "itunes",
+    "providerTrackId": "662282822",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363362780
+  },
+  {
+    "id": "3419614301",
+    "title": "Burn",
+    "artist": "Lil Skies",
+    "album": "The Evolution of the Rose",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2bfa92c9672fba61c30bc9eecb2ad64d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/4/d/0/f4da02abdd8a5095d2b2a919248f45c4.mp3?hdnea=exp=1788364263~acl=/api/1/1/f/4/d/0/f4da02abdd8a5095d2b2a919248f45c4.mp3*~data=user_id=0,application_id=42~hmac=0d66fc0dca3306f14873177e817c087832b00ad49d86b98aa634cb7c6e1ea438",
+    "provider": "itunes",
+    "providerTrackId": "3419614301",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363363415
+  },
+  {
+    "id": "3419614431",
+    "title": "Benjis",
+    "artist": "Lil Skies",
+    "album": "The Evolution of the Rose",
+    "year": 2021,
+    "verifiedOriginalYear": 2021,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2bfa92c9672fba61c30bc9eecb2ad64d/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/b/2/0/eb2a37bc9b8b47b4470ab28585951366.mp3?hdnea=exp=1788364263~acl=/api/1/1/e/b/2/0/eb2a37bc9b8b47b4470ab28585951366.mp3*~data=user_id=0,application_id=42~hmac=c3df9d27831381b3623a0f12d713e1e8931b305e623bc44c8348f58f02fb356a",
+    "provider": "itunes",
+    "providerTrackId": "3419614431",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363363791
+  },
+  {
+    "id": "145521032",
+    "title": "Wit Yo Bitch (feat. MadeinTYO) (Remix)",
+    "artist": "Famous Dex",
+    "album": "Wit Yo Bitch (feat. MadeinTYO) (Remix)",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/f06a5f960823648706b4831cba522c62/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/3/0/0/0306e3babcd74f309f372530a6be6339.mp3?hdnea=exp=1788364264~acl=/api/1/1/0/3/0/0/0306e3babcd74f309f372530a6be6339.mp3*~data=user_id=0,application_id=42~hmac=739b44883dc9af15327e39372b2a248eb80aafa30c505ed5e9c43dae1ff87259",
+    "provider": "itunes",
+    "providerTrackId": "145521032",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363364777
+  },
+  {
+    "id": "111406252",
+    "title": "2 Phones",
+    "artist": "Kevin Gates",
+    "album": "2 Phones",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/1f77cae7e5e351e3a168e220a2db57b0/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/2/3/0/1235f7d7e076acb9e67f1c05de44bb1f.mp3?hdnea=exp=1788364265~acl=/api/1/1/1/2/3/0/1235f7d7e076acb9e67f1c05de44bb1f.mp3*~data=user_id=0,application_id=42~hmac=3200615320a8af1db37a97f85ea054360ceb9d4ed8209e6c5e08bd42fe4bf6ea",
+    "provider": "itunes",
+    "providerTrackId": "111406252",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363365413
+  },
+  {
+    "id": "3399233851",
+    "title": "Phantom",
+    "artist": "EsDeeKid",
+    "album": "Rebel",
+    "year": 2023,
+    "verifiedOriginalYear": 2023,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/efdb627af294be73280594c3e89b09a1/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/d/1/0/7d123f82369352ff8b5ccf84bdc0a11f.mp3?hdnea=exp=1788364265~acl=/api/1/1/7/d/1/0/7d123f82369352ff8b5ccf84bdc0a11f.mp3*~data=user_id=0,application_id=42~hmac=00471697f3d660b4741a34c16356ed2a8df9d555f7b37ff27b06124bbe9f362d",
+    "provider": "itunes",
+    "providerTrackId": "3399233851",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363366094
+  },
+  {
+    "id": "3399233781",
+    "title": "4 Raws",
+    "artist": "EsDeeKid",
+    "album": "Rebel",
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/efdb627af294be73280594c3e89b09a1/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/3/2/0/83205492926ce463cd5ba18a0f65bfa6.mp3?hdnea=exp=1788364266~acl=/api/1/1/8/3/2/0/83205492926ce463cd5ba18a0f65bfa6.mp3*~data=user_id=0,application_id=42~hmac=1ac0f494372a27b92a4eaf1e85bd5b630f2223836dea65fa223f3e67c0517514",
+    "provider": "itunes",
+    "providerTrackId": "3399233781",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363366661
+  },
+  {
+    "id": "130105310",
+    "title": "Swang",
+    "artist": "Rae Sremmurd",
+    "album": "SremmLife 2 (Deluxe)",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/d9c957b88855e088940f96e955cf26be/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/e/c/7/0/ec77a9863daadb4e23f836ae79eb0c2d.mp3?hdnea=exp=1788364266~acl=/api/1/1/e/c/7/0/ec77a9863daadb4e23f836ae79eb0c2d.mp3*~data=user_id=0,application_id=42~hmac=88b22bec2df21209fbcbea5512f63b3dd511671ad66f39e44e45e060976304f8",
+    "provider": "itunes",
+    "providerTrackId": "130105310",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363367235
+  },
+  {
+    "id": "2478544551",
+    "title": "Star Shopping",
+    "artist": "Lil Peep",
+    "album": "Star Shopping",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/e318144ad9a8155c025f24a511f08815/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/4/6/0/6469cbb2bc8825af940ee810cd079e0c.mp3?hdnea=exp=1788364267~acl=/api/1/1/6/4/6/0/6469cbb2bc8825af940ee810cd079e0c.mp3*~data=user_id=0,application_id=42~hmac=7e1632618f1d2e4e883b4028829effbbd00efe20891afe5ae3e2a8c964a40197",
+    "provider": "itunes",
+    "providerTrackId": "2478544551",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363367839
+  },
+  {
+    "id": "581751572",
+    "title": "16 Lines",
+    "artist": "Lil Peep",
+    "album": "Come Over When You're Sober, Pt. 2",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/757870ddc1211505769e2be84d165351/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/3/c/0/13c1203b6bc40ab0f65557d80b55f86e.mp3?hdnea=exp=1788364268~acl=/api/1/1/1/3/c/0/13c1203b6bc40ab0f65557d80b55f86e.mp3*~data=user_id=0,application_id=42~hmac=cf31187ab75aae892c024326d758f88b563de97495ee583adbdf7848d3c6b43d",
+    "provider": "itunes",
+    "providerTrackId": "581751572",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363368395
+  },
+  {
+    "id": "2255407137",
+    "title": "haunt u",
+    "artist": "Lil Peep",
+    "album": "LIVE FOREVER",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/1cec367f43d884cb853c55e9d6fcaff9/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/3/5/4/0/3547fff4450a9287b5ebe95af02fea01.mp3?hdnea=exp=1788364268~acl=/api/1/1/3/5/4/0/3547fff4450a9287b5ebe95af02fea01.mp3*~data=user_id=0,application_id=42~hmac=35e9ddc58804e75d547abb0212fabfcc3e9aa62b7676fc14e1c41f20573c1743",
+    "provider": "itunes",
+    "providerTrackId": "2255407137",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363369601
+  },
+  {
+    "id": "129916028",
+    "title": "SideLine Watching (Hold Up)",
+    "artist": "Lil Uzi Vert",
+    "album": "The Perfect LUV Tape",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/757b65eef408035453c1904136991e40/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/c/2/0/0c2e3aaefc0fd69878ddca8aca49a6ec.mp3?hdnea=exp=1788364270~acl=/api/1/1/0/c/2/0/0c2e3aaefc0fd69878ddca8aca49a6ec.mp3*~data=user_id=0,application_id=42~hmac=b07e540f280c6fd062fca5a586993d5f8d5fb2e8747eac5cc41c47b1dfab966e",
+    "provider": "itunes",
+    "providerTrackId": "129916028",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363371043
+  },
+  {
+    "id": "129916020",
+    "title": "Do What I Want",
+    "artist": "Lil Uzi Vert",
+    "album": "The Perfect LUV Tape",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/757b65eef408035453c1904136991e40/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/8/a/c/0/8acf82a41c03ba812e97f571602a6d55.mp3?hdnea=exp=1788364271~acl=/api/1/1/8/a/c/0/8acf82a41c03ba812e97f571602a6d55.mp3*~data=user_id=0,application_id=42~hmac=44e631fbe9360923029774b494970eedb7801a6028019f549e372bccdde9d446",
+    "provider": "itunes",
+    "providerTrackId": "129916020",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363372090
+  },
+  {
+    "id": "2478510591",
+    "title": "Benz Truck (гелик)",
+    "artist": "Lil Peep",
+    "album": "Benz Truck (гелик)",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/39445bd6b4162554cee8aac31321c99c/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/0/6/0/406f49b77948a942e808a0f37767fac1.mp3?hdnea=exp=1788364272~acl=/api/1/1/4/0/6/0/406f49b77948a942e808a0f37767fac1.mp3*~data=user_id=0,application_id=42~hmac=1f1f12f7a13b5164306a45134bee927df8c699c682ecd24afb1e1466e57ca843",
+    "provider": "itunes",
+    "providerTrackId": "2478510591",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788363373303
   }
 ]
