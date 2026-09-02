@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useDeferredValue } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Music, X, FastForward, Check, Disc3 } from 'lucide-react';
 import { Song } from '../types/song';
@@ -15,6 +15,84 @@ interface SongSearchProps {
   hasCorrectArtistGuess?: boolean;
 }
 
+const BATCH_SIZE = 25;
+
+/**
+ * Memoized individual search result row to avoid re-rendering entire list on selection / hover
+ */
+interface SongSearchRowProps {
+  song: Song;
+  index: number;
+  isHighlighted: boolean;
+  isGuessed: boolean;
+  onSelect: (song: Song) => void;
+  onHover: (index: number) => void;
+}
+
+const SongSearchRow = React.memo<SongSearchRowProps>(({
+  song,
+  index,
+  isHighlighted,
+  isGuessed,
+  onSelect,
+  onHover,
+}) => {
+  const displayYear = song.verifiedOriginalYear ?? song.year;
+
+  return (
+    <div
+      id={`suggestion-item-${index}`}
+      onPointerDown={(e) => {
+        e.preventDefault();
+        onSelect(song);
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        onSelect(song);
+      }}
+      onMouseEnter={() => onHover(index)}
+      className={`p-3.5 flex items-center justify-between cursor-pointer text-left transition-colors duration-100 select-none min-h-[56px] ${
+        isHighlighted
+          ? 'bg-neutral-800 text-white'
+          : 'hover:bg-neutral-800/60 text-neutral-200'
+      } ${isGuessed ? 'opacity-40' : ''}`}
+    >
+      <div className="flex items-center gap-3.5 overflow-hidden">
+        {song.artworkUrl ? (
+          <img
+            src={song.artworkUrl}
+            alt={song.title}
+            loading="lazy"
+            decoding="async"
+            className="w-10 h-10 rounded-xl object-cover flex-shrink-0 bg-neutral-800"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          <div className="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center flex-shrink-0 text-neutral-500">
+            <Music className="w-5 h-5" />
+          </div>
+        )}
+        <div className="truncate">
+          <div className="font-semibold text-sm sm:text-base text-white truncate">
+            {song.title}
+          </div>
+          <div className="text-xs sm:text-sm text-neutral-400 truncate">
+            {song.artist} {displayYear ? `• ${displayYear}` : ''}
+          </div>
+        </div>
+      </div>
+
+      {isGuessed && (
+        <span className="text-[10px] uppercase font-mono text-neutral-500 px-2 py-0.5 rounded bg-neutral-800 flex-shrink-0 ml-2">
+          Guessed
+        </span>
+      )}
+    </div>
+  );
+});
+
+SongSearchRow.displayName = 'SongSearchRow';
+
 export const SongSearch: React.FC<SongSearchProps> = ({
   onSelectGuess,
   onSkip,
@@ -23,11 +101,14 @@ export const SongSearch: React.FC<SongSearchProps> = ({
   alreadyGuessedIds,
   hasCorrectArtistGuess = false,
 }) => {
+  // Urgent raw input state for 60fps responsive typing
   const [query, setQuery] = useState('');
-  const [suggestions, setSuggestions] = useState<Song[]>([]);
+  const deferredQuery = useDeferredValue(query);
+
+  const [allSuggestions, setAllSuggestions] = useState<Song[]>([]);
+  const [renderedCount, setRenderedCount] = useState<number>(BATCH_SIZE);
   const [exactArtistMatch, setExactArtistMatch] = useState<ExactArtistMatchInfo | undefined>(undefined);
   const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
   const [selectedSong, setSelectedSong] = useState<Song | null>(null);
   const [hasUserEditedAfterSelection, setHasUserEditedAfterSelection] = useState(false);
@@ -36,20 +117,22 @@ export const SongSearch: React.FC<SongSearchProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // Debounced search query across whole playable catalog
+  // High-performance search effect with ultra-low debounce (60ms) and deferred execution
   useEffect(() => {
-    // If user has a confirmed selection and has not edited the text, do NOT search or reopen dropdown
+    // If a song is selected and user hasn't edited input, stay closed
     if (selectedSong !== null && !hasUserEditedAfterSelection) {
-      setSuggestions([]);
+      setAllSuggestions([]);
       setExactArtistMatch(undefined);
       setIsOpen(false);
       return;
     }
 
-    const trimmed = query.trim();
+    const trimmed = deferredQuery.trim();
     if (!trimmed) {
-      setSuggestions([]);
+      setAllSuggestions([]);
+      setRenderedCount(BATCH_SIZE);
       setExactArtistMatch(undefined);
       setIsOpen(false);
       setSelectedIndex(-1);
@@ -57,27 +140,53 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     }
 
     const timer = setTimeout(() => {
-      setIsLoading(true);
       try {
         const result = musicService.searchCatalog(trimmed);
-        setSuggestions(result.songs);
+        setAllSuggestions(result.songs);
+        setRenderedCount(BATCH_SIZE);
         setExactArtistMatch(result.exactArtistMatch);
-        // Autocomplete should ONLY show if there is no selected song and we have results
+
         if (result.songs.length > 0 && selectedSong === null) {
           setIsOpen(true);
+          // Reset scroll to top on new query
+          if (dropdownRef.current) {
+            dropdownRef.current.scrollTop = 0;
+          }
         } else {
           setIsOpen(false);
         }
         setSelectedIndex(-1);
       } catch (err) {
         console.error('Song search error:', err);
-      } finally {
-        setIsLoading(false);
       }
-    }, 120);
+    }, 60);
 
     return () => clearTimeout(timer);
-  }, [query, selectedSong, hasUserEditedAfterSelection]);
+  }, [deferredQuery, selectedSong, hasUserEditedAfterSelection]);
+
+  // Infinite scroll observer: load next batch of 25 results as user approaches the bottom
+  useEffect(() => {
+    if (!isOpen || renderedCount >= allSuggestions.length) return;
+
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setRenderedCount((prev) => Math.min(allSuggestions.length, prev + BATCH_SIZE));
+        }
+      },
+      {
+        root: dropdownRef.current,
+        rootMargin: '100px',
+        threshold: 0.1,
+      }
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [isOpen, renderedCount, allSuggestions.length]);
 
   // Keep highlighted suggestion scrolled into view during keyboard navigation
   useEffect(() => {
@@ -100,26 +209,34 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     return () => document.removeEventListener('mousedown', handleOutsideClick);
   }, []);
 
-  const handleSelectSong = (song: Song) => {
-    setSelectedSong(song);
-    setQuery(`${song.title} — ${song.artist}`);
-    setSuggestions([]);
-    setExactArtistMatch(undefined);
-    setIsOpen(false);
-    setHasUserEditedAfterSelection(false);
-    setSelectedIndex(-1);
+  const handleSelectSong = useCallback(
+    (song: Song) => {
+      setSelectedSong(song);
+      setQuery(`${song.title} — ${song.artist}`);
+      setAllSuggestions([]);
+      setExactArtistMatch(undefined);
+      setIsOpen(false);
+      setHasUserEditedAfterSelection(false);
+      setSelectedIndex(-1);
 
-    if (alreadyGuessedIds.includes(song.id)) {
-      setDuplicateWarning(true);
-    } else {
-      setDuplicateWarning(false);
-    }
-  };
+      if (alreadyGuessedIds.includes(song.id)) {
+        setDuplicateWarning(true);
+      } else {
+        setDuplicateWarning(false);
+      }
+    },
+    [alreadyGuessedIds]
+  );
+
+  const handleHoverRow = useCallback((index: number) => {
+    setSelectedIndex(index);
+  }, []);
 
   const handleClearSelection = () => {
     setSelectedSong(null);
     setQuery('');
-    setSuggestions([]);
+    setAllSuggestions([]);
+    setRenderedCount(BATCH_SIZE);
     setExactArtistMatch(undefined);
     setIsOpen(false);
     setHasUserEditedAfterSelection(true);
@@ -130,7 +247,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!isOpen || suggestions.length === 0) {
+    if (!isOpen || allSuggestions.length === 0) {
       if (e.key === 'Enter' && selectedSong && !disabled && !duplicateWarning) {
         e.preventDefault();
         handleSubmit();
@@ -140,16 +257,23 @@ export const SongSearch: React.FC<SongSearchProps> = ({
 
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setSelectedIndex((prev) => (prev < suggestions.length - 1 ? prev + 1 : 0));
+      setSelectedIndex((prev) => {
+        const nextIndex = prev < allSuggestions.length - 1 ? prev + 1 : 0;
+        // Expand rendered batch if user navigates past currently rendered batch
+        if (nextIndex >= renderedCount) {
+          setRenderedCount((curr) => Math.min(allSuggestions.length, curr + BATCH_SIZE));
+        }
+        return nextIndex;
+      });
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : suggestions.length - 1));
+      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : allSuggestions.length - 1));
     } else if (e.key === 'Enter') {
       e.preventDefault();
-      if (selectedIndex >= 0 && selectedIndex < suggestions.length) {
-        handleSelectSong(suggestions[selectedIndex]);
-      } else if (suggestions.length > 0 && selectedIndex === -1) {
-        handleSelectSong(suggestions[0]);
+      if (selectedIndex >= 0 && selectedIndex < allSuggestions.length) {
+        handleSelectSong(allSuggestions[selectedIndex]);
+      } else if (allSuggestions.length > 0 && selectedIndex === -1) {
+        handleSelectSong(allSuggestions[0]);
       }
     } else if (e.key === 'Escape') {
       e.preventDefault();
@@ -169,13 +293,15 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     onSelectGuess(selectedSong);
     setSelectedSong(null);
     setQuery('');
-    setSuggestions([]);
+    setAllSuggestions([]);
+    setRenderedCount(BATCH_SIZE);
     setExactArtistMatch(undefined);
     setIsOpen(false);
     setHasUserEditedAfterSelection(false);
     setDuplicateWarning(false);
   };
 
+  const visibleSuggestions = allSuggestions.slice(0, renderedCount);
   const nextStageDuration =
     currentStage < STAGES.length - 1 ? STAGES[currentStage + 1] : null;
 
@@ -208,7 +334,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
                 if (
                   hasUserEditedAfterSelection &&
                   !selectedSong &&
-                  suggestions.length > 0 &&
+                  allSuggestions.length > 0 &&
                   query.trim()
                 ) {
                   setIsOpen(true);
@@ -236,19 +362,19 @@ export const SongSearch: React.FC<SongSearchProps> = ({
             )}
           </div>
 
-          {/* Autocomplete Dropdown with Smooth Scrollable List */}
+          {/* Batched Autocomplete Dropdown with Infinite Scroll */}
           <AnimatePresence>
-            {isOpen && suggestions.length > 0 && !selectedSong && (
+            {isOpen && allSuggestions.length > 0 && !selectedSong && (
               <motion.div
                 id="search-suggestions-dropdown"
                 ref={dropdownRef}
                 initial={{ opacity: 0, y: -4 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
-                transition={{ duration: 0.15 }}
+                transition={{ duration: 0.12 }}
                 className="absolute left-0 right-0 top-full mt-2 bg-neutral-900/95 border border-neutral-800 rounded-2xl shadow-2xl backdrop-blur-xl max-h-80 sm:max-h-96 overflow-y-auto z-50 divide-y divide-neutral-800/60 touch-pan-y"
               >
-                {/* Exact Artist Catalog Mode Banner */}
+                {/* Exact Artist Catalog Mode Banner with Total Count */}
                 {exactArtistMatch && (
                   <div className="sticky top-0 z-20 px-4 py-2.5 bg-neutral-950/95 border-b border-neutral-800/90 flex items-center justify-between backdrop-blur-md">
                     <div className="flex items-center gap-2 min-w-0">
@@ -266,67 +392,35 @@ export const SongSearch: React.FC<SongSearchProps> = ({
                   </div>
                 )}
 
-                {/* All Matching Tracks */}
-                {suggestions.map((song, index) => {
-                  const isGuessed = alreadyGuessedIds.includes(song.id);
-                  const isHighlighted = selectedIndex === index;
-                  const displayYear = song.verifiedOriginalYear ?? song.year;
+                {/* Rendered Batch of Matching Tracks */}
+                {visibleSuggestions.map((song, index) => (
+                  <SongSearchRow
+                    key={song.id}
+                    song={song}
+                    index={index}
+                    isHighlighted={selectedIndex === index}
+                    isGuessed={alreadyGuessedIds.includes(song.id)}
+                    onSelect={handleSelectSong}
+                    onHover={handleHoverRow}
+                  />
+                ))}
 
-                  return (
-                    <div
-                      key={song.id}
-                      id={`suggestion-item-${index}`}
-                      onPointerDown={(e) => {
-                        e.preventDefault();
-                        handleSelectSong(song);
-                      }}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleSelectSong(song);
-                      }}
-                      onMouseEnter={() => setSelectedIndex(index)}
-                      className={`p-3.5 flex items-center justify-between cursor-pointer text-left transition-colors duration-150 select-none min-h-[56px] ${
-                        isHighlighted
-                          ? 'bg-neutral-800 text-white'
-                          : 'hover:bg-neutral-800/60 text-neutral-200'
-                      } ${isGuessed ? 'opacity-40' : ''}`}
-                    >
-                      <div className="flex items-center gap-3.5 overflow-hidden">
-                        {song.artworkUrl ? (
-                          <img
-                            src={song.artworkUrl}
-                            alt={song.title}
-                            className="w-10 h-10 rounded-xl object-cover flex-shrink-0 bg-neutral-800"
-                            referrerPolicy="no-referrer"
-                          />
-                        ) : (
-                          <div className="w-10 h-10 rounded-xl bg-neutral-800 flex items-center justify-center flex-shrink-0 text-neutral-500">
-                            <Music className="w-5 h-5" />
-                          </div>
-                        )}
-                        <div className="truncate">
-                          <div className="font-semibold text-sm sm:text-base text-white truncate">
-                            {song.title}
-                          </div>
-                          <div className="text-xs sm:text-sm text-neutral-400 truncate">
-                            {song.artist} {displayYear ? `• ${displayYear}` : ''}
-                          </div>
-                        </div>
-                      </div>
+                {/* Infinite Scroll Sentinel */}
+                {renderedCount < allSuggestions.length && (
+                  <div
+                    ref={sentinelRef}
+                    className="py-2.5 text-center text-xs text-neutral-500 font-mono"
+                  >
+                    Loading more results ({renderedCount} of {allSuggestions.length})...
+                  </div>
+                )}
 
-                      {isGuessed && (
-                        <span className="text-[10px] uppercase font-mono text-neutral-500 px-2 py-0.5 rounded bg-neutral-800 flex-shrink-0 ml-2">
-                          Guessed
-                        </span>
-                      )}
-                    </div>
-                  );
-                })}
-
-                {/* Total Count Footnote if many results and not exact artist mode */}
-                {suggestions.length > 8 && !exactArtistMatch && (
+                {/* Total Count Footnote */}
+                {allSuggestions.length > 10 && !exactArtistMatch && (
                   <div className="sticky bottom-0 z-10 px-4 py-1.5 bg-neutral-950/90 border-t border-neutral-800/80 text-[10px] text-center font-mono text-neutral-400 backdrop-blur-sm">
-                    {suggestions.length} matching songs available
+                    {renderedCount >= allSuggestions.length
+                      ? `${allSuggestions.length} matching songs available`
+                      : `Showing ${renderedCount} of ${allSuggestions.length} matching songs`}
                   </div>
                 )}
               </motion.div>
@@ -347,7 +441,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
           </div>
         )}
 
-        {/* Subtle Correct Artist Feedback Banner */}
+        {/* Correct Artist Banner */}
         <AnimatePresence>
           {hasCorrectArtistGuess && !selectedSong && !duplicateWarning && (
             <motion.div
