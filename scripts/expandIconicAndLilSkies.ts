@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { Song } from '../src/types/song';
 import { computeNormalizedGenres } from '../src/utils/genreUtils';
+import { isMatchingArtist } from '../src/utils/normalizeText';
 
 const ITUNES_SEARCH_URL = 'https://itunes.apple.com/search';
 
@@ -811,7 +812,7 @@ async function main() {
   const darkRoseTracks = await lookupAlbumTracks('Lil Skies Life of a Dark Rose');
   let darkRoseAdded = 0;
   for (const track of darkRoseTracks) {
-    if (track.artistName && track.artistName.toLowerCase().includes('lil skies')) {
+    if (track.artistName && isMatchingArtist('Lil Skies', track.artistName)) {
       const added = await verifyAndAddSong(track, 'Hip-Hop/Rap', 90);
       if (added) {
         darkRoseAdded++;
@@ -826,7 +827,7 @@ async function main() {
   const skiesResults = await searchItunes('Lil Skies', 50);
   let skiesHitsAdded = 0;
   for (const track of skiesResults) {
-    if (track.artistName && track.artistName.toLowerCase().includes('lil skies')) {
+    if (track.artistName && isMatchingArtist('Lil Skies', track.artistName)) {
       const added = await verifyAndAddSong(track, 'Hip-Hop/Rap', 88);
       if (added) {
         skiesHitsAdded++;

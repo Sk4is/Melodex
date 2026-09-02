@@ -225,6 +225,15 @@ class AudioService {
   }
 
   /**
+   * Checks if an audio URL is already preloaded and decoded in memory with valid duration
+   */
+  public isBufferLoaded(url: string): boolean {
+    if (!url) return false;
+    const cached = this.bufferCache.get(url);
+    return !!cached && cached.duration >= 14.5;
+  }
+
+  /**
    * Pre-validates that an audio URL is fully playable (>= 14.5s duration) before a round starts.
    * Returns true if verified playable, false otherwise.
    */

@@ -166,6 +166,20 @@ export class MelodexSearchEngine {
       const song = songs[i];
       if (!song || !song.id || !song.title || !song.artist) continue;
 
+      // Quarantine check: Never index false match or imposter artists
+      const rawArtist = (song.artist || '').toLowerCase().trim();
+      if (
+        rawArtist === 'lil skies beats' ||
+        (rawArtist.includes('lil skies') &&
+          (rawArtist.includes('beats') ||
+            rawArtist.includes('instrumental') ||
+            rawArtist.includes('tribute') ||
+            rawArtist.includes('karaoke') ||
+            rawArtist.includes('type beat')))
+      ) {
+        continue;
+      }
+
       const title = song.title;
       const artist = song.artist;
       const cleanTitle = extractCleanTitle(title) || title;
@@ -529,6 +543,14 @@ export class MelodexSearchEngine {
       const isExactCleanTitle = normCleanTitle === normQuery || squashedCleanTitle === squashedQuery;
       const isExactTitle = isExactFullTitle || isExactCleanTitle;
 
+      // When the search query resolves to an exact artist (e.g. "Lil Skies"), results
+      // matching on artist MUST strictly match that artist's identity.
+      // Unrelated artists whose names merely start with or contain the query as a substring
+      // (e.g. "Lil Skies Beats", "Lil Skies Instrumentals", etc.) MUST NOT contaminate the catalog.
+      if (exactArtistInfo && !isExactArtist && !isExactTitle && !normTitle.includes(normQuery) && !normCleanTitle.includes(normQuery)) {
+        continue;
+      }
+
       // Artist + Title combo query check
       let isArtistAndTitleCombo = false;
       let comboBonus = 0;
@@ -540,14 +562,11 @@ export class MelodexSearchEngine {
           const part1 = queryTokens.slice(0, split).join(' ');
           const part2 = queryTokens.slice(split).join(' ');
 
-          // Part 1 Artist, Part 2 Title
+          // Part 1 Artist, Part 2 Title - exact normalized artist or credited artist match only
           const part1MatchesArtist =
             normArtist === part1 ||
             normPrimaryArtist === part1 ||
-            normCreditedNames.some((c) => c === part1) ||
-            normArtist.includes(part1) ||
-            normPrimaryArtist.includes(part1) ||
-            normCreditedNames.some((c) => c.includes(part1));
+            normCreditedNames.some((c) => c === part1);
 
           const part2MatchesTitle =
             normTitle === part2 ||
@@ -563,7 +582,7 @@ export class MelodexSearchEngine {
             break;
           }
 
-          // Part 1 Title, Part 2 Artist
+          // Part 1 Title, Part 2 Artist - exact normalized artist or credited artist match only
           const part1MatchesTitle =
             normTitle === part1 ||
             normCleanTitle === part1 ||
@@ -574,10 +593,7 @@ export class MelodexSearchEngine {
           const part2MatchesArtist =
             normArtist === part2 ||
             normPrimaryArtist === part2 ||
-            normCreditedNames.some((c) => c === part2) ||
-            normArtist.includes(part2) ||
-            normPrimaryArtist.includes(part2) ||
-            normCreditedNames.some((c) => c.includes(part2));
+            normCreditedNames.some((c) => c === part2);
 
           if (part1MatchesTitle && part2MatchesArtist) {
             isArtistAndTitleCombo = true;
@@ -621,14 +637,16 @@ export class MelodexSearchEngine {
       }
       // TIER 5: Artist Starts With Query
       else if (
-        normPrimaryArtist.startsWith(normQuery) ||
-        normArtist.startsWith(normQuery) ||
-        creditedArtists.some((c) => c.norm.startsWith(normQuery)) ||
-        (squashedQuery.length >= 3 && (
-          squashedPrimaryArtist.startsWith(squashedQuery) ||
-          squashedArtist.startsWith(squashedQuery) ||
-          creditedArtists.some((c) => c.squashed.startsWith(squashedQuery))
-        ))
+        !exactArtistInfo &&
+        !/\b(beats?|instrumentals?|tribute|karaoke|type\s*beat)\b/i.test(normArtist) &&
+        (normPrimaryArtist.startsWith(normQuery) ||
+          normArtist.startsWith(normQuery) ||
+          creditedArtists.some((c) => c.norm.startsWith(normQuery)) ||
+          (squashedQuery.length >= 3 && (
+            squashedPrimaryArtist.startsWith(squashedQuery) ||
+            squashedArtist.startsWith(squashedQuery) ||
+            creditedArtists.some((c) => c.squashed.startsWith(squashedQuery))
+          )))
       ) {
         tier = 5;
         score = 5500;
@@ -649,14 +667,16 @@ export class MelodexSearchEngine {
       }
       // TIER 7: Artist Contains Query as whole word or substring
       else if (
-        normArtist.includes(normQuery) ||
-        normPrimaryArtist.includes(normQuery) ||
-        creditedArtists.some((c) => c.norm.includes(normQuery)) ||
-        (squashedQuery.length >= 3 && (
-          squashedArtist.includes(squashedQuery) ||
-          squashedPrimaryArtist.includes(squashedQuery) ||
-          creditedArtists.some((c) => c.squashed.includes(squashedQuery))
-        ))
+        !exactArtistInfo &&
+        !/\b(beats?|instrumentals?|tribute|karaoke|type\s*beat)\b/i.test(normArtist) &&
+        (normArtist.includes(normQuery) ||
+          normPrimaryArtist.includes(normQuery) ||
+          creditedArtists.some((c) => c.norm.includes(normQuery)) ||
+          (squashedQuery.length >= 3 && (
+            squashedArtist.includes(squashedQuery) ||
+            squashedPrimaryArtist.includes(squashedQuery) ||
+            creditedArtists.some((c) => c.squashed.includes(squashedQuery))
+          )))
       ) {
         tier = 7;
         score = 3000;

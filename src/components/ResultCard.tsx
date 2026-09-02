@@ -114,7 +114,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
             </motion.div>
           ) : isWon ? (
             <motion.div
-              key="discovered-pill"
+              key="guessed-pill"
               initial={{ opacity: 0, y: 2 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
@@ -128,7 +128,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
                   boxShadow: '0 0 6px var(--accent)',
                 }}
               />
-              <span>DISCOVERED</span>
+              <span>GUESSED</span>
             </motion.div>
           ) : (
             <motion.span

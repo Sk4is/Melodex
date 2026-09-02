@@ -1,6 +1,6 @@
 import { GenreFilter } from './game';
 
-export type AudioHealthStatus = 'healthy' | 'unknown' | 'temporarily_failed' | 'dead';
+export type AudioHealthStatus = 'healthy' | 'unknown' | 'temporary_failure' | 'temporarily_failed' | 'dead';
 
 export interface Song {
   id: string;
@@ -21,7 +21,8 @@ export interface Song {
   trackIdentityVerified?: boolean;
   providerTrackId?: string;
 
-  // Audio Health Tracking
+  // Audio Health & Playability Tracking
+  playable?: boolean;
   audioStatus?: AudioHealthStatus;
   audioValidatedAt?: number; // timestamp in ms
   failureCount?: number;

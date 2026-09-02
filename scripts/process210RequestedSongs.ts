@@ -2226,7 +2226,7 @@ function doesMatchSpec(item: any, spec: TrackSpec): boolean {
     if (hasForbidden) return false;
   }
 
-  // 4. Karaoke / Tribute / Cover filter
+  // 4. Karaoke / Tribute / Cover / Beatmaker filter
   const badMarkers = [
     'tribute',
     'karaoke',
@@ -2236,6 +2236,8 @@ function doesMatchSpec(item: any, spec: TrackSpec): boolean {
     'cover version',
     'ringtone',
     're-recorded',
+    'beats',
+    'type beat',
   ];
   for (const marker of badMarkers) {
     if (trackName.includes(marker) || artistName.includes(marker)) {
@@ -2281,6 +2283,7 @@ async function run() {
 
       const artistMatch = spec.requiredPrimaryArtist.some((a) => {
         const nA = normalizeStr(a);
+        if (sArtist.includes('beats') || sArtist.includes('instrumental')) return false;
         return sArtist.includes(nA) || nA.includes(sArtist);
       });
       const titleMatch = spec.requiredTitleKeywords.some((kw) => {

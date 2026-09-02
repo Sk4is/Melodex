@@ -1,6 +1,6 @@
 import { Song, AudioHealthStatus } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
-import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/normalizeText';
+import { fuzzyMatchSong, extractPrimaryArtist, normalizeText, isMatchingArtist } from '../utils/normalizeText';
 import { MelodexSearchEngine, SearchResult } from '../utils/searchEngine';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 import { audioService } from './audioService';
@@ -254,12 +254,31 @@ class MusicService {
     this.savePersistedState();
   }
 
+  private searchIndexRebuildTimer: any = null;
+  private activeRoundSongId: string | null = null;
+
+  public setActiveRoundSong(songId: string | null): void {
+    this.activeRoundSongId = songId;
+  }
+
+  public getActiveRoundSongId(): string | null {
+    return this.activeRoundSongId;
+  }
+
+  public scheduleSearchIndexRebuild(): void {
+    if (this.searchIndexRebuildTimer) return;
+    this.searchIndexRebuildTimer = setTimeout(() => {
+      this.searchIndexRebuildTimer = null;
+      this.rebuildSearchIndex();
+    }, 250);
+  }
+
   /**
    * Invalidate precomputed count cache and search index whenever the verified playable catalog changes
    */
   private invalidateCountCache(): void {
     this.countCache.clear();
-    this.rebuildSearchIndex();
+    this.scheduleSearchIndexRebuild();
   }
 
   private rebuildSearchIndex(): void {
@@ -351,10 +370,12 @@ class MusicService {
 
     if (status === 'healthy') {
       newFailureCount = 0;
-    } else if (status === 'temporarily_failed') {
+    } else if (status === 'temporary_failure' || status === 'temporarily_failed') {
       newFailureCount += 1;
       if (newFailureCount >= 3) {
         finalStatus = 'dead';
+      } else {
+        finalStatus = 'temporary_failure';
       }
     } else if (status === 'dead') {
       newFailureCount += 1;
@@ -375,13 +396,17 @@ class MusicService {
       song.audioValidatedAt = record.validatedAt;
       song.failureCount = newFailureCount;
       song.lastFailureReason = record.lastReason;
+      song.playable = finalStatus === 'healthy';
     }
 
     if (finalStatus === 'dead') {
       this.rejectedSongIds.add(songId);
-      this.catalog.delete(songId);
-      this.sessionDeck = this.sessionDeck.filter((s) => s.id !== songId);
-      this.invalidateCountCache();
+      // If song is currently being played/revealed in active round, do not delete immediately to avoid breaking UI state
+      if (this.activeRoundSongId !== songId) {
+        this.catalog.delete(songId);
+        this.sessionDeck = this.sessionDeck.filter((s) => s.id !== songId);
+        this.invalidateCountCache();
+      }
     }
 
     this.savePersistedState();
@@ -433,8 +458,7 @@ class MusicService {
           const match = data.results.find((r: { trackName?: string; artistName?: string; previewUrl?: string }) => {
             if (!r.previewUrl) return false;
             const rTitle = (r.trackName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            const rArtist = (r.artistName || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-            const artistMatches = rArtist.includes(normArtist) || normArtist.includes(rArtist);
+            const artistMatches = isMatchingArtist(song.artist, r.artistName || '');
             const titleMatches = rTitle.includes(normTitle) || normTitle.includes(rTitle);
             return artistMatches && titleMatches;
           });
@@ -458,13 +482,26 @@ class MusicService {
   /**
    * Strict validation rule for catalog item acceptance:
    * Must have id, title, artist, valid audio preview, and verified year.
-   * Tracks with trackIdentityVerified === false are quarantined.
+   * Tracks with trackIdentityVerified === false or false match artists are quarantined.
    */
   public isValidCatalogItem(item: Song | null | undefined): item is Song {
     if (!item || !item.id || !item.title || !item.artist || !item.previewUrl) {
       return false;
     }
     if (item.trackIdentityVerified === false) {
+      return false;
+    }
+    // Quarantine imposter/derivative artist matches
+    const artistLower = item.artist.toLowerCase().trim();
+    if (
+      artistLower === 'lil skies beats' ||
+      (artistLower.includes('lil skies') &&
+        (artistLower.includes('beats') ||
+          artistLower.includes('instrumental') ||
+          artistLower.includes('tribute') ||
+          artistLower.includes('karaoke') ||
+          artistLower.includes('type beat')))
+    ) {
       return false;
     }
     if (!item.previewUrl.startsWith('http')) {
@@ -1031,33 +1068,28 @@ class MusicService {
       return false;
     }
 
-    // Fast check if already known healthy
-    if (song.audioStatus === 'healthy') {
+    // 1. Instant check: If audio buffer is already cached and ready in memory
+    if (audioService.isBufferLoaded(song.previewUrl)) {
+      this.recordAudioHealth(song.id, 'healthy');
       return true;
     }
 
-    // Preload and validate playable audio stream
+    // 2. Preload and validate playable audio stream in browser
     try {
-      const isPlayable = await audioService.validateAudioUrl(song.previewUrl, 2500);
+      const isPlayable = await audioService.validateAudioUrl(song.previewUrl, 3000);
       if (isPlayable) {
         this.recordAudioHealth(song.id, 'healthy');
         return true;
       }
     } catch {
-      // Inconclusive check
+      // Inconclusive / network error
     }
 
-    // If audio validation was inconclusive (e.g. timeout / suspended AudioContext prior to user interaction),
-    // preserve track as eligible if it has a valid https URL from trusted providers and has not failed repeatedly
-    if (song.previewUrl && song.previewUrl.startsWith('https://') && this.getFailureCount(song.id) === 0) {
-      return true;
-    }
-
-    // Attempt runtime re-resolution via iTunes
+    // 3. Attempt runtime re-resolution via iTunes
     try {
       const freshUrl = await this.resolveFreshPreviewUrl(song);
       if (freshUrl && freshUrl !== song.previewUrl) {
-        const freshOk = await audioService.validateAudioUrl(freshUrl, 2500);
+        const freshOk = await audioService.validateAudioUrl(freshUrl, 3000);
         if (freshOk) {
           song.previewUrl = freshUrl;
           song.provider = 'itunes';
@@ -1070,7 +1102,7 @@ class MusicService {
     }
 
     const isPermanent = song.previewUrl.includes('dzcdn.net') || this.getFailureCount(song.id) >= 2;
-    this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporarily_failed', 'Audio stream unplayable');
+    this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporary_failure', 'Audio stream unplayable');
     return false;
   }
 
@@ -1148,6 +1180,7 @@ class MusicService {
           return null;
         }
         if (ok) {
+          this.activeRoundSongId = candidate.id;
           this.recordRecentPlay(candidate.id, normalizeArtistKey(candidate.artist));
           return candidate;
         }
@@ -1180,6 +1213,7 @@ class MusicService {
         return null;
       }
       if (isValid) {
+        this.activeRoundSongId = candidate.id;
         const artKey = normalizeArtistKey(candidate.artist);
         this.recordRecentPlay(candidate.id, artKey);
         return candidate;
@@ -1203,6 +1237,7 @@ class MusicService {
           return null;
         }
         if (ok) {
+          this.activeRoundSongId = song.id;
           this.recordRecentPlay(song.id, normalizeArtistKey(song.artist));
           return song;
         }
@@ -1229,14 +1264,14 @@ class MusicService {
 
       try {
         const allSongs = Array.from(this.catalog.values()).filter(
-          (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead'
+          (s) => !this.rejectedSongIds.has(s.id) && s.audioStatus !== 'dead' && s.id !== this.activeRoundSongId
         );
 
         const prioritized = allSongs.sort((a, b) => {
           const statusOrder = (s: Song): number => {
             const st = s.audioStatus || 'unknown';
-            if (st === 'unknown') return 0;
-            if (st === 'temporarily_failed') return 1;
+            if (st === 'temporary_failure' || st === 'temporarily_failed') return 0;
+            if (st === 'unknown') return 1;
             return 2;
           };
           const orderA = statusOrder(a);
@@ -1254,8 +1289,9 @@ class MusicService {
           const chunk = batch.slice(i, i + CONCURRENCY);
           await Promise.all(
             chunk.map(async (song) => {
+              if (song.id === this.activeRoundSongId) return;
               const age = Date.now() - (song.audioValidatedAt || 0);
-              if (song.audioStatus === 'healthy' && age < 14400000) {
+              if (song.audioStatus === 'healthy' && age < 86400000) {
                 return;
               }
 
@@ -1275,7 +1311,7 @@ class MusicService {
                     }
                   }
                   const isPermanent = song.previewUrl.includes('dzcdn.net') || this.getFailureCount(song.id) >= 2;
-                  this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporarily_failed');
+                  this.recordAudioHealth(song.id, isPermanent ? 'dead' : 'temporary_failure');
                 }
               } catch {
                 // Ignore transient background error

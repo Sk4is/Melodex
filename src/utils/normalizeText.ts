@@ -121,6 +121,16 @@ export function normalizeArtistIdentity(artist: string): string {
 }
 
 /**
+ * Checks for exact normalized artist identity match
+ */
+export function isExactArtistMatch(artistA: string, artistB: string): boolean {
+  if (!artistA || !artistB) return false;
+  const idA = normalizeArtistIdentity(artistA);
+  const idB = normalizeArtistIdentity(artistB);
+  return idA.length > 0 && idA === idB;
+}
+
+/**
  * Checks if two artist strings match or share a primary/featured artist.
  * Handles:
  * - "Post Malone" vs "Post Malone"
@@ -129,9 +139,18 @@ export function normalizeArtistIdentity(artist: string): string {
  * - "David Guetta & Sia" vs "Sia"
  * - "The Weeknd" vs "Weeknd"
  * - "Beyoncé" vs "Beyonce"
+ *
+ * Rejects imposter/derivative artist names (e.g. "Lil Skies Beats" vs "Lil Skies").
  */
 export function isMatchingArtist(artistA: string, artistB: string): boolean {
   if (!artistA || !artistB) return false;
+
+  // Reject imposter / derivative artist matches (beats, instrumental, tribute, karaoke)
+  const isDerivativeA = /\b(beats?|instrumentals?|tribute|karaoke|type\s*beat)\b/i.test(artistA);
+  const isDerivativeB = /\b(beats?|instrumentals?|tribute|karaoke|type\s*beat)\b/i.test(artistB);
+  if (isDerivativeA !== isDerivativeB) {
+    return false;
+  }
 
   const idA = normalizeArtistIdentity(artistA);
   const idB = normalizeArtistIdentity(artistB);

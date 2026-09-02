@@ -20,6 +20,7 @@ import { GuessHistory } from './GuessHistory';
 import { ResultCard } from './ResultCard';
 import { AudioBackground } from './AudioBackground';
 import { VisualCustomizationPanel } from './VisualCustomizationPanel';
+import { StreakIndicator } from './StreakIndicator';
 import { useVisuals } from '../context/VisualContext';
 
 function generateRoundId(): string {
@@ -53,15 +54,36 @@ export const Game: React.FC = () => {
   const [playedSongIds, setPlayedSongIds] = useState<string[]>([]);
   const [initError, setInitError] = useState<string | null>(null);
 
+  // Guess Streak State (Session-based, persists across next song and filter changes)
+  const [streak, setStreak] = useState<number>(0);
+  const [isStreakBroken, setIsStreakBroken] = useState<boolean>(false);
+  const lastIncrementedRoundIdRef = useRef<string | null>(null);
+  const lastFailedRoundIdRef = useRef<string | null>(null);
+  const streakTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (streakTimeoutRef.current) {
+        clearTimeout(streakTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleStreakBreakComplete = useCallback(() => {
+    setIsStreakBroken(false);
+    setStreak(0);
+  }, []);
+
   const filterGenerationRef = useRef(0);
   const activeRoundIdRef = useRef(gameState.roundId);
   const nextSongCandidateRef = useRef<Song | null>(null);
   const isPreparingNextRef = useRef<boolean>(false);
 
-  // Sync active round ID ref
+  // Sync active round ID ref and active song with musicService
   useEffect(() => {
     activeRoundIdRef.current = gameState.roundId;
-  }, [gameState.roundId]);
+    musicService.setActiveRoundSong(gameState.currentSong?.id || null);
+  }, [gameState.roundId, gameState.currentSong?.id]);
 
   // Sync CSS variables with current category theme
   useEffect(() => {
@@ -544,6 +566,11 @@ export const Game: React.FC = () => {
     audioService.stop();
     triggerRoundShuffle();
 
+    if (isStreakBroken) {
+      setIsStreakBroken(false);
+      setStreak(0);
+    }
+
     const newRoundId = generateRoundId();
     activeRoundIdRef.current = newRoundId;
 
@@ -685,9 +712,15 @@ export const Game: React.FC = () => {
       // Continue to replacement fallback
     }
 
-    // 2. If re-resolution fails, quarantine track and get replacement for active round
-    musicService.rejectSong(failedSong.id);
+    // 2. If re-resolution fails: record temporary failure (not dead) to avoid purging valid songs on transient network errors
+    musicService.recordAudioHealth(failedSong.id, 'temporary_failure', 'Audio playback error during round');
 
+    // 3. If player has already made guesses or revealed, freeze round state so the answer doesn't switch
+    if (gameState.guesses.length > 0 || gameState.roundState === 'revealed' || gameState.revealedSong) {
+      return;
+    }
+
+    // 4. Only if no guesses were submitted yet, attempt seamless replacement
     const replacement = await musicService.getPlayableSongForRound(
       playedSongIds,
       gameState.decade,
@@ -712,6 +745,7 @@ export const Game: React.FC = () => {
     gameState.revealedSong,
     gameState.currentSong,
     gameState.roundId,
+    gameState.guesses.length,
     gameState.decade,
     gameState.genres,
     playedSongIds,
@@ -747,6 +781,18 @@ export const Game: React.FC = () => {
       const activeRoundId = gameState.roundId;
       const activeFilterGen = filterGenerationRef.current;
 
+      // Safe streak increment: exactly once per unique round
+      if (lastIncrementedRoundIdRef.current !== activeRoundId) {
+        lastIncrementedRoundIdRef.current = activeRoundId;
+        setIsStreakBroken(false);
+        // Stagger streak increment by ~140ms so Answer Effect initiates first,
+        // followed by the streak badge pulse and number scale-up
+        if (streakTimeoutRef.current) clearTimeout(streakTimeoutRef.current);
+        streakTimeoutRef.current = setTimeout(() => {
+          setStreak((prev) => prev + 1);
+        }, 140);
+      }
+
       setGameState((prev) => ({
         ...prev,
         revealedSong: activeSong,
@@ -775,6 +821,14 @@ export const Game: React.FC = () => {
       } else {
         const activeRoundId = gameState.roundId;
         const activeFilterGen = filterGenerationRef.current;
+
+        // Break streak on round failure
+        if (lastFailedRoundIdRef.current !== activeRoundId) {
+          lastFailedRoundIdRef.current = activeRoundId;
+          if (streak > 0) {
+            setIsStreakBroken(true);
+          }
+        }
 
         setGameState((prev) => ({
           ...prev,
@@ -817,6 +871,14 @@ export const Game: React.FC = () => {
       const activeRoundId = gameState.roundId;
       const activeFilterGen = filterGenerationRef.current;
 
+      // Break streak on round surrender
+      if (lastFailedRoundIdRef.current !== activeRoundId) {
+        lastFailedRoundIdRef.current = activeRoundId;
+        if (streak > 0) {
+          setIsStreakBroken(true);
+        }
+      }
+
       setGameState((prev) => ({
         ...prev,
         revealedSong: activeSong,
@@ -841,6 +903,14 @@ export const Game: React.FC = () => {
   const displayRevealSong = gameState.revealedSong || gameState.currentSong;
   const alreadyGuessedIds = gameState.guesses.map((g) => g.songId);
   const isImmersiveDimmed = settings.immersive && isPlayingAudio && !isGameOver;
+  const glowMultiplier =
+    settings.glowIntensity === 'OFF'
+      ? 0
+      : settings.glowIntensity === 'LOW'
+      ? 0.5
+      : settings.glowIntensity === 'HIGH'
+      ? 1.6
+      : 1;
 
   return (
     <div className="relative min-h-screen bg-[#060709] text-neutral-100 py-6 sm:py-10 px-4 sm:px-6 font-sans flex flex-col justify-between items-center overflow-x-hidden theme-transition">
@@ -924,6 +994,18 @@ export const Game: React.FC = () => {
             />
           </div>
         )}
+
+        {/* Guess Streak Indicator (Centered horizontally between Filters and Timeline) */}
+        <StreakIndicator
+          streak={streak}
+          isBroken={isStreakBroken}
+          onBreakComplete={handleStreakBreakComplete}
+          reducedMotion={settings.reducedMotion}
+          glowMultiplier={glowMultiplier}
+          className={`transition-opacity duration-400 ${
+            isImmersiveDimmed ? 'opacity-30 hover:opacity-100' : 'opacity-100'
+          }`}
+        />
 
         {/* Loading State */}
         {gameState.status === 'loading' && (

@@ -42,7 +42,9 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   const duration = STAGES[currentStage] || 0.5;
 
   useEffect(() => {
+    let isCancelled = false;
     const unsubscribe = audioService.subscribe((status) => {
+      if (isCancelled) return;
       setPlaybackStatus(status);
       setIsPlayingAudio(status.state === 'playing');
       if (status.state === 'error' && onAudioError) {
@@ -51,7 +53,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     });
 
     if (previewUrl) {
-      audioService.preloadAudio(previewUrl).catch(() => {
+      audioService.preloadAudio(previewUrl).catch((err) => {
+        if (isCancelled) return;
+        // Ignore AbortError or benign cancellation
+        if (err?.name === 'AbortError') return;
         if (onAudioError) {
           onAudioError();
         }
@@ -59,6 +64,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     }
 
     return () => {
+      isCancelled = true;
       audioService.stop();
       setIsPlayingAudio(false);
       unsubscribe();

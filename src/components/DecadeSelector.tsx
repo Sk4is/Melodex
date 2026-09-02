@@ -35,15 +35,23 @@ export const DecadeSelector: React.FC<DecadeSelectorProps> = ({
               {isSelected && (
                 <motion.div
                   layoutId="activeDecadeIndicator"
-                  className="absolute inset-0 rounded-full bg-neutral-800 border border-neutral-700/60 shadow-sm"
+                  className="absolute inset-0 rounded-full border shadow-sm theme-transition"
+                  style={{
+                    backgroundColor: 'var(--accent-soft)',
+                    borderColor: 'var(--accent)',
+                    boxShadow: '0 0 10px var(--accent-glow)',
+                  }}
                   transition={{ type: 'spring', stiffness: 400, damping: 32 }}
                 />
               )}
               <span className="relative z-10 flex items-center gap-1.5">
                 {isSelected && (
                   <span
-                    className="w-1.5 h-1.5 rounded-full theme-transition"
-                    style={{ backgroundColor: 'var(--accent)' }}
+                    className="w-1.5 h-1.5 rounded-full theme-transition flex-shrink-0"
+                    style={{
+                      backgroundColor: 'var(--accent)',
+                      boxShadow: '0 0 6px var(--accent)',
+                    }}
                   />
                 )}
                 {option.label}

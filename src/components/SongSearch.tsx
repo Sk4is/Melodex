@@ -342,7 +342,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
               }}
               onKeyDown={handleKeyDown}
               disabled={disabled}
-              placeholder="Guess the Song or Artist..."
+              placeholder="Guess the Song..."
               autoComplete="off"
               className="w-full pl-12 pr-11 py-4 bg-neutral-900/90 border border-neutral-800 rounded-2xl text-base font-medium text-white placeholder:text-neutral-500 focus:outline-none transition-all disabled:opacity-50 theme-transition"
               style={{

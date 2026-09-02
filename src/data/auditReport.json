@@ -1,0 +1,131 @@
+{
+  "timestamp": "2026-09-02T16:06:03.241Z",
+  "durationSeconds": "333.4",
+  "stats": {
+    "total": 10116,
+    "healthy": 10024,
+    "unknown": 0,
+    "temporaryFailure": 0,
+    "dead": 92,
+    "repaired": 18,
+    "perm404": 0,
+    "perm410": 0,
+    "permDecodeCorrupt": 0,
+    "permOther": 92,
+    "tempNetwork": 0,
+    "temp429": 0,
+    "temp5xx": 0,
+    "tempTimeout": 0,
+    "removedFromPlayable": 92
+  },
+  "repairedList": [
+    {
+      "title": "Ayer Me Llamó Mi Ex",
+      "artist": "KHEA",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/2/8/0/f283d340ec0a82b894d76a9a6b021cf4.mp3?hdnea=exp=1788364173~acl=/api/1/1/f/2/8/0/f283d340ec0a82b894d76a9a6b021cf4.mp3*~data=user_id=0,application_id=42~hmac=5083c859983d235c6dce965ea7e6ddc9133d5a6fb52330fb38c7ab863dc0d49e",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/8a/f0/3b/8af03b30-8605-acd6-0e43-006b66c106a9/mzaf_12145538415266592070.plus.aac.p.m4a"
+    },
+    {
+      "title": "Legendary",
+      "artist": "YNW Melly",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/9/4/0/a94af858d682dfaf14811e897e727220.mp3?hdnea=exp=1788364197~acl=/api/1/1/a/9/4/0/a94af858d682dfaf14811e897e727220.mp3*~data=user_id=0,application_id=42~hmac=136f95ce3b100f1c6b4cf7ac3a371d38c35ff0cc2c0e018223b4e368e80fbe71",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a0/f8/ef/a0f8efb9-0120-22ec-4529-3068c43537c3/mzaf_15873257175458240429.plus.aac.p.m4a"
+    },
+    {
+      "title": "Plug Walk",
+      "artist": "Rich The Kid",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/6/e/0/76ed0c053a58a5209309231ccc764efd.mp3?hdnea=exp=1788364217~acl=/api/1/1/7/6/e/0/76ed0c053a58a5209309231ccc764efd.mp3*~data=user_id=0,application_id=42~hmac=0dc88987b18bfd629cb44ca1471a86177f63a481120e359d6ac65a70c13c1fa9",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/51/b7/8c/51b78ce1-bc7d-4f9f-05ab-a94ae938ae78/mzaf_10176626615915059370.plus.aac.p.m4a"
+    },
+    {
+      "title": "Real Ties",
+      "artist": "Lil Skies",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/a/e/0/5aef778783db23f9f40625646ebda87a.mp3?hdnea=exp=1788364225~acl=/api/1/1/5/a/e/0/5aef778783db23f9f40625646ebda87a.mp3*~data=user_id=0,application_id=42~hmac=b99e41b2de7bbb761999fa00751aaedc20d70f886df2e575911dcc40da498dda",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6e/02/f4/6e02f468-d454-7fa5-bfaf-9263c1b33b55/mzaf_1787306560566461370.plus.aac.p.m4a"
+    },
+    {
+      "title": "I Wish",
+      "artist": "Kodak Black",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/1/4/0/d148232fffcc1bdc03931dc05bb4f9e9.mp3?hdnea=exp=1788364225~acl=/api/1/1/d/1/4/0/d148232fffcc1bdc03931dc05bb4f9e9.mp3*~data=user_id=0,application_id=42~hmac=03dbd8c2eaa1a72bf378b9ac0c8e69cc041335b37306ffe899f385273d7d1c9e",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/93/64/7f936433-7321-53aa-6407-2514ecc89f22/mzaf_16891349926008429759.plus.aac.p.m4a"
+    },
+    {
+      "title": "Cashing Out Ft. Suigeneris",
+      "artist": "Kamrin Houser",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/1/b/d/0/1bd520194d8bcd5c8570d4b8893ef812.mp3?hdnea=exp=1788364227~acl=/api/1/1/1/b/d/0/1bd520194d8bcd5c8570d4b8893ef812.mp3*~data=user_id=0,application_id=42~hmac=70972f2cc456f5b04439c0a3d82ecc4d425f682b0cb41066c5e164d1e144bfa6",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/67/0d/84/670d84b7-a1cb-349a-e202-789e34258e6f/mzaf_7883403593321402019.plus.aac.p.m4a"
+    },
+    {
+      "title": "THOUSAND MILES",
+      "artist": "The Kid LAROI",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/d/6/0/4d61c593bc3bbb465d5716d0c9fc4927.mp3?hdnea=exp=1788364227~acl=/api/1/1/4/d/6/0/4d61c593bc3bbb465d5716d0c9fc4927.mp3*~data=user_id=0,application_id=42~hmac=3d02f859d2975478f87f6e3aa5d0b33db1a963e5fc62bd8b6815589da1813320",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/5e/14/b25e14c0-ff72-5bdd-0124-cff2793b878c/mzaf_2730573443216159256.plus.aac.p.m4a"
+    },
+    {
+      "title": "Juice WRLD DID (feat. Juice WRLD)",
+      "artist": "DJ Khaled",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/9/6/3/0/963560c73329c6fd5896a32c96c1b4fb.mp3?hdnea=exp=1788364228~acl=/api/1/1/9/6/3/0/963560c73329c6fd5896a32c96c1b4fb.mp3*~data=user_id=0,application_id=42~hmac=12437ae1d9f985980039dff49933a8650c4f10f5c375030e89291bf672a57295",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/fb/1b/11fb1b0c-b813-c83a-87e9-7acc73d47123/mzaf_15914746458191323134.plus.aac.p.m4a"
+    },
+    {
+      "title": "MIDDLE CHILD",
+      "artist": "PnB Rock",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/c/2/a/0/c2a30513bc0fa1a4a1f49e225b28b28f.mp3?hdnea=exp=1788364228~acl=/api/1/1/c/2/a/0/c2a30513bc0fa1a4a1f49e225b28b28f.mp3*~data=user_id=0,application_id=42~hmac=376c9660335a945c75a93c85fc384f936c78d23992c875deb4de8e1430a15c3f",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ae/9e/b5/ae9eb5af-07fa-0061-c06b-5504e743abef/mzaf_11544815936567211687.plus.aac.p.m4a"
+    },
+    {
+      "title": "CLOUT COBAIN | CLOUT CO13A1N",
+      "artist": "Denzel Curry",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/7/0/7/0/7073ac4cbdad68079e49a1b8bf853f3c.mp3?hdnea=exp=1788364229~acl=/api/1/1/7/0/7/0/7073ac4cbdad68079e49a1b8bf853f3c.mp3*~data=user_id=0,application_id=42~hmac=f1f0c002c6cd9d6c1cbcb4568ed2f0f820d3aae3ed731a1352e5c73c533b977f",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/61/2f/8d612f97-4b1d-2f34-2ad4-89d847e284b9/mzaf_14928794139463479347.plus.aac.p.m4a"
+    },
+    {
+      "title": "Wasted",
+      "artist": "Juice WRLD",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/5/6/e/0/56e3639d7973b455ea79a9cf9ae15603.mp3?hdnea=exp=1788364231~acl=/api/1/1/5/6/e/0/56e3639d7973b455ea79a9cf9ae15603.mp3*~data=user_id=0,application_id=42~hmac=129ab30f6fbf0a6773bb3f7f0f66426ea613e560cb5ebf379d89584ce6bf3500",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e8/77/1e/e8771eac-565f-40d3-a611-7810aae80da0/mzaf_7858718042048594564.plus.aac.p.m4a"
+    },
+    {
+      "title": "Black & White",
+      "artist": "Juice WRLD",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/6/b/0/a6b92f90bc27284d0b9257354a35484b.mp3?hdnea=exp=1788364232~acl=/api/1/1/a/6/b/0/a6b92f90bc27284d0b9257354a35484b.mp3*~data=user_id=0,application_id=42~hmac=5eabaa1e8e4a1e58b25505a4ed051276a52aa25b15ddf6c515fb3fa5e82bb9fe",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/33/56/5c/33565c34-57f8-fb65-1ff0-730bc4846816/mzaf_5354356036882140200.plus.aac.p.m4a"
+    },
+    {
+      "title": "Sick Today",
+      "artist": "Lil Mosey",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/d/2/2/0/d22228d1bf99e124ab1a75734af00f50.mp3?hdnea=exp=1788364232~acl=/api/1/1/d/2/2/0/d22228d1bf99e124ab1a75734af00f50.mp3*~data=user_id=0,application_id=42~hmac=650f9611667ebe93830a7dde9797610757ba78b7a2b29fe12cbd09acfead71f4",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/70/80/8a/70808a18-000e-c946-8da7-a496d680756d/mzaf_15816253510424882409.plus.aac.p.m4a"
+    },
+    {
+      "title": "Drop Top",
+      "artist": "Lil Mosey",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/a/7/2/0/a72b61218c844568ddf4628abacb5af9.mp3?hdnea=exp=1788364232~acl=/api/1/1/a/7/2/0/a72b61218c844568ddf4628abacb5af9.mp3*~data=user_id=0,application_id=42~hmac=9cad13bd13e71a7f8b1cefb774abd2a9761f01ca506bfbe70a87b2f7123a91ce",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e7/e6/0b/e7e60b67-2d24-3259-0751-54fb7f9695d0/mzaf_10773932427254434392.plus.aac.p.m4a"
+    },
+    {
+      "title": "Matte Red/Sum He Said",
+      "artist": "Lil Mosey",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/9/1/0/491cd4944c025f888d173694cb37bc25.mp3?hdnea=exp=1788364235~acl=/api/1/1/4/9/1/0/491cd4944c025f888d173694cb37bc25.mp3*~data=user_id=0,application_id=42~hmac=94c503839e37e14a8067f0381eb9ddfce064861c49ca085a40c37b577f1a7f40",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ee/d0/95/eed09590-91a5-0b35-6c8d-0f283dfc94f2/mzaf_1465345531617671742.plus.aac.p.m4a"
+    },
+    {
+      "title": "17",
+      "artist": "Landon Cube",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/0/e/8/0/0e8a68d296aa86305b48fbf9001b0b72.mp3?hdnea=exp=1788364237~acl=/api/1/1/0/e/8/0/0e8a68d296aa86305b48fbf9001b0b72.mp3*~data=user_id=0,application_id=42~hmac=7e9a66b47162061a7e350252125a81f55cbe1349c4d8fdf7d4343351ab3afa53",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/78/7d/7d/787d7d16-a18c-5938-db7c-78c3f5c26205/mzaf_12787577107396433038.plus.aac.p.m4a"
+    },
+    {
+      "title": "Rolex",
+      "artist": "Ayo & Teo",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/f/d/8/0/fd8214a582286580d0ccac395b8d4f38.mp3?hdnea=exp=1788364239~acl=/api/1/1/f/d/8/0/fd8214a582286580d0ccac395b8d4f38.mp3*~data=user_id=0,application_id=42~hmac=0a22bed2353b01a1a96a88a07b3bc6c8b61cb7fa394ce56376e0909a4febe811",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/61/bb/93/61bb93de-a6fc-cff1-a24e-bcf92c57fdcd/mzaf_6001475491437849664.plus.aac.p.m4a"
+    },
+    {
+      "title": "High Right Now",
+      "artist": "Tyla Yaweh",
+      "oldUrl": "https://cdnt-preview.dzcdn.net/api/1/1/4/f/b/0/4fb88fa5b48cb98d66ff5bbc283d40cc.mp3?hdnea=exp=1788364238~acl=/api/1/1/4/f/b/0/4fb88fa5b48cb98d66ff5bbc283d40cc.mp3*~data=user_id=0,application_id=42~hmac=a0e5ce04d246168fe6353afd44ae904e9b8a761e63fd984526e95b8a2775d560",
+      "newUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/76/38/3a/76383a65-ade3-7ced-5cae-86d1c72fb9b7/mzaf_6092842813267247989.plus.aac.p.m4a"
+    }
+  ]
+}

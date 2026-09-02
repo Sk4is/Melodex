@@ -154,7 +154,7 @@ export const AudioBackground: React.FC<AudioBackgroundProps> = ({
         }
 
         const orbHue = (currentHue + orb.hueOffset + 360) % 360;
-        const orbSat = Math.max(20, Math.min(100, currentSat + orb.satOffset));
+        const orbSat = currentSat === 0 ? 0 : Math.max(20, Math.min(100, currentSat + orb.satOffset));
 
         const cx = orb.x * width + Math.sin(time + orb.hueOffset) * 20 * (motionMultiplier > 0 ? 1 : 0);
         const cy = orb.y * height + Math.cos(time + orb.hueOffset) * 20 * (motionMultiplier > 0 ? 1 : 0);
