@@ -16,6 +16,7 @@ export type GenreFilter =
   | 'rnb'
   | 'electronic'
   | 'latin'
+  | 'reggaeton'
   | 'indie'
   | 'metal'
   | 'dance';
@@ -47,6 +48,7 @@ export const GENRE_OPTIONS: GenreOption[] = [
   { id: 'rnb', label: 'R&B' },
   { id: 'electronic', label: 'Electronic' },
   { id: 'latin', label: 'Latin' },
+  { id: 'reggaeton', label: 'Reggaeton' },
   { id: 'indie', label: 'Indie' },
   { id: 'metal', label: 'Metal' },
   { id: 'dance', label: 'Dance' },

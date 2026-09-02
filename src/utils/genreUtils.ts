@@ -12,6 +12,7 @@ export const CANONICAL_GENRES: GenreFilter[] = [
   'rnb',
   'electronic',
   'latin',
+  'reggaeton',
   'indie',
   'metal',
   'dance',
@@ -25,6 +26,7 @@ export const GENRE_DISPLAY_NAMES: Record<GenreFilter, string> = {
   rnb: 'R&B',
   electronic: 'ELECTRONIC',
   latin: 'LATIN',
+  reggaeton: 'REGGAETON',
   indie: 'INDIE',
   metal: 'METAL',
   dance: 'DANCE',
@@ -47,6 +49,17 @@ export function computeNormalizedGenres(
   const t = (title || '').toLowerCase().trim();
   const al = (album || '').toLowerCase().trim();
   const fullContext = `${g} ${a} ${t} ${al}`;
+
+  // Explicit track-level overrides:
+  // Becky G - "Shower" is an English Pop hit, not Latin
+  if (a.includes('becky g') && t.includes('shower')) {
+    return ['pop'];
+  }
+  // Global Despacito override (Pop + Reggaeton)
+  if (t.includes('despacito')) {
+    return ['reggaeton', 'pop'];
+  }
+
   const set = new Set<GenreFilter>();
 
   // 1. Hip-Hop / Rap
@@ -179,11 +192,12 @@ export function computeNormalizedGenres(
     }
   }
 
-  // 7. Latin
-  if (
+  // 7. Latin & Reggaeton Classification (Track-level classification)
+  const isLatinOrUrbanSignal =
     g.includes('latin') ||
     g.includes('urbano') ||
     g.includes('reggaeton') ||
+    g.includes('reggaetón') ||
     g.includes('bachata') ||
     g.includes('salsa') ||
     g.includes('cumbia') ||
@@ -198,14 +212,307 @@ export function computeNormalizedGenres(
     g.includes('samba') ||
     g.includes('brazilian') ||
     g.includes('música mexicana') ||
-    g.includes('musica mexicana')
-  ) {
-    set.add('latin');
-    if (g.includes('pop latino') || g.includes('latin pop')) {
-      set.add('pop');
-    }
-    if (g.includes('urbano') || g.includes('reggaeton') || g.includes('trap latino')) {
+    g.includes('musica mexicana');
+
+  if (isLatinOrUrbanSignal) {
+    // A. Latin Trap / Urban Hip-Hop tracks -> map to 'hiphop' (NOT latin or reggaeton)
+    const isLatinTrapTrack =
+      (a.includes('bad bunny') && (
+        t === '<3' || t === '25/8' || t === 'bendiciones' ||
+        t === 'no te hagas' || t.includes('me mata') || t === 'de museo' ||
+        t.includes('monaco') || t.includes('vuelve')
+      )) ||
+      (a.includes('ozuna') && (
+        t.includes('solita') || t.includes('patek')
+      )) ||
+      (a.includes('duki') && (
+        t.includes("she don't give a fo") || t.includes('goteo') ||
+        t.includes('hitboy') || t.includes('bzrp music sessions, vol. 50') ||
+        t.includes('hablamos mañana') || t.includes('panamá') ||
+        t.includes('si me sobrara el tiempo') || t.includes('alley oop') ||
+        t.includes('la clase')
+      )) ||
+      (a.includes('myke towers') && (
+        t.includes('piensan') || t.includes('pending') || t.includes('cuerpo en venta')
+      )) ||
+      (a.includes('arcángel') && (
+        t.includes('infeliz') || t.includes('la ocasión') || t.includes('me ama me odia')
+      )) ||
+      (a.includes('bryant myers') && t.includes('ojalá')) ||
+      (a.includes('fat joe') && t.includes('yes')) ||
+      (a.includes('bizarrap') && (
+        t.includes('vol. 36') || t.includes('vol. 46') || t.includes('vol. 49') ||
+        t.includes('vol. 50') || t.includes('vol. 54') || t.includes('vol. 58') ||
+        t.includes('lil baby') || t.includes('yamen fui') || t.includes('mamichula')
+      ));
+
+    if (isLatinTrapTrack) {
       set.add('hiphop');
+    } else {
+      // B. Reggaeton-Pop Crossovers -> 'reggaeton' + 'pop'
+      const isReggaetonPopCrossover =
+        t.includes('despacito') ||
+        t.includes('con calma') ||
+        t.includes('limbo') ||
+        t.includes('llamado de emergencia') ||
+        t.includes('la despedida') ||
+        t.includes('danza kuduro') ||
+        t.includes('dutty love') ||
+        (t.includes('mía') && a.includes('bad bunny')) ||
+        (t.includes('la canción') && a.includes('bad bunny')) ||
+        (t.includes('si veo a tu mamá') && a.includes('bad bunny')) ||
+        (t.includes('estamos bien') && a.includes('bad bunny')) ||
+        (t.includes('pero ya no') && a.includes('bad bunny')) ||
+        (t.includes('me fui de vacaciones') && a.includes('bad bunny')) ||
+        (t.includes('ojitos lindos') && a.includes('bad bunny')) ||
+        (t.includes('neverita') && a.includes('bad bunny')) ||
+        t.includes('un dia (one day)') ||
+        t.includes('échame la culpa') ||
+        t.includes('karmika') ||
+        t.includes('kármika') ||
+        t.includes('está rico') ||
+        t.includes('sensualidad') ||
+        t.includes('mayores') ||
+        t.includes('sin pijama') ||
+        t.includes('mamiii') ||
+        t.includes('dollar') ||
+        (t.includes('chula') && a.includes('becky g')) ||
+        (t.includes('epa') && a.includes('becky g')) ||
+        (t.includes('que haces') && a.includes('becky g')) ||
+        (t.includes('la respuesta') && a.includes('becky g')) ||
+        t.includes('bubalú') ||
+        t.includes('chantaje') ||
+        t.includes('te felicito') ||
+        t.includes('perro fiel') ||
+        t.includes('la tortura') ||
+        (t.includes('bailando') && a.includes('enrique')) ||
+        t.includes('el perdón') ||
+        t.includes('duele el corazón') ||
+        t.includes('súbeme la radio') ||
+        t.includes('felices los 4') ||
+        t.includes('11 pm') ||
+        (t.includes('el perdedor') && a.includes('maluma')) ||
+        t.includes('hawái') ||
+        (t.includes('corazón') && a.includes('maluma')) ||
+        (t.includes('sobrio') && a.includes('maluma')) ||
+        t.includes('créeme') ||
+        t.includes('amigos con derechos') ||
+        (t.includes('la temperatura') && a.includes('maluma')) ||
+        (t.includes('bella') && a.includes('maluma')) ||
+        t.includes('tusa') ||
+        t.includes('tqg') ||
+        t.includes('provenza') ||
+        (t.includes('secreto') && a.includes('karol g')) ||
+        (t.includes('china') && a.includes('anuel')) ||
+        t.includes('baila baila baila') ||
+        (t.includes('criminal') && a.includes('natti natasha')) ||
+        (t.includes('la modelo') && a.includes('ozuna')) ||
+        (t.includes('vaina loca') && a.includes('ozuna')) ||
+        (t.includes('el farsante') && a.includes('ozuna')) ||
+        t.includes('caramelo') ||
+        t.includes('labios mordidos') ||
+        t.includes('mi mala') ||
+        t.includes('yo x ti, tú x mí') ||
+        (t.includes('imposible') && a.includes('fonsi')) ||
+        (t.includes('calypso') && a.includes('fonsi')) ||
+        (t.includes('date la vuelta') && a.includes('fonsi')) ||
+        (t.includes('vacío') && a.includes('fonsi')) ||
+        (t.includes('cambiaré') && a.includes('fonsi')) ||
+        (t.includes('beso') && a.includes('rosalía')) ||
+        (t.includes('baila conmigo') && a.includes('selena')) ||
+        (t.includes('tattoo') && a.includes('rauw')) ||
+        (t.includes('algo mágico') && a.includes('rauw')) ||
+        (t.includes('sci-fi') && a.includes('rauw')) ||
+        (t.includes('loquita') && a.includes('rauw')) ||
+        t.includes('pareja del año') ||
+        t.includes('envolver') ||
+        (t.includes('me gusta') && a.includes('anitta')) ||
+        t.includes('yapaque') ||
+        t.includes('una lady como tú') ||
+        t.includes('loco contigo') ||
+        (t.includes('mi gente') && a.includes('balvin')) ||
+        (t.includes('rojo') && a.includes('balvin')) ||
+        t.includes('sigo extrañándote') ||
+        t.includes('x (feat. maluma') ||
+        (t.includes('x') && a.includes('nicky jam') && a.includes('balvin')) ||
+        (t.includes('safari') && a.includes('balvin')) ||
+        t.includes('khé?') ||
+        t.includes('desenfocao') ||
+        (t.includes('santa') && a.includes('rauw')) ||
+        t.includes('con altura') ||
+        t.includes('hey ma') ||
+        t.includes('bola rebola') ||
+        t.includes('como si no importara') ||
+        t.includes('2:50 remix') ||
+        t.includes('los del espacio') ||
+        (t.includes('unfollow') && a.includes('duki')) ||
+        t.includes('bailando te conocí') ||
+        t.includes('enchule');
+
+      // C. Reggaeton-Dance Crossovers
+      const isReggaetonDanceCrossover =
+        t.includes('pepas') ||
+        t.includes('in da getto') ||
+        (t.includes('taboo') && a.includes('don omar')) ||
+        (t.includes('zumba') && a.includes('don omar')) ||
+        t.includes('virtual diva') ||
+        t.includes('lovumba') ||
+        t.includes('wapae') ||
+        (t.includes('pa ti') && a.includes('6ix9ine')) ||
+        t.includes('habla toro') ||
+        t.includes('papita frita') ||
+        t.includes('fulanito') ||
+        t.includes('ella no es tuya') ||
+        t.includes('el taxi') ||
+        t.includes('como yo le doy') ||
+        t.includes('tu pum pum');
+
+      // D. Pure Reggaeton tracks
+      const isPureReggaetonTrack =
+        g.includes('reggaeton') ||
+        g.includes('reggaetón') ||
+        g.includes('reggaeton latino') ||
+        (g.includes('urbano') && (
+          a.includes('daddy yankee') || a.includes('don omar') ||
+          a.includes('bad bunny') || a.includes('j balvin') ||
+          a.includes('ozuna') || a.includes('karol g') ||
+          a.includes('rauw alejandro') || a.includes('maluma') ||
+          a.includes('plan b') || a.includes('j alvarez') ||
+          a.includes('wisin') || a.includes('yandel') ||
+          a.includes('anuel') || a.includes('nicky jam') ||
+          a.includes('farruko') || a.includes('arcángel') ||
+          a.includes('arcangel') || a.includes('de la ghetto') ||
+          a.includes('myke towers') || a.includes('lunay') ||
+          a.includes('sech') || a.includes('el alfa') ||
+          a.includes('chencho') || a.includes('zion') ||
+          a.includes('natti natasha') || a.includes('manuel turizo') ||
+          a.includes('jhayco') || a.includes('jhay cortez') ||
+          a.includes('mora') || a.includes('feid')
+        )) ||
+        a.includes('plan b') ||
+        a.includes('j alvarez') ||
+        (a.includes('daddy yankee') && (
+          t.includes('gasolina') || t.includes('dura') || t.includes('shaky shaky') ||
+          t.includes('no me dejes solo') || t.includes('tu príncipe') ||
+          t.includes('lo que pasó, pasó') || t.includes('pose') ||
+          t.includes('la rompe corazones') || t.includes('ella me levantó')
+        )) ||
+        (a.includes('don omar') && (
+          t.includes('dile') || t.includes('dale don dale') || t.includes('pobre diabla') ||
+          t.includes('bandoleros') || t.includes('te quiero pa') || t.includes('hooka') ||
+          t.includes('mayor que yo') || t.includes('nadie como tú') || t.includes('myspace') ||
+          t.includes('salió el sol') || t.includes('ángelito') || t.includes('ojitos chiquitos') ||
+          t.includes('ayer la ví')
+        )) ||
+        (a.includes('wisin') && (
+          t.includes('besos mojados') || t.includes('ahora es') ||
+          t.includes('reggaetón en lo oscuro') || t.includes('besos moja2') ||
+          t.includes('3g')
+        )) ||
+        (a.includes('arcángel') && (
+          t.includes("pa' que la pases bien") || t.includes('por amar a ciegas') ||
+          t.includes('ganas de ti') || t.includes('satisfacción') ||
+          t.includes('te acuerdas') || t.includes('+linda')
+        )) ||
+        (a.includes('de la ghetto') && (
+          t.includes('ahí ahí ahí') || t.includes('todo el amor') ||
+          t.includes('relajate conmigo') || t.includes('tu te imaginas') ||
+          t.includes('acércate') || t.includes('ultra solo') || t.includes('panti y colale')
+        )) ||
+        (a.includes('farruko') && (
+          t.includes('chillax') || t.includes('hoy') || t.includes('la tóxica') ||
+          t.includes('singapur') || t.includes('la cartera') || t.includes('fantasías')
+        )) ||
+        (a.includes('nicky jam') && (
+          t.includes('polvo') || t.includes('travesuras') || t.includes('si tú no estás') ||
+          t.includes('sube la music') || t.includes('despacio')
+        )) ||
+        (a.includes('el alfa') && (
+          t.includes('goyard') || t.includes('singapur') || t.includes('dembow y reggaeton') ||
+          t.includes('déjalo que corra') || t.includes('panti y colale')
+        )) ||
+        (a.includes('lunay') && (
+          t.includes('soltera') || t.includes('la cama') || t.includes('aventura')
+        )) ||
+        (a.includes('sech') && (
+          t.includes('sigues con él') || t.includes('te acuerdas') || t.includes('la tóxica')
+        )) ||
+        a.includes('chencho corleone') ||
+        (a.includes('zion') && t.includes('tu príncipe')) ||
+        t.includes('no me conoce') || t.includes('la cama') ||
+        t.includes('la ocasión') || t.includes('ahora dice') || t.includes('una locura') ||
+        t.includes('dembow 2020') || t.includes('problemón') || t.includes('fantasías') ||
+        t.includes('el efecto') || t.includes('noche loca') || t.includes('muévelo') ||
+        t.includes('gatúbela') || t.includes('el makinón') || t.includes('culpables') ||
+        t.includes('mi cama') || t.includes('qué pretendes') || t.includes('mojaita') ||
+        t.includes('yo le llego') || t.includes('cuidao por ahí') || t.includes('como antes') ||
+        t.includes('la noche de anoche') || t.includes('azul') || t.includes('morado') ||
+        t.includes('ay vamos') || t.includes('6 am') || t.includes('ginza') ||
+        (t.includes('bonita') && a.includes('balvin')) || t.includes('se preparó') ||
+        t.includes('dile que tú me quieres') || t.includes('tu foto') || t.includes('si no te quiere') ||
+        (t.includes('bebé') && a.includes('ozuna')) || (t.includes('única') && a.includes('ozuna')) ||
+        t.includes('síguelo bailando') || t.includes('no quiere enamorarse') ||
+        t.includes('quiero repetir') || t.includes('hey mor') || t.includes('borró cassette') ||
+        t.includes('mala mía') || t.includes('sin contrato') || t.includes('el préstamo') ||
+        t.includes('almas gemelas') || t.includes('carita feliz') || t.includes('bella y sensual') ||
+        (t.includes('te vas') && a.includes('ozuna')) || t.includes('luz apaga') ||
+        t.includes('mala santa') || t.includes('perreo triste') ||
+        t.includes('hace mucho tiempo') || t.includes('me prefieres a mi') ||
+        t.includes('contigo quiero amores') || t.includes('50 sombras de austin') ||
+        t.includes('te robo') || (t.includes('sola') && a.includes('arcángel')) ||
+        t.includes('memoria rota') || t.includes('más que ayer') ||
+        t.includes('mi fanática') || t.includes('zum zum') ||
+        t.includes('enséñame a bailar') || t.includes('turista') ||
+        t.includes('a tu merced') || t.includes('pasaporte') ||
+        t.includes('guabansexxx') || t.includes('al mismo tiempo') ||
+        t.includes('aloha') || t.includes('elegí') ||
+        t.includes('pongo') || (t.includes('nubes') && a.includes('rauw')) ||
+        t.includes('toda (remix)') || t.includes('no me sorprende') ||
+        t.includes('cuándo fue') || (t.includes('detective') && a.includes('rauw')) ||
+        t.includes('verde menta') || t.includes('amor bipolar') ||
+        t.includes('no lo trates');
+
+      // Exclude non-reggaeton Latin styles even if by urban artists:
+      const isExplicitNonReggaetonLatin =
+        (a.includes('karol g') && t.includes('ocean')) ||
+        (t.includes('después de la playa') && a.includes('bad bunny')) ||
+        (t.includes('nuevayol') && a.includes('bad bunny')) ||
+        t.includes('si antes te hubiera conocido') || // Merengue
+        t.includes('mi ex tenía razón') || // Tejano cumbia
+        t.includes('200 copas') || // Corrido / Ranchera
+        (t.includes('tú con él') && a.includes('rauw')) || // Salsa
+        t.includes('coleccionando heridas') ||
+        t.includes('por qué será') ||
+        t.includes('cada quien') ||
+        t.includes('si tú me vieras') ||
+        (t.includes('alv') && a.includes('arcángel')) ||
+        (t.includes('la chamba') && a.includes('arcángel')) ||
+        t.includes('el pañuelo') ||
+        (a.includes('becky g') && (
+          t.includes('por el contrario') || t.includes('2ndo chance') ||
+          t.includes('mercedes') || t.includes('ya acabó') || t.includes('chanel')
+        ));
+
+      if (isExplicitNonReggaetonLatin) {
+        set.add('latin');
+      } else if (isReggaetonPopCrossover) {
+        set.add('reggaeton');
+        set.add('pop');
+      } else if (isReggaetonDanceCrossover) {
+        set.add('reggaeton');
+        set.add('dance');
+      } else if (isPureReggaetonTrack) {
+        set.add('reggaeton');
+      } else {
+        // E. Genuine Latin styles (Música Mexicana, Corridos, Norteño, Banda, Bachata, Salsa, Merengue, Latin Rock)
+        set.add('latin');
+        if (g.includes('pop latino') || g.includes('latin pop') || t.includes('ocean') || t.includes('marinero')) {
+          set.add('pop');
+        }
+        if (a.includes('juanes') || a.includes('maná') || a.includes('mana')) {
+          set.add('rock');
+        }
+      }
     }
   }
 
@@ -299,6 +606,7 @@ export function normalizeTrackGenres(track: {
       else if (lower === 'rnb' || lower === 'soul') valid.add('rnb');
       else if (lower === 'electronic' || lower === 'electro') valid.add('electronic');
       else if (lower === 'latin') valid.add('latin');
+      else if (lower === 'reggaeton' || lower === 'reggaetn') valid.add('reggaeton');
       else if (lower === 'indie') valid.add('indie');
       else if (lower === 'metal') valid.add('metal');
       else if (lower === 'dance') valid.add('dance');

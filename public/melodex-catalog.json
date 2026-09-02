@@ -7084,8 +7084,7 @@
     "audioValidatedAt": 1788364829778,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -7435,8 +7434,8 @@
     "audioValidatedAt": 1788364829799,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -7486,8 +7485,8 @@
     "audioValidatedAt": 1788364829804,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -7537,7 +7536,8 @@
     "audioValidatedAt": 1788364829806,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -7762,8 +7762,7 @@
     "audioValidatedAt": 1788364829824,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -7813,8 +7812,7 @@
     "audioValidatedAt": 1788364829828,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -7864,7 +7862,8 @@
     "audioValidatedAt": 1788364829830,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -8064,8 +8063,7 @@
     "audioValidatedAt": 1788364829840,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -8090,8 +8088,7 @@
     "audioValidatedAt": 1788364829844,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -8442,8 +8439,7 @@
     "audioValidatedAt": 1788364829861,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -8543,8 +8539,8 @@
     "audioValidatedAt": 1788364829866,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -8644,8 +8640,7 @@
     "audioValidatedAt": 1788364829872,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -8694,7 +8689,8 @@
     "audioValidatedAt": 1788364829876,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -8770,7 +8766,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -8795,7 +8791,6 @@
     "audioValidatedAt": 1788364829882,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
       "hiphop"
     ],
     "playable": true
@@ -8871,8 +8866,8 @@
     "audioValidatedAt": 1788364829883,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -8897,8 +8892,8 @@
     "audioValidatedAt": 1788364829887,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -8973,7 +8968,7 @@
     "audioValidatedAt": 1788364829889,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -9024,8 +9019,8 @@
     "audioValidatedAt": 1788364829894,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -9050,8 +9045,7 @@
     "audioValidatedAt": 1788364829895,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9076,8 +9070,7 @@
     "audioValidatedAt": 1788364829896,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9103,7 +9096,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9152,8 +9145,8 @@
     "audioValidatedAt": 1788364829901,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -9178,8 +9171,7 @@
     "audioValidatedAt": 1788364829904,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9230,7 +9222,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9256,7 +9248,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9281,8 +9273,7 @@
     "audioValidatedAt": 1788364829910,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9307,8 +9298,7 @@
     "audioValidatedAt": 1788364829913,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9384,8 +9374,8 @@
     "audioValidatedAt": 1788364829915,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -9460,8 +9450,7 @@
     "audioValidatedAt": 1788364829921,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9486,8 +9475,7 @@
     "audioValidatedAt": 1788364829925,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -9562,8 +9550,7 @@
     "audioValidatedAt": 1788364829931,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -14260,8 +14247,7 @@
     "audioValidatedAt": 1788364830713,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -15006,8 +14992,8 @@
     "audioValidatedAt": 1788364830975,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -16443,8 +16429,8 @@
     "audioValidatedAt": 1788364831298,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -17858,7 +17844,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -17883,8 +17869,8 @@
     "audioValidatedAt": 1788364831670,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -17910,7 +17896,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -17935,8 +17921,7 @@
     "audioValidatedAt": 1788364831714,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -18061,8 +18046,7 @@
     "audioValidatedAt": 1788364831767,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -18811,8 +18795,7 @@
     "audioValidatedAt": 1788364832085,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -21965,7 +21948,8 @@
     "audioValidatedAt": 1788364832589,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -22414,7 +22398,6 @@
     "audioValidatedAt": 1788364832713,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
       "hiphop"
     ],
     "playable": true
@@ -28488,7 +28471,8 @@
     "audioValidatedAt": 1788364833534,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -40376,8 +40360,7 @@
     "audioValidatedAt": 1788364834954,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40403,7 +40386,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40428,8 +40411,8 @@
     "audioValidatedAt": 1788364834957,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -40531,8 +40514,7 @@
     "audioValidatedAt": 1788364834982,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40583,8 +40565,7 @@
     "audioValidatedAt": 1788364834983,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40635,8 +40616,8 @@
     "audioValidatedAt": 1788364834988,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -40687,7 +40668,7 @@
     "audioValidatedAt": 1788364834998,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40790,8 +40771,7 @@
     "audioValidatedAt": 1788364835013,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40919,8 +40899,7 @@
     "audioValidatedAt": 1788364835024,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40945,8 +40924,7 @@
     "audioValidatedAt": 1788364835030,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -40996,8 +40974,8 @@
     "audioValidatedAt": 1788364835032,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -41099,7 +41077,7 @@
     "audioValidatedAt": 1788364835043,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -41124,8 +41102,8 @@
     "audioValidatedAt": 1788364835047,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -41150,8 +41128,7 @@
     "audioValidatedAt": 1788364835059,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -41228,7 +41205,7 @@
     "audioValidatedAt": 1788364835077,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -41406,8 +41383,7 @@
     "audioValidatedAt": 1788364835105,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -41432,8 +41408,8 @@
     "audioValidatedAt": 1788364835116,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -41483,8 +41459,7 @@
     "audioValidatedAt": 1788364835128,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -41534,8 +41509,7 @@
     "audioValidatedAt": 1788364835140,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -45324,7 +45298,7 @@
     "audioValidatedAt": 1788364835613,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -46961,8 +46935,7 @@
     "audioValidatedAt": 1788364835824,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -52381,8 +52354,7 @@
     "audioValidatedAt": 1788364836471,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -61347,7 +61319,7 @@
     "audioValidatedAt": 1788364838720,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -61395,7 +61367,8 @@
     "audioValidatedAt": 1788364838736,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -61444,8 +61417,7 @@
     "audioValidatedAt": 1788364838742,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -61469,7 +61441,8 @@
     "audioValidatedAt": 1788364838747,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -61494,8 +61467,8 @@
     "audioValidatedAt": 1788364838748,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -61546,8 +61519,7 @@
     "audioValidatedAt": 1788364838758,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -61572,7 +61544,6 @@
     "audioValidatedAt": 1788364838764,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
       "hiphop"
     ],
     "playable": true
@@ -61598,7 +61569,7 @@
     "audioValidatedAt": 1788364838770,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -61623,8 +61594,7 @@
     "audioValidatedAt": 1788364838787,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -61674,8 +61644,8 @@
     "audioValidatedAt": 1788364838807,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -61700,7 +61670,6 @@
     "audioValidatedAt": 1788364838807,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
       "hiphop"
     ],
     "playable": true
@@ -61751,8 +61720,7 @@
     "audioValidatedAt": 1788364838816,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -63959,7 +63927,8 @@
     "audioValidatedAt": 1788364839293,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -65059,8 +65028,7 @@
     "audioValidatedAt": 1788364839467,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -65360,7 +65328,8 @@
     "audioValidatedAt": 1788364839489,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -69527,8 +69496,7 @@
     "audioValidatedAt": 1788364840156,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69627,8 +69595,7 @@
     "audioValidatedAt": 1788364840160,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69653,8 +69620,7 @@
     "audioValidatedAt": 1788364840160,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69679,8 +69645,7 @@
     "audioValidatedAt": 1788364840161,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69705,8 +69670,7 @@
     "audioValidatedAt": 1788364840161,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69731,8 +69695,7 @@
     "audioValidatedAt": 1788364840165,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69757,8 +69720,7 @@
     "audioValidatedAt": 1788364840165,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69783,8 +69745,7 @@
     "audioValidatedAt": 1788364840165,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69809,8 +69770,7 @@
     "audioValidatedAt": 1788364840166,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -69913,8 +69873,7 @@
     "audioValidatedAt": 1788364840170,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -70867,8 +70826,7 @@
     "audioValidatedAt": 1788364840218,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -70893,8 +70851,7 @@
     "audioValidatedAt": 1788364840219,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -70969,8 +70926,7 @@
     "audioValidatedAt": 1788364840223,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -70995,8 +70951,7 @@
     "audioValidatedAt": 1788364840224,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71021,8 +70976,7 @@
     "audioValidatedAt": 1788364840224,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71047,8 +71001,7 @@
     "audioValidatedAt": 1788364840225,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71073,8 +71026,7 @@
     "audioValidatedAt": 1788364840228,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71099,8 +71051,7 @@
     "audioValidatedAt": 1788364840228,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71150,8 +71101,7 @@
     "audioValidatedAt": 1788364840229,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -71401,8 +71351,7 @@
     "audioValidatedAt": 1788364840245,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74483,8 +74432,7 @@
     "audioValidatedAt": 1788364840651,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74634,8 +74582,7 @@
     "audioValidatedAt": 1788364840659,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74660,8 +74607,7 @@
     "audioValidatedAt": 1788364840663,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74686,8 +74632,7 @@
     "audioValidatedAt": 1788364840663,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74762,8 +74707,7 @@
     "audioValidatedAt": 1788364840670,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74788,8 +74732,7 @@
     "audioValidatedAt": 1788364840671,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74814,8 +74757,7 @@
     "audioValidatedAt": 1788364840671,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74840,8 +74782,7 @@
     "audioValidatedAt": 1788364840674,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74891,8 +74832,7 @@
     "audioValidatedAt": 1788364840678,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74917,8 +74857,7 @@
     "audioValidatedAt": 1788364840678,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -74943,8 +74882,7 @@
     "audioValidatedAt": 1788364840678,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75254,8 +75192,7 @@
     "audioValidatedAt": 1788364840701,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75280,8 +75217,7 @@
     "audioValidatedAt": 1788364840706,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75306,8 +75242,7 @@
     "audioValidatedAt": 1788364840706,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75332,8 +75267,7 @@
     "audioValidatedAt": 1788364840707,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75358,8 +75292,7 @@
     "audioValidatedAt": 1788364840707,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75384,8 +75317,7 @@
     "audioValidatedAt": 1788364840711,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75410,8 +75342,7 @@
     "audioValidatedAt": 1788364840711,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75436,8 +75367,7 @@
     "audioValidatedAt": 1788364840712,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75462,8 +75392,7 @@
     "audioValidatedAt": 1788364840965,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75488,8 +75417,7 @@
     "audioValidatedAt": 1788364840969,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75514,8 +75442,7 @@
     "audioValidatedAt": 1788364840970,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75540,8 +75467,7 @@
     "audioValidatedAt": 1788364840976,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75566,8 +75492,7 @@
     "audioValidatedAt": 1788364841015,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75592,8 +75517,7 @@
     "audioValidatedAt": 1788364841023,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75644,8 +75568,7 @@
     "audioValidatedAt": 1788364841024,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75670,8 +75593,7 @@
     "audioValidatedAt": 1788364841024,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75696,8 +75618,7 @@
     "audioValidatedAt": 1788364841028,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75722,8 +75643,7 @@
     "audioValidatedAt": 1788364841028,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75748,8 +75668,7 @@
     "audioValidatedAt": 1788364841029,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75774,8 +75693,7 @@
     "audioValidatedAt": 1788364841030,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75800,8 +75718,7 @@
     "audioValidatedAt": 1788364841033,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75826,8 +75743,7 @@
     "audioValidatedAt": 1788364841034,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75852,8 +75768,7 @@
     "audioValidatedAt": 1788364841034,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75878,8 +75793,7 @@
     "audioValidatedAt": 1788364841037,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75904,8 +75818,7 @@
     "audioValidatedAt": 1788364841041,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75930,8 +75843,7 @@
     "audioValidatedAt": 1788364841043,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75956,8 +75868,7 @@
     "audioValidatedAt": 1788364841045,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -75982,8 +75893,7 @@
     "audioValidatedAt": 1788364841046,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76058,8 +75968,7 @@
     "audioValidatedAt": 1788364841053,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76084,8 +75993,7 @@
     "audioValidatedAt": 1788364841056,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76110,8 +76018,7 @@
     "audioValidatedAt": 1788364841059,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76161,8 +76068,7 @@
     "audioValidatedAt": 1788364841066,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76187,8 +76093,7 @@
     "audioValidatedAt": 1788364841066,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76213,8 +76118,7 @@
     "audioValidatedAt": 1788364841070,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76239,8 +76143,7 @@
     "audioValidatedAt": 1788364841076,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76265,8 +76168,7 @@
     "audioValidatedAt": 1788364841079,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76291,8 +76193,7 @@
     "audioValidatedAt": 1788364841100,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76317,8 +76218,7 @@
     "audioValidatedAt": 1788364841104,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76343,8 +76243,7 @@
     "audioValidatedAt": 1788364841104,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76369,8 +76268,7 @@
     "audioValidatedAt": 1788364841108,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76395,8 +76293,7 @@
     "audioValidatedAt": 1788364841143,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76421,8 +76318,7 @@
     "audioValidatedAt": 1788364841148,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76447,8 +76343,7 @@
     "audioValidatedAt": 1788364841149,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76473,8 +76368,7 @@
     "audioValidatedAt": 1788364841151,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76499,8 +76393,7 @@
     "audioValidatedAt": 1788364841158,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76525,8 +76418,7 @@
     "audioValidatedAt": 1788364841162,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76551,8 +76443,7 @@
     "audioValidatedAt": 1788364841162,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76885,8 +76776,7 @@
     "audioValidatedAt": 1788364841181,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76937,8 +76827,7 @@
     "audioValidatedAt": 1788364841185,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76963,8 +76852,7 @@
     "audioValidatedAt": 1788364841186,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -76989,8 +76877,7 @@
     "audioValidatedAt": 1788364841187,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77015,8 +76902,7 @@
     "audioValidatedAt": 1788364841190,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77041,8 +76927,7 @@
     "audioValidatedAt": 1788364841193,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77067,8 +76952,7 @@
     "audioValidatedAt": 1788364841195,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77093,8 +76977,7 @@
     "audioValidatedAt": 1788364841200,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77119,8 +77002,7 @@
     "audioValidatedAt": 1788364841224,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77223,8 +77105,7 @@
     "audioValidatedAt": 1788364841279,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77767,8 +77648,7 @@
     "audioValidatedAt": 1788364841308,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77793,8 +77673,7 @@
     "audioValidatedAt": 1788364841308,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77844,8 +77723,7 @@
     "audioValidatedAt": 1788364841309,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77870,8 +77748,7 @@
     "audioValidatedAt": 1788364841312,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77896,8 +77773,7 @@
     "audioValidatedAt": 1788364841312,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77922,8 +77798,7 @@
     "audioValidatedAt": 1788364841313,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -77973,8 +77848,7 @@
     "audioValidatedAt": 1788364841317,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78024,8 +77898,7 @@
     "audioValidatedAt": 1788364841317,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78050,8 +77923,7 @@
     "audioValidatedAt": 1788364841318,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78076,8 +77948,7 @@
     "audioValidatedAt": 1788364841321,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78102,8 +77973,7 @@
     "audioValidatedAt": 1788364841322,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78153,8 +78023,7 @@
     "audioValidatedAt": 1788364841322,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78229,8 +78098,7 @@
     "audioValidatedAt": 1788364841327,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78480,8 +78348,7 @@
     "audioValidatedAt": 1788364841342,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78506,8 +78373,7 @@
     "audioValidatedAt": 1788364841342,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78532,8 +78398,7 @@
     "audioValidatedAt": 1788364841342,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78583,8 +78448,7 @@
     "audioValidatedAt": 1788364841347,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78609,8 +78473,7 @@
     "audioValidatedAt": 1788364841347,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78635,8 +78498,7 @@
     "audioValidatedAt": 1788364841348,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78661,8 +78523,7 @@
     "audioValidatedAt": 1788364841354,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78713,8 +78574,7 @@
     "audioValidatedAt": 1788364841358,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78739,8 +78599,7 @@
     "audioValidatedAt": 1788364841359,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -78765,8 +78624,7 @@
     "audioValidatedAt": 1788364841402,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80127,8 +79985,7 @@
     "audioValidatedAt": 1788364841740,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80153,8 +80010,7 @@
     "audioValidatedAt": 1788364841740,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80283,8 +80139,7 @@
     "audioValidatedAt": 1788364841753,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80309,8 +80164,7 @@
     "audioValidatedAt": 1788364841794,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80335,8 +80189,7 @@
     "audioValidatedAt": 1788364841798,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80361,8 +80214,7 @@
     "audioValidatedAt": 1788364841799,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80412,8 +80264,7 @@
     "audioValidatedAt": 1788364841815,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80438,8 +80289,7 @@
     "audioValidatedAt": 1788364841818,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80489,8 +80339,7 @@
     "audioValidatedAt": 1788364841824,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80515,8 +80364,7 @@
     "audioValidatedAt": 1788364841862,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80541,8 +80389,7 @@
     "audioValidatedAt": 1788364841866,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80567,8 +80414,7 @@
     "audioValidatedAt": 1788364841868,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80593,8 +80439,7 @@
     "audioValidatedAt": 1788364841869,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -80619,8 +80464,7 @@
     "audioValidatedAt": 1788364841871,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -84481,8 +84325,7 @@
     "audioValidatedAt": 1788364844811,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -86955,8 +86798,8 @@
     "audioValidatedAt": 1788364847646,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -86981,8 +86824,8 @@
     "audioValidatedAt": 1788364847646,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -87007,8 +86850,7 @@
     "audioValidatedAt": 1788364847646,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -87109,8 +86951,8 @@
     "audioValidatedAt": 1788364847651,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -87135,8 +86977,8 @@
     "audioValidatedAt": 1788364847652,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -89942,7 +89784,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -90045,7 +89887,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -90247,7 +90089,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -92943,8 +92785,8 @@
     "audioValidatedAt": 1788364848890,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -93228,8 +93070,7 @@
     "audioValidatedAt": 1788364848965,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93760,8 +93601,8 @@
     "audioValidatedAt": 1788364849049,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -93786,6 +93627,7 @@
     "audioValidatedAt": 1788364849049,
     "failureCount": 0,
     "normalizedGenres": [
+      "reggaeton",
       "pop"
     ],
     "playable": true
@@ -93811,8 +93653,7 @@
     "audioValidatedAt": 1788364849050,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93837,8 +93678,7 @@
     "audioValidatedAt": 1788364849061,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93863,8 +93703,8 @@
     "audioValidatedAt": 1788364849065,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -93889,8 +93729,7 @@
     "audioValidatedAt": 1788364849065,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93915,8 +93754,7 @@
     "audioValidatedAt": 1788364849065,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93941,8 +93779,7 @@
     "audioValidatedAt": 1788364849066,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93967,8 +93804,7 @@
     "audioValidatedAt": 1788364849069,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -93993,8 +93829,7 @@
     "audioValidatedAt": 1788364849070,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94019,8 +93854,7 @@
     "audioValidatedAt": 1788364849070,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94045,8 +93879,8 @@
     "audioValidatedAt": 1788364849075,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94071,8 +93905,8 @@
     "audioValidatedAt": 1788364849079,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94097,8 +93931,8 @@
     "audioValidatedAt": 1788364849081,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94123,8 +93957,7 @@
     "audioValidatedAt": 1788364849081,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94149,8 +93982,8 @@
     "audioValidatedAt": 1788364849081,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94175,7 +94008,7 @@
     "audioValidatedAt": 1788364849086,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94200,8 +94033,8 @@
     "audioValidatedAt": 1788364849086,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94227,7 +94060,8 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -94252,8 +94086,7 @@
     "audioValidatedAt": 1788364849093,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94278,8 +94111,7 @@
     "audioValidatedAt": 1788364849097,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94380,8 +94212,7 @@
     "audioValidatedAt": 1788364849102,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -94406,8 +94237,7 @@
     "audioValidatedAt": 1788364849102,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94432,8 +94262,7 @@
     "audioValidatedAt": 1788364849102,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94483,8 +94312,8 @@
     "audioValidatedAt": 1788364849109,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94534,8 +94363,7 @@
     "audioValidatedAt": 1788364849111,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94560,8 +94388,7 @@
     "audioValidatedAt": 1788364849111,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -94635,8 +94462,7 @@
     "audioValidatedAt": 1788364849130,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94661,8 +94487,7 @@
     "audioValidatedAt": 1788364849131,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -94788,8 +94613,8 @@
     "audioValidatedAt": 1788364849146,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94866,7 +94691,8 @@
     "audioValidatedAt": 1788364849180,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -94993,8 +94819,7 @@
     "audioValidatedAt": 1788364849241,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95096,8 +94921,8 @@
     "audioValidatedAt": 1788364849295,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95122,8 +94947,7 @@
     "audioValidatedAt": 1788364849295,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95148,8 +94972,7 @@
     "audioValidatedAt": 1788364849295,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95174,8 +94997,7 @@
     "audioValidatedAt": 1788364849296,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95200,8 +95022,8 @@
     "audioValidatedAt": 1788364849300,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95226,8 +95048,7 @@
     "audioValidatedAt": 1788364849300,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95252,8 +95073,7 @@
     "audioValidatedAt": 1788364849301,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95278,8 +95098,7 @@
     "audioValidatedAt": 1788364849302,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95304,8 +95123,7 @@
     "audioValidatedAt": 1788364849305,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95330,8 +95148,8 @@
     "audioValidatedAt": 1788364849305,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95356,8 +95174,7 @@
     "audioValidatedAt": 1788364849305,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95382,8 +95199,7 @@
     "audioValidatedAt": 1788364849306,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95432,8 +95248,7 @@
     "audioValidatedAt": 1788364849310,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95458,8 +95273,8 @@
     "audioValidatedAt": 1788364849310,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95484,8 +95299,8 @@
     "audioValidatedAt": 1788364849314,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95510,8 +95325,7 @@
     "audioValidatedAt": 1788364849318,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95536,8 +95350,7 @@
     "audioValidatedAt": 1788364849318,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95562,8 +95375,7 @@
     "audioValidatedAt": 1788364849318,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95588,8 +95400,7 @@
     "audioValidatedAt": 1788364849318,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95614,8 +95425,8 @@
     "audioValidatedAt": 1788364849322,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95640,8 +95451,7 @@
     "audioValidatedAt": 1788364849322,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95666,8 +95476,7 @@
     "audioValidatedAt": 1788364849322,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95692,8 +95501,8 @@
     "audioValidatedAt": 1788364849323,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95718,7 +95527,6 @@
     "audioValidatedAt": 1788364849326,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
       "hiphop"
     ],
     "playable": true
@@ -95744,8 +95552,7 @@
     "audioValidatedAt": 1788364849326,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95770,8 +95577,7 @@
     "audioValidatedAt": 1788364849327,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95796,7 +95602,7 @@
     "audioValidatedAt": 1788364849328,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95821,8 +95627,7 @@
     "audioValidatedAt": 1788364849332,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95847,8 +95652,8 @@
     "audioValidatedAt": 1788364849332,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -95898,8 +95703,7 @@
     "audioValidatedAt": 1788364849333,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95924,8 +95728,7 @@
     "audioValidatedAt": 1788364849337,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95950,8 +95753,7 @@
     "audioValidatedAt": 1788364849337,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -95976,8 +95778,7 @@
     "audioValidatedAt": 1788364849338,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96002,8 +95803,8 @@
     "audioValidatedAt": 1788364849342,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96028,8 +95829,7 @@
     "audioValidatedAt": 1788364849346,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96054,8 +95854,8 @@
     "audioValidatedAt": 1788364849347,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96080,8 +95880,8 @@
     "audioValidatedAt": 1788364849347,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96106,8 +95906,8 @@
     "audioValidatedAt": 1788364849352,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96132,8 +95932,8 @@
     "audioValidatedAt": 1788364849357,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96158,8 +95958,7 @@
     "audioValidatedAt": 1788364849359,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96184,8 +95983,8 @@
     "audioValidatedAt": 1788364849360,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96210,8 +96009,7 @@
     "audioValidatedAt": 1788364849369,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96262,8 +96060,8 @@
     "audioValidatedAt": 1788364849372,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96289,7 +96087,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96314,8 +96112,7 @@
     "audioValidatedAt": 1788364849509,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96340,8 +96137,8 @@
     "audioValidatedAt": 1788364849514,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96391,7 +96188,8 @@
     "audioValidatedAt": 1788364849523,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96466,7 +96264,8 @@
     "audioValidatedAt": 1788364849551,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96491,7 +96290,8 @@
     "audioValidatedAt": 1788364849554,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -96516,8 +96316,7 @@
     "audioValidatedAt": 1788364849568,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96595,7 +96394,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96621,7 +96420,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96699,7 +96498,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96750,7 +96549,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -96776,7 +96575,7 @@
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -97430,7 +97229,7 @@
     "audioValidatedAt": 1788364849777,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -97630,8 +97429,7 @@
     "audioValidatedAt": 1788364849843,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin",
-      "hiphop"
+      "latin"
     ],
     "playable": true
   },
@@ -103018,8 +102816,7 @@
     "audioValidatedAt": 1788364850891,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -103118,8 +102915,7 @@
     "audioValidatedAt": 1788364850896,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -103144,8 +102940,7 @@
     "audioValidatedAt": 1788364850896,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -103221,8 +103016,7 @@
     "audioValidatedAt": 1788364850900,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -103273,8 +103067,7 @@
     "audioValidatedAt": 1788364850900,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -103299,8 +103092,7 @@
     "audioValidatedAt": 1788364850901,
     "failureCount": 0,
     "normalizedGenres": [
-      "rock",
-      "metal"
+      "rock"
     ],
     "playable": true
   },
@@ -106320,7 +106112,7 @@
     "audioValidatedAt": 1788364851216,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -106344,7 +106136,7 @@
     "audioValidatedAt": 1788364851217,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -106368,7 +106160,7 @@
     "audioValidatedAt": 1788364851218,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -106392,7 +106184,7 @@
     "audioValidatedAt": 1788364851222,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -106416,7 +106208,8 @@
     "audioValidatedAt": 1788364851223,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -106440,7 +106233,8 @@
     "audioValidatedAt": 1788364851223,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -106560,7 +106354,7 @@
     "audioValidatedAt": 1788364851280,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -116243,7 +116037,7 @@
     "audioValidatedAt": 1788364854124,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -116339,7 +116133,8 @@
     "audioValidatedAt": 1788364854129,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -116435,7 +116230,8 @@
     "audioValidatedAt": 1788364854137,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -116603,7 +116399,8 @@
     "audioValidatedAt": 1788364854167,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -116651,7 +116448,7 @@
     "audioValidatedAt": 1788364854175,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133572,7 +133369,7 @@
     "audioValidatedAt": 1788364858826,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133596,7 +133393,7 @@
     "audioValidatedAt": 1788364858827,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133620,7 +133417,7 @@
     "audioValidatedAt": 1788364858828,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133644,7 +133441,7 @@
     "audioValidatedAt": 1788364858829,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133668,7 +133465,7 @@
     "audioValidatedAt": 1788364858837,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133692,7 +133489,7 @@
     "audioValidatedAt": 1788364858839,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133716,7 +133513,7 @@
     "audioValidatedAt": 1788364858879,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133740,7 +133537,7 @@
     "audioValidatedAt": 1788364858882,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133764,7 +133561,7 @@
     "audioValidatedAt": 1788364858886,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133788,7 +133585,7 @@
     "audioValidatedAt": 1788364858893,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133812,7 +133609,7 @@
     "audioValidatedAt": 1788364858902,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133836,7 +133633,7 @@
     "audioValidatedAt": 1788364858922,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133860,7 +133657,7 @@
     "audioValidatedAt": 1788364858932,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133884,7 +133681,7 @@
     "audioValidatedAt": 1788364858934,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133908,7 +133705,7 @@
     "audioValidatedAt": 1788364858936,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133932,7 +133729,7 @@
     "audioValidatedAt": 1788364858971,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -133980,7 +133777,7 @@
     "audioValidatedAt": 1788364858977,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -134028,7 +133825,7 @@
     "audioValidatedAt": 1788364858985,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134052,7 +133849,7 @@
     "audioValidatedAt": 1788364858988,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134076,7 +133873,7 @@
     "audioValidatedAt": 1788364858990,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134100,7 +133897,7 @@
     "audioValidatedAt": 1788364858995,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134124,7 +133921,7 @@
     "audioValidatedAt": 1788364859032,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134172,7 +133969,7 @@
     "audioValidatedAt": 1788364859044,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -134196,7 +133993,7 @@
     "audioValidatedAt": 1788364859044,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134220,7 +134017,7 @@
     "audioValidatedAt": 1788364859074,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134244,7 +134041,7 @@
     "audioValidatedAt": 1788364859084,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134268,7 +134065,7 @@
     "audioValidatedAt": 1788364859084,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134292,7 +134089,8 @@
     "audioValidatedAt": 1788364859085,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134316,7 +134114,7 @@
     "audioValidatedAt": 1788364859098,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134340,7 +134138,7 @@
     "audioValidatedAt": 1788364859108,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134364,7 +134162,7 @@
     "audioValidatedAt": 1788364859112,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134388,7 +134186,7 @@
     "audioValidatedAt": 1788364859141,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134412,7 +134210,7 @@
     "audioValidatedAt": 1788364859144,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134436,7 +134234,8 @@
     "audioValidatedAt": 1788364859147,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134460,7 +134259,8 @@
     "audioValidatedAt": 1788364859148,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134532,7 +134332,8 @@
     "audioValidatedAt": 1788364859231,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134676,7 +134477,8 @@
     "audioValidatedAt": 1788364859341,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134748,7 +134550,7 @@
     "audioValidatedAt": 1788364859375,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -134772,7 +134574,8 @@
     "audioValidatedAt": 1788364859378,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "dance"
     ],
     "playable": true
   },
@@ -134844,7 +134647,8 @@
     "audioValidatedAt": 1788364859413,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -134964,7 +134768,8 @@
     "audioValidatedAt": 1788364859477,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -135037,7 +134842,7 @@
     "audioValidatedAt": 1788364859487,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162727,7 +162532,7 @@
     "audioValidatedAt": 1788364870726,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162751,7 +162556,7 @@
     "audioValidatedAt": 1788364870729,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162775,7 +162580,7 @@
     "audioValidatedAt": 1788364870730,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162799,7 +162604,7 @@
     "audioValidatedAt": 1788364870734,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162823,7 +162628,7 @@
     "audioValidatedAt": 1788364870734,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162847,7 +162652,7 @@
     "audioValidatedAt": 1788364870735,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162871,7 +162676,7 @@
     "audioValidatedAt": 1788364870774,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162895,7 +162700,7 @@
     "audioValidatedAt": 1788364870784,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162943,7 +162748,7 @@
     "audioValidatedAt": 1788364870822,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -162967,7 +162772,7 @@
     "audioValidatedAt": 1788364872634,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163015,7 +162820,7 @@
     "audioValidatedAt": 1788364872643,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163039,7 +162844,7 @@
     "audioValidatedAt": 1788364872643,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163063,7 +162868,7 @@
     "audioValidatedAt": 1788364872652,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163087,7 +162892,7 @@
     "audioValidatedAt": 1788364872661,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163111,7 +162916,7 @@
     "audioValidatedAt": 1788364872664,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163135,7 +162940,7 @@
     "audioValidatedAt": 1788364872679,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163159,7 +162964,7 @@
     "audioValidatedAt": 1788364872700,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163183,7 +162988,7 @@
     "audioValidatedAt": 1788364872709,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163207,7 +163012,7 @@
     "audioValidatedAt": 1788364872710,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163231,7 +163036,7 @@
     "audioValidatedAt": 1788364872712,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163255,7 +163060,7 @@
     "audioValidatedAt": 1788364872764,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163303,7 +163108,7 @@
     "audioValidatedAt": 1788364872789,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -163327,7 +163132,7 @@
     "audioValidatedAt": 1788364872815,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163351,7 +163156,7 @@
     "audioValidatedAt": 1788364872832,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163399,7 +163204,7 @@
     "audioValidatedAt": 1788364872854,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163447,7 +163252,7 @@
     "audioValidatedAt": 1788364872879,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163495,7 +163300,7 @@
     "audioValidatedAt": 1788364872883,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -163519,7 +163324,7 @@
     "audioValidatedAt": 1788364872885,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -163639,7 +163444,7 @@
     "audioValidatedAt": 1788364872983,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163663,7 +163468,8 @@
     "audioValidatedAt": 1788364872999,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -163759,7 +163565,8 @@
     "audioValidatedAt": 1788364873222,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -163783,7 +163590,8 @@
     "audioValidatedAt": 1788364873225,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -163807,7 +163615,7 @@
     "audioValidatedAt": 1788364873225,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -163855,7 +163663,8 @@
     "audioValidatedAt": 1788364873290,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -164023,7 +163832,8 @@
     "audioValidatedAt": 1788364873759,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -164047,7 +163857,8 @@
     "audioValidatedAt": 1788364873765,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164071,7 +163882,7 @@
     "audioValidatedAt": 1788364873780,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -164095,7 +163906,8 @@
     "audioValidatedAt": 1788364873803,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164119,7 +163931,8 @@
     "audioValidatedAt": 1788364873822,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164167,7 +163980,8 @@
     "audioValidatedAt": 1788364873834,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164215,7 +164029,8 @@
     "audioValidatedAt": 1788364873870,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164383,7 +164198,8 @@
     "audioValidatedAt": 1788364873974,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164455,7 +164271,8 @@
     "audioValidatedAt": 1788364874055,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164479,7 +164296,7 @@
     "audioValidatedAt": 1788364874076,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -164503,7 +164320,8 @@
     "audioValidatedAt": 1788364874088,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164527,7 +164345,8 @@
     "audioValidatedAt": 1788364874092,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164575,7 +164394,8 @@
     "audioValidatedAt": 1788364874102,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164599,7 +164419,8 @@
     "audioValidatedAt": 1788364874130,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164671,7 +164492,8 @@
     "audioValidatedAt": 1788364874151,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164719,7 +164541,8 @@
     "audioValidatedAt": 1788364874230,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164743,7 +164566,8 @@
     "audioValidatedAt": 1788364874230,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164767,7 +164591,8 @@
     "audioValidatedAt": 1788364874231,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164815,7 +164640,8 @@
     "audioValidatedAt": 1788364874247,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164839,7 +164665,8 @@
     "audioValidatedAt": 1788364874256,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164863,7 +164690,8 @@
     "audioValidatedAt": 1788364874279,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164887,7 +164715,8 @@
     "audioValidatedAt": 1788364874281,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164911,7 +164740,8 @@
     "audioValidatedAt": 1788364874298,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -164983,7 +164813,8 @@
     "audioValidatedAt": 1788364874437,
     "failureCount": 0,
     "normalizedGenres": [
-      "latin"
+      "latin",
+      "rock"
     ],
     "playable": true
   },
@@ -217247,7 +217078,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/29/79/f3/2979f357-93aa-c4c3-d874-80491c008a53/191773039967.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -217294,7 +217125,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217317,7 +217148,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/cf/3a/db/cf3adbe6-8ea1-f60f-60fd-713eefda3962/193483317984.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217340,7 +217172,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/90/5e/7e/905e7ed5-a8fa-a8f3-cd06-0028fdf3afaa/199066342442.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217363,7 +217195,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8c/0f/81/8c0f81f2-9f10-5e3d-b9de-5961a73e8e52/195081078724.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217386,7 +217218,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9f/05/24/9f052490-6a7c-cea1-df51-b732a5ff7779/195081580067.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -217409,7 +217241,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/3e/04/eb/3e04ebf6-370f-f59d-ec84-2c2643db92f1/196626945068.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217432,7 +217265,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8c/0f/81/8c0f81f2-9f10-5e3d-b9de-5961a73e8e52/195081078724.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -217455,7 +217288,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/8c/0f/81/8c0f81f2-9f10-5e3d-b9de-5961a73e8e52/195081078724.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217478,7 +217312,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/77/32/74/7732746d-25e5-baae-b921-bad4a07d87b1/19UMGIM55524.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217501,7 +217335,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/77/32/74/7732746d-25e5-baae-b921-bad4a07d87b1/19UMGIM55524.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217524,7 +217358,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ef/80/d8/ef80d8aa-07e6-30fb-413a-44efd9ff4817/17UM1IM26324.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -217547,7 +217381,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/9e/f2/88/9ef288ab-9ab5-630f-255f-26d609cd91f8/196292052268.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "hiphop"
     ],
     "playable": true
   },
@@ -217570,7 +217404,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ab/e8/09/abe8092d-ef44-61b9-6b50-ab7efb78ca51/196872401516.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217593,7 +217427,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/04/5e/85/045e85c7-9cd6-a1d0-d211-208786d8a972/193483202419.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217616,7 +217450,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/85/36/3585365d-4678-0648-1bfd-76ea49ba8c9c/886448841388.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217639,7 +217474,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/e2/3f/b1e23f6e-29ba-c816-cd4a-2f995c19a25d/886447345481.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217662,7 +217498,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1c/2b/5f/1c2b5fdf-9a6a-9e07-bea3-ff92f7da2796/196873615424.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217685,7 +217521,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ff/d2/3d/ffd23dae-61d5-ad74-de3a-20ad47058a04/193483867779.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217708,7 +217544,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/10/21/48/10214887-05b3-2fe8-c891-1b19b66be77c/196006302054.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217731,7 +217567,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1d/f2/61/1df261a7-2086-8945-07b0-e943323d8c53/886448376453.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217754,7 +217590,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/a9/fe/57/a9fe57f9-f0ab-7316-5d6a-4dff501f4a42/196874097311.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217777,7 +217613,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/58/13/c3/5813c326-a7fa-f792-77e1-8310d9c80742/886449738724.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217800,7 +217636,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/29/86/a6/2986a6fc-ff17-4384-85ad-10fcd0d8c81e/194491896423.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217823,7 +217660,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/35/85/36/3585365d-4678-0648-1bfd-76ea49ba8c9c/886448841388.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217846,7 +217684,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/69/e6/be69e6a9-2b75-0994-9dfd-bc71fe839bf6/0.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217869,7 +217707,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/5c/1d/fd/5c1dfd26-c7ee-8055-21df-ea0caaf3ecec/196922093272_Cover.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -217892,7 +217731,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/bf/81/de/bf81de98-e325-3ae0-5eb5-6725276e5dce/196872360400.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217938,7 +217777,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d2/1a/63/d21a6376-80b9-ce89-e4f3-af3f0b70acf9/196871287098.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -217984,7 +217823,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/58/13/c3/5813c326-a7fa-f792-77e1-8310d9c80742/886449738724.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -218007,7 +217846,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/29/bc/47/29bc47d2-0d7e-aa63-25f5-290866c76cbb/194491005801.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -218030,7 +217869,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/99/0f/ef/990fefcb-db12-0cf0-90f9-44115c095c73/196589764720.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -218099,7 +217938,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/a1/c9/0f/a1c90ffb-5791-e3ba-99ab-26c870332ff9/886449455515.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -218168,7 +218008,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/69/8b/50/698b5093-e63e-91f7-afe0-6f6567a926cf/195081813165.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -218398,7 +218238,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1e/a4/fc/1ea4fc70-bd8e-5fe8-8bb2-aca496c73839/dj.jgevzlxu.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "pop"
     ],
     "playable": true
   },
@@ -218490,7 +218330,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/fa/96/f7/fa96f7ba-b403-f14f-842f-74726146a5f2/193483090245.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -218559,7 +218400,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/65/69/2b6569c2-e825-cce3-f94a-c2cbe6e68c1f/886448075417.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -218628,7 +218470,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f2/a5/fb/f2a5fb37-5b82-fc92-7714-1df72db7d683/196873025087.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -218651,7 +218494,8 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4a/16/55/4a16555d-74d5-7347-a7be-49fb5f733164/886447647615.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton",
+      "pop"
     ],
     "playable": true
   },
@@ -218996,7 +218840,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3c/b4/bc/3cb4bce2-2703-7319-8345-123dc3f542f6/196874013816.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219134,7 +218978,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/84/b2/54/84b25474-27fe-1c98-4f52-0434c5a89451/1200214798499.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219157,7 +219001,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/60/4d/b6/604db63f-7d2d-9ccb-0ec1-9632439996a6/886448840961.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219180,7 +219024,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/92/ad/16/92ad16b5-53e2-36b5-c86b-dda28fdb7af3/195081002248.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219295,7 +219139,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/dd/a2/14/dda2148a-fde2-119e-5a5e-ab2cd2d8ab1d/195999094229.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219387,7 +219231,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f8/2e/c6/f82ec6e6-e34b-2dd9-9351-0c57e04d6e4f/886448228530.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219502,7 +219346,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/25/3a/a8/253aa814-231e-2775-5cc6-0a6a6a377bbc/197189072055.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -219847,7 +219691,7 @@
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ad/45/e0/ad45e0ce-de9f-cf9e-2c37-c15f6e145934/196871999434.jpg/600x600bb.jpg",
     "normalizedGenres": [
-      "latin"
+      "reggaeton"
     ],
     "playable": true
   },
@@ -240564,7 +240408,7 @@
     "genre": "Pop Latino",
     "normalizedGenres": [
       "pop",
-      "latin"
+      "reggaeton"
     ],
     "recognitionScore": 92,
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/df/22/bd/df22bd5d-6675-4a45-f87b-7f23efb4d65f/mzaf_9575171492568203164.plus.aac.p.m4a",
@@ -242171,8 +242015,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/fe/35/acfe3571-3872-92c6-e208-072fe362d7c3/886449095070.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/01/27/e6012764-1fc7-c6e3-ecbf-393df8092ece/mzaf_3527043514458329157.plus.aac.p.m4a",
@@ -242193,10 +242036,7 @@
     "yearConfidence": "high",
     "genre": "R&B/Soul",
     "normalizedGenres": [
-      "pop",
-      "rnb",
-      "electronic",
-      "dance"
+      "rnb"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/b9/fe/2bb9fef5-d7f3-8345-25a9-db0e79fde4e4/20UMGIM11048.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/f8/f2/c4f8f2e2-9db0-093d-c03b-bfa6cbf663cb/mzaf_3724293200696761935.plus.aac.p.m4a",
@@ -242239,7 +242079,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -242262,8 +242101,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/9c/19/1b/9c191bbf-15e1-ffd6-c36d-2e480a1a156e/886448153238.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/d8/57/0ed85735-222d-f853-339a-674db1deab59/mzaf_13516983249408034524.plus.aac.p.m4a",
@@ -242285,7 +242123,6 @@
     "genre": "Indie Pop",
     "normalizedGenres": [
       "pop",
-      "rock",
       "indie"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d1/a1/54/d1a1545c-7fc7-1262-d65a-f7a9b0a3a5ca/602537370351_cover.jpg/600x600bb.jpg",
@@ -242307,10 +242144,8 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
-      "dance",
-      "latin"
+      "dance"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b1/ee/2f/b1ee2fbc-01e6-9f40-ab58-c9f9605f6333/16UMGIM13738.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/a2/a8/7aa2a808-9004-01bb-ff3a-6af32f4e6797/mzaf_6349863525890989340.plus.aac.p.m4a",
@@ -242331,9 +242166,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/03/ee/a4/03eea490-fb95-4458-044e-f837b1ae6764/884977677065.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/2c/12/8c2c12c2-4b90-15cf-439c-8882bac5f397/mzaf_1500854499989681363.plus.aac.p.m4a",
@@ -242354,8 +242187,6 @@
     "yearConfidence": "high",
     "genre": "R&B/Soul",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
       "rnb"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/52/ef/da/52efda42-6072-6182-6392-5d30faaef424/886448249979.jpg/600x600bb.jpg",
@@ -242377,8 +242208,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b0/cd/fb/b0cdfbd8-23f1-a1b9-fe6a-f5285a734660/886447581513.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6a/a2/27/6aa227d6-b215-dc0b-d408-c5b63f9f5fde/mzaf_1791006121709827095.plus.aac.p.m4a",
@@ -242421,9 +242251,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/77/d3/bf/77d3bfa7-d2e6-b678-0a6c-0e772600e326/11UMGIM13376.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/f2/54/7df25473-f4bc-7d17-aed4-19ec814c3be6/mzaf_11214036945957492809.plus.aac.p.m4a",
@@ -242444,9 +242272,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/5a/e8/245ae865-c767-310b-c8ee-6b3a05e43fd4/dj.hgvybcjz.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/7d/de/467ddea2-c3f7-3a12-8872-093e1f6cf60c/mzaf_3710409992981308274.plus.aac.p.m4a",
@@ -242467,7 +242293,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -242490,10 +242315,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
-      "electronic",
-      "dance"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3c/6f/37/3c6f378c-c580-ca27-5308-c6ce47bb953a/075679953728.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/b6/da/4fb6da82-106a-6356-ea3a-8c509cdc6078/mzaf_5983308122310391177.plus.aac.p.m4a",
@@ -242514,10 +242336,8 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
-      "dance",
-      "latin"
+      "dance"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e8/b2/34/e8b23458-42bc-17d9-f9df-1ef190c08b9e/TINT0046R.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/6f/c9/026fc9e2-d404-a238-c27b-5d243a508f33/mzaf_14637623766580105074.plus.aac.p.m4a",
@@ -242538,10 +242358,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance",
-      "latin"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/72/5b/84/mzi.pilkaaqe.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/04/21/7f042132-7b8c-786d-63b3-ba489ce51bfd/mzaf_11370418499043208325.plus.aac.p.m4a",
@@ -242562,11 +242379,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "rock",
-      "rnb",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e3/91/bb/e391bb5d-3aef-b9e5-7446-0e19521a5ca2/15UMGIM59797.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/76/b5/0e76b5c6-7971-2743-33a6-65b6397f4535/mzaf_739885188451376443.plus.aac.p.m4a",
@@ -242587,9 +242400,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/74/be/ed/74beed71-6a6c-df84-bb80-bf470dee2bf4/10UMGIM07696.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/9d/51/c69d51c6-05ca-a0e4-4c43-c9743257048b/mzaf_17316422719838636186.plus.aac.p.m4a",
@@ -242610,9 +242421,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1f/25/c4/1f25c4bf-7f7a-ff26-8769-20ab6052dadf/09UMGIM40719.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/54/f0/1b54f0b7-db6a-1a40-6af8-4ae4650d8d6d/mzaf_2782647211171496826.plus.aac.p.m4a",
@@ -242633,10 +242442,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "rnb",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/c0/13/1b/mzi.nnistjgw.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/91/67/7c916728-48c7-7cd6-0d82-1ee253bb067e/mzaf_1054678641743982446.plus.aac.p.m4a",
@@ -242657,9 +242463,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/be/08/5d/be085d34-baf7-9134-c4ad-63269f3f57c0/09UMGIM37308.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/d8/59/93d859d7-a59a-9472-e318-e6917afa3c18/mzaf_5456381282352602086.plus.aac.p.m4a",
@@ -242680,7 +242484,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -242704,9 +242507,7 @@
     "genre": "Reggae",
     "normalizedGenres": [
       "pop",
-      "electronic",
-      "dance",
-      "latin"
+      "dance"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c9/1a/96/c91a9658-55b9-f6de-f13a-8ffbd5d0969c/886447681909.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/cd/9f/30cd9f27-22be-f376-fe4c-8385a33088dd/mzaf_2940469599387087116.plus.aac.p.m4a",
@@ -242727,8 +242528,6 @@
     "yearConfidence": "high",
     "genre": "Alternative",
     "normalizedGenres": [
-      "pop",
-      "rnb",
       "indie",
       "rock"
     ],
@@ -242751,10 +242550,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
-      "electronic",
-      "dance"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/19/ef/f5/19eff530-e6d9-068e-e287-52a67c30da71/5059460326569.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/e1/b5/7ae1b56d-8e64-1e22-c81c-0fcd8723292f/mzaf_10100821169360065352.plus.aac.p.m4a",
@@ -242775,10 +242571,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
-      "electronic",
-      "dance"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/eb/ca/0d/ebca0d0d-3c73-686a-285a-f5899d1e0f25/075679954046.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/31/62/c8/3162c81f-58ac-8f22-8d2c-d0281d603ac4/mzaf_12170500586895199679.plus.aac.p.m4a",
@@ -242799,10 +242592,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance",
-      "latin"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fc/57/da/fc57da34-d446-924b-f67e-478dced0471f/11UMGIM10443.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/44/95/264495ff-a80b-25fd-5b15-49ff2196bd8d/mzaf_5406960914278850389.plus.aac.p.m4a",
@@ -242823,9 +242613,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "rock",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4c/9a/f4/4c9af4b6-31d4-c856-a834-26f73f48d4a5/12UMGIM26179.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/23/d5/bd23d5aa-a3e8-3607-ba4b-1d3b674c859c/mzaf_15777444109108577095.plus.aac.p.m4a",
@@ -242846,8 +242634,6 @@
     "yearConfidence": "high",
     "genre": "Alternative",
     "normalizedGenres": [
-      "pop",
-      "rnb",
       "indie",
       "rock"
     ],
@@ -242870,7 +242656,6 @@
     "yearConfidence": "high",
     "genre": "Country",
     "normalizedGenres": [
-      "hiphop",
       "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/db/81/bedb81c3-ca23-a1b9-f275-59e46ae4fdb1/197342625517_cover.jpg/600x600bb.jpg",
@@ -242892,7 +242677,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -242915,8 +242699,6 @@
     "yearConfidence": "high",
     "genre": "Alternative",
     "normalizedGenres": [
-      "pop",
-      "rnb",
       "indie",
       "rock"
     ],
@@ -242939,8 +242721,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/9d/2e/859d2e32-c116-054f-a6c6-d46eb09be7bf/886448513162.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/65/d7/f965d75f-5d00-5cf2-7754-40f228063d54/mzaf_14746490880725793137.plus.aac.p.m4a",
@@ -242961,7 +242742,6 @@
     "yearConfidence": "high",
     "genre": "Electronic",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -242984,7 +242764,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -243007,8 +242786,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/39/b1/1e/39b11eef-4709-bf53-2b5b-7954d2782496/20UMGIM58296.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/3d/e1/ba3de1d2-0923-e622-db87-099d8d86d9d4/mzaf_1885807968629980011.plus.aac.p.m4a",
@@ -243051,11 +242829,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "electronic",
-      "dance",
-      "indie",
-      "rock"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/38/35/35/38353599-968c-26b8-4dee-8f20ebee46d1/093624932772.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/e4/52/6de452cc-25cb-ed4c-a5be-7c3398e42f00/mzaf_5174604099377275023.plus.aac.p.m4a",
@@ -243076,7 +242850,6 @@
     "yearConfidence": "high",
     "genre": "Dance",
     "normalizedGenres": [
-      "pop",
       "electronic",
       "dance"
     ],
@@ -243099,10 +242872,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "rnb",
-      "electronic",
-      "dance"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/eb/8b/88/eb8b8802-2c13-e98f-505e-c8d2693718bb/00602537795734.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/ac/e8/64ace86c-e2bd-6116-7a55-a3c2f5d3ba7e/mzaf_3505846529731432588.plus.aac.p.m4a",
@@ -243123,10 +242893,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
-      "electronic",
-      "dance"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c5/10/ba/c510baab-02c1-29bc-ce00-a7fa29c8f1af/mzi.hrvbfleo.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/07/97/ff0797ab-a24b-5423-64b3-c5b6e0173583/mzaf_11135363908447775433.plus.aac.p.m4a",
@@ -243147,8 +242914,7 @@
     "yearConfidence": "high",
     "genre": "Pop",
     "normalizedGenres": [
-      "pop",
-      "rock"
+      "pop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/df/fa/ae/dffaae51-3f6c-cafc-abed-1787d843255e/00602517178182.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/6d/4c/5f6d4c23-ea23-9941-5f0f-35f3e4425143/mzaf_9234439908692242264.plus.aac.p.m4a",
@@ -243190,8 +242956,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/98/26/86/982686e6-d525-c732-246c-7ecefd1b0f25/mzaf_14909810769086903470.plus.aac.p.m4a",
@@ -243212,8 +242977,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/a8/3a/22/a83a22f7-af18-7ef6-a7de-74816c532a44/886449475421.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/41/10/a0/4110a051-2d2d-d560-3a1e-7d026561aee5/mzaf_314519057866481741.plus.aac.p.m4a",
@@ -243234,8 +242998,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "latin"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/6fa9e7d533a8cccbf6b22d4739075938/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/8a/f0/3b/8af03b30-8605-acd6-0e43-006b66c106a9/mzaf_12145538415266592070.plus.aac.p.m4a",
@@ -243424,8 +243187,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/b9/15/63/b91563fe-d1c9-be47-5214-f22ad07a96e7/21UM1IM51560.rgb.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/73/83/dc/7383dcee-5846-d7d1-67a1-a47c17ca07db/mzaf_11062045909136364197.plus.aac.p.m4a",
@@ -243509,8 +243271,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/af/b2/af/afb2af7b-b687-e326-3437-88909f442d65/842812134265.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/0c/2d/09/0c2d097a-dd36-9707-a9e1-51981513cc55/mzaf_16347509256370989775.plus.aac.p.m4a",
@@ -243531,8 +243292,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/56/e6/e3/56e6e353-b102-763f-35fe-027e6e5dd97b/842812144424.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/ed/9a/e1/ed9ae15b-6159-9156-7619-d91a98c72ad7/mzaf_5299144145366940443.plus.aac.p.m4a",
@@ -243574,8 +243334,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "rnb"
+      "hiphop"
     ],
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a4/84/49/a4844933-2461-51ec-69a9-48543ac30477/artwork.jpg/600x600bb.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/11/f9/3a/11f93ad6-c7f9-4c5f-810c-35dad28e2d89/mzaf_9706138110986010146.plus.aac.p.m4a",
@@ -243701,8 +243460,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/c198296b472b23cf47ae3ad4ca48d61f/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/5e/14/b25e14c0-ff72-5bdd-0124-cff2793b878c/mzaf_2730573443216159256.plus.aac.p.m4a",
@@ -243765,9 +243523,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "indie",
-      "rock"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/2fd9da19e4bcb7fb8ce9e34f4f6c1aa6/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/8d/61/2f/8d612f97-4b1d-2f34-2ad4-89d847e284b9/mzaf_14928794139463479347.plus.aac.p.m4a",
@@ -243893,9 +243649,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "indie",
-      "rock"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/d697035ce156d91d89768f909699432a/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/78/7d/7d/787d7d16-a18c-5938-db7c-78c3f5c26205/mzaf_12787577107396433038.plus.aac.p.m4a",
@@ -243916,10 +243670,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop",
-      "electronic",
-      "dance"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/97d1455f019921bfc6ae28d93f0c3a6c/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/61/bb/93/61bb93de-a6fc-cff1-a24e-bcf92c57fdcd/mzaf_6001475491437849664.plus.aac.p.m4a",
@@ -243940,8 +243691,7 @@
     "yearConfidence": "high",
     "genre": "Hip-Hop/Rap",
     "normalizedGenres": [
-      "hiphop",
-      "pop"
+      "hiphop"
     ],
     "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/51c86ea9d108b5223b23e9df1694fde0/250x250-000000-80-0-0.jpg",
     "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/76/38/3a/76383a65-ade3-7ced-5cae-86d1c72fb9b7/mzaf_6092842813267247989.plus.aac.p.m4a",

@@ -45,6 +45,7 @@ export type NormalizedGenre =
   | 'Rock/Alternative/Indie'
   | 'R&B'
   | 'Latin'
+  | 'Reggaeton'
   | 'Other';
 
 export const GENRE_WEIGHTS: Record<NormalizedGenre, number> = {
@@ -54,6 +55,7 @@ export const GENRE_WEIGHTS: Record<NormalizedGenre, number> = {
   'Rock/Alternative/Indie': 0.15,
   'R&B': 0.10,
   'Latin': 0.08,
+  'Reggaeton': 0.08,
   'Other': 0.07,
 };
 
@@ -94,6 +96,7 @@ export function getNormalizedGenre(genre?: string, artist = '', title = '', albu
   if (norm.includes('electronic') || norm.includes('dance')) return 'Electronic/Dance';
   if (norm.includes('rock') || norm.includes('indie') || norm.includes('metal')) return 'Rock/Alternative/Indie';
   if (norm.includes('rnb')) return 'R&B';
+  if (norm.includes('reggaeton')) return 'Reggaeton';
   if (norm.includes('latin')) return 'Latin';
   if (norm.includes('pop')) return 'Pop';
   return 'Other';
@@ -753,6 +756,7 @@ class MusicService {
       rnb: 0,
       electronic: 0,
       latin: 0,
+      reggaeton: 0,
       indie: 0,
       metal: 0,
       dance: 0,
@@ -769,6 +773,7 @@ class MusicService {
         if (isTrackEligibleForFilters(song, { decade, genres: 'rnb' })) counts.rnb += 1;
         if (isTrackEligibleForFilters(song, { decade, genres: 'electronic' })) counts.electronic += 1;
         if (isTrackEligibleForFilters(song, { decade, genres: 'latin' })) counts.latin += 1;
+        if (isTrackEligibleForFilters(song, { decade, genres: 'reggaeton' })) counts.reggaeton += 1;
         if (isTrackEligibleForFilters(song, { decade, genres: 'indie' })) counts.indie += 1;
         if (isTrackEligibleForFilters(song, { decade, genres: 'metal' })) counts.metal += 1;
         if (isTrackEligibleForFilters(song, { decade, genres: 'dance' })) counts.dance += 1;
