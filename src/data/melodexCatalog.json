@@ -905,7 +905,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440758945",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101425,
+    "audioValidatedAt": 1788359911783,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -1909,7 +1909,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "581775117",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101425,
+    "audioValidatedAt": 1788359913559,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -4499,7 +4499,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "617154366",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911672,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -5115,7 +5115,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "693290786",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359913045,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -5189,7 +5189,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "922876189",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911960,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5214,7 +5214,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440872929",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911708,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5264,7 +5264,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440787347",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911275,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5413,7 +5413,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440873108",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911716,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5734,7 +5734,7 @@
     "providerTrackId": "1364709436",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359912759,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5784,7 +5784,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "922876184",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911968,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -5834,7 +5834,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1153704956",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359912164,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -7405,7 +7405,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "923691611",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359911505,
     "failureCount": 0,
     "normalizedGenres": [
       "rnb"
@@ -7767,7 +7767,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440826389",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101426,
+    "audioValidatedAt": 1788359912432,
     "failureCount": 0,
     "normalizedGenres": [
       "rnb"
@@ -14950,7 +14950,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1382339701",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359909811,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -18424,7 +18424,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440769310",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359911666,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -18929,7 +18929,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "283567164",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359912475,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -20799,7 +20799,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1053934844",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359911612,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -21065,7 +21065,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1444609119",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359912134,
     "failureCount": 0,
     "normalizedGenres": [
       "pop",
@@ -21210,7 +21210,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "473544653",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359912711,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -21595,7 +21595,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "480436529",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359909800,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -21836,7 +21836,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1202263655",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101427,
+    "audioValidatedAt": 1788359911686,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -25276,7 +25276,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1454435248",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359911124,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -25641,8 +25641,8 @@
     "artist": "Taylor Swift",
     "normalizedArtist": "taylor swift",
     "album": "The Life of a Showgirl",
-    "year": 2025,
-    "verifiedOriginalYear": 2025,
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
     "yearConfidence": "high",
     "genre": "Pop",
     "recognitionScore": 75,
@@ -25653,7 +25653,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1833328840",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359911288,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -26037,7 +26037,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1571330212",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912453,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -26109,7 +26109,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "715891658",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912701,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -26421,7 +26421,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1464549657",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912834,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -28104,7 +28104,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440851722",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912363,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -28380,8 +28380,8 @@
     "artist": "Maroon 5",
     "normalizedArtist": "maroon 5",
     "album": "Hands All Over (Deluxe Edition)",
-    "year": 2010,
-    "verifiedOriginalYear": 2010,
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
     "yearConfidence": "high",
     "genre": "Pop",
     "recognitionScore": 75,
@@ -28392,7 +28392,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440859510",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912464,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -28464,7 +28464,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440842752",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912351,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -29514,7 +29514,7 @@
     "providerTrackId": "1445949267",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359909621,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -29538,7 +29538,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1477880561",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359913197,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -29753,7 +29753,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1373506180",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359912934,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -29849,7 +29849,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1593056951",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359909334,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -29873,7 +29873,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1373506178",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359909135,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -29969,7 +29969,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440889023",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101428,
+    "audioValidatedAt": 1788359909114,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -36450,8 +36450,8 @@
     "artist": "Sia",
     "normalizedArtist": "sia",
     "album": "This Is Acting",
-    "year": 2015,
-    "verifiedOriginalYear": 2015,
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
     "yearConfidence": "high",
     "genre": "Pop",
     "recognitionScore": 75,
@@ -36462,7 +36462,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1055074640",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359912115,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -37492,7 +37492,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "576655098",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359912423,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -38842,7 +38842,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440636498",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359911980,
     "failureCount": 0,
     "normalizedGenres": [
       "latin",
@@ -41197,7 +41197,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1484636829",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359912972,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -41268,7 +41268,7 @@
     "providerTrackId": "1578986673",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359912735,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -41603,7 +41603,7 @@
     "providerTrackId": "1196786344",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101429,
+    "audioValidatedAt": 1788359912749,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -47251,7 +47251,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1207120538",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101430,
+    "audioValidatedAt": 1788359910063,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -49263,7 +49263,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1154239655",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101430,
+    "audioValidatedAt": 1788359912552,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -55061,7 +55061,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1852627148",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101431,
+    "audioValidatedAt": 1788359912216,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -62061,7 +62061,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1445552128",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101431,
+    "audioValidatedAt": 1788359913137,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -65704,7 +65704,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440783289",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101432,
+    "audioValidatedAt": 1788359909921,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -65902,7 +65902,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "821031488",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101432,
+    "audioValidatedAt": 1788359912952,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -66078,7 +66078,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1331589486",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101432,
+    "audioValidatedAt": 1788359912038,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -67598,7 +67598,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1739659142",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101432,
+    "audioValidatedAt": 1788359911339,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -80444,7 +80444,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1438808447",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788359910325,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -81602,7 +81602,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1039447859",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101433,
+    "audioValidatedAt": 1788359912156,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -87662,7 +87662,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1713785273",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101434,
+    "audioValidatedAt": 1788359912994,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -87832,7 +87832,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1715078283",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101434,
+    "audioValidatedAt": 1788359909638,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -89261,8 +89261,8 @@
     "artist": "DJ Snake",
     "normalizedArtist": "dj snake",
     "album": "Encore",
-    "year": 2016,
-    "verifiedOriginalYear": 2016,
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
     "yearConfidence": "high",
     "genre": "Dance",
     "recognitionScore": 87,
@@ -89273,7 +89273,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440867457",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101435,
+    "audioValidatedAt": 1788359911114,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -89767,7 +89767,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1268152499",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101435,
+    "audioValidatedAt": 1788359913119,
     "failureCount": 0,
     "normalizedGenres": [
       "electronic",
@@ -90132,7 +90132,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "716604404",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101435,
+    "audioValidatedAt": 1788359913639,
     "failureCount": 0,
     "normalizedGenres": [
       "latin",
@@ -97810,7 +97810,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440873339",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359908944,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -97835,7 +97835,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1411628148",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359909530,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -97848,8 +97848,8 @@
     "artist": "Imagine Dragons",
     "normalizedArtist": "imagine dragons",
     "album": "Bones - Single",
-    "year": 2021,
-    "verifiedOriginalYear": 2021,
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
     "yearConfidence": "high",
     "genre": "Alternative",
     "recognitionScore": 85,
@@ -97860,7 +97860,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1612321591",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359911740,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -97885,7 +97885,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1437948973",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359911761,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -97935,7 +97935,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440855804",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359909098,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -98010,7 +98010,7 @@
     "trackIdentityVerified": true,
     "providerTrackId": "1440873335",
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101436,
+    "audioValidatedAt": 1788359909023,
     "failureCount": 0,
     "normalizedGenres": [
       "indie",
@@ -101105,7 +101105,7 @@
     "providerTrackId": "dz_dz_10308117_mtii5p7s_cioy",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359911198,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -101185,8 +101185,8 @@
     "title": "Rain Over Me (feat. Marc Anthony)",
     "artist": "Pitbull",
     "album": "Greatest Hits",
-    "year": 2017,
-    "verifiedOriginalYear": 2017,
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
     "yearConfidence": "high",
     "genre": "Pop",
     "recognitionScore": 65,
@@ -101197,7 +101197,7 @@
     "providerTrackId": "dz_dz_430415322_mtii5pvg_ifcn",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359909944,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -103363,7 +103363,7 @@
     "providerTrackId": "pm_stoney_137726971",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359909321,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103409,7 +103409,7 @@
     "providerTrackId": "pm_stoney_137726975",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359909291,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103478,7 +103478,7 @@
     "providerTrackId": "pm_stoney_137726981",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359909240,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103524,7 +103524,7 @@
     "providerTrackId": "pm_stoney_137726985",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359909267,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103662,7 +103662,7 @@
     "providerTrackId": "pm_bb_491446912",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359910996,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103892,7 +103892,7 @@
     "providerTrackId": "pm_bb_491447052",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359911027,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103915,7 +103915,7 @@
     "providerTrackId": "pm_bb_491447062",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359910279,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -103938,7 +103938,7 @@
     "providerTrackId": "pm_stoney_137726991",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359910119,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -104146,7 +104146,7 @@
     "providerTrackId": "deezer-497415082",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359912195,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -104215,7 +104215,7 @@
     "providerTrackId": "deezer-2780753191",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359910308,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -104619,8 +104619,8 @@
     "title": "Heat Waves",
     "artist": "Glass Animals & iann dior",
     "album": "Dreamland (+ Bonus Levels)",
-    "year": 2021,
-    "verifiedOriginalYear": 2021,
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
     "yearConfidence": "high",
     "genre": "Rock",
     "recognitionScore": 75,
@@ -104631,7 +104631,7 @@
     "providerTrackId": "1681997971",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101438,
+    "audioValidatedAt": 1788359913345,
     "failureCount": 0,
     "normalizedGenres": [
       "rock"
@@ -106725,7 +106725,7 @@
     "providerTrackId": "1477887483",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788359912917,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -106863,7 +106863,7 @@
     "providerTrackId": "1477887159",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788359909734,
     "failureCount": 0,
     "normalizedGenres": [
       "hiphop"
@@ -112181,7 +112181,7 @@
     "providerTrackId": "538940189",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101439,
+    "audioValidatedAt": 1788359910092,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -114206,7 +114206,7 @@
     "providerTrackId": "1538214889",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101440,
+    "audioValidatedAt": 1788359911051,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -114332,8 +114332,8 @@
     "title": "Lush Life",
     "artist": "Zara Larsson",
     "album": "So Good",
-    "year": 2017,
-    "verifiedOriginalYear": 2017,
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
     "yearConfidence": "high",
     "genre": "Pop",
     "recognitionScore": 80,
@@ -114344,7 +114344,7 @@
     "providerTrackId": "1201058113",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101440,
+    "audioValidatedAt": 1788359913285,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -119066,7 +119066,7 @@
     "providerTrackId": "1445152388",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304101440,
+    "audioValidatedAt": 1788359910003,
     "failureCount": 0,
     "normalizedGenres": [
       "pop"
@@ -179737,7 +179737,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304103503,
+    "audioValidatedAt": 1788359913620,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/14/0b/8e/mzi.vsvfenht.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -182333,7 +182333,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304105643,
+    "audioValidatedAt": 1788359909213,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/dc/f0/93/mzi.stzaqjgi.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -182377,7 +182377,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304105643,
+    "audioValidatedAt": 1788359909503,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4c/9a/f4/4c9af4b6-31d4-c856-a834-26f73f48d4a5/12UMGIM26179.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -182839,7 +182839,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304105907,
+    "audioValidatedAt": 1788359909976,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/93/c1/37/93c137c8-90d8-687a-4f8a-f117ca99c0a1/14UMGIM12027.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -183345,7 +183345,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304106282,
+    "audioValidatedAt": 1788359909901,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/84/6d/92/846d926b-8290-3855-b32b-dd903cc9b1ad/13UMGIM26867.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -187107,7 +187107,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304109075,
+    "audioValidatedAt": 1788359911320,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3a/09/fa/3a09fabd-7a71-d0d7-3e6a-7f3c4c89014e/24UMGIM32304.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -191361,28 +191361,6 @@
     ]
   },
   {
-    "id": "itunes_1662168786_dh27",
-    "title": "MIA (feat. Drake)",
-    "artist": "Bad Bunny",
-    "album": "MIA (feat. Drake) - Single",
-    "year": 2018,
-    "verifiedOriginalYear": 2018,
-    "yearConfidence": "high",
-    "genre": "Hip-Hop/Rap",
-    "recognitionScore": 82,
-    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e7/b6/05/e7b605d3-e1a7-9d3b-b226-1acea91f0899/mzaf_12789921691491209751.plus.aac.p.m4a",
-    "previewStart": 0,
-    "provider": "itunes",
-    "trackIdentityVerified": true,
-    "audioStatus": "healthy",
-    "audioValidatedAt": 1788304112875,
-    "failureCount": 0,
-    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/09/aa/f8/09aaf8da-8eaf-bf60-0c23-48a88d546cbd/26991.jpg/600x600bb.jpg",
-    "normalizedGenres": [
-      "hiphop"
-    ]
-  },
-  {
     "id": "itunes_328449248_cqb1",
     "title": "I Invented Sex (feat. Drake)",
     "artist": "Trey Songz",
@@ -195511,7 +195489,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304117785,
+    "audioValidatedAt": 1788359912881,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/42/7c/23/427c23ba-78dc-5a27-78c4-1a0e5f0e40da/886446557731.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -203042,7 +203020,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304139259,
+    "audioValidatedAt": 1788359913321,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/19/e0/1b/19e01b5f-0fd5-85f1-f347-461d4130309a/825646029594.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -204675,7 +204653,7 @@
     "provider": "itunes",
     "trackIdentityVerified": true,
     "audioStatus": "healthy",
-    "audioValidatedAt": 1788304145753,
+    "audioValidatedAt": 1788359909176,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b5/92/bb/b592bb72-52e3-e756-9b26-9f56d08f47ab/16UMGIM67864.rgb.jpg/600x600bb.jpg",
     "normalizedGenres": [
@@ -232245,5 +232223,1023 @@
     "audioValidatedAt": 1788304952092,
     "failureCount": 0,
     "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d6/2c/b6/d62cb68b-b322-38f5-8539-6187deb5be17/23UMGIM53490.rgb.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "1499386363",
+    "title": "In Your Eyes",
+    "artist": "The Weeknd",
+    "album": "After Hours",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "R&B/Soul",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/2b/b9/fe/2bb9fef5-d7f3-8345-25a9-db0e79fde4e4/20UMGIM11048.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/c4/f8/f2/c4f8f2e2-9db0-093d-c03b-bfa6cbf663cb/mzaf_3724293200696761935.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1499386363",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909421
+  },
+  {
+    "id": "1604646670",
+    "title": "Gangsta's Paradise (feat. L.V.)",
+    "artist": "Coolio",
+    "album": "Gangsta's Paradise",
+    "year": 1995,
+    "verifiedOriginalYear": 1995,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b7/d4/ce/b7d4cee5-38ab-34af-5605-1588e9a34fec/081227515461.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/db/4b/4f/db4b4ff6-5fb3-fb50-7dbb-ea4c45ffdab5/mzaf_6510633620048230208.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1604646670",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909469
+  },
+  {
+    "id": "1880597961",
+    "title": "Heroes Tonight (Super Slowed)",
+    "artist": "Janji & Johnning",
+    "album": "Heroes Tonight (Super Slowed) - Single",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Electronic",
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/fe/ae/13/feae1342-79a6-1724-ffba-865da8e90bcb/8721466037929.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b9/b8/b4/b9b8b4e4-d0ec-7c41-eaa6-69955f625f90/mzaf_12638012246937118505.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1880597961",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909573
+  },
+  {
+    "id": "1559066401",
+    "title": "Mood (feat. iann dior)",
+    "artist": "24kGoldn",
+    "album": "El Dorado",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ac/fe/35/acfe3571-3872-92c6-e208-072fe362d7c3/886449095070.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e6/01/27/e6012764-1fc7-c6e3-ecbf-393df8092ece/mzaf_3527043514458329157.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1559066401",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909611
+  },
+  {
+    "id": "6798409159",
+    "title": "More Than You Know",
+    "artist": "Axwell Λ Ingrosso, Axwell & Sebastian Ingrosso",
+    "album": "More Than You Know",
+    "year": 2017,
+    "verifiedOriginalYear": 2017,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b7/8a/08/b78a089b-2812-53d9-4f60-efe8e727c7f2/0602567320319.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e9/f4/a6/e9f4a630-ce20-1473-3393-a7d4922a5a98/mzaf_14435144518516212467.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "6798409159",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909709
+  },
+  {
+    "id": "1496062761",
+    "title": "ROXANNE",
+    "artist": "Arizona Zervas",
+    "album": "ROXANNE - Single",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/9c/19/1b/9c191bbf-15e1-ffd6-c36d-2e480a1a156e/886448153238.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/d8/57/0ed85735-222d-f853-339a-674db1deab59/mzaf_13516983249408034524.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1496062761",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909785
+  },
+  {
+    "id": "1766005715",
+    "title": "Safe and Sound",
+    "artist": "Capital Cities",
+    "album": "In A Tidal Wave of Mystery",
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
+    "yearConfidence": "high",
+    "genre": "Indie Pop",
+    "normalizedGenres": [
+      "pop",
+      "rock",
+      "indie"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d1/a1/54/d1a1545c-7fc7-1262-d65a-f7a9b0a3a5ca/602537370351_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/13/67/1d1367e8-394c-ef92-9237-c4175ba038c1/mzaf_12971151638979749050.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1766005715",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359909855
+  },
+  {
+    "id": "1170699703",
+    "title": "Closer (feat. Halsey)",
+    "artist": "The Chainsmokers",
+    "album": "Collage - EP",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/41/f8/38/41f8380b-9b56-d5d4-31f7-a6411c0c9aaa/886446102054.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bd/f9/b9/bdf9b9b2-eaa4-4461-6079-aaacc6df7316/mzaf_17327312786932455493.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1170699703",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359910048
+  },
+  {
+    "id": "1453754337",
+    "title": "They Ain't You",
+    "artist": "Tyla Yaweh",
+    "album": "Heart Full of Rage",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b0/cd/fb/b0cdfbd8-23f1-a1b9-fe6a-f5285a734660/886447581513.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6a/a2/27/6aa227d6-b215-dc0b-d408-c5b63f9f5fde/mzaf_1791006121709827095.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1453754337",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359910179
+  },
+  {
+    "id": "1496294735",
+    "title": "High Right Now (feat. Wiz Khalifa) [Remix]",
+    "artist": "Tyla Yaweh",
+    "album": "High Right Now (Remix) [feat. Wiz Khalifa] - Single",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "R&B/Soul",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "rnb"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/52/ef/da/52efda42-6072-6182-6392-5d30faaef424/886448249979.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/20/1d/ca/201dca9f-69c2-3a44-c30a-e036b3fa71eb/mzaf_12057811005342781991.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1496294735",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359910245
+  },
+  {
+    "id": "383869925",
+    "title": "Cooler Than Me (Single Mix)",
+    "artist": "Mike Posner",
+    "album": "31 Minutes to Takeoff",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/03/ee/a4/03eea490-fb95-4458-044e-f837b1ae6764/884977677065.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/8c/2c/12/8c2c12c2-4b90-15cf-439c-8882bac5f397/mzaf_1500854499989681363.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "383869925",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911095
+  },
+  {
+    "id": "1442858494",
+    "title": "I Took a Pill In Ibiza (Seeb Remix)",
+    "artist": "Mike Posner",
+    "album": "At Night, Alone.",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "latin"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/b1/ee/2f/b1ee2fbc-01e6-9f40-ab58-c9f9605f6333/16UMGIM13738.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7a/a2/a8/7aa2a808-9004-01bb-ff3a-6af32f4e6797/mzaf_6349863525890989340.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1442858494",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911172
+  },
+  {
+    "id": "91990183",
+    "title": "Sorry",
+    "artist": "Madonna",
+    "album": "Confessions on a Dance Floor",
+    "year": 2005,
+    "verifiedOriginalYear": 2005,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/24/5a/e8/245ae865-c767-310b-c8ee-6b3a05e43fd4/dj.hgvybcjz.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/7d/de/467ddea2-c3f7-3a12-8872-093e1f6cf60c/mzaf_3710409992981308274.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "91990183",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911261
+  },
+  {
+    "id": "1457685266",
+    "title": "Sun Is Up",
+    "artist": "Inna",
+    "album": "I Am the Club Rocker",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f6/1d/77/f61d77a5-191e-0b88-7f18-4feae990ae97/4670_Inna_I_Am_The_Club_Rocker_3000.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5e/f1/74/5ef17404-00a0-6447-6f99-7ace59a2abd9/mzaf_8278983139454785521.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1457685266",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911378
+  },
+  {
+    "id": "1444045228",
+    "title": "Higher (feat. Kylie Minogue)",
+    "artist": "Taio Cruz",
+    "album": "Rokstarr (Special Edition)",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/77/d3/bf/77d3bfa7-d2e6-b678-0a6c-0e772600e326/11UMGIM13376.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7d/f2/54/7df25473-f4bc-7d17-aed4-19ec814c3be6/mzaf_11214036945957492809.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1444045228",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911422
+  },
+  {
+    "id": "1490348552",
+    "title": "Breaking Me",
+    "artist": "Topic & A7S",
+    "album": "Breaking Me - Single",
+    "year": 2019,
+    "verifiedOriginalYear": 2019,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/31/f5/c6/31f5c650-8439-c8b1-e64e-e7e95b4d458c/19UM1IM02929.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/19/98/51/1998518e-4d51-fe7e-6259-a29c66562b8a/mzaf_13039807513016356064.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1490348552",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911458
+  },
+  {
+    "id": "1442966499",
+    "title": "Cake by the Ocean",
+    "artist": "DNCE",
+    "album": "SWAAY - EP",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "rock",
+      "rnb",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/e3/91/bb/e391bb5d-3aef-b9e5-7446-0e19521a5ca2/15UMGIM59797.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/76/b5/0e76b5c6-7971-2743-33a6-65b6397f4535/mzaf_739885188451376443.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1442966499",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911497
+  },
+  {
+    "id": "440723118",
+    "title": "International Love (feat. Chris Brown)",
+    "artist": "Pitbull",
+    "album": "Planet Pit",
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "latin"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/72/5b/84/mzi.pilkaaqe.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7f/04/21/7f042132-7b8c-786d-63b3-ba489ce51bfd/mzaf_11370418499043208325.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "440723118",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911543
+  },
+  {
+    "id": "1782445186",
+    "title": "Call on Me (Ryan Riback Remix)",
+    "artist": "Starley",
+    "album": "Call on Me (Remixes) - EP",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "latin"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/e8/b2/34/e8b23458-42bc-17d9-f9df-1ef190c08b9e/TINT0046R.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/02/6f/c9/026fc9e2-d404-a238-c27b-5d243a508f33/mzaf_14637623766580105074.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1782445186",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911601
+  },
+  {
+    "id": "631801054",
+    "title": "Good Feeling",
+    "artist": "Flo Rida",
+    "album": "Wild Ones (Deluxe)",
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3c/6f/37/3c6f378c-c580-ca27-5308-c6ce47bb953a/075679953728.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/4f/b6/da/4fb6da82-106a-6356-ea3a-8c509cdc6078/mzaf_5983308122310391177.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "631801054",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911654
+  },
+  {
+    "id": "326644034",
+    "title": "Replay",
+    "artist": "Iyaz",
+    "album": "Replay - Single",
+    "year": 2009,
+    "verifiedOriginalYear": 2009,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/c0/13/1b/mzi.nnistjgw.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/91/67/7c916728-48c7-7cd6-0d82-1ee253bb067e/mzaf_1054678641743982446.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "326644034",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911820
+  },
+  {
+    "id": "1476095084",
+    "title": "Bad Romance",
+    "artist": "Lady Gaga",
+    "album": "The Fame Monster (Deluxe Edition)",
+    "year": 2009,
+    "verifiedOriginalYear": 2009,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1f/25/c4/1f25c4bf-7f7a-ff26-8769-20ab6052dadf/09UMGIM40719.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1b/54/f0/1b54f0b7-db6a-1a40-6af8-4ae4650d8d6d/mzaf_2782647211171496826.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1476095084",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911867
+  },
+  {
+    "id": "1443147095",
+    "title": "Dynamite",
+    "artist": "Taio Cruz",
+    "album": "Rokstarr (Bonus Track Version)",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/74/be/ed/74beed71-6a6c-df84-bb80-bf470dee2bf4/10UMGIM07696.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/9d/51/c69d51c6-05ca-a0e4-4c43-c9743257048b/mzaf_17316422719838636186.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1443147095",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911907
+  },
+  {
+    "id": "1442974165",
+    "title": "Break Your Heart (feat. Ludacris)",
+    "artist": "Taio Cruz",
+    "album": "Rokstarr (Deluxe)",
+    "year": 2009,
+    "verifiedOriginalYear": 2009,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/be/08/5d/be085d34-baf7-9134-c4ad-63269f3f57c0/09UMGIM37308.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/93/d8/59/93d859d7-a59a-9472-e318-e6917afa3c18/mzaf_5456381282352602086.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1442974165",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359911952
+  },
+  {
+    "id": "1257259293",
+    "title": "No Money",
+    "artist": "Galantis",
+    "album": "The Aviary",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/b5/f7/72/b5f772a2-f75b-3aa1-5590-f50713e31ab2/075679894755.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/e0/4d/1d/e04d1db6-7a98-60ee-9472-bc4116af5f2a/mzaf_4968525257180007886.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1257259293",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912022
+  },
+  {
+    "id": "1202354334",
+    "title": "Human",
+    "artist": "Rag'n'Bone Man",
+    "album": "Human (Deluxe)",
+    "year": 2016,
+    "verifiedOriginalYear": 2016,
+    "yearConfidence": "high",
+    "genre": "Alternative",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/cc/81/83/cc818302-ff27-bbbf-195e-f72bb39d32c2/886446364636.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/c1/8e/f2c18ee8-cebc-a288-61e5-e47c2d822de8/mzaf_18389359348027713438.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1202354334",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912103
+  },
+  {
+    "id": "1459540255",
+    "title": "Cheerleader (Felix Jaehn Remix) [Radio Edit]",
+    "artist": "Omi",
+    "album": "2010s Hits",
+    "year": 2014,
+    "verifiedOriginalYear": 2014,
+    "yearConfidence": "high",
+    "genre": "Reggae",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "latin"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/c9/1a/96/c91a9658-55b9-f6de-f13a-8ffbd5d0969c/886447681909.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/30/cd/9f/30cd9f27-22be-f376-fe4c-8385a33088dd/mzaf_2940469599387087116.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1459540255",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912255
+  },
+  {
+    "id": "1764002653",
+    "title": "My House",
+    "artist": "Flo Rida",
+    "album": "college football 2024",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/19/ef/f5/19eff530-e6d9-068e-e287-52a67c30da71/5059460326569.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7a/e1/b5/7ae1b56d-8e64-1e22-c81c-0fcd8723292f/mzaf_10100821169360065352.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1764002653",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912295
+  },
+  {
+    "id": "613867346",
+    "title": "Whistle",
+    "artist": "Flo Rida",
+    "album": "Wild Ones",
+    "year": 2012,
+    "verifiedOriginalYear": 2012,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/eb/ca/0d/ebca0d0d-3c73-686a-285a-f5899d1e0f25/075679954046.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/31/62/c8/3162c81f-58ac-8f22-8d2c-d0281d603ac4/mzaf_12170500586895199679.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "613867346",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912337
+  },
+  {
+    "id": "1422675689",
+    "title": "One More Night",
+    "artist": "Maroon 5",
+    "album": "Overexposed (Deluxe Version)",
+    "year": 2012,
+    "verifiedOriginalYear": 2012,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "rock",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/4c/9a/f4/4c9af4b6-31d4-c856-a834-26f73f48d4a5/12UMGIM26179.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/23/d5/bd23d5aa-a3e8-3607-ba4b-1d3b674c859c/mzaf_15777444109108577095.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1422675689",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912410
+  },
+  {
+    "id": "1443130548",
+    "title": "On the Floor (feat. Pitbull) [Radio Edit]",
+    "artist": "Jennifer Lopez",
+    "album": "LOVE? (Bonus Version)",
+    "year": 2011,
+    "verifiedOriginalYear": 2011,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "latin"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fc/57/da/fc57da34-d446-924b-f67e-478dced0471f/11UMGIM10443.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/26/44/95/264495ff-a80b-25fd-5b15-49ff2196bd8d/mzaf_5406960914278850389.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1443130548",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912534
+  },
+  {
+    "id": "1736635465",
+    "title": "Feel It (From The Original Series “Invincible”)",
+    "artist": "d4vd",
+    "album": "Feel It (From The Original Series “Invincible”) - Single",
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
+    "yearConfidence": "high",
+    "genre": "Alternative",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/1c/4a/d2/1c4ad2bd-efc3-0084-980f-003c01e4cfcd/24UMGIM24769.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a0/b6/35/a0b635c2-2247-e16c-fc7a-60e4280f1ab2/mzaf_15668491638413954695.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1736635465",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912595
+  },
+  {
+    "id": "1749591722",
+    "title": "A Bar Song (Tipsy)",
+    "artist": "Shaboozey",
+    "album": "Where I've Been, Isn't Where I'm Going",
+    "year": 2024,
+    "verifiedOriginalYear": 2024,
+    "yearConfidence": "high",
+    "genre": "Country",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/be/db/81/bedb81c3-ca23-a1b9-f275-59e46ae4fdb1/197342625517_cover.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/46/6f/7f/466f7f67-0365-ddf8-16c2-e033371d2f7e/mzaf_3764341442720608698.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1749591722",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912644
+  },
+  {
+    "id": "1517725083",
+    "title": "Tommy Lee (feat. Post Malone)",
+    "artist": "Tyla Yaweh",
+    "album": "Tommy Lee (feat. Post Malone) - Single",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/85/9d/2e/859d2e32-c116-054f-a6c6-d46eb09be7bf/886448513162.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/65/d7/f965d75f-5d00-5cf2-7754-40f228063d54/mzaf_14746490880725793137.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1517725083",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912689
+  },
+  {
+    "id": "1481418646",
+    "title": "Without Me",
+    "artist": "Halsey",
+    "album": "Manic",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Alternative",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/09/50/2f/09502f77-c2c9-0ae0-7e21-945a6bc80119/19UMGIM75722.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/96/ee/a196ee27-727a-7911-6207-8d2904aac4c1/mzaf_5972923977565050863.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1481418646",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359912822
+  },
+  {
+    "id": "1712039610",
+    "title": "Stereo Love (Original)",
+    "artist": "Edward Maya & Vika Jigulina",
+    "album": "Stereo Love",
+    "year": 2009,
+    "verifiedOriginalYear": 2009,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/45/33/38/4533387a-c8b5-ac5d-fef7-318af8ac9dee/617465238451.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/1a/f8/df1af89c-3df8-d3ed-b005-ad4b40e7f296/mzaf_16170444951110748141.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1712039610",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913037
+  },
+  {
+    "id": "1870874481",
+    "title": "On & On",
+    "artist": "Cartoon, Jéja & Daniel Levi",
+    "album": "On & On - Single",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f5/80/6e/f5806eb6-2539-0255-9996-ef7d3ad630c4/8721465219043.png/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/2c/65/85/2c6585ee-26ac-a800-1871-bc6a5bd3b73a/mzaf_16375765530208432118.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1870874481",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913099
+  },
+  {
+    "id": "1526575721",
+    "title": "Smile",
+    "artist": "Juice WRLD & The Weeknd",
+    "album": "Legends Never Die",
+    "year": 2020,
+    "verifiedOriginalYear": 2020,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/39/b1/1e/39b11eef-4709-bf53-2b5b-7954d2782496/20UMGIM58296.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/3d/e1/ba3de1d2-0923-e622-db87-099d8d86d9d4/mzaf_1885807968629980011.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1526575721",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913186
+  },
+  {
+    "id": "1440842654",
+    "title": "King",
+    "artist": "Years & Years",
+    "album": "Communion (Deluxe)",
+    "year": 2015,
+    "verifiedOriginalYear": 2015,
+    "yearConfidence": "high",
+    "genre": "Electronic",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e9/2c/0a/e92c0a04-7ac6-9563-a9b1-ec93171fcca5/00602547836649.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9d/68/9d/9d689d74-1e42-ba5c-e037-f7e00b768b79/mzaf_10103412023450050299.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1440842654",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913253
+  },
+  {
+    "id": "380656419",
+    "title": "Satellites",
+    "artist": "September",
+    "album": "In Orbit",
+    "year": 2005,
+    "verifiedOriginalYear": 2005,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/47/a9/9d/47a99d2d-4a91-0513-38dc-ac278133ccf4/884977508543.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/a3/fb/bf/a3fbbf80-9732-46e0-8e57-f208ddacb9ec/mzaf_4801540593745830423.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "380656419",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913384
+  },
+  {
+    "id": "378650466",
+    "title": "Club Can't Handle Me (feat. David Guetta) [From \"Step Up 3D\"]",
+    "artist": "Flo Rida",
+    "album": "Club Can't Handle Me - Single",
+    "year": 2010,
+    "verifiedOriginalYear": 2010,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c5/10/ba/c510baab-02c1-29bc-ce00-a7fa29c8f1af/mzi.hrvbfleo.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/07/97/ff0797ab-a24b-5423-64b3-c5b6e0173583/mzaf_11135363908447775433.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "378650466",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913444
+  },
+  {
+    "id": "1443231883",
+    "title": "Love Me Again",
+    "artist": "John Newman",
+    "album": "Tribute (Deluxe)",
+    "year": 2013,
+    "verifiedOriginalYear": 2013,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "rnb",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/eb/8b/88/eb8b8802-2c13-e98f-505e-c8d2693718bb/00602537795734.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/64/ac/e8/64ace86c-e2bd-6116-7a55-a3c2f5d3ba7e/mzaf_3505846529731432588.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1443231883",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913488
+  },
+  {
+    "id": "916432920",
+    "title": "Am I Wrong",
+    "artist": "Nico & Vinz",
+    "album": "Black Star Elephant",
+    "year": 2013,
+    "verifiedOriginalYear": 2013,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/38/35/35/38353599-968c-26b8-4dee-8f20ebee46d1/093624932772.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6d/e4/52/6de452cc-25cb-ed4c-a5be-7c3398e42f00/mzaf_5174604099377275023.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "916432920",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913553
+  },
+  {
+    "id": "1713089345",
+    "title": "Miss You (Mixed)",
+    "artist": "Robin Schulz & Oliver Tree",
+    "album": "Deorro presents Carte de Amor at The Torch (DJ Mix)",
+    "year": 2022,
+    "verifiedOriginalYear": 2022,
+    "yearConfidence": "high",
+    "genre": "Dance",
+    "normalizedGenres": [
+      "pop",
+      "electronic",
+      "dance"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/10/b8/0f/10b80f0c-5424-7489-aac7-3bc7ba6679dd/e95bde97-597a-43aa-aeff-7738104d44e1.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/45/3e/fb/453efbbd-f9da-c86d-4231-4db19441d5af/mzaf_14680331080610732537.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1713089345",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913687
+  },
+  {
+    "id": "1440762915",
+    "title": "Patience",
+    "artist": "Take That",
+    "album": "Beautiful World",
+    "year": 2006,
+    "verifiedOriginalYear": 2006,
+    "yearConfidence": "high",
+    "genre": "Pop",
+    "normalizedGenres": [
+      "pop",
+      "rock"
+    ],
+    "artworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/df/fa/ae/dffaae51-3f6c-cafc-abed-1787d843255e/00602517178182.rgb.jpg/600x600bb.jpg",
+    "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5f/6d/4c/5f6d4c23-ea23-9941-5f0f-35f3e4425143/mzaf_9234439908692242264.plus.aac.p.m4a",
+    "provider": "itunes",
+    "providerTrackId": "1440762915",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359913730
+  },
+  {
+    "id": "581751632",
+    "title": "Falling Down (Bonus Track)",
+    "artist": "Lil Peep",
+    "album": "Come Over When You're Sober, Pt. 2",
+    "year": 2018,
+    "verifiedOriginalYear": 2018,
+    "yearConfidence": "high",
+    "genre": "Hip-Hop/Rap",
+    "normalizedGenres": [
+      "hiphop",
+      "indie",
+      "rock"
+    ],
+    "artworkUrl": "https://cdn-images.dzcdn.net/images/cover/757870ddc1211505769e2be84d165351/250x250-000000-80-0-0.jpg",
+    "previewUrl": "https://cdnt-preview.dzcdn.net/api/1/1/6/c/4/0/6c41f823037c50cc90732ce135013c8e.mp3?hdnea=exp=1788360810~acl=/api/1/1/6/c/4/0/6c41f823037c50cc90732ce135013c8e.mp3*~data=user_id=0,application_id=42~hmac=9597820169ebd430d8af233941a12898efe76d3eecf61798e5a1f108c1c656ba",
+    "provider": "itunes",
+    "providerTrackId": "581751632",
+    "trackIdentityVerified": true,
+    "audioStatus": "healthy",
+    "audioValidatedAt": 1788359910970
   }
 ]

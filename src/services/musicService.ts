@@ -1,6 +1,7 @@
 import { Song, AudioHealthStatus } from '../types/song';
 import { DecadeFilter, GenreFilter } from '../types/game';
 import { fuzzyMatchSong, extractPrimaryArtist, normalizeText } from '../utils/normalizeText';
+import { MelodexSearchEngine, SearchResult } from '../utils/searchEngine';
 import { MELODEX_BASE_CATALOG } from '../data/melodexCatalog';
 import { audioService } from './audioService';
 import {
@@ -119,6 +120,7 @@ class MusicService {
   private isCatalogLoaded = false;
   private loadPromise: Promise<Song[]> | null = null;
   private countCache: Map<DecadeFilter, Record<GenreFilter, number>> = new Map();
+  private searchEngine: MelodexSearchEngine = new MelodexSearchEngine();
 
   // Session Deck & Balanced Distribution
   private sessionDeck: Song[] = [];
@@ -253,10 +255,16 @@ class MusicService {
   }
 
   /**
-   * Invalidate precomputed count cache whenever the verified playable catalog changes
+   * Invalidate precomputed count cache and search index whenever the verified playable catalog changes
    */
   private invalidateCountCache(): void {
     this.countCache.clear();
+    this.rebuildSearchIndex();
+  }
+
+  private rebuildSearchIndex(): void {
+    const playable = this.getCatalog();
+    this.searchEngine.buildIndex(playable);
   }
 
   /**
@@ -279,6 +287,7 @@ class MusicService {
           }
         }
       }
+      this.rebuildSearchIndex();
     } catch (e) {
       console.warn('Failed to bootstrap catalog synchronously:', e);
     }
@@ -734,45 +743,20 @@ class MusicService {
   }
 
   /**
-   * Search verified songs in catalog only.
-   * Ensures autocomplete contains ONLY 100% verified playable songs.
-   * Ranks exact primary artist matches and title matches highest.
+   * Search verified songs in catalog.
+   * Full playable catalog search across title, artist, and credited artists.
+   * No arbitrary limits — returns all matching songs ranked intelligently.
    */
-  public async searchSongs(query: string, limit = 10): Promise<Song[]> {
-    const trimmed = query.trim();
-    if (!trimmed) return [];
+  public async searchSongs(query: string): Promise<Song[]> {
+    const res = this.searchCatalog(query);
+    return res.songs;
+  }
 
-    const playablePool = this.getCatalog();
-    const matches: { song: Song; priority: number }[] = [];
-
-    const normQuery = trimmed.toLowerCase();
-
-    for (const song of playablePool) {
-      if (fuzzyMatchSong(song.title, song.artist, trimmed)) {
-        const normArtist = song.artist.toLowerCase();
-        const normTitle = song.title.toLowerCase();
-
-        let priority = 3;
-        if (normArtist === normQuery || normTitle === normQuery) {
-          priority = 0;
-        } else if (normArtist.startsWith(normQuery) || normTitle.startsWith(normQuery)) {
-          priority = 1;
-        } else if (normArtist.includes(normQuery) || normTitle.includes(normQuery)) {
-          priority = 2;
-        }
-
-        matches.push({ song, priority });
-      }
-    }
-
-    matches.sort((a, b) => {
-      if (a.priority !== b.priority) return a.priority - b.priority;
-      const scoreA = a.song.recognitionScore ?? 50;
-      const scoreB = b.song.recognitionScore ?? 50;
-      return scoreB - scoreA;
-    });
-
-    return matches.slice(0, limit).map((m) => m.song);
+  /**
+   * Performs full-catalog search with exact artist catalog detection and ranking metadata.
+   */
+  public searchCatalog(query: string): SearchResult {
+    return this.searchEngine.search(query);
   }
 
   /**

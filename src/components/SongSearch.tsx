@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, Music, X, FastForward, Check } from 'lucide-react';
+import { Search, Music, X, FastForward, Check, Disc3 } from 'lucide-react';
 import { Song } from '../types/song';
 import { musicService } from '../services/musicService';
+import { ExactArtistMatchInfo } from '../utils/searchEngine';
 import { STAGES } from '../types/game';
 
 interface SongSearchProps {
@@ -24,6 +25,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
 }) => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Song[]>([]);
+  const [exactArtistMatch, setExactArtistMatch] = useState<ExactArtistMatchInfo | undefined>(undefined);
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
@@ -33,12 +35,14 @@ export const SongSearch: React.FC<SongSearchProps> = ({
 
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Debounced search query
+  // Debounced search query across whole playable catalog
   useEffect(() => {
     // If user has a confirmed selection and has not edited the text, do NOT search or reopen dropdown
     if (selectedSong !== null && !hasUserEditedAfterSelection) {
       setSuggestions([]);
+      setExactArtistMatch(undefined);
       setIsOpen(false);
       return;
     }
@@ -46,18 +50,20 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     const trimmed = query.trim();
     if (!trimmed) {
       setSuggestions([]);
+      setExactArtistMatch(undefined);
       setIsOpen(false);
       setSelectedIndex(-1);
       return;
     }
 
-    const timer = setTimeout(async () => {
+    const timer = setTimeout(() => {
       setIsLoading(true);
       try {
-        const results = await musicService.searchSongs(trimmed, 8);
-        setSuggestions(results);
+        const result = musicService.searchCatalog(trimmed);
+        setSuggestions(result.songs);
+        setExactArtistMatch(result.exactArtistMatch);
         // Autocomplete should ONLY show if there is no selected song and we have results
-        if (results.length > 0 && selectedSong === null) {
+        if (result.songs.length > 0 && selectedSong === null) {
           setIsOpen(true);
         } else {
           setIsOpen(false);
@@ -68,10 +74,20 @@ export const SongSearch: React.FC<SongSearchProps> = ({
       } finally {
         setIsLoading(false);
       }
-    }, 150);
+    }, 120);
 
     return () => clearTimeout(timer);
   }, [query, selectedSong, hasUserEditedAfterSelection]);
+
+  // Keep highlighted suggestion scrolled into view during keyboard navigation
+  useEffect(() => {
+    if (selectedIndex >= 0 && dropdownRef.current) {
+      const activeEl = dropdownRef.current.querySelector(`#suggestion-item-${selectedIndex}`);
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: 'nearest' });
+      }
+    }
+  }, [selectedIndex]);
 
   // Click outside listener
   useEffect(() => {
@@ -88,6 +104,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     setSelectedSong(song);
     setQuery(`${song.title} — ${song.artist}`);
     setSuggestions([]);
+    setExactArtistMatch(undefined);
     setIsOpen(false);
     setHasUserEditedAfterSelection(false);
     setSelectedIndex(-1);
@@ -103,6 +120,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     setSelectedSong(null);
     setQuery('');
     setSuggestions([]);
+    setExactArtistMatch(undefined);
     setIsOpen(false);
     setHasUserEditedAfterSelection(true);
     setDuplicateWarning(false);
@@ -152,6 +170,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
     setSelectedSong(null);
     setQuery('');
     setSuggestions([]);
+    setExactArtistMatch(undefined);
     setIsOpen(false);
     setHasUserEditedAfterSelection(false);
     setDuplicateWarning(false);
@@ -197,7 +216,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
               }}
               onKeyDown={handleKeyDown}
               disabled={disabled}
-              placeholder="Guess the Song..."
+              placeholder="Guess the Song or Artist..."
               autoComplete="off"
               className="w-full pl-12 pr-11 py-4 bg-neutral-900/90 border border-neutral-800 rounded-2xl text-base font-medium text-white placeholder:text-neutral-500 focus:outline-none transition-all disabled:opacity-50 theme-transition"
               style={{
@@ -217,25 +236,46 @@ export const SongSearch: React.FC<SongSearchProps> = ({
             )}
           </div>
 
-          {/* Autocomplete Dropdown */}
+          {/* Autocomplete Dropdown with Smooth Scrollable List */}
           <AnimatePresence>
             {isOpen && suggestions.length > 0 && !selectedSong && (
               <motion.div
                 id="search-suggestions-dropdown"
+                ref={dropdownRef}
                 initial={{ opacity: 0, y: -4 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -4 }}
                 transition={{ duration: 0.15 }}
-                className="absolute left-0 right-0 top-full mt-2 bg-neutral-900/95 border border-neutral-800 rounded-2xl shadow-2xl backdrop-blur-xl max-h-64 overflow-y-auto z-50 divide-y divide-neutral-800/60"
+                className="absolute left-0 right-0 top-full mt-2 bg-neutral-900/95 border border-neutral-800 rounded-2xl shadow-2xl backdrop-blur-xl max-h-80 sm:max-h-96 overflow-y-auto z-50 divide-y divide-neutral-800/60 touch-pan-y"
               >
+                {/* Exact Artist Catalog Mode Banner */}
+                {exactArtistMatch && (
+                  <div className="sticky top-0 z-20 px-4 py-2.5 bg-neutral-950/95 border-b border-neutral-800/90 flex items-center justify-between backdrop-blur-md">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <Disc3
+                        className="w-3.5 h-3.5 flex-shrink-0 animate-spin"
+                        style={{ animationDuration: '6s', color: 'var(--accent)' }}
+                      />
+                      <span className="text-xs font-black tracking-wider uppercase truncate text-white">
+                        {exactArtistMatch.artistName}
+                      </span>
+                    </div>
+                    <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300 flex-shrink-0 ml-2">
+                      {exactArtistMatch.totalCount} {exactArtistMatch.totalCount === 1 ? 'track' : 'tracks'}
+                    </span>
+                  </div>
+                )}
+
+                {/* All Matching Tracks */}
                 {suggestions.map((song, index) => {
                   const isGuessed = alreadyGuessedIds.includes(song.id);
                   const isHighlighted = selectedIndex === index;
+                  const displayYear = song.verifiedOriginalYear ?? song.year;
 
                   return (
                     <div
                       key={song.id}
-                      id={`suggestion-item-${song.id}`}
+                      id={`suggestion-item-${index}`}
                       onPointerDown={(e) => {
                         e.preventDefault();
                         handleSelectSong(song);
@@ -245,7 +285,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
                         handleSelectSong(song);
                       }}
                       onMouseEnter={() => setSelectedIndex(index)}
-                      className={`p-3.5 flex items-center justify-between cursor-pointer text-left transition-colors duration-150 select-none ${
+                      className={`p-3.5 flex items-center justify-between cursor-pointer text-left transition-colors duration-150 select-none min-h-[56px] ${
                         isHighlighted
                           ? 'bg-neutral-800 text-white'
                           : 'hover:bg-neutral-800/60 text-neutral-200'
@@ -269,7 +309,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
                             {song.title}
                           </div>
                           <div className="text-xs sm:text-sm text-neutral-400 truncate">
-                            {song.artist} {song.year ? `• ${song.year}` : ''}
+                            {song.artist} {displayYear ? `• ${displayYear}` : ''}
                           </div>
                         </div>
                       </div>
@@ -282,6 +322,13 @@ export const SongSearch: React.FC<SongSearchProps> = ({
                     </div>
                   );
                 })}
+
+                {/* Total Count Footnote if many results and not exact artist mode */}
+                {suggestions.length > 8 && !exactArtistMatch && (
+                  <div className="sticky bottom-0 z-10 px-4 py-1.5 bg-neutral-950/90 border-t border-neutral-800/80 text-[10px] text-center font-mono text-neutral-400 backdrop-blur-sm">
+                    {suggestions.length} matching songs available
+                  </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>
@@ -341,7 +388,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
             disabled={disabled || !selectedSong || duplicateWarning}
             whileHover={{ scale: disabled || !selectedSong ? 1 : 1.02 }}
             whileTap={{ scale: disabled || !selectedSong ? 1 : 0.98 }}
-            className="flex-1 py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm sm:text-base tracking-wider shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed theme-transition"
+            className="flex-1 py-3.5 sm:py-4 px-6 rounded-2xl font-bold text-sm sm:text-base tracking-wider shadow-md transition-all disabled:opacity-30 disabled:cursor-not-allowed theme-transition cursor-pointer"
             style={{
               backgroundColor: 'var(--accent)',
               color: 'var(--accent-text-color)',
@@ -359,7 +406,7 @@ export const SongSearch: React.FC<SongSearchProps> = ({
             disabled={disabled}
             whileHover={{ scale: disabled ? 1 : 1.02 }}
             whileTap={{ scale: disabled ? 1 : 0.98 }}
-            className="flex-1 py-3.5 sm:py-4 px-5 rounded-2xl font-semibold text-sm sm:text-base tracking-wide bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-neutral-800 transition-all flex items-center justify-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="flex-1 py-3.5 sm:py-4 px-5 rounded-2xl font-semibold text-sm sm:text-base tracking-wide bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-neutral-800 transition-all flex items-center justify-center gap-2 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
           >
             <FastForward className="w-4 h-4 sm:w-5 sm:h-5 text-neutral-400" />
             <span>
